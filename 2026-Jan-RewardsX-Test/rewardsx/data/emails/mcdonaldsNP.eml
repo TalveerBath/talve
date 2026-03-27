@@ -1,0 +1,1025 @@
+Delivered-To: talveerbath@gmail.com
+Received: by 2002:a05:7110:5805:b0:2fc:5780:b0eb with SMTP id by5csp2009879geb;
+        Tue, 10 Mar 2026 10:09:02 -0700 (PDT)
+X-Received: by 2002:a05:690c:1a:b0:78e:6176:2c8b with SMTP id 00721157ae682-798dd797affmr149509977b3.49.1773162542330;
+        Tue, 10 Mar 2026 10:09:02 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1773162542; cv=none;
+        d=google.com; s=arc-20240605;
+        b=XJC2Qp8jMlwyE6izfaZNsSTXi8rP+SFOexjK7kisLOZkWch7DWIoRUyR6soZ7yjCKx
+         we/6A6iRfcO6o+9EE+u03XKR5PtF+uOCExDfZdVEmWI8FW+0f16F7Hj4LbHERDO0GtF+
+         xrk9IY9k32VUG+03Z2cmoryozqY49iCCy+du7PJIgnO6jPoPbPkDiVF9uzgA0AgohIv/
+         hq2qEuU718zE1wBkhzRuRrQ5qyQIzGiD6kMrvt/E0gwchAu+T0wuc9Mh0UYE9Gn+YRT/
+         OST1V3PB3Tir2gGbIc4NcNg0q4qNjdl+SUkoCJIma0rS6uCgi13fEyai+YFHVj7e6xWg
+         tFzw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=reply-to:subject:mime-version:date:to:list-unsubscribe-post
+         :list-unsubscribe:message-id:from:dkim-signature;
+        bh=F6qzXUvRnvaORpAnSwnMgcpkGTW/jwwpxKseV3KkfAs=;
+        fh=OYuaZ8rPTC9pUigfh3yoTx6H7O1WyMO4Twlu5+H+CBU=;
+        b=cXc0WWEU5ao8tek9+b+zfNgD+nrATZL6Fi2MR2apK4PyHvaFIDPb9RAjnogW2d65xH
+         S9/t+MLw0dLOe8pZV2+USekqmOkhfqFGFGyrfS2trrle1EaNByPepFUJZkWrR9fE00WL
+         dY0XXRt03ysvCmnP6mpZy54Of7LF+2Mb+4rt2yPiaBj8jP1N72sn4cGi7lvRlL5ofmqX
+         H9rtMECW6PcAQKlNp0H/Xscc4ZRbgPogNRahcFfKjqFILB17rtl/t19MoToMMz6ybbUy
+         BpvQcDVWky2PsIEDsJyWwpZ7FbgubYKW3KpPgKJZvN2PkJ13mYMSDJZMXmA6fjDERrnw
+         pGFA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@canada.mcdonalds.com header.s=scph0322 header.b=OCzHpnQw;
+       spf=pass (google.com: domain of msprvs1=20529dszoyi5v=bounces-266693-179@canada.mcdonalds.com designates 223.165.122.56 as permitted sender) smtp.mailfrom="msprvs1=20529dszoyI5v=bounces-266693-179@canada.mcdonalds.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mcdonalds.com
+Return-Path: <msprvs1=20529dszoyI5v=bounces-266693-179@canada.mcdonalds.com>
+Received: from bz1521.canada.mcdonalds.com (bz1521.canada.mcdonalds.com. [223.165.122.56])
+        by mx.google.com with ESMTPS id 00721157ae682-7990a86e78csi32284527b3.227.2026.03.10.10.09.01
+        for <talveerbath@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 10 Mar 2026 10:09:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=20529dszoyi5v=bounces-266693-179@canada.mcdonalds.com designates 223.165.122.56 as permitted sender) client-ip=223.165.122.56;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@canada.mcdonalds.com header.s=scph0322 header.b=OCzHpnQw;
+       spf=pass (google.com: domain of msprvs1=20529dszoyi5v=bounces-266693-179@canada.mcdonalds.com designates 223.165.122.56 as permitted sender) smtp.mailfrom="msprvs1=20529dszoyI5v=bounces-266693-179@canada.mcdonalds.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mcdonalds.com
+Return-Path: <msprvs1=20529dszoyI5v=bounces-266693-179@canada.mcdonalds.com>
+X-MSFBL: vEYIBktW+56amk92MQqbu5wZV8MWXi+LobL1q/rlJX0=|eyJjdXN0b21lcl9pZCI
+	6IjI2NjY5MyIsInRlbmFudF9pZCI6InNwYyIsIm1lc3NhZ2VfaWQiOiI2OWFkMmM
+	1MGIwNjkwNjJmN2UzMSIsInIiOiJ0YWx2ZWVyYmF0aEBnbWFpbC5jb20iLCJzdWJ
+	hY2NvdW50X2lkIjoiMTc5In0=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=canada.mcdonalds.com; s=scph0322; t=1773162540;
+	i=@canada.mcdonalds.com;
+	bh=F6qzXUvRnvaORpAnSwnMgcpkGTW/jwwpxKseV3KkfAs=;
+	h=From:Message-ID:List-Unsubscribe:List-Unsubscribe-Post:To:Date:
+	 Content-Type:Subject:From:To:Cc:Subject;
+	b=OCzHpnQwW/vLjACuKC8CvEaHK0tS/Xkkh7wJsEzQvvzGJYBYylkCXLxJIywNfPY77
+	 XoFL1dU6hfU6mM+02RAxYQqZq3g5l6meJItioRobb1au1+WaeKiNQtfnsGNLZUrYeH
+	 Wz4RpoUywNsr0HFpgBr7mGW6+vO+nIi8eC2r65a8=
+Received: from [10.90.1.76] ([10.90.1.76])
+	by i-0caf141b90c26113f.mta1vrest.sd.prd.sparkpost (ecelerity 5.2.0.75207 r(msys-ecelerity:tags/5.2.0.3)) with REST
+	id 13/E7-20977-C2050B96; Tue, 10 Mar 2026 17:09:00 +0000
+From: =?utf-8?B?TWNEb25hbGTigJlzIENhbmFkYQ==?=
+	 <McDonaldsCanada@canada.mcdonalds.com>
+Message-ID: <13.E7.20977.C2050B96@i-0caf141b90c26113f.mta1vrest.sd.prd.sparkpost>
+List-Unsubscribe: <https://06.emailinboundprocessing.com/enc_user/list_unsubscribe?d=%241%24zF0e7oesSXfanrRNtqK7qA%3D%3D%24vKKYLFMqTUCRQJb8ovSG%2FjYDwHjWZdK8qgaaEHvacf0d%2FcBnGWGk4m4%2FCgiD%0AtdzQDo4yi7skpM3WTEDg%2BNNMHpTLV%2FDS9Uwh1y26LrGnUjKPXedoXm7es5aD%0A8nQRAUGvKLp%2B%2Fho7BFgN5BoWzpr0QuoDVTBbXMwJxctb5vvd3SYv%2FomZF%2BSa%0AgYzuV41iZ%2FK51LomW0Zc4dH0CB0tVOKjJ85uDuhKNerBrUDRyPuM3zvSLkV6%0A2xmGOhmaBnz0H9qqaBxP4l2vhRTCBmMi613AR92VYhhX7Kb4o0CNUyPnJ2N8%0ADGILrm4y22jxc6RkaL%2FTk1hkCzmVbk1tEw%2BbT5ehPSPqFfSTsSAOQMRmPRXh%0A5Z2QKdIAeeQkrIji%2FEVEP2lA&1=1>,<mailto:4_odt94qgxzoo3ekzd1m4x8zalqfs10jq9sn7xc9jca75nc9v597pndx@unsubscribe-06.emailinboundprocessing.com?subject=Unsubscribe%20pnrcgsq2oo7cojgzdz20lzscr1m3etxiq5pyjzalnwovcfd&body=DO_NOT_DELETE-27qnjanjv5f6yogqd42b1fv0xrk2v3tdvbcfjwu0707wud90wt5pyyedo59fyil8rb0vmbiplw99xsqteyxoyul-DO_NOT_DELETE>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+To: talveerbath@gmail.com
+Date: Tue, 10 Mar 2026 17:09:00 +0000
+Content-Type: multipart/alternative; boundary="_----GPC9pkyy370EKUc8IyX+RQ===_90/E7-20977-C2050B96"
+MIME-Version: 1.0
+Subject: =?utf-8?B?U2F2ZSBvbiBhIFN1bmRhZSBvciBhIE1jRmx1cnJ5PyDwn6SU?=
+Reply-To: McDonaldsCanada@mcdonalds.ca
+
+--_----GPC9pkyy370EKUc8IyX+RQ===_90/E7-20977-C2050B96
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+=F0=9F=AB=B5You decide. Vote on this week=E2=80=99s Deal VS Deal.=0A=E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=0A=E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C=0A=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C=0A=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=0A=E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=0A=E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=0AMyMcDonald's Rewards =0A( https:/=
+/link.canada.mcdonalds.com/f/a/H2iWG8b9hyiPXPilF08yCg~~/AAQRxRA~/3fWaN1hth6=
+JeFn9YOgjKPCmAA__-wf2dtg8xYdm7_e2opDJYo6gXhBmsHhH8w3VxVoL6LTHFbsKw2SvkBFgJs=
+VtjmJUhl9fDFgg8F4tlgz8zEZKPNkGr9lxATjNfWomMWjD-MSKoyKxos9cbpCo-AUTJMw3MCFhO=
+AALNYgnQiP-4DKz_s1Cn1YUCBuBbUzzY )=0A                   DEAL VS DEAL $2 plu=
+s tax Sundae Vs $3 plus=0Atax Snack Size McFlurry      Vote Now =0A( https:=
+//link.canada.mcdonalds.com/f/a/-hlCBIYAzOK8HgD7X3kH-g~~/AAQRxRA~/uGLEHBoNq=
+TOdAyoz_c41ItrRTzyJ_DD6CuCAwJd4nViu5a1ns326kNeq3Zjy6wesEbWv-JMSJaFRBPB_NBhr=
+MRlx-nrsOoofsusZRZ6UioqhYoWQ20VOWmn8ym7d4_b19q58Y4gacTXS894PmN8Hcg~~ )     =
+Cold hard=0Aclash.        Grab your spoons, It=E2=80=99s week two=0Awith tw=
+o sweet treats going head to head. Cast your vote on the=0AMcD=E2=80=99s ap=
+p for tomorrow=E2=80=99s Deal VS Deal winner.*=0A                     You m=
+iss=0A100% of the meals you don=E2=80=99t taste.        NHL=C2=AE Star Stic=
+ks are so=0Aback, but not for long. Get one of seven mini sticks with every=
+=0ANHL=C2=AE Star Sticks Meal.=E2=80=A0 Hurry, they=E2=80=99re only here fo=
+r a=0Alimited time.     You miss 100% of the meals you don=E2=80=99t taste.=
+=0ANHL=C2=AE Star Sticks are so back, but not for long. Get one of seven=0A=
+mini sticks with every NHL=C2=AE Star Sticks Meal.=E2=80=A0 Hurry, they=E2=
+=80=99re=0Aonly here for a limited time.      Order Now =0A( https://link.c=
+anada.mcdonalds.com/f/a/pORf6eMiwRQ4GFNFzwQEMA~~/AAQRxRA~/1e0ek34yTvHJwiWt3=
+ulVIj4CgOMJCg-y0YEabH5LCmykspnc9dt61oXKd5_Oz5hLNLKRC2bBDwtHmvETWHmEoLtl4vrP=
+lbAxiOxcOVWkLMhv5I9AmlNrT1dRI2F1nNuQcrfg-cwGvv-HmxRKaZgYPyWqyyq4B_6iCQq6CNW=
+m4r0~ )=0A=0AMyMcDonald's Rewards =0A( https://link.canada.mcdonalds.com/f/=
+a/GXnAfR6lBMaYJwQ9tVYseA~~/AAQRxRA~/uGLEHBoNqTOdAyoz_c41IqiTHpm9y4BCKZ3-OFM=
+NCdm2U2FIO6Uhhv6lH43obx3cEmFNXXr_rLwRFe1vtWE4koCr3EU84fzooWwd9O7drs5tlNpvoC=
+WB8pOrZiMDyw2BQgcvInR8N4Hf9-GEjxlp_Q~~ )=0A=0AMcDelivery =0A( https://link.=
+canada.mcdonalds.com/f/a/wLlQ9QRVdrbYq_AaqBBDXg~~/AAQRxRA~/o7wIfkZgTr1LqugC=
+qbA-JWSICx5FrmNP31PvAJDtv5AjGAfYDeS4AKQBIYxQDLo1dDqgNAxW72Wl89KKaMoc05gnlvQ=
+bDMau1GVGi39fqZYFFP3Mr8Kr6kIMEnSadnnhrjgGr7BxRLtkxMmWn2zFlPwB1B9a8s6LABwP2X=
+AR3wQ~ )=0A=0A( https://link.canada.mcdonalds.com/f/a/1uDqUa2O-8RVZs1-hu9zs=
+A~~/AAQRxRA~/uGLEHBoNqTOdAyoz_c41ImReZhk5KWIo3Pf2dEQZBeWBwg0jcPHcsCy0iZTq1_=
+FaK1FPSjRL6LvAfO1YYuh3tAApvIpHiNTGfNNiYwwNgF833fZdKpLvFVJbk8nJViYuD4QfvUAY9=
+TQftTFJCOk1SA~~ )=0A=0AHiring ( https://link.canada.mcdonalds.com/f/a/v6_Aj=
+Nmw7AaVqOROVss4Mw~~/AAQRxRA~/uGLEHBoNqTOdAyoz_c41IsSu98zDXwtQYcBBgw5T9J4xVX=
+2ibBkKYTe8NT3sxmAnpU7swQkNffGr3clsWjq0lwP3U0J1vq9S2DZebZ85OO5MQV5Eyy4fozIOZ=
+H3IHqPzCrGoDbWMUmFQ9HoRG0S86g~~ )=0A=0ARewards ( https://link.canada.mcdona=
+lds.com/f/a/oBMaTnMe1o_UAk2haIIolw~~/AAQRxRA~/uGLEHBoNqTOdAyoz_c41IqiTHpm9y=
+4BCKZ3-OFMNCdmdgtbdwg_2lP1LXdtKFII6Dtvc4Yo43kd2TkU-kvZNP7-7YJ_rk6m_yMKslDmU=
+hwWbiB14PQ2Tv1Otd_scXjeughks1a_3fhUtMX6SqRKyew~~ )=0A=0A|=0AMcDelivery =0A(=
+ https://link.canada.mcdonalds.com/f/a/FLWp_hZKRqHScorBUo59GA~~/AAQRxRA~/o7=
+wIfkZgTr1LqugCqbA-JWSICx5FrmNP31PvAJDtv5AjGAfYDeS4AKQBIYxQDLo1MEVGWfoPr83w9=
+fWRJXMb66ECd3KDHKUWDH8LZcFCtnNcVSyLpiGvfpqxF_dyKA7mze9qISpnPTTP2iDfrOhRgXVC=
+PXSKvSk9YCSPeL4Hisc~ )=0A=0A|=0AOffers ( https://link.canada.mcdonalds.com/=
+f/a/BdqVCz1o086N6ORJDKN2Eg~~/AAQRxRA~/uGLEHBoNqTOdAyoz_c41ImReZhk5KWIo3Pf2d=
+EQZBeVT8POmaXdTjc5oHYW6BVpJCY2ethkTUtZIWc6xZwTwihvzPzdR7Hbt3x3ihCLRy2xe5pvV=
+_AXmlRji48gxiO3xUgQ2MM4dNLSwHW1kDtvmkQ~~ )=0A=0A|=0AHiring ( https://link.c=
+anada.mcdonalds.com/f/a/NOpG2aZQUsQ3s2tcELB7OQ~~/AAQRxRA~/uGLEHBoNqTOdAyoz_=
+c41IsSu98zDXwtQYcBBgw5T9J7WQXsZx1Wud2qiK3s0qKS7J9Gpru3TnNFXCT9e2JrNjuMkweyH=
+CTWnHLtlcvy6phSDabU9I_j_sxYkWEQRET-z0lRydah6msFzdYBTRCTzaw~~ )=0A=0AFaceboo=
+k =0A( https://link.canada.mcdonalds.com/f/a/9IP8FJTbb_8KLbEopyzBng~~/AAQRx=
+RA~/1e0ek34yTvHJwiWt3ulVIhwz61AVB7YUgcd65V6Dg36CyG4grvrJYp09_6PbDpxWtUWZAX_=
+CpxOAVhdirkdg0VcYjX-f-SGy_spUY7YGOAldPR1Ucc1NFXZQLi2J4HvkHyJmNPZAjDh0gqJe2l=
+ZjwAjGHMTTNSMopSZxZ0aMWbw~ )=0A=0AYoutube =0A( https://link.canada.mcdonald=
+s.com/f/a/5wzi95fdJqD7ePKGXFPzpQ~~/AAQRxRA~/Pw7jh7BHs4IhdMBDxygKfXChzhXrHjN=
+iDVScMF9AIVP8AZ0KTa6wiOO2TWSYo1lGSmcg3IA0XNYeKk9hSvWQTd7pMsmXXQ-19AEWOdlc6W=
+yv_4r8zVx4k47GFuB3LSNQrGAYH2qh9OND--5er6wkIELQB8FCqSEhorZeWV-bEbw~ )=0A=0AI=
+nstagram =0A( https://link.canada.mcdonalds.com/f/a/8i7RuS_dJaXiVYlgBohtJQ~=
+~/AAQRxRA~/l3mBgIylkq2B5pnRbcZpQZ4-rt9ORCBXEeKflTPgMSOuEj0pps7HtdtkaMHlrrca=
+S27Hjt0M4HO2tPzSZj0sbX_68BicyaL4FxMS-exmytvnXCCpJ9QAnVugHmT4uIr1TyGgiam9oPk=
+egQN9bx_f9bNNnyO5LItGgCxYg2CFd2g~ )=0A=0ASnapChat =0A( https://link.canada.=
+mcdonalds.com/f/a/zE6sxHbY1yKsPFZfN45qZw~~/AAQRxRA~/Pw7jh7BHs4IhdMBDxygKfd9=
+INjUIGxhp9-YJku_2Y125-TiWlLZuNT6l2K6eDD78TaosIk4wldpHvzPZrlq51IlvNF6HSFYOyZ=
+8Bt60TdFM9lOC_vblTVDAejSw_uZdp0sCo1DBBNcVDVbEYUdh3_XObFuyRo9tS6s7pk2uelYM~ =
+)=0A=0APinterest =0A( https://link.canada.mcdonalds.com/f/a/AU4igUiWB3lBQke=
+IoVPRCg~~/AAQRxRA~/1e0ek34yTvHJwiWt3ulVIieor3RKax_xdknPl_wXGCzEgwuvmebBayDp=
+MI9ak_vTVEvCm6NabOxyzqREGjF0tzQNUNvMNqlIBD4xNUvh6C2Hr1vPUD7Tyc7140gziYJ6yM8=
+72TeS_3lJKcjoM4l-iwEBngIC10SET8FQ2u2L2Y8~ )=0A=0ATikTok =0A( https://link.c=
+anada.mcdonalds.com/f/a/FZcY9z1XJA45nLDe8RL4fA~~/AAQRxRA~/SaQ5syLVlGL5oH02u=
+6oqt0Xm57oewxfPedIFjTnwhadP1zUn2H7NR_l16Jii3NloJUnP7DTiYJKdDd64EJPWV9sV9iTa=
+BBTEU95u1n_YOBUDCKbuYAG2Ccw9LEFQdpLEfViK4TJeg8A53U2xG0uy1kfWF0CwT0ggoae4_nh=
+fbFg~ )=0A=0A=0A=0A=0A=0A=0A Corporate =0A( https://link.canada.mcdonalds.c=
+om/f/a/Zu3ogyoPy4VIfeBrCLZvSQ~~/AAQRxRA~/Xv771qTpFSA644ZA1vcSPSaBgMPj8H2ejA=
+0oqe00LI8sEcqNgFavYaq1WG-jpATFjK_E1JV3JgIq56wlWqANJZ2_eCn_lpFF6sMuQ0jnQWQ0D=
+BW_-0TRKZhkLyx0E_gEwAdXSe2djy92f2O-TCkGbyNXCr62BFiwhlQ636YJyVZXmfXdKL8x_yeG=
+5ZxSfXwW )=0A Privacy =0A( https://link.canada.mcdonalds.com/f/a/TJVou9SM_w=
+tGmlpGq1GL7A~~/AAQRxRA~/SaQ5syLVlGL5oH02u6oqt8HDot4X-xO0bTvoa9ZoAPFE0uiTmMX=
+cvjaXKSkOjNeGhowNInsdctjbhSgf9wdrhbF0W5nx3tkKRxw3Lp0n3Lz6WrgFuAkBjemUSilMi8=
+0muQZNCIcx5XVqk0DDyUb6FmOt9LzqucKeTHBtGcDXkcc~ )=0A Terms & Conditions =0A(=
+ https://link.canada.mcdonalds.com/f/a/IkPPMOby2ZYinbsdMzKHnw~~/AAQRxRA~/Xv=
+771qTpFSA644ZA1vcSPSaBgMPj8H2ejA0oqe00LI_FxRUQypU1sRv8Y1dJWmBtFXxi0dDjri-L3=
+S13nlhl1ajh75jY1tXoPPjMHoF4ErYr-50W7h4WRwtQXufxHfA5opd7SVUXhXRwpxVokyNsQJlv=
+omRgtKeEsYhC709CroPozMfo9KLMC1DOkdoIBLqK )=0A Unsubscribe ( =0Ahttps://link=
+.canada.mcdonalds.com/f/a/4c8N8EJO4Mcmm-Nep4GS8w~~/AAQRxRA~/_naVEmsDpB1n0b=
+D0SQEyHCudYRTL8WjZBhuI9fO9NzqFKOSNx145E3ReZ5e0pNLQ5mwSHx70EmkKeCpbnXdZ57XcG=
+KTw28pE1JLqCWQEnQErc-a63Qp_CIzP1ObfnidzA6eTdCYPhhMzT9TEEAjBhLB0RD7SpEob_V6T=
+hBFac_eWcKi6tmgDgLM-lDMCvpDW=0A )=0A=0A=C2=A9 2026 McDonald=E2=80=99s=0AAll=
+ Rights Reserved.=0A=0A *Voting open 11:=E2=80=8B00 =E2=80=8BA.M=0A- 11:=E2=
+=80=8B00 =E2=80=8BP.M. ET March =E2=80=8B10, =E2=80=8B2026. Limit 1 vote pe=
+r person.=0A=0AOffers valid at participating McDonald=E2=80=99s restaurants=
+ in Canada.=0ASee offer terms in-app for details. App download and=0Aregist=
+ration required.=0A=0A=E2=80=A0Limit one stick per meal purchase. Meal come=
+s with choice of a=0AHockey Hero Burger=C2=AE, Big Mac=C2=AE, 10-pc Chicken=
+ McNuggets=C2=AE,=0AMcVeggie=E2=84=A2 or Spicy McVeggie=E2=84=A2. For a lim=
+ited time only. While=0Asupplies last. At participating McDonald=E2=80=99s =
+restaurants in Canada.=0A=0AMyMcDonald=E2=80=99s Rewards program available =
+at participating=0AMcDonald's restaurants in Canada. See Program Terms at=
+=0Amcdonalds.ca ( https://link.canada.mcdonalds.com/f/a/dH80i2y5pBrT0NyYjqu=
+QOg~~/AAQRxRA~/NATNojZTDlpaB22xDnskVcLqtqYgOOui4mNyGyi5OAI2JOI4gBP3ywUKoS87=
+h9EQN4RDA1t-hlsDX2cNGd_73B8aIcMIXg8pWhrqkZgE3DlBlsg-521_mdIm9XYoAw_h ) or i=
+n-app=0Afor details. App download and registration required.=0A=0A=C2=A9 NH=
+L & =C2=A9 NHLPA=0A=0A You are receiving this email=0Aas you have requested=
+ to receive email communications from=0AMcDonald=E2=80=99s Canada. If you w=
+ould like to stop receiving emails,=0Ayou can unsubscribe ( =0Ahttps://link=
+.canada.mcdonalds.com/f/a/4c8N8EJO4Mcmm-Nep4GS8w~~/AAQRxRA~/_naVEmsDpB1n0b=
+D0SQEyHCudYRTL8WjZBhuI9fO9NzqFKOSNx145E3ReZ5e0pNLQ5mwSHx70EmkKeCpbnXdZ57XcG=
+KTw28pE1JLqCWQEnQErc-a63Qp_CIzP1ObfnidzA6eTdCYPhhMzT9TEEAjBhLB0RD7SpEob_V6T=
+hBFac_eWcKi6tmgDgLM-lDMCvpDW=0A ). You=0Amay continue to receive other elec=
+tronic messages that do not=0Arequire your consent under applicable law, in=
+cluding=0Atransactional messages.=0A=0ATo ensure delivery to your inbox, pl=
+ease add=0AMcDonaldsCanada@my.mcdonalds.ca (=0AMcDonaldsCanada@canada.mcdon=
+alds.com ) to your safe sender list=0Aor address book.=0A=0AHave questions=
+=3F Contact us online =0A( https://link.canada.mcdonalds.com/f/a/pZT8-VThNQ=
+Z004GfvXQfZQ~~/AAQRxRA~/KrQ9HKGVHmp3ORrRpY1Ma48_q1_y2_WsHbs4PW8qhrz4DtypOsT=
+oUPJumwJ6jeDXvI-RyDxDJo57kmj2xEGYrFsyVQ9ypEeP8_uSIo9XQJGixhl_ojRYOp_0DfcZdx=
+wpSH0BuqMJx_rXTFj38SM8QolaxVhRmqms2DQCeD2Wx3Z6Zw6l9u5LNJ2gZ5JcULr4 )=0A or =
+call us at 1-888-424-4622 ( tel:18884244622 ).=0AMcDonald=E2=80=99s Restaur=
+ants of Canada Limited=0AGuest Contact Centre=0AP.O. Box 61023=0AWinnipeg (=
+Manitoba) R3M 3X8=0A=0A
+--_----GPC9pkyy370EKUc8IyX+RQ===_90/E7-20977-C2050B96
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html>=0A<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=
+=3D"urn:schemas-microsoft-com:office:office" style=3D"-webkit-text-size-adj=
+ust: none;">=0A<head>=0A  <meta name=3D"viewport" content=3D"width=3Ddevice=
+-width, initial-scale=3D1.0">=0A  <meta http-equiv=3D"Content-Type" content=
+=3D"text/html; charset=3Dutf-8">=0A  <meta name=3D"HandheldFriendly" conten=
+t=3D"True">=0A  <!--[if gte mso 9]>=0A    <xml xmlns:o=3D"urn:schemas-micro=
+soft-com:office:office">=0A      <o:OfficeDocumentSettings>=0A        <o:Al=
+lowPNG/>=0A        <o:PixelsPerInch>96</o:PixelsPerInch>=0A     </o:OfficeD=
+ocumentSettings>=0A    </xml>=0A  <![endif]-->=0A  <!--[if !mso]><!-->=0A  =
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">=0A  <!--<![en=
+dif]-->=0A  <title>=0A Save on a Sundae or a McFlurry=3F =F0=9F=A4=94</titl=
+e>=0A  <link rel=3D"icon" type=3D"image/vnd.microsoft.icon" href=3D"https:/=
+/www.mcdonalds.com/content/dam/sites/ca/nfl/icons/favicon-ca.png">=0A   =0A=
+=0A  =0A=0A  <!--[if gte mso 9]>=0A    <style>=0A      sup { font-size: 100=
+% !important; }=0A    </style> =0A  <![endif]-->=0A=0A  <!--[if (gte mso 9)=
+|(IE)]>=0A    <style type=3D"text/css">=0A      table {=0A        border-co=
+llapse: collapse;=0A        border-spacing: 0; =0A        mso-line-height-r=
+ule: exactly; =0A        mso-margin-bottom-alt: 0; =0A        mso-margin-to=
+p-alt: 0; =0A        mso-table-lspace: 0pt; mso-table-rspace: 0pt;=0A      =
+}=0A    </style>=0A  <![endif]-->=0A=0A<style>img {=0Aoutline: none; text-d=
+ecoration: none; -ms-interpolation-mode: bicubic;=0A}=0Abody {=0Awidth: 100=
+% !important; margin: 0; padding: 0;=0A}=0A@media (max-width: 600px) {=0A  =
+body {=0A    -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=0A=
+  }=0A  table {=0A    max-width: 600px !important; width: 100% !important;=
+=0A  }=0A  .wrap {=0A    width: 100% !important;=0A  }=0A  .fullImage {=0A =
+   max-width: 600px !important; width: 100% !important; height: auto !impor=
+tant;=0A  }=0A  .heroHeadline {=0A    padding-left: 5vw !important; padding=
+-right: 5vw !important;=0A  }=0A  .heroText {=0A    padding: 5vw 6.6vw 3.5v=
+w 6.6vw !important;=0A  }=0A  .moduleWrapper {=0A    padding-bottom: 5vw !i=
+mportant;=0A  }=0A}=0A@media (max-width: 500px) {=0A  .fullImage {=0A    ma=
+x-width: 500px !important; width: 100% !important; height: auto !important;=
+=0A  }=0A  .cta {=0A    text-align: center !important; padding-top: 10px !i=
+mportant;=0A  }=0A  .mobileImg {=0A    display: block !important; max-heigh=
+t: none !important; max-width: 500px !important; width: 100% !important; he=
+ight: auto !important;=0A  }=0A  .hideMe {=0A    display: none !important; =
+max-height: 0px !important; font-size: 0 !important;=0A  }=0A  .RewardFoot =
+{=0A    width: 80% !important; max-width: 97px !important;=0A  }=0A  .modul=
+eWrapper {=0A    padding-left: 0 !important; padding-right: 0 !important;=
+=0A  }=0A}=0A</style>=0A</head>=0A=0A<body bgcolor=3D"#ffffff" style=3D"-we=
+bkit-text-size-adjust: none; width: 100% !important; margin: 0; padding: 0;=
+">=0A  <!-- ************************************************************* -=
+->=0A  <!-- Preheader text -->=0A  <div style=3D"display: none; font-size: =
+0; line-height: 1; mso-hide: all; max-height: 0; max-width: 0; width: 0;">=
+=0A    <table width=3D"600" align=3D"center" class=3D"wrap" cellspacing=3D"=
+0" cellpadding=3D"0" border=3D"0" bgcolor=3D"#ffffff" style=3D"border-colla=
+pse: collapse; max-width: 600px; border-spacing: 0; mso-table-lspace: 0; ms=
+o-table-rspace: 0;">=0A      <tr>=0A        <td width=3D"600" align=3D"left=
+" style=3D"display: none !important; visibility: hidden; mso-hide: all; fon=
+t-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 0px; color: #000=
+000; line-height: 0px; width: 0px; height: 0px; max-height: 0px; max-width:=
+ 0px; opacity: 0; overflow: hidden; border-collapse: collapse; mso-table-ls=
+pace: 0; mso-table-rspace: 0;">=0A         =F0=9F=AB=B5You decide. Vote on =
+this week=E2=80=99s Deal VS Deal.=0A          <div style=3D"display: none; =
+max-height: 0px; overflow: hidden;">=0A            <span>&nbsp;</span>=E2=
+=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;<=
+/span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<spa=
+n>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=
+=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;<=
+/span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span><span>&nbsp;<=
+/span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<spa=
+n>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=
+=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;<=
+/span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<spa=
+n>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span><spa=
+n>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=
+=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;<=
+/span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<spa=
+n>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=
+=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;<=
+/span><span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;<=
+/span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<spa=
+n>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=
+=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;<=
+/span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<spa=
+n>&nbsp;</span><span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<spa=
+n>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=
+=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;<=
+/span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<spa=
+n>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=0A =
+           =E2=80=8C<span>&nbsp;</span><span>&nbsp;</span>=E2=80=8C<span>&n=
+bsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=
+=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</sp=
+an>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&=
+nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=
+=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span><span>&nbsp;</span>=E2=80=
+=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</sp=
+an>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&=
+nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=
+=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</sp=
+an>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span><span>&nbsp;</sp=
+an>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&=
+nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=
+=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</sp=
+an>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&=
+nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span><span>&=
+nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=
+=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</sp=
+an>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&=
+nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=
+=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</sp=
+an><span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</sp=
+an>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&=
+nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=
+=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</sp=
+an>=E2=80=8C<span>&nbsp;</span>=0A            =E2=80=8C<span>&nbsp;</span>=
+=E2=80=8C<span>&nbsp;</span><span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=
+=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbs=
+p;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<=
+span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=
+=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbs=
+p;</span>=E2=80=8C<span>&nbsp;</span><span>&nbsp;</span>=E2=80=8C<span>&nbs=
+p;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<=
+span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=
+=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbs=
+p;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<=
+span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span><span>&nbsp;</span>=E2=80=8C<=
+span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=
+=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbs=
+p;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<=
+span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=
+=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span><span>&nbsp;</span>=
+=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbs=
+p;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<=
+span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=
+=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbs=
+p;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span><span>&nbs=
+p;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<=
+span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=
+=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbs=
+p;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=0A       =
+     =E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span=
+>&nbsp;</span><span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span=
+>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=
+=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;<=
+/span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<spa=
+n>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=
+=80=8C<span>&nbsp;</span><span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=
+=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;<=
+/span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<spa=
+n>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=
+=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;<=
+/span>=E2=80=8C<span>&nbsp;</span><span>&nbsp;</span>=E2=80=8C<span>&nbsp;<=
+/span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<spa=
+n>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=
+=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;<=
+/span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<spa=
+n>&nbsp;</span>=E2=80=8C<span>&nbsp;</span><span>&nbsp;</span>=E2=80=8C<spa=
+n>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=
+=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;<=
+/span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<spa=
+n>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=
+=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span><span>&nbsp;</span>=E2=
+=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;<=
+/span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<spa=
+n>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=
+=80=8C<span>&nbsp;</span>=0A            =E2=80=8C<span>&nbsp;</span>=E2=80=
+=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</sp=
+an><span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</sp=
+an>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&=
+nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=
+=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</sp=
+an>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&=
+nbsp;</span><span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&=
+nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=
+=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</sp=
+an>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&=
+nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=
+=8C<span>&nbsp;</span><span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=
+=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</sp=
+an>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&=
+nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=
+=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</sp=
+an>=E2=80=8C<span>&nbsp;</span><span>&nbsp;</span>=E2=80=8C<span>&nbsp;</sp=
+an>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&=
+nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=
+=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</sp=
+an>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&=
+nbsp;</span>=E2=80=8C<span>&nbsp;</span><span>&nbsp;</span>=E2=80=8C<span>&=
+nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=
+=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</sp=
+an>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=0A            =
+=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbs=
+p;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span><span>&nbs=
+p;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<=
+span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=
+=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbs=
+p;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<=
+span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span><=
+span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=
+=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbs=
+p;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<=
+span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=
+=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbs=
+p;</span><span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbs=
+p;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<=
+span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=
+=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbs=
+p;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<span>&nbsp;</span>=E2=80=8C<=
+span>&nbsp;</span>=0A          </div>=0A        </td>=0A      </tr>=0A     =
+ <tr>=0A        <td width=3D"100%" border=3D"0" style=3D"border-collapse: c=
+ollapse; mso-table-lspace: 0; mso-table-rspace: 0;">=0A          <!-- Andro=
+id Fix -->=0A          <table width=3D"100%" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" align=3D"center" style=3D"width: 100%; display: none; ms=
+o-hide: all; border-spacing: 0; border-collapse: collapse; mso-table-lspace=
+: 0; mso-table-rspace: 0;" bgcolor=3D"#ffffff">=0A            <tbody>=0A   =
+           <tr>=0A                <td width=3D"600" style=3D"border-collaps=
+e: collapse; mso-table-lspace: 0; mso-table-rspace: 0;">=0A                =
+  <img src=3D"https://mcdonalds.com/content/dam/sites/ca/crm/library/trigge=
+red/2021/sports/spacer.png" class=3D"remove" width=3D"600" height=3D"1" sty=
+le=3D"display: block; width: 600px; height: 1px; outline: none; text-decora=
+tion: none; -ms-interpolation-mode: bicubic; border-width: 0;" alt=3D" " ti=
+tle=3D" ">=0A                </td>=0A              </tr>=0A            </tb=
+ody>=0A          </table>=0A          <!-- END Android Fix -->=0A        </=
+td>=0A      </tr>=0A    </table>=0A  </div>=0A  <!-- End Preheader Text -->=
+=0A<!-- ************************************************************* -->=
+=0A  <!-- Main Email Wrapper -->=0A  <table width=3D"600" class=3D"wrap" al=
+ign=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 600px; b=
+order-spacing: 0; border-collapse: collapse; mso-table-lspace: 0; mso-table=
+-rspace: 0; max-width: 600px;">=0A<!-- ************************************=
+************************* --> =0A    <tr>=0A      <td width=3D"100%" align=
+=3D"left" bgcolor=3D"#ffffff" style=3D"border-collapse: collapse; mso-table=
+-lspace: 0; mso-table-rspace: 0; mso-padding-alt: 20px 0 20px 0; padding: 2=
+0px 0;">=0A        <table width=3D"100%" class=3D"wrap" align=3D"center" ce=
+llpadding=3D"0" bgcolor=3D"#ffffff" cellspacing=3D"0" style=3D"border-spaci=
+ng: 0; border-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0;=
+ max-width: 600px;">=0A          <!-- Rewards -->=0A          <tr>=0A      =
+      <td align=3D"center" style=3D"border-collapse: collapse; mso-table-ls=
+pace: 0; mso-table-rspace: 0;">=0A              <a name=3D"logo_desktop" hr=
+ef=3D"https://link.canada.mcdonalds.com/f/a/H2iWG8b9hyiPXPilF08yCg~~/AAQRxR=
+A~/3fWaN1hth6JeFn9YOgjKPCmAA__-wf2dtg8xYdm7_e2opDJYo6gXhBmsHhH8w3VxVoL6LTHF=
+bsKw2SvkBFgJsVtjmJUhl9fDFgg8F4tlgz8zEZKPNkGr9lxATjNfWomMWjD-MSKoyKxos9cbpCo=
+-AUTJMw3MCFhOAALNYgnQiP-4DKz_s1Cn1YUCBuBbUzzY" target=3D"_blank">=0A       =
+         <img src=3D"https://www.mcdonalds.com/content/dam/sites/ca/crm/lib=
+rary/header-footer/my_rewards_header.png" class=3D"logo" width=3D"124" heig=
+ht=3D"auto" style=3D"width: 124px; display: block; max-width: 124px; max-he=
+ight: 72px; height: auto; outline: none; text-decoration: none; -ms-interpo=
+lation-mode: bicubic;" alt=3D"MyMcDonald's Rewards" title=3D"MyMcDonald's R=
+ewards" border=3D"0"></a>=0A            </td>=0A          </tr>=0A        <=
+/table>=0A      </td>=0A    </tr>=0A    <!-- END Header Logos -->=0A=0A    =
+<!-- Main Creative -->=0A    <tr>=0A      <td width=3D"600" style=3D"width:=
+ 600px; border-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0=
+;">=0A        <!--*********************************************************=
+***-->=0A        <!-- Hero  Module -->=0A        <table width=3D"600" class=
+=3D"wrap" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=3D"wid=
+th: 600px; border-spacing: 0; border-collapse: collapse; mso-table-lspace: =
+0; mso-table-rspace: 0; max-width: 600px;" bgcolor=3D"#F8EAC9">=0A         =
+ <tr>=0A            <td class=3D"" width=3D"100%" style=3D"border-collapse:=
+ collapse; mso-table-lspace: 0; mso-table-rspace: 0;">=0A              <tab=
+le width=3D"600" class=3D"wrap" align=3D"center" cellpadding=3D"0" cellspac=
+ing=3D"0" style=3D"width: 600px; border-spacing: 0; border-collapse: collap=
+se; mso-table-lspace: 0; mso-table-rspace: 0; max-width: 600px;" bgcolor=3D=
+"#F8EAC9">=0A                <!-- Full Width Image-->=0A                <tr=
+>=0A                  <td width=3D"600" align=3D"center" valign=3D"top" sty=
+le=3D"width: 600px; border-collapse: collapse; mso-table-lspace: 0; mso-tab=
+le-rspace: 0; margin: 0;">=0A                    <img src=3D"https://www.mc=
+donalds.com/content/dam/sites/ca/crm/adhoc/2026/3/showdown-mini-faceoff-2/e=
+n/header-en.jpg" alt=3D"DEAL VS DEAL $2 plus tax Sundae Vs $3 plus tax Snac=
+k Size McFlurry" title=3D"DEAL VS DEAL $2 plus tax Sundae Vs $3 plus tax Sn=
+ack Size McFlurry" class=3D"fullImage" width=3D"600" height=3D"auto" style=
+=3D"width: 600px; display: block; max-width: 600px; height: auto; color: #f=
+fffff; white-space: pre; font-family: Speedee, Helvetica, Arial, sans-serif=
+; line-height: 50%; outline: none; text-decoration: none; -ms-interpolation=
+-mode: bicubic;" border=3D"0">=0A                  </td>=0A                =
+</tr>=0A                 <!-- CTA -->=0A=09=09=09=09 <tr>=0A            <td=
+ align=3D"center" bgcolor=3D"#F8EAC9" class=3D"cta" style=3D"border-collaps=
+e: collapse; mso-table-lspace: 0; mso-table-rspace: 0; mso-padding-alt: 30p=
+x 0 0 0; padding: 30px 0 0;">=0A              <a href=3D"https://link.canad=
+a.mcdonalds.com/f/a/-hlCBIYAzOK8HgD7X3kH-g~~/AAQRxRA~/uGLEHBoNqTOdAyoz_c41I=
+trRTzyJ_DD6CuCAwJd4nViu5a1ns326kNeq3Zjy6wesEbWv-JMSJaFRBPB_NBhrMRlx-nrsOoof=
+susZRZ6UioqhYoWQ20VOWmn8ym7d4_b19q58Y4gacTXS894PmN8Hcg~~" style=3D"display:=
+ inline-block;">=0A                <img src=3D"https://www.mcdonalds.com/co=
+ntent/dam/sites/ca/crm/adhoc/2026/3/showdown-mini-faceoff-2/en/vote-en.jpg"=
+ width=3D"180" height=3D"55" style=3D"width: 180px; display: block; max-wid=
+th: 180px; max-height: 55px; height: 55px; text-align: center; outline: non=
+e; text-decoration: none; -ms-interpolation-mode: bicubic;" alt=3D"Vote Now=
+" border=3D"0"></a>=0A            </td>=0A          </tr>=0A               =
+ <tr>=0A                  <td class=3D"heroHeadline" width=3D"100%" style=
+=3D"font-family: Speedee, Helvetica, Arial, sans-serif; color: #000000; fon=
+t-size: 24px; line-height: 30px; mso-line-height-rule: exactly; font-weight=
+: bold; mso-padding-alt: 32px 30px 0 30px; border-collapse: collapse; mso-t=
+able-lspace: 0; mso-table-rspace: 0; padding: 32px 30px 0;" align=3D"center=
+">=0A                   Cold hard clash.=0A                  </td>=0A      =
+          </tr>=0A                <!-- Live Text -->=0A                <!--=
+ Include top, left, bottom, right padding -->=0A                <!--If no s=
+ubhead - Update padding-top to 32px -->=0A                <tr>=0A          =
+        <td width=3D"600" class=3D"heroText" align=3D"center" style=3D"font=
+-family: Speedee, Helvetica, Arial, sans-serif; color: #000000; font-size: =
+18px; line-height: 24px; mso-line-height-rule: exactly; mso-padding-alt: 20=
+px 40px 40px 40px; border-collapse: collapse; mso-table-lspace: 0; mso-tabl=
+e-rspace: 0; padding: 20px 40px 40px;">=0A=09=09=09=09            =0A      =
+                      Grab your spoons, Talveer! It=E2=80=99s week two with=
+ two sweet treats going head to head. Cast your vote on the McD=E2=80=99s a=
+pp for tomorrow=E2=80=99s Deal VS Deal&nbsp;winner.*=0A                    =
+        =0A                  </td>=0A                </tr>=0A              =
+  <tr>=0A                  <td width=3D"600" align=3D"center" valign=3D"top=
+" style=3D"width: 600px; border-collapse: collapse; mso-table-lspace: 0; ms=
+o-table-rspace: 0; mso-padding-alt: 20px 0 0 0; margin: 0; padding: 20px 0 =
+0;">=0A                    <img src=3D"https://www.mcdonalds.com/content/da=
+m/sites/ca/crm/adhoc/2026/3/showdown-mini-faceoff-2/en/divider.jpg" alt=3D"=
+" title=3D"" class=3D"fullImage" width=3D"600" height=3D"auto" style=3D"wid=
+th: 600px; display: block; max-width: 600px; height: auto; color: #ffffff; =
+white-space: pre; font-family: Speedee, Helvetica, Arial, sans-serif; line-=
+height: 50%; outline: none; text-decoration: none; -ms-interpolation-mode: =
+bicubic;" border=3D"0">=0A                  </td>=0A                </tr>=
+=0A=09=09=09=09=0A              </table>=0A            </td>=0A          </=
+tr>=0A        </table>=0A        <!--**************************************=
+**********************-->=0A        <!-- Second  Module Start -->=0A       =
+ <table width=3D"600" class=3D"wrap" align=3D"center" cellpadding=3D"0" cel=
+lspacing=3D"0" style=3D"width: 600px; border-spacing: 0; border-collapse: c=
+ollapse; mso-table-lspace: 0; mso-table-rspace: 0; max-width: 600px;" bgcol=
+or=3D"#FFBC0D">=0A          <tr>=0A            <td class=3D"moduleWrapper" =
+width=3D"100%" style=3D"mso-padding-alt: 0 0 32px 0; border-collapse: colla=
+pse; mso-table-lspace: 0; mso-table-rspace: 0; padding: 0 0 32px;">=0A     =
+         <table width=3D"600" class=3D"wrap" align=3D"center" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"width: 600px; border-spacing: 0; border-c=
+ollapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0; max-width: 600=
+px;" bgcolor=3D"#FFBC0D">=0A               <!-- Full Width Image-->=0A     =
+          =0A                <tr>=0A                  <td class=3D"heroHead=
+line" width=3D"100%" style=3D"font-family: Speedee, Helvetica, Arial, sans-=
+serif; color: #000000; font-size: 24px; line-height: 30px; mso-line-height-=
+rule: exactly; font-weight: bold; mso-padding-alt: 32px 30px 0 30px; border=
+-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0; padding: 32p=
+x 30px 0;" align=3D"center">=0A                   You miss 100% of the meal=
+s you don=E2=80=99t&nbsp;taste.=0A                  </td>=0A               =
+ </tr>=0A                <!-- Live Text -->=0A                <!-- Include =
+top, left, bottom, right padding -->=0A                <!--If no subhead - =
+Update padding-top to 32px -->=0A                <tr>=0A                  <=
+td width=3D"600" class=3D"heroText" align=3D"center" style=3D"font-family: =
+Speedee, Helvetica, Arial, sans-serif; color: #000000; font-size: 18px; lin=
+e-height: 24px; mso-line-height-rule: exactly; mso-padding-alt: 20px 40px 0=
+ 40px; border-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0;=
+ padding: 20px 40px 0;">=0A=09=09=09=09  NHL<sup style=3D"line-height: 0px;=
+ font-size: 75%;">=C2=AE</sup> Star Sticks are so back, but not for long. G=
+et one of seven mini sticks with every NHL<sup style=3D"line-height: 0px; f=
+ont-size: 75%;">=C2=AE</sup> Star Sticks Meal.<sup style=3D"line-height: 0p=
+x; font-size: 75%;">=E2=80=A0</sup> Hurry, they=E2=80=99re only here for a =
+limited&nbsp;time.=0A                  </td>=0A                </tr>=0A=09=
+=09=09=09 <tr>=0A                  <td width=3D"600" align=3D"center" valig=
+n=3D"top" style=3D"width: 600px; border-collapse: collapse; mso-table-lspac=
+e: 0; mso-table-rspace: 0; margin: 0;">=0A=09=09=09=09  =0A=09=09=09=09    =
+ <img src=3D"https://www.mcdonalds.com/content/dam/sites/ca/crm/adhoc/2026/=
+3/showdown-mini-faceoff-2/en/teritory-lto-en.jpg" alt=3D"You miss 100% of t=
+he meals you don=E2=80=99t taste. NHL=C2=AE Star Sticks are so back, but no=
+t for long. Get one of seven mini sticks with every NHL=C2=AE Star Sticks M=
+eal.=E2=80=A0 Hurry, they=E2=80=99re only here for a limited time." title=
+=3D"You miss 100% of the meals you don=E2=80=99t taste. NHL=C2=AE Star Stic=
+ks are so back, but not for long. Get one of seven mini sticks with every N=
+HL=C2=AE Star Sticks Meal.=E2=80=A0 Hurry, they=E2=80=99re only here for a =
+limited time." class=3D"fullImage" width=3D"600" height=3D"auto" style=3D"w=
+idth: 600px; display: block; max-width: 600px; height: auto; color: #ffffff=
+; white-space: pre; font-family: Speedee, Helvetica, Arial, sans-serif; lin=
+e-height: 50%; outline: none; margin-top: -2px; text-decoration: none; -ms-=
+interpolation-mode: bicubic;" border=3D"0">=0A                  </td>=0A   =
+             </tr>=0A                <!-- CTA -->=0A                <tr>=0A=
+            <td align=3D"center" bgcolor=3D"#FFBC0D" class=3D"cta" style=3D=
+"border-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0; mso-p=
+adding-alt: 40px 0 0 0; padding: 40px 0 0;">=0A              <a href=3D"htt=
+ps://link.canada.mcdonalds.com/f/a/pORf6eMiwRQ4GFNFzwQEMA~~/AAQRxRA~/1e0ek3=
+4yTvHJwiWt3ulVIj4CgOMJCg-y0YEabH5LCmykspnc9dt61oXKd5_Oz5hLNLKRC2bBDwtHmvETW=
+HmEoLtl4vrPlbAxiOxcOVWkLMhv5I9AmlNrT1dRI2F1nNuQcrfg-cwGvv-HmxRKaZgYPyWqyyq4=
+B_6iCQq6CNWm4r0~" style=3D"display: inline-block;">=0A                <img =
+src=3D"https://www.mcdonalds.com/content/dam/sites/ca/crm/adhoc/2026/3/show=
+down-mini-faceoff-2/en/cta-en.png" width=3D"180" height=3D"55" style=3D"wid=
+th: 180px; display: block; max-width: 180px; max-height: 55px; height: 55px=
+; text-align: center; outline: none; text-decoration: none; -ms-interpolati=
+on-mode: bicubic;" alt=3D"Order Now" border=3D"0"></a>=0A            </td>=
+=0A          </tr>=0A              </table>=0A            </td>=0A         =
+ </tr>=0A        </table>=0A=09=09<!-- Second  Module End -->=0A        =0A=
+=09=09=0A      </td>=0A    </tr>=0A    <!-- End Main Creative -->=0A    <!-=
+-FOOTER-->=0A    <tr>=0A      <td width=3D"600" style=3D"width: 600px; bord=
+er-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0;">=0A      =
+  <table width=3D"600" class=3D"wrap" align=3D"center" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"width: 600px; border-spacing: 0; border-collapse: =
+collapse; mso-table-lspace: 0; mso-table-rspace: 0; max-width: 600px;" bgco=
+lor=3D"#ffffff">=0A          <tr>=0A            <td width=3D"100%" border=
+=3D"0" style=3D"border-collapse: collapse; mso-table-lspace: 0; mso-table-r=
+space: 0;">=0A              <table class=3D"mobile_tbl" cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"width: 100%; border-s=
+pacing: 0; border-collapse: collapse; mso-table-lspace: 0; mso-table-rspace=
+: 0;" bgcolor=3D"#ffffff">=0A                <tr>=0A                  <td w=
+idth=3D"600" height=3D"30" style=3D"width: 100%; font-size: 30px; line-heig=
+ht: 30px; border-collapse: collapse; mso-table-lspace: 0; mso-table-rspace:=
+ 0;" bgcolor=3D"#ffffff">&nbsp;</td>=0A                </tr>=0A            =
+  </table>=0A              <table width=3D"100%" class=3D"footer" align=3D"=
+left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" bgcolor=3D"#ffffff" =
+style=3D"border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0;=
+ mso-table-rspace: 0;">=0A                <tr>=0A                  <td clas=
+s=3D"whitespace resize_10" style=3D"font-size: 11px; mso-line-height: exact=
+ly; font-family: 'Speedee', Helvetica, Arial, sans-serif; line-height: 30px=
+; border-collapse: collapse; width: 25px; mso-table-lspace: 0; mso-table-rs=
+pace: 0; padding: 0; border-style: none;">&nbsp;<br>=0A</td>=0A            =
+      <td class=3D"whitespace" style=3D"font-size: 11px; mso-line-height: e=
+xactly; font-family: 'Speedee', Helvetica, Arial, sans-serif; line-height: =
+30px; border-collapse: collapse; border-top-width: 1px; border-top-color: #=
+d8d8d8; border-top-style: solid; mso-table-lspace: 0; mso-table-rspace: 0; =
+padding: 0;">&nbsp;<br>=0A</td>=0A                  <td class=3D"whitespace=
+ resize_10" style=3D"font-size: 11px; mso-line-height: exactly; font-family=
+: 'Speedee', Helvetica, Arial, sans-serif; line-height: 30px; border-collap=
+se: collapse; width: 25px; mso-table-lspace: 0; mso-table-rspace: 0; paddin=
+g: 0; border-style: none;">&nbsp;<br>=0A</td>=0A                </tr>=0A   =
+           </table>=0A            </td>=0A          </tr>=0A          <tr>=
+=0A            <td width=3D"100%" border=3D"0" style=3D"border-collapse: co=
+llapse; mso-table-lspace: 0; mso-table-rspace: 0;">=0A              <!-- So=
+cial -->=0A              <table width=3D"100%" class=3D"mobile_tbl" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" bgcolor=3D"#fff=
+fff" style=3D"width: 100%; border-spacing: 0; border-collapse: collapse; ms=
+o-table-lspace: 0; mso-table-rspace: 0;">=0A                <!-- Icons -->=
+=0A                <tr>=0A                  <td class=3D"hideMe" width=3D"5=
+%" border=3D"0" style=3D"border-collapse: collapse; width: 5%; mso-table-ls=
+pace: 0; mso-table-rspace: 0;">&nbsp;<br>=0A</td>=0A                  <td w=
+idth=3D"12" border=3D"0" style=3D"border-collapse: collapse; width: 12px; m=
+so-table-lspace: 0; mso-table-rspace: 0;" align=3D"center">&nbsp;<br>=0A</t=
+d>=0A                  <td width=3D"120" border=3D"0" style=3D"border-colla=
+pse: collapse; width: 120px; mso-table-lspace: 0; mso-table-rspace: 0;" ali=
+gn=3D"center" valign=3D"bottom">=0A                    <a href=3D"https://l=
+ink.canada.mcdonalds.com/f/a/GXnAfR6lBMaYJwQ9tVYseA~~/AAQRxRA~/uGLEHBoNqTOd=
+Ayoz_c41IqiTHpm9y4BCKZ3-OFMNCdm2U2FIO6Uhhv6lH43obx3cEmFNXXr_rLwRFe1vtWE4koC=
+r3EU84fzooWwd9O7drs5tlNpvoCWB8pOrZiMDyw2BQgcvInR8N4Hf9-GEjxlp_Q~~" target=
+=3D"_blank">=0A                      <img src=3D"https://www.mcdonalds.com/=
+content/dam/sites/ca/crm/library/header-footer/Footer-MyRewards_v3.png" wid=
+th=3D"84" alt=3D"MyMcDonald's Rewards" title=3D"MyMcDonald's Rewards" style=
+=3D"display: block; outline: none; text-decoration: none; -ms-interpolation=
+-mode: bicubic; border-width: 0;">=0A                    </a>=0A           =
+       </td>=0A                  <td width=3D"12" border=3D"0" style=3D"bor=
+der-collapse: collapse; width: 12px; mso-table-lspace: 0; mso-table-rspace:=
+ 0;" align=3D"center">&nbsp;<br>=0A</td>=0A                   <td width=3D"=
+120" border=3D"0" style=3D"border-collapse: collapse; width: 120px; mso-tab=
+le-lspace: 0; mso-table-rspace: 0;" align=3D"center" valign=3D"bottom">=0A =
+                   <a href=3D"https://link.canada.mcdonalds.com/f/a/wLlQ9QR=
+VdrbYq_AaqBBDXg~~/AAQRxRA~/o7wIfkZgTr1LqugCqbA-JWSICx5FrmNP31PvAJDtv5AjGAfY=
+DeS4AKQBIYxQDLo1dDqgNAxW72Wl89KKaMoc05gnlvQbDMau1GVGi39fqZYFFP3Mr8Kr6kIMEnS=
+adnnhrjgGr7BxRLtkxMmWn2zFlPwB1B9a8s6LABwP2XAR3wQ~" target=3D"_blank">=0A   =
+                   <img src=3D"https://www.mcdonalds.com/content/dam/sites/=
+ca/crm/library/header-footer/Footer-McDelivery.png" width=3D"48" alt=3D"McD=
+elivery" title=3D"McDelivery" style=3D"display: block; outline: none; text-=
+decoration: none; -ms-interpolation-mode: bicubic; border-width: 0;">=0A   =
+                 </a>=0A                  </td>=0A                  <td wid=
+th=3D"12" border=3D"0" style=3D"border-collapse: collapse; width: 12px; mso=
+-table-lspace: 0; mso-table-rspace: 0;" align=3D"center">&nbsp;<br>=0A</td>=
+=0A                  <td width=3D"120" border=3D"0" style=3D"border-collaps=
+e: collapse; width: 120px; mso-table-lspace: 0; mso-table-rspace: 0;" align=
+=3D"center" valign=3D"bottom">=0A                    <a href=3D"https://lin=
+k.canada.mcdonalds.com/f/a/1uDqUa2O-8RVZs1-hu9zsA~~/AAQRxRA~/uGLEHBoNqTOdAy=
+oz_c41ImReZhk5KWIo3Pf2dEQZBeWBwg0jcPHcsCy0iZTq1_FaK1FPSjRL6LvAfO1YYuh3tAApv=
+IpHiNTGfNNiYwwNgF833fZdKpLvFVJbk8nJViYuD4QfvUAY9TQftTFJCOk1SA~~" target=3D"=
+_blank">=0A                      <img src=3D"https://www.mcdonalds.com/cont=
+ent/dam/sites/ca/crm/library/header-footer/Footer-Offers_v3.png" width=3D"7=
+2" title=3D"Offers" style=3D"display: block; outline: none; text-decoration=
+: none; -ms-interpolation-mode: bicubic; border-width: 0;">=0A             =
+       </a>=0A                  </td>=0A                  <td width=3D"12" =
+border=3D"0" style=3D"border-collapse: collapse; width: 12px; mso-table-lsp=
+ace: 0; mso-table-rspace: 0;" align=3D"center">&nbsp;<br>=0A</td>=0A       =
+           <td width=3D"120" border=3D"0" style=3D"border-collapse: collaps=
+e; width: 120px; mso-table-lspace: 0; mso-table-rspace: 0;" align=3D"center=
+" valign=3D"bottom">=0A                    <a href=3D"https://link.canada.m=
+cdonalds.com/f/a/v6_AjNmw7AaVqOROVss4Mw~~/AAQRxRA~/uGLEHBoNqTOdAyoz_c41IsSu=
+98zDXwtQYcBBgw5T9J4xVX2ibBkKYTe8NT3sxmAnpU7swQkNffGr3clsWjq0lwP3U0J1vq9S2DZ=
+ebZ85OO5MQV5Eyy4fozIOZH3IHqPzCrGoDbWMUmFQ9HoRG0S86g~~" target=3D"_blank">=
+=0A                      <img src=3D"https://www.mcdonalds.com/content/dam/=
+sites/ca/crm/library/header-footer/Footer-Hiring.png" width=3D"34" alt=3D"H=
+iring" title=3D"Hiring" style=3D"display: block; outline: none; text-decora=
+tion: none; -ms-interpolation-mode: bicubic; border-width: 0;">=0A         =
+           </a>=0A                  </td>=0A                  <td width=3D"=
+12" border=3D"0" style=3D"border-collapse: collapse; width: 12px; mso-table=
+-lspace: 0; mso-table-rspace: 0;" align=3D"center">&nbsp;<br>=0A</td>=0A<td=
+ class=3D"hideMe" width=3D"5%" border=3D"0" style=3D"border-collapse: colla=
+pse; width: 5%; mso-table-lspace: 0; mso-table-rspace: 0;">&nbsp;<br>=0A</t=
+d>=0A                </tr>=0A                <!-- Verbiage -->=0A          =
+      <tr>=0A                  <td class=3D"hideMe" width=3D"5%" border=3D"=
+0" style=3D"border-collapse: collapse; width: 5%; mso-table-lspace: 0; mso-=
+table-rspace: 0;">&nbsp;<br>=0A</td>=0A                  <td width=3D"12" b=
+order=3D"0" style=3D"border-collapse: collapse; width: 12px; mso-table-lspa=
+ce: 0; mso-table-rspace: 0;" align=3D"center">&nbsp;<br>=0A</td>=0A        =
+          <td width=3D"120" border=3D"0" style=3D"border-collapse: collapse=
+; width: 120px; font-family: Speedee, Helvetica, Arial, sans-serif; color: =
+#000000; font-size: 14px; line-height: 16px; mso-line-height-rule: exactly;=
+ font-weight: bold; mso-table-lspace: 0; mso-table-rspace: 0;" align=3D"cen=
+ter">=0A                    <br><a href=3D"https://link.canada.mcdonalds.co=
+m/f/a/oBMaTnMe1o_UAk2haIIolw~~/AAQRxRA~/uGLEHBoNqTOdAyoz_c41IqiTHpm9y4BCKZ3=
+-OFMNCdmdgtbdwg_2lP1LXdtKFII6Dtvc4Yo43kd2TkU-kvZNP7-7YJ_rk6m_yMKslDmUhwWbiB=
+14PQ2Tv1Otd_scXjeughks1a_3fhUtMX6SqRKyew~~" target=3D"_blank" style=3D"colo=
+r: #000000;">=0A                    Rewards=0A                    </a>=0A  =
+                </td>=0A                  <td width=3D"12" border=3D"0" sty=
+le=3D"border-collapse: collapse; width: 12px; font-size: 20px; line-height:=
+ 16px; mso-table-lspace: 0; mso-table-rspace: 0;" align=3D"center">=0A<br>|=
+</td>=0A                  <td width=3D"120" border=3D"0" style=3D"border-co=
+llapse: collapse; width: 120px; font-family: Speedee, Helvetica, Arial, san=
+s-serif; color: #000000; font-size: 14px; line-height: 16px; mso-line-heigh=
+t-rule: exactly; font-weight: bold; mso-table-lspace: 0; mso-table-rspace: =
+0;" align=3D"center">=0A                    <br><a href=3D"https://link.can=
+ada.mcdonalds.com/f/a/FLWp_hZKRqHScorBUo59GA~~/AAQRxRA~/o7wIfkZgTr1LqugCqbA=
+-JWSICx5FrmNP31PvAJDtv5AjGAfYDeS4AKQBIYxQDLo1MEVGWfoPr83w9fWRJXMb66ECd3KDHK=
+UWDH8LZcFCtnNcVSyLpiGvfpqxF_dyKA7mze9qISpnPTTP2iDfrOhRgXVCPXSKvSk9YCSPeL4Hi=
+sc~" target=3D"_blank" style=3D"color: #000000;">=0A                    McD=
+elivery=0A                    </a>=0A                  </td>=0A            =
+      <td width=3D"12" border=3D"0" style=3D"border-collapse: collapse; wid=
+th: 12px; font-size: 20px; line-height: 16px; mso-table-lspace: 0; mso-tabl=
+e-rspace: 0;" align=3D"center">=0A<br>|</td>=0A                  <td width=
+=3D"120" border=3D"0" style=3D"border-collapse: collapse; width: 120px; fon=
+t-family: Speedee, Helvetica, Arial, sans-serif; color: #000000; font-size:=
+ 14px; line-height: 16px; mso-line-height-rule: exactly; font-weight: bold;=
+ mso-table-lspace: 0; mso-table-rspace: 0;" align=3D"center">=0A           =
+         <br><a href=3D"https://link.canada.mcdonalds.com/f/a/BdqVCz1o086N6=
+ORJDKN2Eg~~/AAQRxRA~/uGLEHBoNqTOdAyoz_c41ImReZhk5KWIo3Pf2dEQZBeVT8POmaXdTjc=
+5oHYW6BVpJCY2ethkTUtZIWc6xZwTwihvzPzdR7Hbt3x3ihCLRy2xe5pvV_AXmlRji48gxiO3xU=
+gQ2MM4dNLSwHW1kDtvmkQ~~" target=3D"_blank" style=3D"color: #000000;">=0A   =
+                 Offers=0A                    </a>=0A                  </td=
+>=0A                  <td width=3D"12" border=3D"0" style=3D"border-collaps=
+e: collapse; width: 12px; font-size: 20px; line-height: 16px; mso-table-lsp=
+ace: 0; mso-table-rspace: 0;" align=3D"center">=0A<br>|</td>=0A            =
+      <td width=3D"120" border=3D"0" style=3D"border-collapse: collapse; wi=
+dth: 120px; font-family: Speedee, Helvetica, Arial, sans-serif; color: #000=
+000; font-size: 14px; line-height: 16px; mso-line-height-rule: exactly; fon=
+t-weight: bold; mso-table-lspace: 0; mso-table-rspace: 0;" align=3D"center"=
+>=0A                    <br>=0A                    <a href=3D"https://link.=
+canada.mcdonalds.com/f/a/NOpG2aZQUsQ3s2tcELB7OQ~~/AAQRxRA~/uGLEHBoNqTOdAyoz=
+_c41IsSu98zDXwtQYcBBgw5T9J7WQXsZx1Wud2qiK3s0qKS7J9Gpru3TnNFXCT9e2JrNjuMkwey=
+HCTWnHLtlcvy6phSDabU9I_j_sxYkWEQRET-z0lRydah6msFzdYBTRCTzaw~~" target=3D"_b=
+lank" style=3D"color: #000000;">=0A                      Hiring=0A         =
+           </a>=0A                  </td>=0A                  <td width=3D"=
+12" border=3D"0" style=3D"border-collapse: collapse; width: 12px; mso-table=
+-lspace: 0; mso-table-rspace: 0;" align=3D"center">&nbsp;<br>=0A</td>=0A   =
+               <td class=3D"hideMe" width=3D"5%" border=3D"0" style=3D"bord=
+er-collapse: collapse; width: 5%; mso-table-lspace: 0; mso-table-rspace: 0;=
+">&nbsp;<br>=0A</td>=0A                </tr>=0A              </table>=0A   =
+         </td>=0A          </tr>=0A          <!--Line-->=0A          <tr>=
+=0A            <td width=3D"100%" border=3D"0" style=3D"border-collapse: co=
+llapse; mso-table-lspace: 0; mso-table-rspace: 0;">=0A              <table =
+class=3D"mobile_tbl" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%" style=3D"width: 100%; border-spacing: 0; border-collapse: collaps=
+e; mso-table-lspace: 0; mso-table-rspace: 0;" bgcolor=3D"#ffffff">=0A      =
+          <tr>=0A                  <td width=3D"600" height=3D"30" style=3D=
+"width: 100%; font-size: 30px; line-height: 30px; border-collapse: collapse=
+; mso-table-lspace: 0; mso-table-rspace: 0;" bgcolor=3D"#ffffff">&nbsp;</td=
+>=0A                </tr>=0A              </table>=0A              <table w=
+idth=3D"100%" class=3D"footer" align=3D"left" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" bgcolor=3D"#ffffff" style=3D"border-spacing: 0; border-=
+collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0;">=0A         =
+       <tr>=0A                  <td class=3D"whitespace resize_10" style=3D=
+"font-size: 11px; mso-line-height: exactly; font-family: 'Speedee', Helveti=
+ca, Arial, sans-serif; line-height: 30px; border-collapse: collapse; width:=
+ 25px; mso-table-lspace: 0; mso-table-rspace: 0; padding: 0; border-style: =
+none;">&nbsp;<br>=0A</td>=0A                  <td class=3D"whitespace" styl=
+e=3D"font-size: 11px; mso-line-height: exactly; font-family: 'Speedee', Hel=
+vetica, Arial, sans-serif; line-height: 30px; border-collapse: collapse; bo=
+rder-top-width: 1px; border-top-color: #d8d8d8; border-top-style: solid; ms=
+o-table-lspace: 0; mso-table-rspace: 0; padding: 0;">&nbsp;<br>=0A</td>=0A =
+                 <td class=3D"whitespace resize_10" style=3D"font-size: 11p=
+x; mso-line-height: exactly; font-family: 'Speedee', Helvetica, Arial, sans=
+-serif; line-height: 30px; border-collapse: collapse; width: 25px; mso-tabl=
+e-lspace: 0; mso-table-rspace: 0; padding: 0; border-style: none;">&nbsp;<b=
+r>=0A</td>=0A                </tr>=0A              </table>=0A            <=
+/td>=0A          </tr>=0A          <!--End Line-->=0A          <tr>=0A     =
+       <td width=3D"100%" border=3D"0" style=3D"border-collapse: collapse; =
+mso-table-lspace: 0; mso-table-rspace: 0;">=0A              <!-- Social -->=
+=0A              <table width=3D"100%" class=3D"mobile_tbl" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" align=3D"center" bgcolor=3D"#ffffff" styl=
+e=3D"width: 100%; border-spacing: 0; border-collapse: collapse; mso-table-l=
+space: 0; mso-table-rspace: 0;">=0A                <tr>=0A                 =
+ <td class=3D"hideMe" width=3D"10%" border=3D"0" style=3D"border-collapse: =
+collapse; width: 5%; mso-table-lspace: 0; mso-table-rspace: 0;">&nbsp;<br>=
+=0A</td>=0A                  <td class=3D"social" width=3D"30" border=3D"0"=
+ style=3D"border-collapse: collapse; width: 30px; mso-table-lspace: 0; mso-=
+table-rspace: 0;" align=3D"center">&nbsp;<br>=0A</td>=0A                  <=
+td class=3D"social" width=3D"30" border=3D"0" style=3D"border-collapse: col=
+lapse; width: 30px; mso-table-lspace: 0; mso-table-rspace: 0;" align=3D"cen=
+ter">=0A                    <a href=3D"https://link.canada.mcdonalds.com/f/=
+a/9IP8FJTbb_8KLbEopyzBng~~/AAQRxRA~/1e0ek34yTvHJwiWt3ulVIhwz61AVB7YUgcd65V6=
+Dg36CyG4grvrJYp09_6PbDpxWtUWZAX_CpxOAVhdirkdg0VcYjX-f-SGy_spUY7YGOAldPR1Ucc=
+1NFXZQLi2J4HvkHyJmNPZAjDh0gqJe2lZjwAjGHMTTNSMopSZxZ0aMWbw~" target=3D"_blan=
+k">=0A                      <img src=3D"https://www.mcdonalds.com/content/d=
+am/sites/ca/crm/library/header-footer/Footer-Facebook.png" width=3D"30" alt=
+=3D"Facebook" title=3D"Facebook" style=3D"display: block; outline: none; te=
+xt-decoration: none; -ms-interpolation-mode: bicubic; border-width: 0;">=0A=
+                    </a>=0A                  </td>=0A                  <td =
+class=3D"social" width=3D"30" border=3D"0" style=3D"border-collapse: collap=
+se; width: 30px; mso-table-lspace: 0; mso-table-rspace: 0;" align=3D"center=
+">&nbsp;<br>=0A</td>=0A                  <td class=3D"social" width=3D"30" =
+border=3D"0" style=3D"border-collapse: collapse; width: 30px; mso-table-lsp=
+ace: 0; mso-table-rspace: 0;" align=3D"center">=0A                    <a hr=
+ef=3D"https://link.canada.mcdonalds.com/f/a/5wzi95fdJqD7ePKGXFPzpQ~~/AAQRxR=
+A~/Pw7jh7BHs4IhdMBDxygKfXChzhXrHjNiDVScMF9AIVP8AZ0KTa6wiOO2TWSYo1lGSmcg3IA0=
+XNYeKk9hSvWQTd7pMsmXXQ-19AEWOdlc6Wyv_4r8zVx4k47GFuB3LSNQrGAYH2qh9OND--5er6w=
+kIELQB8FCqSEhorZeWV-bEbw~" target=3D"_blank">=0A                      <img =
+src=3D"https://www.mcdonalds.com/content/dam/sites/ca/crm/library/header-fo=
+oter/Footer-Youtube.png" width=3D"30" alt=3D"Youtube" title=3D"Youtube" sty=
+le=3D"display: block; outline: none; text-decoration: none; -ms-interpolati=
+on-mode: bicubic; border-width: 0;">=0A                    </a>=0A         =
+         </td>=0A                  <td class=3D"social" width=3D"30" border=
+=3D"0" style=3D"border-collapse: collapse; width: 30px; mso-table-lspace: 0=
+; mso-table-rspace: 0;" align=3D"center">&nbsp;<br>=0A</td>=0A             =
+     <td class=3D"social" width=3D"30" border=3D"0" style=3D"border-collaps=
+e: collapse; width: 30px; mso-table-lspace: 0; mso-table-rspace: 0;" align=
+=3D"center">=0A                    <a href=3D"https://link.canada.mcdonalds=
+.com/f/a/8i7RuS_dJaXiVYlgBohtJQ~~/AAQRxRA~/l3mBgIylkq2B5pnRbcZpQZ4-rt9ORCB=
+XEeKflTPgMSOuEj0pps7HtdtkaMHlrrcaS27Hjt0M4HO2tPzSZj0sbX_68BicyaL4FxMS-exmyt=
+vnXCCpJ9QAnVugHmT4uIr1TyGgiam9oPkegQN9bx_f9bNNnyO5LItGgCxYg2CFd2g~" target=
+=3D"_blank">=0A                      <img src=3D"https://www.mcdonalds.com/=
+content/dam/sites/ca/crm/library/header-footer/Footer-Instagram.png" width=
+=3D"30" alt=3D"Instagram" title=3D"Instagram" style=3D"display: block; outl=
+ine: none; text-decoration: none; -ms-interpolation-mode: bicubic; border-w=
+idth: 0;">=0A                    </a>=0A                  </td>=0A         =
+         <td class=3D"social" width=3D"30" border=3D"0" style=3D"border-col=
+lapse: collapse; width: 30px; mso-table-lspace: 0; mso-table-rspace: 0;" al=
+ign=3D"center">&nbsp;<br>=0A</td>=0A                  <td class=3D"social" =
+width=3D"30" border=3D"0" style=3D"border-collapse: collapse; width: 30px; =
+mso-table-lspace: 0; mso-table-rspace: 0;" align=3D"center">=0A            =
+        <a href=3D"https://link.canada.mcdonalds.com/f/a/zE6sxHbY1yKsPFZfN4=
+5qZw~~/AAQRxRA~/Pw7jh7BHs4IhdMBDxygKfd9INjUIGxhp9-YJku_2Y125-TiWlLZuNT6l2K6=
+eDD78TaosIk4wldpHvzPZrlq51IlvNF6HSFYOyZ8Bt60TdFM9lOC_vblTVDAejSw_uZdp0sCo1D=
+BBNcVDVbEYUdh3_XObFuyRo9tS6s7pk2uelYM~" target=3D"_blank">=0A              =
+        <img src=3D"https://www.mcdonalds.com/content/dam/sites/ca/crm/libr=
+ary/header-footer/Footer-Snapchat.png" width=3D"30" alt=3D"SnapChat" title=
+=3D"SnapChat" style=3D"display: block; outline: none; text-decoration: none=
+; -ms-interpolation-mode: bicubic; border-width: 0;">=0A                   =
+ </a>=0A                  </td>=0A                  <td class=3D"social" wi=
+dth=3D"30" border=3D"0" style=3D"border-collapse: collapse; width: 30px; ms=
+o-table-lspace: 0; mso-table-rspace: 0;" align=3D"center">&nbsp;<br>=0A</td=
+>=0A                  <td class=3D"social" width=3D"30" border=3D"0" style=
+=3D"border-collapse: collapse; width: 30px; mso-table-lspace: 0; mso-table-=
+rspace: 0;" align=3D"center">=0A                    <a href=3D"https://link=
+.canada.mcdonalds.com/f/a/AU4igUiWB3lBQkeIoVPRCg~~/AAQRxRA~/1e0ek34yTvHJwi=
+Wt3ulVIieor3RKax_xdknPl_wXGCzEgwuvmebBayDpMI9ak_vTVEvCm6NabOxyzqREGjF0tzQNU=
+NvMNqlIBD4xNUvh6C2Hr1vPUD7Tyc7140gziYJ6yM872TeS_3lJKcjoM4l-iwEBngIC10SET8FQ=
+2u2L2Y8~" target=3D"_blank">=0A                      <img src=3D"https://ww=
+w.mcdonalds.com/content/dam/sites/ca/crm/library/header-footer/Footer-Pinte=
+rest.png" width=3D"30" alt=3D"Pinterest" title=3D"Pinterest" style=3D"displ=
+ay: block; outline: none; text-decoration: none; -ms-interpolation-mode: bi=
+cubic; border-width: 0;">=0A                    </a>=0A                  </=
+td>=0A                  <td class=3D"social" width=3D"30" border=3D"0" styl=
+e=3D"border-collapse: collapse; width: 30px; mso-table-lspace: 0; mso-table=
+-rspace: 0;" align=3D"center">&nbsp;<br>=0A</td>=0A                  <td cl=
+ass=3D"social" width=3D"30" border=3D"0" style=3D"border-collapse: collapse=
+; width: 30px; mso-table-lspace: 0; mso-table-rspace: 0;" align=3D"center">=
+=0A                    <a href=3D"https://link.canada.mcdonalds.com/f/a/FZc=
+Y9z1XJA45nLDe8RL4fA~~/AAQRxRA~/SaQ5syLVlGL5oH02u6oqt0Xm57oewxfPedIFjTnwhadP=
+1zUn2H7NR_l16Jii3NloJUnP7DTiYJKdDd64EJPWV9sV9iTaBBTEU95u1n_YOBUDCKbuYAG2Ccw=
+9LEFQdpLEfViK4TJeg8A53U2xG0uy1kfWF0CwT0ggoae4_nhfbFg~" target=3D"_blank">=
+=0A                      <img src=3D"https://www.mcdonalds.com/content/dam/=
+sites/ca/crm/library/header-footer/Footer-TikTok.png" width=3D"30" alt=3D"T=
+ikTok" title=3D"TikTok" style=3D"display: block; outline: none; text-decora=
+tion: none; -ms-interpolation-mode: bicubic; border-width: 0;">=0A         =
+           </a>=0A                  </td>=0A                  <td class=3D"=
+social" width=3D"30" border=3D"0" style=3D"border-collapse: collapse; width=
+: 30px; mso-table-lspace: 0; mso-table-rspace: 0;" align=3D"center">&nbsp;<=
+br>=0A</td>=0A                  <td class=3D"hideMe" width=3D"10%" border=
+=3D"0" style=3D"border-collapse: collapse; width: 5%; mso-table-lspace: 0; =
+mso-table-rspace: 0;">&nbsp;<br>=0A</td>=0A                </tr>=0A        =
+      </table>=0A            </td>=0A          </tr>=0A          <!--End So=
+cial-->=0A          =0A          =0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=0A=0A<tr>=
+=0A  <td width=3D"100%" border=3D"0" style=3D"border-collapse: collapse; ms=
+o-table-lspace: 0; mso-table-rspace: 0;">=0A    <table width=3D"100%" class=
+=3D"mobile_tbl" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"c=
+enter" bgcolor=3D"#ffffff" style=3D"width: 100%; border-spacing: 0; border-=
+collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0;">=0A      <tr=
+>=0A        <td style=3D"height: 30px; border-collapse: collapse; mso-table=
+-lspace: 0; mso-table-rspace: 0;" height=3D"30" bgcolor=3D"#ffffff">&nbsp;<=
+/td>=0A      </tr>=0A      <tr>=0A        <td bgcolor=3D"#ffffff" height=3D=
+"30" style=3D"height: 30px; font-size: 16px; border-collapse: collapse; mso=
+-table-lspace: 0; mso-table-rspace: 0;" align=3D"center">=0A          <a cl=
+ass=3D"apple_legal" href=3D"https://link.canada.mcdonalds.com/f/a/Zu3ogyoPy=
+4VIfeBrCLZvSQ~~/AAQRxRA~/Xv771qTpFSA644ZA1vcSPSaBgMPj8H2ejA0oqe00LI8sEcqNgF=
+avYaq1WG-jpATFjK_E1JV3JgIq56wlWqANJZ2_eCn_lpFF6sMuQ0jnQWQ0DBW_-0TRKZhkLyx0E=
+_gEwAdXSe2djy92f2O-TCkGbyNXCr62BFiwhlQ636YJyVZXmfXdKL8x_yeG5ZxSfXwW" target=
+=3D"_blank" style=3D"text-decoration: none; color: #000000; font-family: Sp=
+eedee App, arial, sans serif; font-weight: bold; border-width: 0;">Corporat=
+e</a> &nbsp; <a class=3D"apple_legal" href=3D"https://link.canada.mcdonalds=
+.com/f/a/TJVou9SM_wtGmlpGq1GL7A~~/AAQRxRA~/SaQ5syLVlGL5oH02u6oqt8HDot4X-xO=
+0bTvoa9ZoAPFE0uiTmMXcvjaXKSkOjNeGhowNInsdctjbhSgf9wdrhbF0W5nx3tkKRxw3Lp0n3L=
+z6WrgFuAkBjemUSilMi80muQZNCIcx5XVqk0DDyUb6FmOt9LzqucKeTHBtGcDXkcc~" target=
+=3D"_blank" style=3D"text-decoration: none; color: #000000; font-family: Sp=
+eedee App, arial, sans serif; font-weight: bold; border-width: 0;">Privacy<=
+/a> &nbsp; <a class=3D"apple_legal" href=3D"https://link.canada.mcdonalds.c=
+om/f/a/IkPPMOby2ZYinbsdMzKHnw~~/AAQRxRA~/Xv771qTpFSA644ZA1vcSPSaBgMPj8H2ejA=
+0oqe00LI_FxRUQypU1sRv8Y1dJWmBtFXxi0dDjri-L3S13nlhl1ajh75jY1tXoPPjMHoF4ErYr-=
+50W7h4WRwtQXufxHfA5opd7SVUXhXRwpxVokyNsQJlvomRgtKeEsYhC709CroPozMfo9KLMC1DO=
+kdoIBLqK" target=3D"_blank" style=3D"text-decoration: none; color: #000000;=
+ font-family: Speedee App, arial, sans serif; font-weight: bold; border-wid=
+th: 0;">Terms &amp; Conditions</a> &nbsp; <a class=3D"apple_legal" href=3D"=
+https://link.canada.mcdonalds.com/f/a/4c8N8EJO4Mcmm-Nep4GS8w~~/AAQRxRA~/_na=
+VEmsDpB1n0bD0SQEyHCudYRTL8WjZBhuI9fO9NzqFKOSNx145E3ReZ5e0pNLQ5mwSHx70EmkKeC=
+pbnXdZ57XcGKTw28pE1JLqCWQEnQErc-a63Qp_CIzP1ObfnidzA6eTdCYPhhMzT9TEEAjBhLB0R=
+D7SpEob_V6ThBFac_eWcKi6tmgDgLM-lDMCvpDW" target=3D"_blank" style=3D"text-de=
+coration: none; color: #000000; font-family: Speedee App, arial, sans serif=
+; font-weight: bold; border-width: 0;">Unsubscribe</a>=0A        </td>=0A  =
+    </tr>=0A      <tr>=0A        <td bgcolor=3D"#ffffff" height=3D"30" styl=
+e=3D"height: 30px; border-collapse: collapse; mso-table-lspace: 0; mso-tabl=
+e-rspace: 0;">&nbsp;<br>=0A</td>=0A      </tr>=0A    </table>=0A    <table =
+width=3D"100%" class=3D"footer" align=3D"left" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" bgcolor=3D"#ffffff" style=3D"border-spacing: 0; border=
+-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0;">=0A      <t=
+r>=0A        <td class=3D"resize_10" style=3D"font-size: 11px; mso-line-hei=
+ght: exactly; font-family: 'Speedee', Helvetica, Arial, sans-serif; line-he=
+ight: 20px; border-collapse: collapse; width: 25px; mso-table-lspace: 0; ms=
+o-table-rspace: 0; padding: 0; border-style: none;">&nbsp;<br>=0A</td>=0A  =
+      <td style=3D"border-collapse: collapse; mso-table-lspace: 0; mso-tabl=
+e-rspace: 0;">=0A          <table width=3D"100%" cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" align=3D"left" style=3D"border-spacing: 0; border-co=
+llapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0;">=0A           =
+ <tr>=0A              <td style=3D"font-size: 12px; mso-line-height: exactl=
+y; font-family: Arial,sans-serif; line-height: 16px; color: #777777; text-d=
+ecoration: none; border-collapse: collapse; mso-table-lspace: 0; mso-table-=
+rspace: 0;">=0A                =C2=A9&nbsp;2026&nbsp;McDonald=E2=80=99s=0A =
+               <br>All Rights Reserved.=0A                <br><br>=0A      =
+          =0A=09=09  <sup style=3D"line-height: 0px; font-size: 75%;">*</su=
+p>Voting open <span style=3D"display: inline-block;">11:=E2=80=8B00&nbsp;=
+=E2=80=8BA.M - 11:=E2=80=8B00&nbsp;=E2=80=8BP.M.</span> ET March&nbsp;=E2=
+=80=8B10,&nbsp;=E2=80=8B2026. Limit 1 vote per&nbsp;person. =0A         <br=
+><br>=0A         Offers valid at participating McDonald=E2=80=99s restauran=
+ts in Canada. See offer terms <span style=3D"display: inline-block;">in-app=
+</span> for details. App download and registration&nbsp;required. =0A      =
+   <br><br>=0A         <sup style=3D"line-height: 0px; font-size: 75%;">=E2=
+=80=A0</sup>Limit one stick per meal purchase. Meal comes with choice of a =
+Hockey Hero Burger<sup style=3D"line-height: 0px; font-size: 75%;">=C2=AE</=
+sup>, Big Mac<sup style=3D"line-height: 0px; font-size: 75%;">=C2=AE</sup>,=
+ <span style=3D"display: inline-block;">10-pc</span> Chicken McNuggets<sup =
+style=3D"line-height: 0px; font-size: 75%;">=C2=AE</sup>, McVeggie=E2=84=A2=
+ or Spicy McVeggie=E2=84=A2. For a limited time only. While supplies last. =
+At participating McDonald=E2=80=99s restaurants in&nbsp;Canada. =0A        =
+ <br><br>=0A         MyMcDonald=E2=80=99s Rewards program available at part=
+icipating McDonald's restaurants in Canada. See Program Terms at <a href=3D=
+"https://link.canada.mcdonalds.com/f/a/dH80i2y5pBrT0NyYjquQOg~~/AAQRxRA~/NA=
+TNojZTDlpaB22xDnskVcLqtqYgOOui4mNyGyi5OAI2JOI4gBP3ywUKoS87h9EQN4RDA1t-hlsDX=
+2cNGd_73B8aIcMIXg8pWhrqkZgE3DlBlsg-521_mdIm9XYoAw_h" target=3D"_blank" styl=
+e=3D"color: #444444; text-decoration: underline; border-style: none;">mcdon=
+alds.ca</a> or <span style=3D"display: inline-block;">in-app</span> for det=
+ails. App download and registration&nbsp;required. =0A          <br><br>=0A=
+=09=09     =C2=A9&nbsp;NHL &amp; =C2=A9&nbsp;NHLPA=0A=09=09     <br><br>=0A=
+          =0A                You are receiving this email as you have reque=
+sted to receive email communications from McDonald=E2=80=99s Canada. If you=
+ would like to stop receiving emails, you can <a href=3D"https://link.canad=
+a.mcdonalds.com/f/a/4c8N8EJO4Mcmm-Nep4GS8w~~/AAQRxRA~/_naVEmsDpB1n0bD0SQEyH=
+CudYRTL8WjZBhuI9fO9NzqFKOSNx145E3ReZ5e0pNLQ5mwSHx70EmkKeCpbnXdZ57XcGKTw28pE=
+1JLqCWQEnQErc-a63Qp_CIzP1ObfnidzA6eTdCYPhhMzT9TEEAjBhLB0RD7SpEob_V6ThBFac_e=
+WcKi6tmgDgLM-lDMCvpDW" target=3D"_blank" style=3D"color: #444444; text-deco=
+ration: underline; border-style: none;">unsubscribe</a>. You may continue t=
+o receive other electronic messages that do not require your consent under =
+applicable law, including transactional&nbsp;messages.=0A                <b=
+r><br>=0A                To ensure delivery to your inbox, please add =0A  =
+              <a href=3D"mailto:McDonaldsCanada@canada.mcdonalds.com" style=
+=3D"color: #444444; text-decoration: underline; border-style: none;">=0A   =
+             <span style=3D"color: #444444;">McDonaldsCanada@my.mcdonalds.c=
+a</span></a> to your safe sender list or address book.<br><br>=0A          =
+      <span>Have questions=3F <a href=3D"https://link.canada.mcdonalds.com/=
+f/a/pZT8-VThNQZ004GfvXQfZQ~~/AAQRxRA~/KrQ9HKGVHmp3ORrRpY1Ma48_q1_y2_WsHbs4P=
+W8qhrz4DtypOsToUPJumwJ6jeDXvI-RyDxDJo57kmj2xEGYrFsyVQ9ypEeP8_uSIo9XQJGixhl_=
+ojRYOp_0DfcZdxwpSH0BuqMJx_rXTFj38SM8QolaxVhRmqms2DQCeD2Wx3Z6Zw6l9u5LNJ2gZ5J=
+cULr4" target=3D"_blank" style=3D"color: #444444; text-decoration: underlin=
+e; border-style: none;">Contact us online</a> =0A                or call us=
+ at <a href=3D"tel:18884244622" style=3D"text-decoration: none; color: #515=
+151;">1-888-424-4622</a>. </span>=0A                <br><br class=3D"remove=
+">=0A                McDonald=E2=80=99s Restaurants of Canada Limited<br>=
+=0A                Guest Contact Centre<br>=0A                P.O. Box 6102=
+3<br>=0A                Winnipeg (Manitoba) R3M 3X8<br><br>=0A             =
+ </td>=0A            </tr>=0A          </table>=0A        </td>=0A        <=
+td class=3D"resize_10" style=3D"font-size: 11px; mso-line-height: exactly; =
+font-family: 'Speedee', Helvetica, Arial, sans-serif; line-height: 20px; bo=
+rder-collapse: collapse; width: 25px; mso-table-lspace: 0; mso-table-rspace=
+: 0; padding: 0; border-style: none;">&nbsp;<br>=0A</td>=0A      </tr>=0A  =
+  </table>=0A  </td>=0A</tr>=0A=0A        </table>=0A      </td>=0A    </tr=
+>=0A  </table>=0A<table width=3D"1" height=3D"1" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0" style=3D"border-spacing: 0; border-collapse: collaps=
+e; mso-table-lspace: 0; mso-table-rspace: 0;">=0A  <tr><td style=3D"font-si=
+ze: 0px; line-height: 0px; border-collapse: collapse; mso-table-lspace: 0; =
+mso-table-rspace: 0;">=0A    <img src=3D"http://mi.mcdonalds.ca/p/cp/5ba94a=
+a9e478879e/o.gif=3Fmi_u=3D32124000005062027" width=3D"1" height=3D"1" alt=
+=3D"" aria-hidden=3D"true" style=3D"outline: none; text-decoration: none; -=
+ms-interpolation-mode: bicubic;">=0A  </td></tr>=0A</table>=0A=0A<!-- *****=
+******************************************************** -->=0A<!-- Loyalty=
+ URL -->        =0A<!-- <a href=3D"https://link.canada.mcdonalds.com/f/a/sm=
+WfrGOfeksF4ZlkynnvkQ~~/AAQRxRA~/jvXdE8K_rWZAD5YQiLSHyYjAi1jqvxJgMguNroRlEHE=
+10F8k55dJW1l0eY2I8v_9p5c2L2R-T3HCX0gqoqZq0zi4amyZBEUd0BsrfaV-qWTIUVuUgzSG3E=
+Lo_5G6MUZVpGsfVAoqCDK1V8zcZOOdsSVEJgx2P_bFHyGloFl87xkGt1GIo3KIbvtjF4hGWbO9"=
+ target=3D"_blank" style=3D"color:#777777">Program Terms</a> -->          =
+=0A          =0A  =0A=0D=0A<img border=3D"0" width=3D"1" height=3D"1" alt=
+=3D"" src=3D"https://link.canada.mcdonalds.com/q/c5Vk6VmJJe4qfM2BCGNb3Q~~/A=
+AQRxRA~/G4qWXWsxhRsuipAlYHfko4fKfzXNuEpIO6ZI4ZaOBW1q207AYaB0_9_WtoUSwKzBHrY=
+xOS7xSoWn9XJWw19pGg~~">=0D=0A</body>=0A=0A</html>
+--_----GPC9pkyy370EKUc8IyX+RQ===_90/E7-20977-C2050B96--
+

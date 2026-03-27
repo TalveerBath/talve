@@ -1,0 +1,2749 @@
+Delivered-To: talveerbath@gmail.com
+Received: by 2002:a05:7110:b507:b0:2fe:1825:8528 with SMTP id hp7csp803584geb;
+        Sat, 14 Mar 2026 16:03:16 -0700 (PDT)
+X-Received: by 2002:a0c:ed47:0:b0:89c:4812:3c41 with SMTP id 6a1803df08f44-89c48123f0emr7393166d6.10.1773529396002;
+        Sat, 14 Mar 2026 16:03:16 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1773529395; cv=none;
+        d=google.com; s=arc-20240605;
+        b=L4xCbpwUcvH04zE31H9PjHjaA69WkVNscyXNayzdTCY48lzpPbHUFPTRbUcpFEm4Sk
+         Rk2zywAOfYuse1jhVTMMc/57KQW+lvm8x+Bx1YG1BCK/VWWI9loIJ9x5QUPlb8ZKQPQE
+         KcUR7IoGRCYQjlslvQJDZ6xnQ7k7+KOCi/8aDzY0+mrQfi5kDHPLFQtftjhtrFPg9P5b
+         cCZglVNh/VfbeO09TIsoVHQqbOjdGz9PXVQRVGplvqyCUOYi5oG0DN0eYU8F9Lhod3zy
+         N9kNf3+e+aO/pI7X9jTj+grdS1oEXriGt7b4pjft5oT9xz9xxXnq1GJ2WisLW5cUTO15
+         BvjA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:list-unsubscribe-post:list-unsubscribe:feedback-id:reply-to
+         :subject:message-id:mime-version:from:date:content-transfer-encoding
+         :dkim-signature:dkim-signature;
+        bh=bpNIdzTzqR429nFniCoDq9r4ffM2JOJCC4hMsDHDdQQ=;
+        fh=OYuaZ8rPTC9pUigfh3yoTx6H7O1WyMO4Twlu5+H+CBU=;
+        b=WcuYUXdAiVeMJL8aCPUn/DLpyaTHiN2LG+2vhDZEVQYIdAKI5pb3tjgt4OjGn09jPn
+         Pwh/sWiv4LZKTxnUktv6NOR2o96X/PxIcFFfMnk21RpHGJ3QJIhyUUtiI11hHb5iK0w7
+         /snhpMjhlwIvTr1TXAVMDiV16iCjQOLYxu41DQN2WR9ASqUVs+9OqsqPn35lP9SjLefE
+         cLhxSyLE24PGrgisB5gl847zIjrFJeLi7Nl6TuGN0BqOOdNb3M7propnWUXhoOUxQ6H0
+         q3VmCWIn+Mm0mstyiYagwVQJc48dxOvIu/MHxLlhc97THBkqkGXKEt0DhKR9D67UXmrt
+         cnpg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@em.pcoptimum.ca header.s=msg header.b=MtpyEbvA;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b="rATRyaE/";
+       spf=pass (google.com: domain of bounces+46805862-791c-talveerbath=gmail.com@msg.em.pcoptimum.ca designates 149.72.197.209 as permitted sender) smtp.mailfrom="bounces+46805862-791c-talveerbath=gmail.com@msg.em.pcoptimum.ca";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=em.pcoptimum.ca
+Return-Path: <bounces+46805862-791c-talveerbath=gmail.com@msg.em.pcoptimum.ca>
+Received: from o2503.msg.em.pcoptimum.ca (o2503.msg.em.pcoptimum.ca. [149.72.197.209])
+        by mx.google.com with ESMTPS id 6a1803df08f44-89a65bc98absi157959936d6.111.2026.03.14.16.03.15
+        for <talveerbath@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sat, 14 Mar 2026 16:03:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+46805862-791c-talveerbath=gmail.com@msg.em.pcoptimum.ca designates 149.72.197.209 as permitted sender) client-ip=149.72.197.209;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@em.pcoptimum.ca header.s=msg header.b=MtpyEbvA;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b="rATRyaE/";
+       spf=pass (google.com: domain of bounces+46805862-791c-talveerbath=gmail.com@msg.em.pcoptimum.ca designates 149.72.197.209 as permitted sender) smtp.mailfrom="bounces+46805862-791c-talveerbath=gmail.com@msg.em.pcoptimum.ca";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=em.pcoptimum.ca
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=em.pcoptimum.ca;
+	h=content-transfer-encoding:content-type:date:from:mime-version:subject:
+	reply-to:feedback-id:list-unsubscribe:list-unsubscribe-post:to:cc:content-type:
+	date:feedback-id:from:subject:to;
+	s=msg; t=1773529393; bh=bpNIdzTzqR429nFniCoDq9r4ffM2JOJCC4hMsDHDdQQ=;
+	b=MtpyEbvAL/yfU5FbNFwFlKkjgmMSGfaEk9Qbx1NAaXJcs2ZGX8Vl2VU0zzQmyBuObHOv
+	lZVvMrnhbQ5Z1zWWvE2QQoOIHRdJU2x+sYO7EOfbUw2Xy7NTiw+nwlfE5vADKY9gBWp0dI
+	W3MAXy5fifYm6/iJRFuRIc4BThXLt0h0c2Au3d/mu189pBmwqJbksZKv7ePqFUNzNNZEwm
+	NyTmepjISAjApEio3+VqIPzyD1Z5Mj1h3DWBxsfwo8+AM+8ZPw7eJEttE8KrvznVU/aR8r
+	lQmhq4DzutM2xpt6pLBr1TC3Cm9ubu4DuKlZpQXDY/Jt4GVPwTxmX4IRyIQjjMuA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-transfer-encoding:content-type:date:from:mime-version:subject:
+	reply-to:feedback-id:list-unsubscribe:list-unsubscribe-post:to:cc:content-type:
+	date:feedback-id:from:subject:to;
+	s=smtpapi; t=1773529393; bh=bpNIdzTzqR429nFniCoDq9r4ffM2JOJCC4hMsDHDdQQ=;
+	b=rATRyaE/fuHPm3QmRhMF9g/TtK8iPLh8ZJwLgsqsr6g7MP/VcvSZdtMDjx70HKCm9Mc4
+	Zxja3cxiAAEneHKtR9z9CFeDVW+e3AG1eecbBnisQBIQEscuKYmhfLSMjlNI6lNALA1kdK
+	Un6U8BnzRonry//4wRJa5jXY/+cRh92QE=
+Received: by recvd-c545696f7-pj52q with SMTP id recvd-c545696f7-pj52q-1-69B5DCDA-73
+	2026-03-14 22:10:34.907383591 +0000 UTC m=+442483.521784445
+Received: from NDY4MDU4NjI (unknown)
+	by geopod-ismtpd-60 (SG) with HTTP
+	id jfXgCD0KTda2bFTqaOliQQ
+	Sat, 14 Mar 2026 22:10:34.898 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Date: Sat, 14 Mar 2026 23:03:13 +0000 (UTC)
+From: PC Optimum <noreply@em.pcoptimum.ca>
+Mime-Version: 1.0
+Message-ID: <jfXgCD0KTda2bFTqaOliQQ@geopod-ismtpd-60>
+Subject: =?UTF-8?B?8J+aqA==?= EXPIRING SOON: Activate and shop your weekly
+ offers.
+Reply-To: noreply@em.pcoptimum.ca
+Feedback-ID: 
+ =?us-ascii?Q?o5EgWGAu3C7hBmILuduxKtaE4osrNvp8QinmShrKgJc3vVkQWG=5FgzgHe5o3idg?=
+ =?us-ascii?Q?fSjD7i2A=3AJaoARGpTk2CeoH7yWIBM=5F9AXEnCBbm?=
+ =?us-ascii?Q?6afga3MRRFBoPfmTLsVSshxACXmhnzyygurlfM8?=
+ =?us-ascii?Q?w=3ADC01=3AMoe?=
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Chttps=3A=2F=2Flink=2Epcoptimum=2Eca=2Fv1=2Femailunsubscribe=3Fqmoe=3DWpcvuwz2qA?=
+ =?us-ascii?Q?PNNx=2E7xrQqb4pJmb2Ok0NnLaRzA=2Exznxr0NwAoC?=
+ =?us-ascii?Q?dUIeTjKLH8v2lwp926sMWHgtw-yfyzjOsDbsvZn?=
+ =?us-ascii?Q?10DVOUoQ97SZlOz1cm6oRmwDrIDIwsG7jHHIiuo?=
+ =?us-ascii?Q?=5F3a2NQD8XLZwMTginXZMxQ-dHPRt=2E221X=2E1VZVs?=
+ =?us-ascii?Q?ucb7XsXRDAHjOxPe=5FbSIMYuGVwLAXXheAe41Kt1?=
+ =?us-ascii?Q?d=5FISiNAGHzcfBG4E4oYXzwZfp6yCEYkm9Dfib=5FY?=
+ =?us-ascii?Q?=5FVK4GzSVoE77RcXksikfSGiWn=2EGe0G0A7091zdb?=
+ =?us-ascii?Q?ISRW5edI3w-lU3=2EVQlrlcGV6nSU4hPakQUjBxZm?=
+ =?us-ascii?Q?8qxOF8tSHb=2EnGrQMo9nkuK0Mvd6g9uKU0V5xzFx?=
+ =?us-ascii?Q?QAw-f=2E86r2FqOZOBJ=5Fvn5y6y7MmgMIp=5FhhuCNTx?=
+ =?us-ascii?Q?NWnaYbWeC=3E=2C?=
+ <mailto:unsubscribe-DC01@moengage.co?subject=Unsubscribe |
+ =?us-ascii?Q?Wpcvuwz2qAPNNx=2E7xrQqb4pJmb2Ok0NnLaRzA=2Exznxr0NwAoCdUIeTjKLH8v2l?=
+ =?us-ascii?Q?wp926sMWHgtw-yfyzjOsDbsvZn10DVOUoQ97SZl?=
+ =?us-ascii?Q?Oz1cm6oRmwDrIDIwsG7jHHIiuo=5F3a2NQD8XLZwM?=
+ =?us-ascii?Q?TginXZMxQ-dHPRt=2E221X=2E1VZVsucb7XsXRDAHjO?=
+ =?us-ascii?Q?xPe=5FbSIMYuGVwLAXXheAe41Kt1d=5FISiNAGHzcfB?=
+ =?us-ascii?Q?G4E4oYXzwZfp6yCEYkm9Dfib=5FY=5FVK4GzSVoE77R?=
+ =?us-ascii?Q?cXksikfSGiWn=2EGe0G0A7091zdbISRW5edI3w&bo?=
+ =?us-ascii?Q?dy=3DHi!?= I am requesting to be removed from all future
+ marketing emails from your company.>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+x-campaignid: 69b45776cc0994c1b89dbd23
+X-SG-EID: 
+ =?us-ascii?Q?u001=2E0=2FLtvwMNwQoIBN7V+60=2F=2FIA1am9qnlAJi17B0zBqTTDhdIYqnHLxBrV1C?=
+ =?us-ascii?Q?xR6T6rZQ+igoqs8HdfNvl9es5q8TV6oWZvzIILu?=
+ =?us-ascii?Q?bSZXCH2q+SJ3dvkS1CisFQkTNduoHv5yiLVaT8s?=
+ =?us-ascii?Q?ZlzpQHZh5n7l0jbcFq0=2FMGsMKhdxTIs8dh5aBnE?=
+ =?us-ascii?Q?Bt7LVbYohJhuL13Co2YzN2aCsWbaC5LHTM3nmd8?=
+ =?us-ascii?Q?223+N1OaJH7vR9y0aHGjn5KMKwHwas0nxGzuT9W?= =?us-ascii?Q?VinH?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BmFROsG7W1szxBkh=2FhxOmpWM+J3lE98=2FkMLpe?=
+ =?us-ascii?Q?V5=2FBKWqRjIgbS07C3aogiBVhoYn12WsWeElBEbm?=
+ =?us-ascii?Q?CMfXDzDXwB3CvmJlLPGAEC6k8U9BylDW9jvTBOp?=
+ =?us-ascii?Q?mCqBBVJFGpi=2FPmxiVYTlTcEVcMyrMeBYUxQ=2Fme1?=
+ =?us-ascii?Q?JRvK=2F=2FoOMUrRNnLa=2FPtTs9igUYxWCRH=2Fphrj4zB?=
+ =?us-ascii?Q?fJGPv9bke8YzbyUban7e=2FKpFw1v8ROJF=2FeSepzC?=
+ =?us-ascii?Q?8c51ni4C2iN2F9IupsevmWto7kKmwnqQ7vBllT6?=
+ =?us-ascii?Q?wF5FmfcNcv4YyGSfuQceyg6A8rIpzO=2FR5bzNnaE?=
+ =?us-ascii?Q?D8DAZFn4ys=2FTBcUaCsiw76whP4UtJuzwnocagNv?=
+ =?us-ascii?Q?KHZ=2FzP0CdFmIRH1h1m26NMctK=2FO4thSjLZUNw=3D=3D?=
+To: talveerbath@gmail.com
+X-Entity-ID: u001.nJu8kJXQX1HbBjyYyOXNHw==
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html height=3D"100% !important" lang=3D"en" style=3D"margin:0 auto !import=
+ant; padding:0 !important; height:100% !important; width:100% !important" w=
+idth=3D"100% !important">
+<head>
+<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type"/>
+<meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatible"/>
+<meta content=3D"date=3Dno" name=3D"format-detection"/>
+<meta content=3D"telephone=3Dno" name=3D"format-detection"/>
+<meta content=3D"width=3Ddevice-width, initial-scale=3D1, maximum-scale=3D1=
+, user-scalable=3D0" name=3D"viewport"/>
+<meta name=3D"x-apple-disable-message-reformatting"/>
+<meta content=3D"light dark" name=3D"supported-color-schemes"/>
+<link href=3D"https://fonts.googleapis.com" rel=3D"preconnect"/>
+<link href=3D"https://fonts.gstatic.com" rel=3D"preconnect"/>
+<title>PC Optimum</title>
+<!--<meta name=3D"color-scheme" content=3D"light dark">
+    <meta name=3D"supported-color-schemes" content=3D"light dark">--><!--<s=
+tyle type=3D"text/css">
+      :root {
+        color-scheme: light dark;
+        supported-color-schemes: light dark;
+      }
+    </style>--><style type=3D"text/css">@media (prefers-color-scheme: dark)=
+ {
+    [data-ogsb] .pinkbg {
+        background-color: #F2AEAE !important
+        }
+    .whitetxt, [data-ogsc] .whitetxt {
+        color: #fefefe !important
+        }
+    .blacktxt, [data-ogsc] .blacktxt {
+        color: #231F20 !important
+        }
+    }</style>
+<style media=3D"screen" type=3D"text/css">@media screen {
+    /* Poppins */
+    /* Roboto */
+    }</style>
+<style type=3D"text/css">.btn:hover {transition:0.2s !important}
+.btn-primary-green:hover {background:transparent !important;border:3px soli=
+d #398380 !important;color:#398380 !important}
+.btn-primary-red:hover {background:#C8140A !important;border:3px solid #C81=
+40A !important;color:#FFF !important}
+.btn-primary-hotpink:hover {background:#A0006D !important;border:3px solid =
+#A0006D !important;color:#FFF !important}
+.btn-secondary-white:hover {background:#ECEEEE !important;border:3px solid =
+#ECEEEE !important}
+.btn-secondary-black:hover {background:#515151 !important;border:3px solid =
+#515151 !important;color:#FFF !important}
+.btn-tertiary-white:hover {background:#ECEEEE !important;border:1px solid #=
+000001 !important;color:#231F20 !important}
+.hover-nounderline:hover {text-decoration:none !important}
+.hover-underline:hover {text-decoration:underline !important}
+@media screen and (max-width: 599px) {
+    /* Width and height classes */
+    .width30 {
+        width: 30% !important
+        }
+    .width40 {
+        width: 40% !important
+        }
+    .width50 {
+        width: 50% !important
+        }
+    .width60 {
+        width: 60% !important
+        }
+    .width70 {
+        width: 70% !important
+        }
+    .width75 {
+        width: 75% !important
+        }
+    .width90 {
+        width: 90% !important
+        }
+    .width100 {
+        width: 100% !important;
+        text-align: center !important
+        }
+    .h-auto {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important
+        }
+    /* Padding classes */
+    .plr-0 {
+        padding-left: 0 !important;
+        padding-right: 0 !important
+        }
+    .plr-10 {
+        padding-left: 10px !important;
+        padding-right: 10px !important
+        }
+    .plr-20 {
+        padding-left: 20px !important;
+        padding-right: 20px !important
+        }
+    .plr-30 {
+        padding-left: 30px !important;
+        padding-right: 30px !important
+        }
+    .ptb-0 {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important
+        }
+    .ptb-10 {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important
+        }
+    .ptb-20 {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important
+        }
+    .ptb-30 {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important
+        }
+    .pt-0 {
+        padding-top: 0 !important
+        }
+    .pt-10 {
+        padding-top: 10px !important
+        }
+    .pt-20 {
+        padding-top: 20px !important
+        }
+    .pt-30 {
+        padding-top: 30px !important
+        }
+    .pb-0 {
+        padding-bottom: 0 !important
+        }
+    .pb-10 {
+        padding-bottom: 10px !important
+        }
+    .pb-20 {
+        padding-bottom: 20px !important
+        }
+    .mlr-0 {
+        margin-left: 0 !important;
+        margin-right: 0 !important
+        }
+    .mtb-0 {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important
+        }
+    .mtb-10 {
+        margin-top: 10px !important;
+        margin-bottom: 10px !important
+        }
+    .mtb-20 {
+        margin-top: 20px !important;
+        margin-bottom: 20px !important
+        }
+    .mtb-30 {
+        margin-top: 30px !important;
+        margin-bottom: 30px !important
+        }
+    .mt-0 {
+        margin-top: 0 !important
+        }
+    .mt-10 {
+        margin-top: 10px !important
+        }
+    .mt-20 {
+        margin-top: 20px !important
+        }
+    .mt-30 {
+        margin-top: 30px !important
+        }
+    .mb-0 {
+        margin-bottom: 0 !important
+        }
+    .mb-10 {
+        margin-bottom: 10px !important
+        }
+    .mb-20 {
+        margin-bottom: 20px !important
+        }
+    .mb-30 {
+        margin-bottom: 30px !important
+        }
+    .mr-0 {
+        margin-right: 0 !important
+        }
+    .ml-0 {
+        margin-left: 0 !important
+        }
+    /* Alignment classes */
+    .ta-c {
+        text-align: center !important
+        }
+    .ta-l {
+        text-align: left !important
+        }
+    .ta-r {
+        text-align: right !important
+        }
+    /* Font classes */
+    .fs-14 {
+        font-size: 14px !important
+        }
+    .fs-16 {
+        font-size: 16px !important
+        }
+    .fs-18 {
+        font-size: 18px !important
+        }
+    .fs-20 {
+        font-size: 20px !important
+        }
+    .fs-22 {
+        font-size: 22px !important
+        }
+    .fs-24 {
+        font-size: 24px !important
+        }
+    .fs-26 {
+        font-size: 26px !important
+        }
+    .fs-28 {
+        font-size: 28px !important
+        }
+    .fs-30 {
+        font-size: 30px !important
+        }
+    .fs-32 {
+        font-size: 32px !important
+        }
+    .fs-34 {
+        font-size: 34px !important
+        }
+    .fs-36 {
+        font-size: 36px !important
+        }
+    .fs-38 {
+        font-size: 38px !important
+        }
+    .fs-40 {
+        font-size: 40px !important
+        }
+    .fs-42 {
+        font-size: 42px !important
+        }
+    .fs-44 {
+        font-size: 44px !important
+        }
+    .fs-46 {
+        font-size: 46px !important
+        }
+    .fs-48 {
+        font-size: 48px !important
+        }
+    .fs-50 {
+        font-size: 50px !important
+        }
+    .lh-16 {
+        line-height: 16px !important
+        }
+    .lh-18 {
+        line-height: 18px !important
+        }
+    .lh-20 {
+        line-height: 20px !important
+        }
+    .lh-22 {
+        line-height: 22px !important
+        }
+    .lh-24 {
+        line-height: 24px !important
+        }
+    .lh-26 {
+        line-height: 26px !important
+        }
+    .lh-28 {
+        line-height: 28px !important
+        }
+    .lh-30 {
+        line-height: 30px !important
+        }
+    .lh-32 {
+        line-height: 32px !important
+        }
+    .lh-34 {
+        line-height: 34px !important
+        }
+    .lh-36 {
+        line-height: 36px !important
+        }
+    .lh-38 {
+        line-height: 38px !important
+        }
+    .lh-40 {
+        line-height: 40px !important
+        }
+    .lh-42 {
+        line-height: 42px !important
+        }
+    .lh-44 {
+        line-height: 44px !important
+        }
+    .lh-46 {
+        line-height: 46px !important
+        }
+    .lh-48 {
+        line-height: 48px !important
+        }
+    .lh-50 {
+        line-height: 50px !important
+        }
+    .lh-52 {
+        line-height: 52px !important
+        }
+    }
+@media screen and (max-width: 479px) {
+    .two-col .column {
+        max-width: 50% !important;
+        display: block !important
+        }
+    .two-col .small {
+        max-width: 38% !important
+        }
+    .two-col .large {
+        max-width: 62% !important
+        }
+    .three-col .column {
+        max-width: 33.3% !important
+        }
+    .five-col .column {
+        max-width: 20% !important
+        }
+    .mobile-show {
+        display: block !important;
+        font-size: initial !important;
+        line-height: initial !important;
+        max-height: initial !important;
+        mso-hide: none !important
+        }
+    .mobile-hide {
+        display: none !important
+        }
+    .display-table {
+        display: table !important
+        }
+    }
+@media screen and (max-width: 350px) {
+    .three-col .column {
+        max-width: 100% !important
+        }
+    }
+@media screen and (min-width: 351px) and (max-width: 460px) {
+    .three-col .column {
+        max-width: 50% !important
+        }
+    }
+@media screen and (max-width: 460px) {
+    .two-col .column {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important
+        }
+    .two-col .small {
+        max-width: 100% !important
+        }
+    .two-col .large {
+        max-width: 100% !important
+        }
+    .two-col .wid-100 {
+        display: block !important;
+        display: block !important;
+        width: 100% !important
+        }
+    .two-col .margin-auto {
+        margin: auto !important
+        }
+    .two-col .rs-bottom {
+        display: table-footer-group !important
+        }
+    .two-col .rs-top {
+        display: table-header-group !important
+        }
+    .two-col .mr-0 {
+        margin-right: 0 !important
+        }
+    .two-col .mob-ta-c {
+        text-align: center !important
+        }
+    .three-col .wid-100 {
+        display: block !important;
+        width: 100% !important
+        }
+    .mb-ph {
+        padding-left: 24px !important;
+        padding-right: 24px !important
+        }
+    .remove-border {
+        border: none !important
+        }
+    .bb {
+        border-bottom: 1px solid #fff !important;
+        display: block !important
+        }
+    .h-0 {
+        height: auto !important
+        }
+    }
+@media screen and (min-width: 461px) {
+    .three-col .column {
+        max-width: 33.3% !important
+        }
+    .two-col .column {
+        max-width: 50% !important
+        }
+    .two-col .small {
+        max-width: 38% !important
+        }
+    .two-col .large {
+        max-width: 62% !important
+        }
+    .sidebar .small {
+        max-width: 16% !important
+        }
+    .sidebar .large {
+        max-width: 84% !important
+        }
+    }</style>
+<style type=3D"text/css">@media only screen and (max-width: 599px) {
+    u ~ div .body-wrap {
+        min-width: 100vw !important
+        }
+    u ~ div .fluid {
+        min-width: 100% !important
+        }
+    u ~ div .gmail-hide-mobile {
+        display: none !important
+        }
+    u ~ div .gmail-show-mobile {
+        display: block !important
+        }
+    }
+@media only screen and (max-width: 599px) {
+    div > u ~ div .body-wrap {
+        min-width: 100% !important
+        }
+    div > u ~ div .fluid {
+        min-width: 100% !important
+        }
+    div > u ~ div .gmail-hide-mobile {
+        display: none !important
+        }
+    div > u ~ div .gmail-show-mobile {
+        display: block !important
+        }
+    }</style>
+<!--[if gte mso 16]>
+      <style>
+        .keep-black {
+          mso-style-textfill-type:gradient;
+          mso-style-textfill-fill-gradientfill-stoplist:"0 \#000001 1 10000=
+0\,99000 \#000001 1 100000";
+          color:#ffffff !important;
+        }
+        .keep-white {
+          mso-style-textfill-type:gradient;
+          mso-style-textfill-fill-gradientfill-stoplist:"0 \#ffffff 1 10000=
+0\,99000 \#ffffff 1 100000";
+          color:#000001 !important;
+        }
+      </style>
+    <![endif]--><!--[if gte mso 9]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+    <style>
+      table {border-collapse: collapse;border-spacing: 0; }
+      span.MsoHyperlink {mso-style-priority:99;color:inherit;}
+      span.MsoHyperlinkFollowed {mso-style-priority:99;color:inherit;}
+      body, th, td, h1, h2, h3, h4, h5, h6, p {
+        font-family: 'Segoe UI', Arial, Helvetica, sans-serif !important;
+        line-height: 100% !important;
+        mso-line-height-rule: exactly !important;
+      }
+      sup, sub { font-size: 90% !important; }
+      .lh-1 {line-height: 100% !important;}
+      .btn-primary-green {
+        border: none !important;
+      }
+      .app-btn {font-size: 14px !important;}
+      li {
+      margin-left:27px !important;
+      mso-special-format: bullet;
+      }
+      .forDumbOutlooks {
+      margin-left: -25px !important;
+      }=20
+    </style>
+    <![endif]-->
+<meta content=3D"noindex, nofollow, noarchive" name=3D"robots"/><meta conte=
+nt=3D"noindex, nofollow, noarchive" name=3D"googlebot"/></head>
+<body aria-disabled=3D"false" bgcolor=3D"rgb(249, 249, 249)" height=3D"100%=
+ !important" id=3D"body" style=3D'-webkit-text-size-adjust:100%; -ms-text-s=
+ize-adjust:100%; width:100% !important; margin:0; padding:0; -webkit-font-s=
+moothing:antialiased; background:#f9f9f9; hyphens:none; mso-hyphenate:none;=
+ height:100% !important; font-family:"Poppins", -apple-system, "Roboto", sa=
+ns-serif !important; background-color:rgb(249, 249, 249)' width=3D"100% !im=
+portant">
+<!--awkward space, please scroll down-->
+<!--reminder: switch on and off the esso_offer_on_off boolean switch, if ha=
+s offer for Esso - true, otherwise - false -->
+   =20
+
+
+   =20
+   =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+   =20
+   =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+    =20
+    =20
+    =20
+    =20
+   =20
+   =20
+    =20
+   =20
+   =20
+    =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+       =20
+
+   =20
+
+   =20
+   =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+       =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+     =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+     =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+     =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+   =20
+
+
+   =20
+   =20
+
+   =20
+   =20
+   =20
+     =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+     =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+   =20
+
+
+   =20
+   =20
+
+   =20
+   =20
+   =20
+     =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+
+   =20
+   =20
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+   =20
+
+   =20
+
+    =20
+   =20
+   =20
+   =20
+
+    =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+   =20
+   =20
+   =20
+
+   =20
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"body-wrap" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adj=
+ust:100%; mso-table-lspace:0; mso-table-rspace:0; border-collapse:collapse =
+!important; min-width:320px" width=3D"100%"><tbody><tr><td align=3D"center"=
+ bgcolor=3D"#f9f9f9" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-=
+adjust:100%; mso-table-lspace:0; mso-table-rspace:0">
+<!--[if (gte mso 9) | (IE) ]><table border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0" role=3D"presentation" align=3D"center" style=3D"width: 600px;"><t=
+r><td align=3D"center"><![endif]-->
+<table align=3D"center" bgcolor=3D"#f9f9f9" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" class=3D"width100" role=3D"presentation" style=3D"width: =
+600px;">
+<tr>
+<td align=3D"center" style=3D"padding: 20px 4%;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" width=3D"100%">
+<tr>
+<td style=3D"font-family: 'Poppins', -apple-system, Roboto, sans-serif; col=
+or:#686868; font-size:12px; line-height:normal; text-align:left;" valign=3D=
+"top">
+            Points + savings in app!
+            <div style=3D"display: none; max-height: 0px; overflow: hidden;=
+">
+              =C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0
+              =E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0
+              =E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0
+            </div>
+</td>
+<td style=3D"width: 30px;font-size: 1px; line-height: 1px;">=C2=A0</td>
+<td align=3D"right" style=3D"width: 130px ; font-family: 'Poppins', -apple-=
+system, 'Roboto', sans-serif; color:#686868; font-size:12px; line-height:no=
+rmal;" valign=3D"top">
+<a href=3D"https://link.pcoptimum.ca/v1/emailview?q=3DvfIFvZXPDVtVZUTCfqB5m=
+YX_dIlSncjWoojgttg4n0kHS6oFRWPPltg-liZ8LqfkoeUKPy4f95D4X8wImPw6hSYYnhFzsENG=
+Bo2TyPgjW5FkqRALBPX96MABp1.FIgQfSMuUCahHyTeJp0UjkFGUZRg.Xj3AYXYJlV.M.vpjd97=
+.ROU45GlAaRyupQWKcCRLDH4sjuU-6RiNUOqfgxiH8fmm8zLvcYktpm3EQF6HsPmXQ0jCATngMw=
+uIOhEM2VIfpH39ly6Z.8jTu6jWsg&event_date=3D2026-03-14&event_time=3D177352623=
+4" id=3D"moe_email_vib" style=3D"font-size:12px; text-decoration:underline;=
+ color:#686868;">
+           =20
+              View this email online
+           =20
+            </a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align=3D"center" bgcolor=3D"#FFFFFE" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" class=3D"width100" style=3D"-webkit-text-size-adjust:100%=
+; -ms-text-size-adjust:100%; mso-table-lspace:0; mso-table-rspace:0; border=
+-collapse:collapse !important; width:600px" width=3D"600"><tbody><tr><td al=
+ign=3D"center" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust=
+:100%; mso-table-lspace:0; mso-table-rspace:0" valign=3D"top" width=3D"100%=
+">
+<!--<table align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0" bgcolor=3D"#F9DADA" role=3D"presentation" style=3D"backgro=
+und-color:#F9DADA;margin: 0 auto; width: 100%;">
+    <tr>
+        <td style=3D"padding: 0 0 6px;">
+         =20
+            <img src=3D"https://clickncollect.s3.amazonaws.com/email/PCO/20=
+25/_GlobalAssets/Logos/img_pcologo_en.png" alt=3D"PC Optimum Logo." width=
+=3D"600" style=3D"display: block;width:100%; max-width:600px;font-size: 20p=
+x;line-height:22px;color:#000001;font-family:Arial, Helvetica, sans-serif;t=
+ext-align:left;">
+         =20
+        </td>
+    </tr>
+</table>-->
+<table align=3D"right" bgcolor=3D"#F9DADA" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" role=3D"presentation" style=3D"background-color:#F9DADA;ma=
+rgin: 0 auto; width: 100%;" width=3D"100%">
+<tr>
+<td align=3D"right" style=3D"padding: 0 36px 12px;">
+<!--[if mso]><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=
+=3D"presentation" align=3D"right" style=3D"width: 204px;"><tr><td align=3D"=
+right" style=3D"padding: 0;"><![endif]-->
+         =20
+            <img alt=3D"PC Optimum Logo." src=3D"https://clickncollect.s3.u=
+s-east-1.amazonaws.com/email/Modular-2025/PCO/PCO-Logo-Pink_DM-Safe_BIL.png=
+" style=3D"display: block;width:204px; max-width:204px;font-size: 20px;line=
+-height:22px;color:#000001;font-family:Arial, Helvetica, sans-serif;text-al=
+ign:right;" width=3D"204"/>
+         =20
+        <!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+       =20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style media=3D"screen" type=3D"text/css">
+@media screen {
+    /* Poppins */
+    @font-face {
+      font-family: 'Poppins';
+      font-style: italic;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLm=
+g1hVF9eOYktMqg.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: italic;
+      font-weight: 600;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLm=
+r19VF9eOYktMqg.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9=
+Z1xlFd2JQEk.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6=
+Z1xlFd2JQEk.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+	/* Roboto */
+	@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiGyp8kv8JHgFVrJJLucHtA=
+OvWDSA.woff2) format('woff2');
+  mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLmg1=
+hVF9eOYktMqg.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLmr1=
+9VF9eOYktMqg.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiEyp8kv8JHgFVrJJfecn=
+FHGPc.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9Z1=
+xlFd2JQEk.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6Z1=
+xlFd2JQEk.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+}
+</style>
+
+
+<table align=3D"center" bgcolor=3D"#F9DADA" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"background: #F9DADA; borde=
+r-collapse: collapse;" width=3D"100%">
+<tr>
+<td style=3D"padding: 20px 6% 0; text-align:left;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"border-collapse: collapse;" width=3D"100%">
+<tr>
+<td class=3D"two-col" style=3D"text-align:left; font-size:0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"border-collapse: collapse;" width=3D"100%">
+<tr>
+<td class=3D"column" style=3D"width:264;max-width:264px;display:inline-bloc=
+k;vertical-align:top; padding:0 0 30px;" width=3D"264">
+<p style=3D"font-family: 'Poppins', -apple-system, 'Roboto', sans-serif; fo=
+nt-size: 16px; line-height: 110%; font-weight: 600; color: #403840;margin: =
+0;">
+                   =20
+                    Your current points balance is
+                   =20
+                  </p>
+<h2 style=3D"font-family: 'Poppins', -apple-system, 'Roboto', sans-serif; f=
+ont-size:30px; line-height: 100%; font-weight: 600; margin: 12px 0 0; color=
+: #403840;">
+                   =20
+                    28,064**
+                   =20
+                  </h2>
+</td>
+<td class=3D"column" style=3D"width:264;max-width:264px;display:inline-bloc=
+k;vertical-align:top; padding:0 0 30px;" width=3D"264">
+<p style=3D"font-family: 'Poppins', -apple-system, 'Roboto', sans-serif; fo=
+nt-size: 16px; line-height: 110%; font-weight: 600; color: #403840;margin: =
+0;">
+                   =20
+                    You can redeem
+                   =20
+                  </p>
+<h2 style=3D"font-family: 'Poppins', -apple-system, 'Roboto', sans-serif; f=
+ont-size:30px; line-height: 100%; font-weight: 600; margin: 12px 0 0; color=
+: #403840;">
+                   =20
+                    $20**
+                   =20
+                  </h2>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+
+       =20
+
+
+
+
+
+<style media=3D"screen" type=3D"text/css">
+@media screen {
+    /* Poppins */
+    @font-face {
+      font-family: 'Poppins';
+      font-style: italic;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLm=
+g1hVF9eOYktMqg.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: italic;
+      font-weight: 600;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLm=
+r19VF9eOYktMqg.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9=
+Z1xlFd2JQEk.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6=
+Z1xlFd2JQEk.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+	/* Roboto */
+	@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiGyp8kv8JHgFVrJJLucHtA=
+OvWDSA.woff2) format('woff2');
+  mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLmg1=
+hVF9eOYktMqg.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLmr1=
+9VF9eOYktMqg.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiEyp8kv8JHgFVrJJfecn=
+FHGPc.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9Z1=
+xlFd2JQEk.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6Z1=
+xlFd2JQEk.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+}
+</style>
+<table align=3D"center" bgcolor=3D"#F9DADA" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"border-collapse: collapse;=
+ background: #F9DADA;" width=3D"100%">
+<tr>
+<td style=3D"padding: 30px 6% 8px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"border-collapse: collapse;" width=3D"100%">
+<tr>
+<td style=3D"text-align:left;vertical-align:bottom;">
+<h1 style=3D"font-family: 'Poppins', -apple-system, 'Roboto', sans-serif; f=
+ont-size:48px; line-height: 110%; font-weight: 600; font-style: normal; mar=
+gin: 0; color: #E1251B;">
+             =20
+              Activate and shop your weekly offers!
+             =20
+            </h1>
+<p style=3D"font-family: 'Poppins', -apple-system, 'Roboto', sans-serif; fo=
+nt-size: 18px; line-height: 140%; font-weight: 400; font-style: normal; col=
+or: #403840;margin: 20px 10px 20px 0;">
+             =20
+             =20
+             =20
+             =20
+              Open the app to activate your offers, plus, scan at checkout =
+to earn + save. Offers expire soon.
+             =20
+                =20
+             =20
+             =20
+            </p>
+</td>
+</tr>
+<tr>
+<td>
+<!--[if mso]>
+            <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" style=3D"border-collapse: collapse; border-radius: 30px; bac=
+kground-color: #E1251B; border: 3px solid #E1251B;">
+            <![endif]-->
+<!--[if! mso]>--><!-- -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<!--<![endif]-->
+<tr>
+<td align=3D"center" style=3D"padding: 0; font-family: 'NoirPro', Helvetica=
+, Arial, sans-serif;">
+               =20
+               =20
+               =20
+               =20
+               =20
+               =20
+                  =20
+               =20
+                                    =20
+                  <a class=3D"btn-primary-red btn" href=3D"https://link.pco=
+ptimum.ca/v1/emailclick?q=3DBChvg7tWqpvR1bBEgE.is9n90nmjE6xXeIl_1.8FJTgixEj=
+_3GRvQQo-a4omoDdrnsmIUtecnw8CTlyYUH.AEtUnLIYyIjBPw_J3cs7zk29_R0ubSvNHIC7SkN=
+R571WhwvY68fkxnvd3DDWDqCppqaIB0sCGdtIzRCjfbsB41Uu7PvjkIZAsUsaEh7w2CcVCcUvUl=
+eI-6RiNUOqfgxiH8fmm8zLvcYktpm3EQF6HsPmXQ0jCATngMwuIOhEM2VIfpH39ly6Z.8jTu6jW=
+sg-Xag0kL0XQrnR72OhRYBNH4FWFS_wv.4WROtWEqbVAeJobl5NDVqDdUybCux2sTp9pBv3WQ-p=
+35VzzeKsdT4XNX4Hcvb7j7ib4ZqY76r5XG1yivuUN22KA-1xBc18pIym6q_AlFW_jgcL9jzU4Ih=
+zvvWWqCSO5OT_4Bp8YdGkDOJfjV2nGAY4_fI9O391cEQgE87.Yfil7GHuufHG5yC5TXH3cdUGaZ=
+WDMODAimFrhXjr64R93HXJG8boKuucMsrFuFOhY93CvyHNk5NM36wqjAcnSDW8F4to0BBR_u1uG=
+SbUeq2ZPRse9xSZf7wHiO0DY6sx2eO4iEbh1WnK8QB0BnAlqXJXW4eXMOdlchCdC5pv9LsYnmTx=
+e_8WMNSOgAojK7iP40dD35JFbOIYmxpkiaDfzvB5D351rezur3YZ9TqMh5HO23E9315dPMeMEGv=
+aYu0dpCsSRhwUdW9l5tL0cMw0sZae74jI.h8M_PXh1wkGlGoHY1GQyso3Y5vzd7umdj2jpF1FdL=
+mA" style=3D"font-size: 18px; line-height: 140%; font-family: 'Poppins', -a=
+pple-system, 'Roboto', sans-serif; color: #FFFFFE; background-color: #E1251=
+B; font-weight: 600; font-style: normal; text-decoration: none;border-radiu=
+s: 30px; padding: 8px 24px; border: 3px solid #E1251B; display: inline-bloc=
+k; text-underline-color: #E1251B;">
+<!--[if mso]><i style=3D"mso-font-width:100%;mso-text-raise:150%;" hidden>&=
+#8195;</i><span style=3D"mso-text-raise:75%;"><![endif]-->
+                   =20
+                   =20
+                   =20
+                   =20
+                    Open the app
+                   =20
+                      =20
+                   =20
+                   =20
+                    <!--[if mso]></span><i style=3D"mso-font-width:100%;" h=
+idden>&#8195;&#8203;</i><![endif]--></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<!--[if mso]><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=
+=3D"presentation" align=3D"center" style=3D"width: 440px;" width=3D"440"><t=
+r><td align=3D"center" style=3D"padding: 0;"><![endif]-->
+<img alt=3D"PC Optimum app" class=3D"pt-20" src=3D"https://clickncollect.s3=
+.us-east-1.amazonaws.com/email/Modular-2025/PCO/PCO-Weekly-Hero_DMSafe_EN.p=
+ng" style=3D"display:block; width: 100%; height:auto; max-width:400px; marg=
+in:auto; padding-bottom: 12px" width=3D"400"/>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+       =20
+<style media=3D"screen" type=3D"text/css">
+@media screen {
+    /* Poppins */
+    @font-face {
+      font-family: 'Poppins';
+      font-style: italic;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLm=
+g1hVF9eOYktMqg.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: italic;
+      font-weight: 600;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLm=
+r19VF9eOYktMqg.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9=
+Z1xlFd2JQEk.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6=
+Z1xlFd2JQEk.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+	/* Roboto */
+	@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiGyp8kv8JHgFVrJJLucHtA=
+OvWDSA.woff2) format('woff2');
+  mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLmg1=
+hVF9eOYktMqg.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLmr1=
+9VF9eOYktMqg.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiEyp8kv8JHgFVrJJfecn=
+FHGPc.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9Z1=
+xlFd2JQEk.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6Z1=
+xlFd2JQEk.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+}
+</style>
+
+<table align=3D"center" bgcolor=3D"#FFFFFE" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"background: #FFFFFE;" widt=
+h=3D"100%">
+<tr>
+<td style=3D"padding: 30px 6% 0;text-align:left;">
+<h2 style=3D"font-family: 'Poppins', -apple-system, 'Roboto', sans-serif; f=
+ont-size:32px; line-height: 130%; font-weight: 600; margin: 0; color: #E125=
+1B;">
+       =20
+       =20
+        Talveer, your offers are still waiting!
+       =20
+       =20
+      </h2>
+<p style=3D"font-family: 'Poppins', -apple-system, 'Roboto', sans-serif; fo=
+nt-size: 18px; line-height: 130%; font-weight: 500; color: #231F20 ;margin:=
+ 16px 0 ;">
+       =20
+       =20
+        Open your app to get your new weekly offers, expiring soon!
+       =20
+       =20
+        </p>
+</td>
+</tr>
+</table>
+
+
+       =20
+       =20
+
+       =20
+       =20
+
+       =20
+       =20
+
+       =20
+       =20
+       =20
+       =20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table bgcolor=3D"#FFFFFE" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" width=3D"100%">
+<tr>
+<td style=3D"padding: 20px 6%;font-size:0;text-align:center;width:100%;marg=
+in:0 auto;">
+<!--
+          <table align=3D"center" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" role=3D"presentation">
+            <tr>
+              <td style=3D"padding:20px 0 0; font-size:6px; line-height:6px=
+;border-bottom:6px solid #EBEBEA;">&nbsp;</td>
+            </tr>
+          </table>
+          -->
+<h3 style=3D"margin: 20px 0 0; text-align:left; font-family: 'Poppins', -ap=
+ple-system, 'Roboto', sans-serif; font-size:24px; mso-line-height-rule:exac=
+tly; line-height: 120%; font-weight: 600; color: #000001;">
+           =20
+            100 points
+           =20
+          </h3>
+<p style=3D"margin: 16px 0; text-align:left; font-family: 'Poppins', -apple=
+-system, 'Roboto', sans-serif; font-size:18px; mso-line-height-rule:exactly=
+; line-height: 130%; font-weight: normal; color: #000001;">
+           =20
+            for every $1 spent on Bananas
+           =20
+          </p>
+<!--[if (gte mso 9) | (IE) ]>
+          <table width=3D"170" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" role=3D"presentation" align=3D"left" style=3D"width: 170px;">
+            <tr>
+              <td align=3D"center">
+            <![endif]-->
+<!---<img src=3D"https://clickncollect.s3.us-east-1.amazonaws.com/email/Mod=
+ular-2025/PCO/brandtile/Logo-RCSS_EN.png" alt=3D"RCSS Logo" width=3D"170" h=
+eight=3D"68"
+            style=3D"display: block; width:170px;height:auto;">-->
+<!--[if (gte mso 9) | (IE) ]>
+                </td>
+            </tr>
+        </table>
+        <![endif]-->
+</td>
+</tr>
+</table>
+
+
+
+
+       =20
+
+       =20
+       =20
+       =20
+       =20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table bgcolor=3D"#FFFFFE" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" width=3D"100%">
+<tr>
+<td style=3D"padding: 20px 6%;font-size:0;text-align:center;width:100%;marg=
+in:0 auto;">
+<!--
+          <table align=3D"center" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" role=3D"presentation">
+            <tr>
+              <td style=3D"padding:20px 0 0; font-size:6px; line-height:6px=
+;border-bottom:6px solid #EBEBEA;">&nbsp;</td>
+            </tr>
+          </table>
+          -->
+<h3 style=3D"margin: 20px 0 0; text-align:left; font-family: 'Poppins', -ap=
+ple-system, 'Roboto', sans-serif; font-size:24px; mso-line-height-rule:exac=
+tly; line-height: 120%; font-weight: 600; color: #000001;">
+           =20
+            20,000 or 30,000 points
+           =20
+          </h3>
+<p style=3D"margin: 16px 0; text-align:left; font-family: 'Poppins', -apple=
+-system, 'Roboto', sans-serif; font-size:18px; mso-line-height-rule:exactly=
+; line-height: 130%; font-weight: normal; color: #000001;">
+           =20
+            when you spend $60. Shop in-store to reveal your offer!
+           =20
+          </p>
+<!--[if (gte mso 9) | (IE) ]>
+          <table width=3D"170" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" role=3D"presentation" align=3D"left" style=3D"width: 170px;">
+            <tr>
+              <td align=3D"center">
+            <![endif]-->
+<img alt=3D"Shoppers Drug Mart Logo" height=3D"68" src=3D"https://clickncol=
+lect.s3.us-east-1.amazonaws.com/email/Modular-2025/PCO/brandtile/Logo-SDM_E=
+N.png" style=3D"display: block; width:170px;height:auto;" width=3D"170"/>
+<!--[if (gte mso 9) | (IE) ]>
+                </td>
+            </tr>
+        </table>
+        <![endif]-->
+</td>
+</tr>
+</table>
+
+
+
+
+
+       =20
+
+       =20
+       =20
+       =20
+       =20
+
+ =20
+
+ =20
+ =20
+ =20
+ =20
+ =20
+ =20
+ =20
+ =20
+ =20
+ =20
+  =20
+ =20
+ =20
+
+ =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+  =20
+
+ =20
+ =20
+   =20
+   =20
+   =20
+   =20
+ =20
+ =20
+
+<table bgcolor=3D"#FFFFFE" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" width=3D"100%">
+<tr>
+<td style=3D"padding: 20px 6%;font-size:0;text-align:center;width:100%;marg=
+in:0 auto;">
+<!--
+          <table align=3D"center" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" role=3D"presentation">
+            <tr>
+              <td style=3D"padding:20px 0 0; font-size:6px; line-height:6px=
+;border-bottom:6px solid #EBEBEA;">&nbsp;</td>
+            </tr>
+          </table>
+          -->
+<h3 style=3D"margin: 20px 0 0; text-align:left; font-family: 'Poppins', -ap=
+ple-system, 'Roboto', sans-serif; font-size:24px; mso-line-height-rule:exac=
+tly; line-height: 120%; font-weight: 600; color: #000001;">
+           =20
+            2,000 points
+           =20
+          </h3>
+<p style=3D"margin: 16px 0; text-align:left; font-family: 'Poppins', -apple=
+-system, 'Roboto', sans-serif; font-size:18px; mso-line-height-rule:exactly=
+; line-height: 130%; font-weight: normal; color: #000001;">
+           =20
+            When you spend $5 or more on eligible convenience store purchas=
+es at Esso stations
+           =20
+           =20
+          </p>
+<!--[if (gte mso 9) | (IE) ]>
+          <table width=3D"170" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" role=3D"presentation" align=3D"left" style=3D"width: 170px;">
+            <tr>
+              <td align=3D"center">
+            <![endif]-->
+<img alt=3D"Esso Logo" height=3D"68" src=3D"https://clickncollect.s3.us-eas=
+t-1.amazonaws.com/email/Modular-2025/PCO/brandtile/Esso/Esso.png" style=3D"=
+display: block; width:170px;height:auto;" width=3D"170"/>
+<!--[if (gte mso 9) | (IE) ]>
+                </td>
+            </tr>
+        </table>
+        <![endif]-->
+</td>
+</tr>
+</table>
+
+
+       =20
+        =20
+       =20
+                 =20
+
+       =20
+       =20
+
+       =20
+       =20
+       =20
+<style media=3D"screen" type=3D"text/css">
+@media screen {
+    /* Poppins */
+    @font-face {
+      font-family: 'Poppins';
+      font-style: italic;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLm=
+g1hVF9eOYktMqg.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: italic;
+      font-weight: 600;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLm=
+r19VF9eOYktMqg.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9=
+Z1xlFd2JQEk.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6=
+Z1xlFd2JQEk.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+	/* Roboto */
+	@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiGyp8kv8JHgFVrJJLucHtA=
+OvWDSA.woff2) format('woff2');
+  mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLmg1=
+hVF9eOYktMqg.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLmr1=
+9VF9eOYktMqg.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiEyp8kv8JHgFVrJJfecn=
+FHGPc.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9Z1=
+xlFd2JQEk.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6Z1=
+xlFd2JQEk.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+}
+</style>
+
+<table align=3D"center" bgcolor=3D"#fffffe" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"background: #fffffe;" widt=
+h=3D"100%">
+<tr>
+<td colspan=3D"3" style=3D"font-size: 20px; line-height: 20px;">=C2=A0</td>
+</tr>
+<tr>
+<td style=3D"padding: 10px 6% 30px ;text-align:left;">
+<!--[if mso]>
+      <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" style=3D"border-collapse: collapse; border-radius: 30px; backgroun=
+d-color: #E1251B; border: 3px solid #E1251B;">
+      <![endif]-->
+<!--[if! mso]>--><!-- -->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<!--<![endif]-->
+<tr>
+<td>
+           =20
+           =20
+           =20
+            <a class=3D"btn-primary-red btn" href=3D"https://link.pcoptimum=
+.ca/v1/emailclick?q=3Dsa5Ew0r40eVt_Mpuu_ftGJyQlhYvPbTSwIJNsEfbqhObT4NXDBsqX=
+f4-EHkuDcuzM.1ccRnlgJvclpGA054OZtLir6kgZB7OI3ug7_2SxbwUv2z_qKjN_MJFjIejz..7=
+6xXYwoEn5BaJYiZLfjZRC0BSr9KqcG6FJuRlot_MxBucaZMCf8K..DRWtMJ12TIvBu.BeEs-6Ri=
+NUOqfgxiH8fmm8zLvcYktpm3EQF6HsPmXQ0jCATngMwuIOhEM2VIfpH39ly6Z.8jTu6jWsg-Xag=
+0kL0XQrnR72OhRYBNH4FWFS_wv.4WROtWEqbVAeJobl5NDVqDdUybCux2sTp9pBv3WQ-GRiZ5t.=
+Xlwzc8x6.LQZ_KIqnEUyDa2pAPbUg77AP6TVr6A-y8gV93KpJSht_ABg1suUpq_TTdwqPUO.P_A=
+9Lkwsvt9EyIRmHMF4dZZ70GuJfwtqK6Jr1FiFWG2vv3dfHbBrUT95joTZNfUThVHwdS8TpOEHC2=
+Kb.KjNWb7drPlHOKSzUnLw8CdUr6XhdW5Wj5AcDHknmZKw4MhUpvWV9Oc0eO7g5m0WTCF.rnJs.=
+J21bRgwaEsT8bm5fcEKKHKG4J6ESEqGn4Qepn.duCTbj5Ubu4ZhOnsuaYWvmYH0UNLl0PPqMB1e=
+U6xcA0mK5sFxjYqqdefWYCcEoDRKF1yEFXvU5IZymxRyl0iKXxNqWEyKj5oIRokHqECq9BjMky6=
+pVbIeYfwr2TzAmw8QWqvd9HBHVBZcfn3LbF2.lvepSoFwjzeiacVc1rSCcIHK1e2I6uiYaxHPQq=
+ZQeo7yF1_hSx7gIA" style=3D"background-color:#E1251B; background-image:linea=
+r-gradient(#E1251B,#E1251B); border-radius: 30px; border:3px solid #E1251B;=
+ font-family: 'Poppins', -apple-system, 'Roboto', sans-serif; font-size:18p=
+x; line-height: 140%; font-weight:600; text-decoration:none; padding:8px 24=
+px; color: #fffffe; display:inline-block; mso-padding-alt:0;text-underline-=
+color:#E1251B"><!--[if mso]><i style=3D"mso-font-width:200%;mso-text-raise:=
+150%;" hidden>&#8195;</i><span style=3D"mso-text-raise:75%;"><![endif]-->
+              Get my offers
+              <!--[if mso]></span><i style=3D"mso-font-width:200%;" hidden>=
+&#8195;&#8203;</i><![endif]--></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+       =20
+
+       =20
+       =20
+       =20
+        =20
+
+
+       =20
+<style media=3D"screen" type=3D"text/css">
+@media screen {
+    /* Poppins */
+    @font-face {
+      font-family: 'Poppins';
+      font-style: italic;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLm=
+g1hVF9eOYktMqg.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: italic;
+      font-weight: 600;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLm=
+r19VF9eOYktMqg.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9=
+Z1xlFd2JQEk.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6=
+Z1xlFd2JQEk.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+	/* Roboto */
+	@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiGyp8kv8JHgFVrJJLucHtA=
+OvWDSA.woff2) format('woff2');
+  mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLmg1=
+hVF9eOYktMqg.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLmr1=
+9VF9eOYktMqg.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiEyp8kv8JHgFVrJJfecn=
+FHGPc.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9Z1=
+xlFd2JQEk.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6Z1=
+xlFd2JQEk.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+}
+</style>
+<table align=3D"center" bgcolor=3D"#f3f3f3" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"background: #f3f3f3;" widt=
+h=3D"100%">
+<tr>
+<td style=3D"padding: 20px 32px">
+<table bgcolor=3D"#f3f3f3" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" style=3D"border-collapse: collapse; background: #f3f=
+3f3;" width=3D"100%">
+<tr>
+<td style=3D"padding: 6px;">
+<img alt=3D"PC Optimum Logo/Logo PC Optimum." class=3D"mwidth90px" src=3D"h=
+ttps://clickncollect.s3.us-east-1.amazonaws.com/email/Modular-2025/PCO/PCO-=
+Logo-Grey_DM-Safe_BIL.png" style=3D"display: inline-block;width:100%; max-w=
+idth:180px;font-size: 0;" width=3D"180"/>
+<td align=3D"center" width=3D"10%"><a href=3D"https://link.pcoptimum.ca/v1/=
+emailclick?q=3DEttJOPb8hGVgaxdQ3HaoQo_lo31RK46eaD2MIYSIHaAo8zEXg.lzIvg-GV7U=
+1T_22is2Kd8brdh2nuZasUJ_g13sXTLERlQ73JGb1gCWJ7366XtWmpbQK9Qsjrf0.oxQcyKpXvf=
+41UYEpi2J3iYKUCMuRUEBcdaddYhdZsTzZCQCkHgvVkWBNeUodRENM1_oiO712eE-6RiNUOqfgx=
+iH8fmm8zLvcYktpm3EQF6HsPmXQ0jCATngMwuIOhEM2VIfpH39ly6Z.8jTu6jWsg-Xag0kL0XQr=
+nR72OhRYBNH4FWFS_wv.4WROtWEqbVAeJobl5NDVqDdUybCux2sTp9pBv3WQ-8UMWKEuk3XP9vv=
+tRJuTluDlU0h.tX0yJ_1vAujsbT6I1Gg-el2pMmSKj3mTdEYwuEcFpuEZL5BZE0Tqs3G2_r7FLX=
+OkrD9Y2I.s8HWXtj2XO3._zLt15.g6DroRlh_NY6_bGFHga._I0zsBgn6nMHE" target=3D"_b=
+lank"><img alt=3D"Instagram" border=3D"0" height=3D"30" src=3D"https://clic=
+kncollect.s3.us-east-1.amazonaws.com/email/Modular-2025/Footer/IG_DM-Safe.p=
+ng" style=3D"border:0px; padding-right:5px;"/></a></td>
+<td align=3D"center" width=3D"10%"><a href=3D"https://link.pcoptimum.ca/v1/=
+emailclick?q=3DL86oUvT2Shdb0zd7NVIknefjNEt7RzwJ.R936SdtYIVh68y2VpX.eD0-zMpq=
+8H6c0Zdn0o23g2ukmzmoGQJHtO5qpCY3vQlwFhMvWhhTyM89NBfxhR7THtqabLnEFG70wYusrD5=
+jWY51r2mWaceBfcPJsyQel_PLt1afnnJLlwcQ.bMomSeNdCkjrgxXeLQCCY6oQFU-6RiNUOqfgx=
+iH8fmm8zLvcYktpm3EQF6HsPmXQ0jCATngMwuIOhEM2VIfpH39ly6Z.8jTu6jWsg-Xag0kL0XQr=
+nR72OhRYBNH4FWFS_wv.4WROtWEqbVAeJobl5NDVqDdUybCux2sTp9pBv3WQ-eqRkY0F50AyzZE=
+4.ZFKwNb8GUSMje9lKU9L7EyYd9afRlg-K0nen4hGR_.f8ySieY1oz4hMG67JC241zZcBRpMT5v=
+iiHiIQe08w.kqCcUxaroOmbDpKwzFOxMriVC3JzwQWOhiDCaKUAdjvGKRu" target=3D"_blan=
+k"><img alt=3D"Tiktok" border=3D"0" height=3D"30" src=3D"https://clickncoll=
+ect.s3.us-east-1.amazonaws.com/email/Modular-2025/Footer/TT_DM-Safe.png" st=
+yle=3D"padding-right:5px;"/></a></td>
+<td align=3D"center" width=3D"10%"><a href=3D"https://link.pcoptimum.ca/v1/=
+emailclick?q=3DANHEPu8mNvrvWKE8vZT8HK5bx6S9Qm9kMzxHM1UcWJiRzZJ2taquxxk-HtRV=
+DYS_LpMpFSzHB6mHsYJDIoTLMlgMDBHggK4SmwD2zzlByvGcoBhIjOT1YFHRWOXLFp2DrbFgfiK=
+89OAfzA6LrdblgB2iTS5cpLL1C3KUQwy70K69B.vZysaQEXFl2zxP4pJJiWi0PVk-6RiNUOqfgx=
+iH8fmm8zLvcYktpm3EQF6HsPmXQ0jCATngMwuIOhEM2VIfpH39ly6Z.8jTu6jWsg-Xag0kL0XQr=
+nR72OhRYBNH4FWFS_wv.4WROtWEqbVAeJobl5NDVqDdUybCux2sTp9pBv3WQ-Dn6KFEbcyETWL_=
+5Ei.gNtAM8_ovE9N1f1Bbeof3MNzyNaA-jXW1MQyyY7XA7vLhn4keck2aF0ESSTWrQ4RZiuZyi.=
+TqW857.9Ka5J3GA26Imo3dqGqi_vmqY2NjZRYz9NiNaUHJaMAUJsUGxA" target=3D"_blank"=
+><img alt=3D"Facebook" border=3D"0" height=3D"30" src=3D"https://clickncoll=
+ect.s3.us-east-1.amazonaws.com/email/Modular-2025/Footer/FB_DM-Safe.png" st=
+yle=3D"padding-right:5px;"/></a></td>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+<table align=3D"center" bgcolor=3D"#f3f3f3" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"background: #f3f3f3;" widt=
+h=3D"100%">
+<tr>
+<td style=3D"padding: 20px 32px 0;text-align:center;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"border-collapse: collapse;" width=3D"100%">
+<tr>
+<td style=3D"text-align:center;font-size:0; padding:0 0 30px;">
+<h1 style=3D"font-family: 'Poppins', -apple-system, 'Roboto', sans-serif;fo=
+nt-weight: bold; font-size: 28px; line-height: 32px; color: #000001; margin=
+: 0;">
+               =20
+                Download the app
+               =20
+            </h1>
+</td>
+</tr>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"border-collapse: collapse;" width=3D"100%">
+<tr>
+<td class=3D"two-col" style=3D"text-align:center;font-size:0">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"border-collapse: collapse;" width=3D"100%">
+<tr>
+<td class=3D"column plr-0 ta-c pb-20" style=3D"width:244px;max-width:244px;=
+display:inline-block;vertical-align:top;padding:0 12px 30px; text-align: ri=
+ght;" width=3D"244">
+<!--[if (gte mso 9) | (IE) ]><table role=3D"presentation" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" style=3D"border-collapse: collapse; border-=
+radius: 30px; background-color: #fffffe; border: 1px solid #000001;"><tr><t=
+d style=3D"padding: 0;"><![endif]-->
+<a bgcolor=3D"#fffffe" class=3D"btn btn-tertiary-white" href=3D"https://lin=
+k.pcoptimum.ca/v1/emailclick?q=3DS0aeTi2rsf9G27cvQR_5Gv1nDlxhLBOlT63lpcB21g=
+U1wDB6GAdu42o-Us8KkM5yf7RVnhA6Lx7XXKYEf.mGj1gD_PADZLGRGk4sP.nMsNF38zOJuFUvh=
+dPHVqExKvGMWPxnDQFSAoBq7LBRMgy5uzIclCkHKAtxMSnFD3BFlzSyqZdPQ8QGafUJOk7G.Tdq=
+k2606gQ-6RiNUOqfgxiH8fmm8zLvcYktpm3EQF6HsPmXQ0jCATngMwuIOhEM2VIfpH39ly6Z.8j=
+Tu6jWsg-Xag0kL0XQrnR72OhRYBNH4FWFS_wv.4WROtWEqbVAeJobl5NDVqDdUybCux2sTp9pBv=
+3WQ-mi03TSfGr4e1.pxl.A.L80ovk2XhI36NUmfSPXU9kSObHQ-.BJQU7tLkB8g7AFSkn4xP5OW=
+I0MZMDzqXm1XwQju2wkN9SjJ0d1SNl98MF_NfnQ04Ra_5X.aWfE.yJm.70TJftIQDrMf2TY6PVi=
+5T575HYX4dacT_YzzWw3Zc8UTLo1YVA" style=3D"font-family: 'Poppins', -apple-sy=
+stem, 'Roboto', sans-serif; background: #fffffe; text-align: center; border=
+: 1px solid #000001; font-size:16px; line-height:120%; font-weight:600; tex=
+t-decoration:none; padding: 8px 8px; color: #000001=20
+                        !important; border-radius: 40px; display: inline-bl=
+ock;">
+<span style=3D"color:#000001;">
+<strong>
+<!--[if mso]><i style=3D"mso-font-width:200%;mso-text-raise:150%;" hidden>&=
+#8195;</i><span style=3D"mso-text-raise:75%;"><![endif]-->
+                         =20
+                          Go to App Store
+                         =20
+                          <!--[if mso]></span><i style=3D"mso-font-width:20=
+0%;" hidden>&#8195;&#8203;</i><![endif]-->
+</strong>
+</span>
+</a>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+<td class=3D"column plr-0 ta-c" style=3D"width:244px;max-width:244px;displa=
+y:inline-block;vertical-align:top;padding:0 0 30px 12px; text-align: left;"=
+ width=3D"244">
+<!--[if (gte mso 9) | (IE) ]><table role=3D"presentation" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" style=3D"border-collapse: collapse; border-=
+radius: 30px; background-color: #fffffe; border: 1px solid #000001;"><tr><t=
+d style=3D"padding: 0;"><![endif]-->
+<a bgcolor=3D"#fffffe" class=3D"btn btn-tertiary-white" href=3D"https://lin=
+k.pcoptimum.ca/v1/emailclick?q=3Dj1rjzBN.xh3n_4qJvkgR5wAwiJ3JVJuEaWM1zoTZUT=
+kBtS37jtR9atM-Wh8H4DRxJtQB.BdFLPdXQdGFZDD4z5Kmc.w_y7X_yFY4kWxFBxaYBEf4X1i3r=
+0aPRBPYbJQyg4fW6BfO2.G8aLdrWnEESyS9aC8QJlItkBDvY5y6J7FKKVZOUEQVnGAQZ.VT5g7d=
+mjHhxHA-6RiNUOqfgxiH8fmm8zLvcYktpm3EQF6HsPmXQ0jCATngMwuIOhEM2VIfpH39ly6Z.8j=
+Tu6jWsg-Xag0kL0XQrnR72OhRYBNH4FWFS_wv.4WROtWEqbVAeJobl5NDVqDdUybCux2sTp9pBv=
+3WQ-QR2LqnFIylHC.mzuHEgiuuzUvvbDzvWTMxw3Kev0R5gUPQ-CaGdpNiYigx1pR8job.nbcIV=
+ASzDQA0yNmaWfvfHq1GIQCgiXzN.DxL32GHyvzlEdh1xg98GlTHg_3vlw1JC8xTj6XS6mJB_U0s=
+voGsZQ9N1tgtxrXCP.DMkOo4qONNHnCYMo8b1BE9qR5zOR5JNNt5LEUGw" style=3D"font-fa=
+mily: 'Poppins', -apple-system, 'Roboto', sans-serif; background: #fffffe; =
+text-align: center; border: 1px solid #000001; font-size:16px; line-height:=
+120%; font-weight:600; text-decoration:none; padding: 8px 8px; color: #0000=
+01 !important; border-radius: 40px; display: inline-block;">
+<span style=3D"color:#000001;">
+<strong>
+<!--[if mso]><i style=3D"mso-font-width:200%;mso-text-raise:150%;" hidden>&=
+#8195;</i><span style=3D"mso-text-raise:75%;"><![endif]-->
+                       =20
+                        Go to Google Play
+                       =20
+                        <!--[if mso]></span><i style=3D"mso-font-width:200%=
+;" hidden>&#8195;&#8203;</i><![endif]-->
+</strong>
+</span>
+</a>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>  =20
+       =20
+<style media=3D"screen" type=3D"text/css">
+@media screen {
+    /* Poppins */
+    @font-face {
+      font-family: 'Poppins';
+      font-style: italic;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLm=
+g1hVF9eOYktMqg.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: italic;
+      font-weight: 600;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLm=
+r19VF9eOYktMqg.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9=
+Z1xlFd2JQEk.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6=
+Z1xlFd2JQEk.woff2) format('woff2');
+      mso-font-alt: 'Segoe UI';
+    }
+
+	/* Roboto */
+	@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v23/pxiGyp8kv8JHgFVrJJLucHtA=
+OvWDSA.woff2) format('woff2');
+  mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLmg1=
+hVF9eOYktMqg.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLmr1=
+9VF9eOYktMqg.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiEyp8kv8JHgFVrJJfecn=
+FHGPc.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9Z1=
+xlFd2JQEk.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6Z1=
+xlFd2JQEk.woff2) format('woff2');
+    mso-font-alt: 'Segoe UI';
+  }
+}
+</style>
+
+<table align=3D"center" bgcolor=3D"#f3f3f3" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"border-collapse: collapse;=
+ background: #f3f3f3;" width=3D"100%">
+<tr>
+<td style=3D"padding: 20px 32px; text-align:center;width:100%;margin:0 auto=
+;">
+<p style=3D"margin: 0; font-family: 'Poppins', -apple-system, 'Roboto', san=
+s-serif; font-size:20px; line-height: 130%; font-weight: normal; color: #00=
+0001;">
+<a alias=3D"Legal-PrivacyPolicy_EN" href=3D"https://link.pcoptimum.ca/v1/em=
+ailclick?q=3DJyUGexZUvJLA6wAXJm583faDk2aWz9jgG2htkz0OxyYeaP0Kc3uMfcA-NgR.47=
+Y4KS16EHCevPOPQZ23yRECCuxr7wkc0DPgaoa511Hyj22w1c13BP7mThtpoTIBBFgAvOW4rG89E=
+ZKEUvuf1E_VnDwbP.NAxArE_z6uNP0zvFpAmPGI7qk5uHQjc87qW9ccN6MNawU-6RiNUOqfgxiH=
+8fmm8zLvcYktpm3EQF6HsPmXQ0jCATngMwuIOhEM2VIfpH39ly6Z.8jTu6jWsg-Xag0kL0XQrnR=
+72OhRYBNH4FWFS_wv.4WROtWEqbVAeJobl5NDVqDdUybCux2sTp9pBv3WQ-wyjM6l_TBfNiFs77=
+r9qClS0t9L6BMPC0iwL8eoPP04D7_g-xkms1b3ICn8OGzZ8VJs0RWOo8WKeH5ZNV5uxuiZ.wsXz=
+Eyjo6zlM46iFEnbYr2mjsnPd_IamlRaRzpLwWQna3w" style=3D"font-weight: 600; colo=
+r: #000001; text-decoration: underline;">About</a> | <a alias=3D"Legal-Cont=
+actUs-EN" href=3D"https://link.pcoptimum.ca/v1/emailclick?q=3Ddj0beS.Pj4j8Q=
+0.HkiOLE7jqUgGrWg17fhfO.UMaT0RhOFtR9JTUPLI-5qaO.fNfDjoVla9aEhsLeHQ2p48EQaIv=
+lYRVcWRmInp2c70IUu35n0R77iXt5tQI6ViPVcB8MBjrKv28bwZWr25ZdTmLg8hOmqWsjoY1a.Z=
+xJqKQRn0y7TBiLq7Xfra.1ylS9fH6InpAwdM-6RiNUOqfgxiH8fmm8zLvcYktpm3EQF6HsPmXQ0=
+jCATngMwuIOhEM2VIfpH39ly6Z.8jTu6jWsg-Xag0kL0XQrnR72OhRYBNH4FWFS_wv.4WROtWEq=
+bVAeJobl5NDVqDdUybCux2sTp9pBv3WQ-t0mEPVGeRrgLc9evxr1EW.F2u3Q8kKiMaaYtSC5Huk=
+mOiQ-JIthVd.o4xsuYTH0d1ltZTUp1Y6MR7rAvfp0io41YEV0.DL6xTXA1H3GUfNHnPH9BsmZaK=
+AuS.wQrInTgMwl5JU61EoLAnzUDQFJDsyeweLmZwdOZGqfwLx0DAa7YTq.6Yx9ph9oejLrW9UV5=
+K2WOH5JFO0" style=3D"font-weight: 600; color: #000001; text-decoration: und=
+erline;">FAQs</a>
+<br>
+<br>
+</p>
+<p style=3D"margin: 1em 0; font-family: 'Poppins', -apple-system, 'Roboto',=
+ sans-serif; font-size:14px; line-height: 140%; font-weight: normal; color:=
+ #000001;">
+            This email was sent by: Loblaws=C2=A0Inc.<br>
+            1=C2=A0President's=C2=A0Choice=C2=A0Circle=C2=A0Brampton,=C2=A0=
+ON,=C2=A0L6Y=C2=A05S5,=C2=A0Canada<br>
+            =C2=A9 Loblaws=C2=A0Inc. All Rights Reserved
+          <br>
+</p>
+<p style=3D"margin: 1em 0; font-family: 'Poppins', -apple-system, 'Roboto',=
+ sans-serif; font-size:14px; line-height: 140%; font-weight: normal; color:=
+ #000001;">
+<a href=3D"https://link.pcoptimum.ca/v1/emailclick?q=3DezIsxFS2Km6594Up.qoZ=
+EhzE9t_uZCOeS6LanSgCMAdCUedgaQB2byI-atjbTatYkl5nuQ52S.TDBvig_jfu2daBUxSyTG2=
+ZseDV4RiCCvp4buuVI8fX_fdMziqo7INHVAGlfO737WtBBCRHL.CaT4yM2kwJcW0J2r9j_5XJZp=
+e3oLDf4FKzbe9LT9eLc.7kk8Ris40-6RiNUOqfgxiH8fmm8zLvcYktpm3EQF6HsPmXQ0jCATngM=
+wuIOhEM2VIfpH39ly6Z.8jTu6jWsg-Xag0kL0XQrnR72OhRYBNH4FWFS_wv.4WROtWEqbVAeJob=
+l5NDVqDdUybCux2sTp9pBv3WQ-UmhL3cNPKYeg.dWjiBsl57_NuHuk01das_hUPOxgwvXy.Q-ag=
+voVKVuRfJP4fxrYTbfqBscmolmJTdh77.zR11QTj3rXhzyJHF7VTVLFNO1Um0UDITHEl7NO.uZH=
+dcGcF9GM19wjvGmE63thjf4925oInewCnL8rBZupDJMWwML9ew" style=3D"color:#000001;=
+padding:0;margin:0;text-decoration:underline;">Privacy Policy</a> | <a alia=
+s=3D"Legal-TermsAndConditions_EN" href=3D"https://link.pcoptimum.ca/v1/emai=
+lclick?q=3D1sUNATWE4IVIIecb23V1rqT72pJCBhrLd9iXX3Kl5wUCFna0TE02C8Y-ioIO8z1W=
+94d8JSoLaHJt3jSO7JjD8Ujca1gPkv2DDXGN4W8mCMVzVeCPo7u1mrcRnB3.ByIesVOw.u9cM_J=
+5Qh1Kfzl9dJx02DJ1n4FXurYR2RhxT6obQkk043MUvivulGHK4T73uWG5SpA-6RiNUOqfgxiH8f=
+mm8zLvcYktpm3EQF6HsPmXQ0jCATngMwuIOhEM2VIfpH39ly6Z.8jTu6jWsg-Xag0kL0XQrnR72=
+OhRYBNH4FWFS_wv.4WROtWEqbVAeJobl5NDVqDdUybCux2sTp9pBv3WQ-CFKPFzxXhGOw9Lw7Q1=
+EA6vx1SspaVomlUudVdFOYDNjcAA-0LN54saXTgfe3CSHHf2l.pwO1TW7x40ZVVpbzZsS_1UUny=
+LuAGRZgkYv5f57BO5471S4gjc1ndg7Hpd5PgmySJUKHj5u9nPiVBtj2HnuBvXXp1BY6DbdhZqX4=
+NljvdtTKj8uHb0" style=3D"color:#000001;padding:0;margin:0;text-decoration:u=
+nderline;">Terms & Conditions</a> | =C2=A9 2026 Loblaws=C2=A0Inc. All Right=
+s Reserved.
+          <br>
+</p>
+<p style=3D"margin: 1em 0; font-family: 'Poppins', -apple-system, 'Roboto',=
+ sans-serif; font-size:14px; line-height: 140%; font-weight: normal; color:=
+ #000001;">
+<sup style=3D"font-size:0.5em;vertical-align:0.7em;line-height:1;">=C2=AE</=
+sup>/<sup style=3D"font-size:0.5em;vertical-align:0.7em;line-height:1;">TM<=
+/sup> Trademarks of Loblaws=C2=A0Inc. used under
+            license by President's=C2=A0Choice=C2=A0Services=C2=A0Inc.
+            Shoppers=C2=A0Drug=C2=A0Mart<sup style=3D"font-size:0.5em;verti=
+cal-align:0.7em;line-height:1;">=C2=AE</sup>,
+            Pharmaprix<sup style=3D"font-size:0.5em;vertical-align:0.7em;li=
+ne-height:1;">=C2=AE</sup> and the Pharmaprix
+            logo are trademarks of 911979 Alberta Ltd., used under=C2=A0lic=
+ence.
+            <br>
+</p>
+<p style=3D"margin: 1em 0; font-family: 'Poppins', -apple-system, 'Roboto',=
+ sans-serif; font-size:14px; line-height: 140%; font-weight: normal; color:=
+ #000001;">
+            **Points balance and redemption value are calculated up to 48 h=
+ours prior to sending this email, based on
+            minimum redemption of 10,000 points. Points are not redeemable =
+for cash or credit.
+            <br>
+</p>
+         =20
+         =20
+         =20
+         =20
+
+          <p style=3D"margin: 1em 0; font-family: 'Poppins', -apple-system,=
+ 'Roboto', sans-serif; font-size:14px; line-height: 140%; font-weight: norm=
+al; color: #000001;">
+            You are receiving this email because <a href=3D"mailto:talveerb=
+ath@gmail.com" style=3D"color:#000001;" target=3D"_blank">talveerbath@gmail=
+.com</a> is a
+            PC=C2=A0Optimum<sup style=3D"font-size:0.5em;vertical-align:0.7=
+em;line-height:1;">=E2=84=A2</sup>
+            member
+            and has signed up to receive communications from the PC=C2=A0Op=
+timum<sup style=3D"font-size:0.5em;vertical-align:0.7em;line-height:1;">=E2=
+=84=A2</sup> program on behalf
+            of
+            President's=C2=A0Choice=C2=A0Services=C2=A0Inc.
+            <br>
+</p>
+<p style=3D"margin: 1em 0; font-family: 'Poppins', -apple-system, 'Roboto',=
+ sans-serif; font-size:14px; line-height: 140%; font-weight: normal; color:=
+ #000001;">
+            This email was sent by President's=C2=A0Choice=C2=A0Services=C2=
+=A0Inc., provider of the PC=C2=A0Optimum<sup>=E2=84=A2</sup> program: 1=C2=
+=A0President's=C2=A0Choice=C2=A0Circle,=C2=A0Brampton,=C2=A0Ontario,=C2=A0L=
+6Y=C2=A05S5, <a href=3D"https://link.pcoptimum.ca/v1/emailclick?q=3DgbDeMWh=
+lpPHXx1zggDunKhZVev80wyMWys5IbHH5F_EbSYkdKNcDl1g-3lmDefHTgwmuWUkoZH_bqEXX.4=
+iURGY5YIRLreD9o8WP3c.sWEbqXfhQih3B6OUwCwEmeqWAWo8qIOetFhGR6nTqAfM7yLYeuZJcN=
+0EmQiMf8YdUzP_pKv3ae9pdaxi9t3oZyh0ByEb1Xnw-6RiNUOqfgxiH8fmm8zLvcYktpm3EQF6H=
+sPmXQ0jCATngMwuIOhEM2VIfpH39ly6Z.8jTu6jWsg-Xag0kL0XQrnR72OhRYBNH4FWFS_wv.4W=
+ROtWEqbVAeJobl5NDVqDdUybCux2sTp9pBv3WQ-Uhwctonq6fJSHE.T4Mfae2SZFhsLbDqs1IJG=
+TmME7sEqrw-MfOaiyVSUTNTbJyrHylaRElSsdVZ5cIpauKFjvh7RxnKon.Jm0qsw5QOXdFi5Ryx=
+1hYW.y7TX9O_Z5i6.CF4GQ" style=3D"color: #000001; text-decoration: underline=
+;">www.pcoptimum.ca</a>
+<br>
+</p>
+<p style=3D"margin: 1em 0; font-family: 'Poppins', -apple-system, 'Roboto',=
+ sans-serif; font-size:14px; line-height: 140%; font-weight: normal; color:=
+ #000001;">
+            For all PC=C2=A0Optimum<sup>=E2=84=A2</sup> member inquiries, p=
+lease <a alias=3D"Legal-ContactUs-EN" href=3D"https://link.pcoptimum.ca/v1/=
+emailclick?q=3D9Eg97QngObIQPnSlQ85oGQMlzKR4qgGUP87RXiz4gtVsCp4lN7wd.k0-S2R9=
+O_zsVHo.hT8fb9py82xejvDHelrhfUqRNRHQYkVMhvPRsxqqTRp._iQtPnTXBOyGbrr0rT9v3l2=
+WCreVjjFhCqygIMYxaAfsaq3hWPOeUPjPQNm3iLGZGTVpM4G9PLlPWHeGelFtvyg-6RiNUOqfgx=
+iH8fmm8zLvcYktpm3EQF6HsPmXQ0jCATngMwuIOhEM2VIfpH39ly6Z.8jTu6jWsg-Xag0kL0XQr=
+nR72OhRYBNH4FWFS_wv.4WROtWEqbVAeJobl5NDVqDdUybCux2sTp9pBv3WQ-sgyaub7kzTOBtk=
+YIR7VKdV7FpObRSftHsV1IgRpJDn0VuQ-aDjc35vxshBigTSwy.zVAgOhKqZl1n.YIBwzpJlYsI=
+yc1AogyBpf.tHniczV5t8TQjFllt41Cl59yZ1F.GX801mABkgDubWO4WeQ6r2EtjK0cJ8KeIXHl=
+Ihe7qRp" style=3D"color:#000001;padding:0;margin:0;text-decoration:underlin=
+e;">contact us</a>.=20
+            <br>
+</p>
+<p style=3D"margin: 1em 0; font-family: 'Poppins', -apple-system, 'Roboto',=
+ sans-serif; font-size:14px; line-height: 140%; font-weight: normal; color:=
+ #000001;">
+            To unsubscribe from PC=C2=A0Optimum<sup>=E2=84=A2</sup> communi=
+cations from President's=C2=A0Choice
+          =C2=A0Services=C2=A0Inc., <a alias=3D"Unsubscribe" href=3D"https:=
+//link.pcoptimum.ca/v1/emailclick?q=3D.WVmQPJTBvDfiZsHu.xijz73t4wQNlmuqhA6s=
+9KIzvISfBlAApuQvWU-RMnC89UiUXEyaBe2aCHLPKCLkvj8Mj6hB6W7gvePo9fd0_EfK9T85xdy=
+E7ga00IE.QC45fU7ajCVT2HytPQZEL_Bfmn8rrUOG397iANrMl.saNaHd3RP33d8AFrj.APlVsQ=
+RJKJu676nz.g-6RiNUOqfgxiH8fmm8zLvcYktpm3EQF6HsPmXQ0jCATngMwuIOhEM2VIfpH39ly=
+6Z.8jTu6jWsg-Xag0kL0XQrnR72OhRYBNH4FWFS_wv.4WROtWEqbVAeJobl5NDVqDdUybCux2sT=
+p9pBv3WQ-vkoliFtBZSVajlfhK0YZJQyXcYiCNxcMRUS4uGf6hFHcXg-gki6w3oDoSS1qhZ5n3B=
+0__xZeWCra04.ZTnPKLLrOxcP65fNUXQXXo6EuGIDJAAIU4.eavKQngNGrZQcxi8RtuT.h2kWvK=
+MB7DQd7a2GlSg52Qhp6zpIdvSqL_jXE6PaOwskl626VqJeDG.piaTlG3UBxS9OaBjj" style=
+=3D"color: #000001; text-decoration: underline;">click
+              here </a>
+</p>
+<p style=3D"margin: 1em 0; font-family: 'Poppins', -apple-system, 'Roboto',=
+ sans-serif; font-size:14px; line-height: 140%; font-weight: normal; color:=
+ #000001;">
+            The PC=C2=A0Optimum<sup style=3D"font-size:0.5em;vertical-align=
+:0.7em;line-height:1;">=E2=84=A2</sup> program is provided by President's=
+=C2=A0Choice=C2=A0Services=C2=A0Inc.
+          </p>
+</td>
+</tr>
+</table>
+
+         =20
+          </td></tr></tbody></table>
+<!--[if (gte mso 9) | (IE) ]></td></tr></table><![endif]-->
+</td></tr></tbody></table>
+<img src=3D"https://u46805862.ct.sendgrid.net/wf/open?upn=3Du001.JpEpiht5aA=
+IlDnI-2FxPTcM-2BT6LPYFL7xW4ejsG7jvovvKgE9KcqlYyA9d73hq2ewtv9q38-2F-2BihQ-2B=
+dAOlo8v3jOLNzxhRiPAfTi4pWY1FdvzJmoNrIRMVd7vNRrdbVvqc5Hf-2F1ze9rK0CNQyXcMAX2=
+w0FKzPZGQI-2FVRWeJlC9W8M1XeD4Vh5pdqI6VGJfe6GyY6gA8o-2FaN7jh1q-2Fq0foaR4s2B-=
+2Bb8LaEbPg4xo4DfYRZ-2BlaKaOojxL3E08WKfCb0ghI6cfI2tv2nIcoOoHPVeqYIfJUCcDDro9=
+N6jkXz99o5UqCyOA-2BCY-2BEKOzQxFH9Az3xzkRXWoRZG-2FkUyD6ZQtGgSFXZWITjdwh8eVuq=
+p30Yd4636druPs9bwfL4f6Qbx3AI7FuJZejRPqwOSzkV-2FvCsOPcf0b4Hp6koqHsg2PwJPHj-2=
+FrpKUdugXC9cQ6NXdcFNzorE2qEgHcwPuKxRtrZIYyggi0IiuLo64wcpCk5j3LmkvtoHnR7Mt15=
+tq2Yy-2FoFfuusP9nyi8GzSs2u2UdUp7kstkGmVA-2FyKgWW-2FOAurwrvKtio5h-2B5wrQTkEf=
+AnDIS8uT7KnfkTthfMj3eZS-2BJ-2BungqklNea32JbsZC7cYNj-2BE-3D" alt=3D"" width=
+=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !=
+important;border-width:0 !important;margin-top:0 !important;margin-bottom:0=
+ !important;margin-right:0 !important;margin-left:0 !important;padding-top:=
+0 !important;padding-bottom:0 !important;padding-right:0 !important;padding=
+-left:0 !important;"/></body>
+</html><img src=3D"https://link.pcoptimum.ca/v1/emailopen?q=3DrbrDHfA.d3tW1=
+Y3vd9yUuwrYY7TN2QlScBSHdi1e9Grb4dWgzt9fpqo-HjyWsBn72BsWUs27ZqMQQZMHZr7tpvgc=
+3YeGqe.bSqxLrY_fheqqVQm1qrngQugHrKNd088pKM67QRUwINLhfP5pTCKTxcqawpVcKVJOtzD=
+HAqmnV3VGhCHWsAAGoGWBUs.OKwVlsUMW9gY-fZcFi5OCpuRKeA0KltjHbU7AN__dzWt34hOzJZ=
+o_UJHPzLepAQQWahCLXJ44v2S0ah13hXhx0A-PdfefdIWFCPi74ltH71HEo5SzXq7f8T_LP27qP=
+OERMUaYSHLSKL3mubKrIi9eDTrYi5KSg" alt=3D"" style=3D"display:none;width:1px;=
+height:1px;" height=3D"1" width=3D"1">

@@ -1,0 +1,2409 @@
+Delivered-To: talveerbath@gmail.com
+Received: by 2002:a05:7110:b507:b0:2fe:1825:8528 with SMTP id hp7csp287488geb;
+        Fri, 13 Mar 2026 15:24:37 -0700 (PDT)
+X-Received: by 2002:a05:620a:4713:b0:8cd:9aba:f5fb with SMTP id af79cd13be357-8cdb5aa56famr691689585a.30.1773440677567;
+        Fri, 13 Mar 2026 15:24:37 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1773440677; cv=none;
+        d=google.com; s=arc-20240605;
+        b=IG+riDOrEFJZl99tYB+8Sx6GTYzR+i1kGYTaQ7FXjEdQ6Vw60HHnvneEK9SW8tj9cQ
+         X1o9P7+maW+KVt/nl+WkQ3dyAZAOKhNEU9q9xri0+yOwfX24alptR1mijC3CCwnkFQGv
+         XvjuMHkIyzhf2TzNcacxoIxZdQW0RKgxcXN5W7KtrWCe+iHpq17dmneONgc5hmDQesKv
+         ijJwsSUxFW8PBAKv+fg8pPuJox7EVDKAKqdnzRsJRFiE0LcshAgBFApM6VouZ0r9lh6o
+         WFvJ8m3dIN+ZWKtTC9kyB/2h9aZn71R04vk8SSSAndSem0cg+13KPhi+XZteShkQBJsb
+         g8vA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=from:subject:reply-to:mime-version:date:to:message-id
+         :dkim-signature;
+        bh=Y/p3dOp2t5qf68N6w0B4OSQBgpeJzjqmo4TZOxOrQKk=;
+        fh=OYuaZ8rPTC9pUigfh3yoTx6H7O1WyMO4Twlu5+H+CBU=;
+        b=kv65wUYfuBU9deC+S+zgBH8sVhqcM73wfpgXUwiFU4lFjFk7h4DR7Fhdo/VEhiXC/q
+         qKzRMRcvpoKJwwNWnCG7u6xtpbFZT8JWkQuMSflI/EWbL/3ZJje9OVY74XFevPg2oiid
+         rY7YWr65Lgr0RtHF7WzGfT+rsI4ZgnhuxXG0Wy7598AcBz80MTKzL2H3fvJ8QPj16tPW
+         wK8XB7WPyLD0LX6m34wZb71VRiUXUU7PyxukLoTP+3tty+K/4NRraNga4dz7n9Bq+Sdk
+         v24ZkCtsgt3qtzYkDNGh6n4jyCCpWwtNQtSu5kfyP44TQuKXXECQcYInjZcZTsNof3PR
+         e0ng==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@campaigns.cineplex.com header.s=cineplex header.b=D6CYtmsZ;
+       spf=pass (google.com: domain of cineplex@campaigns.cineplex.com designates 20.57.72.210 as permitted sender) smtp.mailfrom=cineplex@campaigns.cineplex.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=cineplex.com
+Return-Path: <cineplex@campaigns.cineplex.com>
+Received: from r210.campaigns.cineplex.com (r210.campaigns.cineplex.com. [20.57.72.210])
+        by mx.google.com with ESMTPS id af79cd13be357-8cda1fd9dd6si987246685a.137.2026.03.13.15.24.37
+        for <talveerbath@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 13 Mar 2026 15:24:37 -0700 (PDT)
+Received-SPF: pass (google.com: domain of cineplex@campaigns.cineplex.com designates 20.57.72.210 as permitted sender) client-ip=20.57.72.210;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@campaigns.cineplex.com header.s=cineplex header.b=D6CYtmsZ;
+       spf=pass (google.com: domain of cineplex@campaigns.cineplex.com designates 20.57.72.210 as permitted sender) smtp.mailfrom=cineplex@campaigns.cineplex.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=cineplex.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=campaigns.cineplex.com; s=cineplex; t=1773440677;
+	bh=Y/p3dOp2t5qf68N6w0B4OSQBgpeJzjqmo4TZOxOrQKk=;
+	h=Message-ID:To:Date:Content-Type:MIME-Version:Subject:From;
+	b=D6CYtmsZBbzM7mgU3M8f0SXo+EfLqfjvu47kDUJj/goPlJED9f2aWX1sgY878sQM/
+	 A2JHd1BR66hv3pOaqs/P7k5Q7tWoIAA0IGHtP5VG1kFlYYWNLqa/ftUii6PKXoSsgK
+	 8+fatJQvFxBIYpujq+qiRyMjbkcGx95lflQ04YOna/DNxsxh+UdNpAIH/QHwcQ0uMF
+	 zjjDZIGIFHs5KXFEEj+rC2pXDOJfIre9g8uMX5aWO3+MrWfzfWDnFhB9rZVTEqQcr0
+	 Nn7TZ+TL41SoAK1bLJXsmcyck3lXFFrVVP3koeDNiDzuzeEtIjeoirVlqa6QwEsTZe
+	 XMUm1RVFwSZOg==
+X-MSFBL: AOQs3lzPbAu2nIg0OauDV9L/UqNPVcKKiL/wLCw6Yys=|eyJjYW1wYWlnbl9pZCI
+	6IkJNQS05Mjc4NDA4MiIsInN1YmFjY291bnRfaWQiOiIwIiwiYiI6ImFmZmluaXR
+	5XzAyZGU0N2U2LTJlNmQtNDJmOC04ZWMzLTg1OGM1YWI5MWUwNF9iYXRjaF8yMC4
+	1Ny43Mi4yMTAiLCJyIjoidGFsdmVlcmJhdGhAZ21haWwuY29tIiwic25pcHBldF9
+	jb3VudCI6IjAiLCJyY3B0X3RhZ3MiOlsgXSwidGVtcGxhdGVfY29udGVudF90eXB
+	lIjoiaW5saW5lX3BhcnRzX3dpdGhfc3Vic3RpdHV0aW9ucyIsInRyYW5zbWlzc2l
+	vbl9pZCI6IjE0ODQ1MTI3ODI3MzcxNTI3IiwidGVtcGxhdGVfdmVyc2lvbiI6IjA
+	iLCJ0ZW5hbnRfaWQiOiJrZXlzcGFjZV9kZWZhdWx0IiwibWVzc2FnZV9pZCI6IjA
+	wMDBhNThlYjQ2OTc0MGE0ZDI0IiwicmNwdF9tZXRhIjp7ICJlbmNyeXB0IjogInY
+	xLk5vdEgxS2VSUWdzXzNHZXo4YklUbFpOZ0JIOWNqVFZlV05oM1BGR1hzakcxNXp
+	zUktSa2ZTdHBTODBHWmdRcVZ5STBFaVBLaDFHUGFqMnNQcXo4eVlwWlQ2RDRrVFZ
+	vUTBaYTZWQkc5UmtIaUFrNlpXNkt0WlJSelpySm5McFhJbzBqSzNqYnBTWTR0NUd
+	lcWwwMjVJdk1ueDZET3ktMzFRUUE2UEJEY3pHTE9TZ3lLODBNU2VfZ1BOMXpCMlA
+	2RVNKaDFyVnlKV1dkOTNOc3NDYThLTXZPQlc4NnRwdjZ2Z0MzT055djhTMjA5am5
+	DOXgwSUg2YlQzN2R6Qk5WcXpMaEp2VFBYT2Eyb2Z6aWF5eEdaLTFVdzQ0a3FaMFZ
+	3UktQWXphYTJGS1lDejJUSU9wQXBsMHNZSXVGX2VsNDJ4QVQxeHpWckJ2RHh3VXd
+	2RjJlLWhIdUl5VlM1WUZCSzVJNm51UlFGUDJLNm8tZVZHaExMbXppRVRFV3FsdFp
+	SaDBRZS1xOW81c2h6S0tXMDF3ZUNYM0pFRXpuOTNfR0tpYlByQXo0NUl6MDJScjR
+	DeEhIV2VCQzJUZUNSQWxYOXh0WnBCRTAxTzRzeXl0NmJqa3VBWnRZNEhRMXNOMjl
+	vNUJ1aDQ5NlpxaXRDMU5uZThkUmtIMEt3Q0JLN1hDMlhVRDNOR1YxQjljVWRPSHB
+	ZMjJlWVc0N013QVdmcThnY1NNVk5VekpDNDFtczd3YjZKZDJxM3VSZTZOZ0pCb3d
+	aSDJkOXlpWWNhUkY2UmNiVWFMclVFakVzVFBZNnJWWlB0LXM4TzFwdklsY0NGUHR
+	Mc0NuZHNLSVVhOTA2TlNhaTNoQ2JDUUpsT2YxWGpUdUtqVXdZblZKa2tiME0xT3U
+	5XzFnM1MwTFVLNkJJNVFhWG9tOEJjN2ZMV29sTE14b3hLR0NuNnlQWXdIY0pzMjE
+	4dVlQMzFxNHllQ2VoMlB2WWI0Y1E0MFVtRGdobXBOWWp0NWdsaW9LYjhkSWc5IiB
+	9LCJ0ZW1wbGF0ZV9pZCI6InRlbXBsYXRlXzE0ODQ1MTI3ODI3MzcxNTI3IiwiZyI
+	6ImFmZmluaXR5XzAyZGU0N2U2LTJlNmQtNDJmOC04ZWMzLTg1OGM1YWI5MWUwNF9
+	iYXRjaCIsImN1c3RvbWVyX2lkIjoiMSJ9
+x-ess-validity: 1773743076
+x-message-profile-id: 5d11aed9-e85f-3777-ae3d-c243abb7a6d5
+Message-ID: <5d11aed9-e85f-3777-ae3d-c243abb7a6d5@campaigns.cineplex.com>
+x-request-id: 3af61a0f-b54f-4fd3-bfa7-e8b2f5b7e3cf.63dc9bc1-9fe1-4e1e-8b1a-5527bc298d40.e787e127-2cff-4758-a38e-5a922d48bb8a
+To: talveerbath@gmail.com
+Date: Fri, 13 Mar 2026 22:24:37 +0000
+Content-Type: multipart/alternative; boundary="_----L16cGxT5K8Sxk0z1XRistg===_EE/22-02676-4AE84B96"
+MIME-Version: 1.0
+Reply-To: "Cineplex" <cineplex@campaigns.cineplex.com>
+x-message-type: marketing
+Subject: =?utf-8?B?8J+SliBMb3ZlLCBsYXVnaHRlciwgYW5kIGEgZ3JlYXQgRnJpZGF5?=
+	=?utf-8?B?IGF0IHRoZSBtb3ZpZXM=?=
+From: "Cineplex" <cineplex@campaigns.cineplex.com>
+x-affinity-id: 02de47e6-2e6d-42f8-8ec3-858c5ab91e04
+x-execution-mode: batch
+x-msg-execution-id: BMA-92784082
+
+--_----L16cGxT5K8Sxk0z1XRistg===_EE/22-02676-4AE84B96
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+=0A=F0=9F=8E=9F=EF=B8=8F Experience Reminders of Him and Hoppers on the big=
+ screen              =0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A        <div class=
+=3D"acr-fragment is-locked" data-fragment-id=3D"ajo:e7125795-a08b-4484-a8eb=
+-b094c31c6a6f"><table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0" style=3D"font-family: 'MarkOTMedium', Arial, Helvetica, sans-s=
+erif !important; font-style: normal; font-weight: 400; table-layout: fixed;=
+ width: 100%;"> <tbody> <tr> <th class=3D"colspan1"><div class=3D"acr-tmp-c=
+omponent" style=3D"height:0px;width:auto;" data-contenteditable=3D"true" da=
+ta-tmp-component-id=3D"html"><style type=3D"text/css">=0A@media only screen=
+ and (max-width: 500px) {=0A  h1 {=0A    font-size: 28px !important;=0A    =
+line-height: 30px;=0A  }=0A}=0A</style></div><div class=3D"acr-tmp-componen=
+t" style=3D"background-color:rgb(0, 0, 0);" data-source-uuid=3D"a7a06770-59=
+00-4c36-9199-1e68a8a039ff" data-contenteditable=3D"true" data-tmp-component=
+-id=3D"html"><table align=3D"center" bgcolor=3D"#001636" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" style=3D"color: #ffffff !important; font-fam=
+ily: 'MarkOTMedium', Arial, Helvetica, sans-serif !important; font-style: n=
+ormal; font-weight: 400; padding: 15px 0px; text-align: center;" width=3D"1=
+00%">=0A  <tbody>=0A    <tr style=3D"background-color:#001636;border:0px;">=
+=0A      <td width=3D"32%" style=3D"font-family: 'MarkOTMedium', Arial, Hel=
+vetica, sans-serif !important; font-style: normal; font-weight: 400;">=0A  =
+    </td>=0A      <td width=3D"36%" valign=3D"middle" style=3D"font-family:=
+ 'MarkOTMedium', Arial, Helvetica, sans-serif !important; font-style: norma=
+l; font-weight: 400; mso-padding-alt: 20px;">=0A        <a data-linkto=3D"h=
+ttps://" title data-nl-type=3D"externalLink" style=3D"font-family: 'MarkOTM=
+edium', Arial, Helvetica, sans-serif !important; font-style: normal; font-w=
+eight: 400; text-decoration: underline;" href=3D"https://data.campaigns.cin=
+eplex.com/ee/v1/click=3Fparams=3Dv1.A3qTOH7gd_3bII_TQ9BeNXJJrAUIA77uILxMnbJ=
+YFHI7HTL46vYsbTIlorgLoeq7ZunOgkbum-lYeLlubd9VRevQ1iTD6HxAMaNtMNJWlynhG1Zz25=
+RrAriJq6XJAQSTbtw1guTyjG1k8eq5uX-piC2HS_3-FYK1xja2BveIFJtuFj-bTYEKYcl1DVaMa=
+h-0BzygnkJ9LaPv5O2FAucw30OjFd05l5dkVqPOO7f3hyZRlbQIuoLNhBG_HSQyfW2ne8zWLwCU=
+pplakVN9B0l1VNZ8n84Udb9jKwz5y9JkMsi03DG56CFX5-6Egeox87G24Yoja7HGlNlnbAZidoG=
+oAK13QPq12kbM8N2NDijn8pY-Zm0kfekHxop0dj33e6SUMXD3QugZqOQaJkzJrzTrUhSPy9jQkZ=
+ZVitC6I4S-Aq7l3ZVaPn4KFJDr1AmZYG0W4Y3a9M1u7qSbo2q7ayCbzlLi3X1M&pid=3Dv1.s76=
+Z_oqHPi6pvjc5FRn3paZ5Ml3yAHtkL5s1JsJBgExak79OIcaFXUI7OO6DnbrRovIw6gvkB9RWXm=
+p8&tuid=3D6810d9c12f259d075e4a169c&configId=3De1f3099f-d292-4909-bc6e-348ab=
+e6b1809"><img alt=3D"Cineplex Logo" style=3D"padding: 5px 0px; width: 180px=
+; height: auto; text-align: center; border: 0px;" width=3D"180" class heigh=
+t=3D"49" src=3D"https://cdn.campaigns.cineplex.com/23dc5144-baef-40f8-9c51-=
+44baefa0f836/urn:aaid:aem:5efa8f5f-c75a-4f98-9238-d36e7e093f16/oak:1.1::ci:=
+c2e257f0f4a7a199cc284637aef721fd/3251cbde-99e3-3618-a184-69034dcff087"></a>=
+=0A      </td>=0A      <td width=3D"32%" style=3D"font-family: 'MarkOTMediu=
+m', Arial, Helvetica, sans-serif !important; font-style: normal; font-weigh=
+t: 400;">=0A      </td>=0A    </tr>=0A  </tbody>=0A</table>=0A=0A<table sty=
+le=3D"color: #ffffff !important; font-family: 'MarkOTMedium', Arial, Helvet=
+ica, sans-serif !important; font-style: normal; font-weight: 400; padding: =
+20px 0px 15px 0px;">=0A  <tbody>=0A    <tr style=3D"background-color:#00000=
+0;">=0A      <td width=3D"3%" style=3D"font-family: 'MarkOTMedium', Arial, =
+Helvetica, sans-serif !important; font-style: normal; font-weight: 400;">=
+=0A      </td>=0A      <td width=3D"58%" style=3D"color: #ffffff; font-fami=
+ly: 'MarkOTMedium', Arial, Helvetica, sans-serif !important; font-size: 15p=
+x !important; font-style: normal; font-weight: normal; line-height: 110%; m=
+so-ansi-font-size: 15px !important; mso-font-alt: Arial, Helvetica, Verdana=
+, Tahoma, sans-serif; mso-padding-left-alt: 5px; mso-padding-top-alt: 20px;=
+ text-align: left;"><!--[if gte mso 9]><span style=3D"font-family: Arial, H=
+elvetica, Verdana, Tahoma, sans-serif;color:#ffffff; font-size:15px !import=
+ant;"><![endif]-->=0A        =0A        =0A        Hey Talveer, you have <s=
+trong><span style=3D"color:#ffffff;font-family:'MarkOTMedium', Arial, Helve=
+tica, sans-serif !important;font-style:normal;font-weight:400;">0</span></s=
+trong> Scene+ Points<!--[if gte mso 9]></span><![endif]--></td>=0A      <td=
+ width=3D"19%" style=3D"font-family: 'MarkOTMedium', Arial, Helvetica, sans=
+-serif !important; font-style: normal; font-weight: 400;">=0A      </td>=0A=
+      <td width=3D"17%" style=3D"font-family: 'MarkOTMedium', Arial, Helvet=
+ica, sans-serif !important; font-style: normal; font-weight: 400; mso-paddi=
+ng-bottom-alt: 15px; mso-padding-left-alt: 5px; mso-padding-top-alt: 20px;"=
+>=0A        <a data-linkto=3D"https://" title data-nl-type=3D"externalLink"=
+ style=3D"font-family: 'MarkOTMedium', Arial, Helvetica, sans-serif !import=
+ant; font-style: normal; font-weight: 400; text-decoration: underline;" hre=
+f=3D"https://data.campaigns.cineplex.com/ee/v1/click=3Fparams=3Dv1.A3qTOH7g=
+d_3bII_TQ9BeNXJJrAUIA77uILxMnbJYFHI7HTL46vYsbTIlorgLoeq7ZunOgkbum-lYeLlubd9=
+VRevQ1iTD6HxAMaNtMNJWlynhG1Zz25RrAriJq6XJAQSTbtw1guTyjG1k8eq5uX-piC2HS_3-FY=
+K1xja2BveIFJtuFj-bTYEKYcl1DVaMah-0BzygnkJ9LaPv5O2FAucw30OjFd05l5dkVqPOO7f3h=
+yZRlbQIuoLNhBG_HSQyfW2ne8zWLwCUpplakVN9B0l1VNZ8n84Udb9jKwz5y9JkMsi03DG56CFX=
+5-6Egeox87G24Yoja7HGlNlnbAZidoGoAK13QPq12kbM8N2NDijn8pY-Zm0kfekHxop0dj33e6S=
+UMXD3QugZqOQaJkzJrzTrUhSPy9jQkZZVitC6I4S-Aq7l3ZVaPn4KFJDr1AmZYG0W4Y3a9M1u7q=
+Sbo2q7ayCbzlLi3X1M&pid=3Dv1.s76Z_oqHPi6pvjc5FRn3paZ5Ml3yAHtkL5s1JsJBgExak79=
+OIcaFXUI7OO6DnbrRovIw6gvkB9RWXmp8&tuid=3D6810d9c12f259d075e4a169e&configId=
+=3De1f3099f-d292-4909-bc6e-348abe6b1809"><img alt=3D"Scene+ Logo" style=3D"=
+padding: 0px; width: 100px; height: auto; text-align: center; border: 0px;"=
+ width=3D"100" class height=3D"38" src=3D"https://cdn.campaigns.cineplex.co=
+m/23dc5144-baef-40f8-9c51-44baefa0f836/urn:aaid:aem:07e805b1-5f45-450f-95d1=
+-2fcb19530f39/oak:1.0::ci:d7c76c62150aa78046b49efc83dcf333/dd9205e4-4ea7-37=
+dc-9186-0fe593890eaf"></a>=0A      </td>=0A      <td width=3D"3%" style=3D"=
+font-family: 'MarkOTMedium', Arial, Helvetica, sans-serif !important; font-=
+style: normal; font-weight: 400;">=0A      </td>=0A    </tr>=0A  </tbody>=
+=0A</table></div>=0A</th> </tr> </tbody> </table></div>              PLAN Y=
+OUR WEEKEND ESCAPE Reminders of Him (https://www.cineplex.com/movie/reminde=
+rs-of-him=3Futm_medium=3Dem&utm_source=3Dajo&utm_campaign=3Dfriwhatson_en&u=
+tm_content=3Dlnk_WhatsOn_Mar13&utm_term=3Dc360&utm_variation=3Dfm) Get Tick=
+ets (https://www.cineplex.com/movie/reminders-of-him=3Futm_medium=3Dem&utm_=
+source=3Dajo&utm_campaign=3Dfriwhatson_en&utm_content=3Dlnk_WhatsOn_Mar13&u=
+tm_term=3Dc360&utm_variation=3Dfm)                 =C2=A0A Must-See On The =
+Big Screen        Hoppers (https://www.cineplex.com/movie/hoppers=3Futm_med=
+ium=3Dem&utm_source=3Dajo&utm_campaign=3Dfriwhatson_en&utm_content=3Dlnk_Wh=
+atsOn_Mar13&utm_term=3Dc360&utm_variation=3Dfm)         =C2=A0Now Playing (=
+https://www.cineplex.com/=3Futm_medium=3Dem&utm_source=3Dajo&utm_campaign=
+=3Dfriwhatson_en&utm_content=3Dlnk_WhatsOn_Mar13&utm_term=3Dc360&utm_variat=
+ion=3Dfm) =C2=A0        undertone (https://www.cineplex.com/en/movie/undert=
+one=3Futm_medium=3Dem&utm_source=3Dajo&utm_campaign=3Dfriwhatson_en&utm_con=
+tent=3Dlnk_WhatsOn_Mar13&utm_term=3Dc360&utm_variation=3Dfm) =C2=A0 The Bri=
+de! (https://www.cineplex.com/en/movie/the-bride=3Futm_medium=3Dem&utm_sour=
+ce=3Dajo&utm_campaign=3Dfriwhatson_en&utm_content=3Dlnk_WhatsOn_Mar13&utm_t=
+erm=3Dc360&utm_variation=3Dfm) =C2=A0         =C2=A0        Scream 7 (https=
+://www.cineplex.com/en/movie/scream-7=3Futm_medium=3Dem&utm_source=3Dajo&ut=
+m_campaign=3Dfriwhatson_en&utm_content=3Dlnk_WhatsOn_Mar13&utm_term=3Dc360&=
+utm_variation=3Dfm) =C2=A0 Goat (https://www.cineplex.com/en/movie/goat=3Fu=
+tm_medium=3Dem&utm_source=3Dajo&utm_campaign=3Dfriwhatson_en&utm_content=3D=
+lnk_WhatsOn_Mar13&utm_term=3Dc360&utm_variation=3Dfm) =C2=A0         =C2=A0=
+=0A=0A    =0A  =0A=0A      See More Near Me=0A (https://www.cineplex.com/=
+=3FshowtimesNearYou=3Dtrue&utm_medium=3Dem&utm_source=3Dajo&utm_campaign=3D=
+friwhatson_en&utm_content=3Dlnk_WhatsOn_Mar13&utm_term=3Dc360&utm_variation=
+=3Dfm) =0A  =0A  =C2=A0         Coming Soon (https://www.cineplex.com/=3Fut=
+m_medium=3Dem&utm_source=3Dajo&utm_campaign=3Dfriwhatson_en&utm_content=3Dl=
+nk_WhatsOn_Mar13&utm_term=3Dc360&utm_variation=3Dfm) =C2=A0         Project=
+ Hail Mary (https://www.cineplex.com/en/movie/project-hail-mary=3Futm_mediu=
+m=3Dem&utm_source=3Dajo&utm_campaign=3Dfriwhatson_en&utm_content=3Dlnk_What=
+sOn_Mar13&utm_term=3Dc360&utm_variation=3Dfm) =C2=A0=C2=A0 =0A         =0A =
+ =0A    =0A      Get Advance Tickets (https://www.cineplex.com/en/movie/pro=
+ject-hail-mary=3Futm_medium=3Dem&utm_source=3Dajo&utm_campaign=3Dfriwhatson=
+_en&utm_content=3Dlnk_WhatsOn_Mar13&utm_term=3Dc360&utm_variation=3Dfm) =0A=
+    =0A           =0A          Ready or Not 2: Here I Come (https://www.cin=
+eplex.com/en/movie/ready-or-not-2-here-i-come=3Futm_medium=3Dem&utm_source=
+=3Dajo&utm_campaign=3Dfriwhatson_en&utm_content=3Dlnk_WhatsOn_Mar13&utm_ter=
+m=3Dc360&utm_variation=3Dfm) =C2=A0=C2=A0 =0A         =0A  =0A    =0A      =
+Get Advance Tickets (https://www.cineplex.com/en/movie/ready-or-not-2-here-=
+i-come=3Futm_medium=3Dem&utm_source=3Dajo&utm_campaign=3Dfriwhatson_en&utm_=
+content=3Dlnk_WhatsOn_Mar13&utm_term=3Dc360&utm_variation=3Dfm) =0A    =0A =
+           =0A                 =C2=A0        They Will Kill You (https://ww=
+w.cineplex.com/en/movie/they-will-kill-you=3Futm_medium=3Dem&utm_source=3Da=
+jo&utm_campaign=3Dfriwhatson_en&utm_content=3Dlnk_WhatsOn_Mar13&utm_term=3D=
+c360&utm_variation=3Dfm) =C2=A0=C2=A0 =0A         =0A  =0A    =0A      Lear=
+n More (https://www.cineplex.com/en/movie/they-will-kill-you=3Futm_medium=
+=3Dem&utm_source=3Dajo&utm_campaign=3Dfriwhatson_en&utm_content=3Dlnk_Whats=
+On_Mar13&utm_term=3Dc360&utm_variation=3Dfm) =0A    =0A           =0A      =
+    The Super Mario Galaxy Movie (https://www.cineplex.com/en/movie/the-sup=
+er-mario-galaxy-movie=3Futm_medium=3Dem&utm_source=3Dajo&utm_campaign=3Dfri=
+whatson_en&utm_content=3Dlnk_WhatsOn_Mar13&utm_term=3Dc360&utm_variation=3D=
+fm) =C2=A0=C2=A0 =0A         =0A  =0A    =0A      Get Advance Tickets (http=
+s://www.cineplex.com/en/movie/the-super-mario-galaxy-movie=3Futm_medium=3De=
+m&utm_source=3Dajo&utm_campaign=3Dfriwhatson_en&utm_content=3Dlnk_WhatsOn_M=
+ar13&utm_term=3Dc360&utm_variation=3Dfm) =0A    =0A            =0A         =
+            =C2=A0=0ALooking for ways to enhance your movie experience=3F D=
+iscover all that your local theatre has to offer.=0A =0A  =0A     =0A    =
+=0A      Find My Theatre (https://www.cineplex.com/=3FtheatresNearYou=3Dtru=
+e&utm_medium=3Dem&utm_source=3Dajo&utm_campaign=3Dfriwhatson_en&utm_content=
+=3Dlnk_WhatsOn_Mar13&utm_term=3Dc360&utm_variation=3Dfm) =0A    =0A  =0A   =
+  =C2=A0                     Crunchyroll (https://www.cineplex.com/movie/cr=
+unchyroll-anime-nights-sneak-peek-japanese-we-2026=3Futm_medium=3Dem&utm_so=
+urce=3Dajo&utm_campaign=3Dfriwhatson_en&utm_content=3Dlnk_CrunchyrollSneakP=
+eekMarch&utm_term=3Dc360&utm_variation=3Dfm)         =0A<div class=3D"acr-f=
+ragment is-locked" data-fragment-id=3D"ajo:8cb6e7ee-c95d-4669-af64-1ed9c543=
+b041"><style data-name=3D"media-custom-prefers-color-scheme-dark" type=3D"t=
+ext/css">@media (prefers-color-scheme: dark){.acr-dark-img{display:block !i=
+mportant;}.acr-light-img{display:none !important;}}</style><table align=3D"=
+center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" height=3D"auto" st=
+yle=3D"height: auto; width: 100%; table-layout: fixed;"> <tbody> <tr role=
+=3D"presentation"> <th class=3D"colspan1" data-source-uuid=3D"6907e5d7-8ca0=
+-4fc8-9af5-7f3abd9b312e"><div class=3D"acr-tmp-component image-container" d=
+ata-has-int-mso-hack=3D"true" data-source-uuid=3D"33b57d20-cb9e-4bae-8f38-5=
+0593a707111" style=3D"width:100%;text-align:center;border-bottom:4px solid =
+rgb(255, 213, 0);" data-params-id=3D"65217572" data-contenteditable=3D"fals=
+e" data-tmp-component-id=3D"image"><!--[if mso]><table cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"text-align: ce=
+nter;" ><![endif]--><a class=3D"arc-link" data-nl-type=3D"externalLink" hre=
+f=3D"https://data.campaigns.cineplex.com/ee/v1/click=3Fparams=3Dv1.j4HVRT_g=
+nyuJU7NIWrpeAA-7NtR5jao_4WD2yGbdSGiml8rHm6VUZB-9AGyY3H7s-AiZUINzskFQZmctCJ-=
+GMWmscpGGNlXUSNCsRWneDNOKeF7rLFoVgvPnGTnl5IU6oDBPx_46kNNIeRpo-qdh7CrbOx7dci=
+GXkhcMSIzZXFYC53pD3spPf3151ANhp6X_U4eJ60CHVeNUm5w6HMUk3_Kb8uLfSxPBQSmBufgoL=
+A6RKK5IYZoxDeW87xZR1ssEoHWNiYO9RPVRTOhaQzN82q-_1-gODa-ntmLs99CBbDErUaPdCxfm=
+A8vZsP50&pid=3Dv1.s76Z_oqHPi6pvjc5FRn3paZ5Ml3yAHtkL5s1JsJBgExak79OIcaFXUI7O=
+O6DnbrRovIw6gvkB9RWXmp8&tuid=3D69b471830da2ed55de51b64a&configId=3De1f3099f=
+-d292-4909-bc6e-348abe6b1809" id=3D"acr-link-15533842" style=3D"text-decora=
+tion:underline;"><img style=3D"height: auto; width: 100%; max-width: 100%;"=
+ width=3D"600" class data-medialibrary-source=3D"aem" alt=3D"=0A  Family Fa=
+vourites=0A" height=3D"auto" src=3D"https://cdn.campaigns.cineplex.com/23dc=
+5144-baef-40f8-9c51-44baefa0f836/urn:aaid:aem:362a9143-7a62-44e1-8c45-26398=
+c2fba86/oak:1.0::ci:e6a326e3012b6030142cc10d50b98396/3d9c45d7-c6ef-368c-8df=
+0-b56d4f26525a"></a><!--[if mso]></td></tr></table><![endif]--></div></th> =
+</tr> </tbody> </table> </div>            Holiday Gift Bundle  - Redeem Rem=
+inder (https://www.cineplex.com/promos/holiday=3Futm_medium=3Dem&utm_source=
+=3Dajo&utm_campaign=3Dpp-exh_en&utm_content=3Dsta_hgbreminder&utm_term=3Dc3=
+60&utm_variation=3Dpc)         <div class=3D"acr-fragment is-locked" data-f=
+ragment-id=3D"ajo:5a57fc9e-79e8-4aaf-9c98-29d0e749670a"><style data-name=3D=
+"media-custom-prefers-color-scheme-dark" type=3D"text/css">=0A@media (prefe=
+rs-color-scheme: dark) {=0A  .acr-dark-img {=0A    display: block !importan=
+t;=0A  }=0A  .acr-light-img {=0A    display: none !important;=0A  }=0A}=0A<=
+/style> <div id=3D"acr-42268521" data-fragmentbuilder-label=3D"Selected" da=
+ta-source-uuid=3D"0c763e47-2d14-4eb2-aab2-68c994bf33dc"> <table align=3D"ce=
+nter" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width: 100%=
+; table-layout: fixed;"> <tbody> <tr> <th class=3D"colspan1 is-empty" style=
+=3D"background-color:rgb(0, 0, 0);padding:0px;background-image:none;"></th>=
+ </tr> </tbody> </table> </div>=0A</div><grammarly-desktop-integration data=
+-grammarly-shadow-root=3D"true"></grammarly-desktop-integration>=C2=A0     =
+         =0A   =0A            Get The App=0A       =0A             (https:/=
+/itunes.apple.com/ca/app/cineplex-mobile/id404011384=3Fmt=3D8) =0A         =
+  =0A             (https://play.google.com/store/apps/details=3Fid=3Dcom.fi=
+vemobile.cineplex&hl=3Den_CA) =0A                      <div class=3D"acr-fr=
+agment is-locked" data-fragment-id=3D"ajo:55ef2c41-03a0-47dc-8283-32074bf3d=
+fd3"><style data-name=3D"media-custom-prefers-color-scheme-dark" type=3D"te=
+xt/css">=0A@media (prefers-color-scheme: dark) {=0A  .acr-dark-img {=0A    =
+display: block !important;=0A  }=0A  .acr-light-img {=0A    display: none !=
+important;=0A  }=0A}=0A</style> <table align=3D"center" cellpadding=3D"0" c=
+ellspacing=3D"0" border=3D"0" style=3D"width: 100%; table-layout: fixed;"> =
+<tbody> <tr> <th class=3D"colspan1" style=3D"background-color:rgb(0, 0, 0);=
+border-top:1px solid rgb(69, 69, 69);border-right:none;border-bottom:none;b=
+order-left:none;border-radius:0px;padding:20px 0px;"><div class=3D"acr-tmp-=
+component" style=3D"vertical-align:baseline;text-align:center;" data-source=
+-uuid=3D"8c1b6e7d-ce36-4906-811a-f61a22a937ce" data-contenteditable=3D"true=
+" data-tmp-component-id=3D"html"><!-- LEGAL --><table align=3D"center" bord=
+er=3D"0" cellpadding=3D"10" cellspacing=3D"0" style=3D"margin-top:20px;marg=
+in-bottom:5px;border-collapse:collapse;" width=3D"100%">=0A =0A  <tbody sty=
+le=3D"color:#ffffff;text-align:center;">=0A   <tr>=0A   <td width=3D"5%">=
+=0A   </td>=0A   <td width=3D"90%">=0A    <a style=3D"text-align:center;col=
+or:#ffffff;letter-spacing:1px;font-family:Google Sans, Helvetica, Arial, sa=
+ns-serif;font-size:18px;text-decoration:underline;" target=3D"_blank" data-=
+nl-type=3D"mirrorPage" href=3D"https://data.campaigns.cineplex.com/ee/v1/we=
+bview=3Fparams=3Dv1.qwTtSvH-DP6HXZjxx3YIqioH4UpmJotP52TcL9tXZ99sISDIlCJMlp9=
+1ziUHI_R0E88ypJgpvNkSa3tEXjT2GmZ9jg2cP1VZp5kskqMxnyQlS5dYW6FF0v6ViNaoMtHUQC=
+MTV2-jZHuuzV3LztfZ2PfytG8lz9AikvKwzIlKZcAg0ME4VR4A0ei1_MehKCY_nEMRJSC8YCcQ5=
+qea2-063Q07giwgBeZ5FyWjlBqY_9G47U8p6HQLmwJJa7lAFMsBLp1Y1Ct9Clw9ChCRNPq0p5-b=
+tnz53jDoIGlgPwbfZGhpOYcIH6fMSmWw1E_Ht2YLpFycbMulrF3clTCBpGcpFCEmGUcuTQAq162=
+NNeMdgsZvbPAV5QvTc7uMjpI_XJl3tzXqvIkt459Q87IxFmfYSTzKUACMyw7XHGPUduP1afNCXG=
+qwpIyJYzSYM8AFfrhPjx-yZRvH1Y8YtgGeORNYJChPtoJW&configId=3De1f3099f-d292-490=
+9-bc6e-348abe6b1809&pid=3Dv1.n0H6a9HvQ08rmho55XsLeQ6iKhqcU0xxTeWA6ojKauZhvZ=
+1Y9I5fs0o9PNBmmIwFgaw6_LmLHlb4di9dWGoYX7G7DUak8Wl5-SelUISlMtn9Ui0ivdZd0VviF=
+7kqwMv-ZqyhPm_u&p=3Dv1.0g7uVP6rSBqw3i2B4cAMe3QwnefIK_A3E8-3NP3Zq4UIZF9XKc4l=
+oYE7ehS-m-y9IZ6BzhVaP2VfkQeJX36ecv9hAKa2g619t9Ld39w7fqTeGOoxr96uz4Hxp5Gnw0p=
+uNf9Xa6oVgGesysMaeGutdC6fPN9o8MlvgcenNP5JaQ1vZQAiNS6fAA_UFn93GOvInmdhOIRUsr=
+WmLENatNyZs6edvBEcxcSfu9-CTYB8Uhcjg4eUvjLoSL_x2_oMs7PNL69OeNyXWSDbvEHzyF4jj=
+jtfFbL_usB4k0ysRU3YARE3Rr7nBUKokSc61feZWQTFs8R-BwnXETBrikm0p7R0e6X6saWgEDIV=
+LPUsCxhYbnySIbOTDM2Z--jGHD8-C51RUSe9j8aKYtxQH6no3R_d6BJ1CXSYVZlgF4RGyU2q60O=
+kVvkXFY0RQapnLi7ySdvNoHpmhMyZy4q1eoq-_6Z8EUY-SoIU52Rl6gcwnx4xmJ9JMDSJnxmt9Q=
+Lh8xnSiMz3XMCDV4Mk-iO0pHTl4b62h2fmykVeMMT8YzDjv-qdb8iRixMcCDg8HWzOTdKaxj6SN=
+gmfoGBx7lEaMBgQqiQtHX71cXXodthKNtaw06mItARdcrExMvlnwsoQsg-ILDF4ZmeKGPeGc55Q=
+0QhgyYEfrgDw2lsTQUdU3KebyO64iozBQONaRYVhl1LXrdOxUxGHIUen7X0zALsJoEa9AAZwcGA=
+ScNAk9aNPCrMzk7XB7Id3NNS7r2wJWE9L3vt1zaCVcnOstHTrmTHuPDtRffmlTuLcbT5Xvcx4w_=
+wbl_pVRxYbnI6_HL5jjOjNJOFb79G627qg406iEr3Dh0LxTfsFhheXxN3L61ZsV7eUqXObPZHJw=
+2DoDRPeN9xJ7rkafd4jbXf86Vme__09EhP4sILaXtZFm6OZO-GYOqzqrs1T2NScZ2NykOWUnpf-=
+TdpDLnEyZrRX85kT&t=3D1773440676538"><!--[if gte mso 9]><span style=3D"font-=
+family: Arial, Helvetica, Verdana, Tahoma, sans-serif;color:#ffffff;"><![en=
+dif]-->View this email online<!--[if gte mso 9]></span><![endif]--><br><br>=
+</a></td>=0A   <td width=3D"5%">=0A   </td> =0A   </tr>=0A    =0A   <tr>=0A=
+   <td width=3D"5%">=0A   </td>=0A   <td width=3D"90%">=0A    <a style=3D"t=
+ext-align:centert;color:#ffffff;font-family:Google Sans, Helvetica, Arial, =
+sans-serif;font-size:14px;text-decoration:none;" target=3D"_blank" href=3D"=
+https://data.campaigns.cineplex.com/ee/v1/click=3Fparams=3Dv1.A3qTOH7gd_3bI=
+I_TQ9BeNXJJrAUIA77uILxMnbJYFHI7HTL46vYsbTIlorgLoeq7ZunOgkbum-lYeLlubd9VRevQ=
+1iTD6HxAMaNtMNJWlynhG1Zz25RrAriJq6XJAQSTbtw1guTyjG1k8eq5uX-piC2HS_3-FYK1xja=
+2BveIFJtuFj-bTYEKYcl1DVaMah-0BzygnkJ9LaPv5O2FAucw30OjFd05l5dkVqPOO7f3hyZRlb=
+QIuoLNhBG_HSQyfW2ne8zWLwCUpplakVN9B0l1VNZ8n84Udb9jKwz5y9JkMsi03DG56CFX5-6Eg=
+eox87G24Yoja7HGlNlnbAZidoGoAK13QPq12kbM8N2NDijn8pY-Zm0kfekHxop0dj33e6SUMXD3=
+QugZqOQaJkzJrzTrUhSPy9jQkZZVitC6I4S-Aq7l3ZVaPn4KFJDr1AmZYG0W4Y3a9M1u7qSbo2q=
+7ayCbzlLi3X1M&pid=3Dv1.s76Z_oqHPi6pvjc5FRn3paZ5Ml3yAHtkL5s1JsJBgExak79OIcaF=
+XUI7OO6DnbrRovIw6gvkB9RWXmp8&tuid=3D691ca9d0228f5c32bf43ff58&configId=3De1f=
+3099f-d292-4909-bc6e-348abe6b1809"><!--[if gte mso 9]><span style=3D"font-f=
+amily: Arial, Helvetica, Verdana, Tahoma, sans-serif;color:#ffffff;"><![end=
+if]-->Privacy<!--[if gte mso 9]></span><![endif]--> </a> &nbsp;|&nbsp; <a a=
+lias conversion=3D"false" data-linkto=3D"https://" style=3D"text-align:cent=
+er;color:#ffffff;font-family:Google Sans, Helvetica, Arial, sans-serif;font=
+-size:14px;text-decoration:none;" target=3D"_blank" title data-nl-type=3D"u=
+nsubscription" href=3D"https://data.campaigns.cineplex.com/ee/v1/click=3Fpa=
+rams=3Dv1.WQp9qG0sJ1OgpnPeQ29LsLy83RZ_dJIJSIePZSGHeIO-NsMM55EBurqOP0-yiPSPa=
+fKMmFU_GbqExGmOYVaQREtiBd18ZZGenKWzilDduhniOTmFmVkPwzn4tcaGOc-AFvL63tQsEEVU=
+v2giPnDEW3tq1DipNksFo7lsFNPetfAMbPH_VX7HgkA6WjJ4S9NHDq_-RR0_EAPG5lVgKCJyxgU=
+z50HGvkwTN7XJ_BorLucTf5xuP0vuL73WYTHL5arMtJBlJhr4cJszGZ2_w7qyJcSWC0CnacSNjc=
+QGbr2isLHqMBQKaB3qTiz0dS4HXozmt-uzhT7h6KVYPXl0CGV0KXP-8QssLhaD4Wxz6THFQb2uU=
+4zGYjP0Rfq2XyG80bJXELEahIIgdq24q-uCZwvBXGx5zhG75GJgl8ZRSraG1hiIm0xJm0XfxELO=
+CxOKG3ZmXe5V_m2hHn1aGWh6ccfHIPhqdvhyYs9YEQQDzfSmi6SeBFbVGDUO4D1KLvorEgl103n=
+sLZJ0zBQL8bYV2-Z4jCYNWyl668_BRi1tViVrx00BBjiHVVVrZalzQsJ1yo-L0yUfbbuhlfALfo=
+lc0kHARuR0I0tN4esyPDevtWntKyjBXV-z2YY7y6Q3GfiHtwfrx49Awbc0x1W4xKfcecQHUwtpV=
+Nbyq6l6ncmncqcCkHkngX8sI0w&pid=3Dv1.n0H6a9HvQ08rmho55XsLeQ6iKhqcU0xxTeWA6oj=
+KauZhvZ1Y9I5fs0o9PNBmmIwFgaw6_LmLHlb4di9dWGoYX7G7DUak8Wl5-SelUISlMtn9Ui0ivd=
+Zd0VviF7kqwMv-ZqyhPm_u&tuid=3D691ca9d0228f5c32bf43ff59&configId=3De1f3099f-=
+d292-4909-bc6e-348abe6b1809">Unsubscribe </a> &nbsp;|&nbsp; <a style=3D"tex=
+t-align:center;color:#ffffff;font-family:Google Sans, Helvetica, Arial, san=
+s-serif;font-size:14px;text-decoration:none;" target=3D"_blank" href=3D"htt=
+ps://data.campaigns.cineplex.com/ee/v1/click=3Fparams=3Dv1.A3qTOH7gd_3bII_T=
+Q9BeNXJJrAUIA77uILxMnbJYFHI7HTL46vYsbTIlorgLoeq7ZunOgkbum-lYeLlubd9VRevQ1iT=
+D6HxAMaNtMNJWlynhG1Zz25RrAriJq6XJAQSTbtw1guTyjG1k8eq5uX-piC2HS_3-FYK1xja2Bv=
+eIFJtuFj-bTYEKYcl1DVaMah-0BzygnkJ9LaPv5O2FAucw30OjFd05l5dkVqPOO7f3hyZRlbQIu=
+oLNhBG_HSQyfW2ne8zWLwCUpplakVN9B0l1VNZ8n84Udb9jKwz5y9JkMsi03DG56CFX5-6Egeox=
+87G24Yoja7HGlNlnbAZidoGoAK13QPq12kbM8N2NDijn8pY-Zm0kfekHxop0dj33e6SUMXD3Qug=
+ZqOQaJkzJrzTrUhSPy9jQkZZVitC6I4S-Aq7l3ZVaPn4KFJDr1AmZYG0W4Y3a9M1u7qSbo2q7ay=
+CbzlLi3X1M&pid=3Dv1.s76Z_oqHPi6pvjc5FRn3paZ5Ml3yAHtkL5s1JsJBgExak79OIcaFXUI=
+7OO6DnbrRovIw6gvkB9RWXmp8&tuid=3D691ca9d0228f5c32bf43ff5a&configId=3De1f309=
+9f-d292-4909-bc6e-348abe6b1809"> <!--[if gte mso 9]><span style=3D"font-fam=
+ily: Arial, Helvetica, Verdana, Tahoma, sans-serif;color:#ffffff;"><![endif=
+]-->Contact Us <!--[if gte mso 9]></span><![endif]--></a> &nbsp;|&nbsp; <a =
+style=3D"text-align:center;color:#ffffff;font-family:Google Sans, Helvetica=
+, Arial, sans-serif;font-size:14px;text-decoration:none;" target=3D"_blank"=
+ href=3D"https://data.campaigns.cineplex.com/ee/v1/click=3Fparams=3Dv1.A3qT=
+OH7gd_3bII_TQ9BeNXJJrAUIA77uILxMnbJYFHI7HTL46vYsbTIlorgLoeq7ZunOgkbum-lYeLl=
+ubd9VRevQ1iTD6HxAMaNtMNJWlynhG1Zz25RrAriJq6XJAQSTbtw1guTyjG1k8eq5uX-piC2HS_=
+3-FYK1xja2BveIFJtuFj-bTYEKYcl1DVaMah-0BzygnkJ9LaPv5O2FAucw30OjFd05l5dkVqPOO=
+7f3hyZRlbQIuoLNhBG_HSQyfW2ne8zWLwCUpplakVN9B0l1VNZ8n84Udb9jKwz5y9JkMsi03DG5=
+6CFX5-6Egeox87G24Yoja7HGlNlnbAZidoGoAK13QPq12kbM8N2NDijn8pY-Zm0kfekHxop0dj3=
+3e6SUMXD3QugZqOQaJkzJrzTrUhSPy9jQkZZVitC6I4S-Aq7l3ZVaPn4KFJDr1AmZYG0W4Y3a9M=
+1u7qSbo2q7ayCbzlLi3X1M&pid=3Dv1.s76Z_oqHPi6pvjc5FRn3paZ5Ml3yAHtkL5s1JsJBgEx=
+ak79OIcaFXUI7OO6DnbrRovIw6gvkB9RWXmp8&tuid=3D691ca9d0228f5c32bf43ff61&confi=
+gId=3De1f3099f-d292-4909-bc6e-348abe6b1809"> <!--[if gte mso 9]><span style=
+=3D"font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;color:#fffff=
+f;"><![endif]-->Sceneplus.ca<!--[if gte mso 9]></span><![endif]--> </a></td=
+>=0A   <td width=3D"5%">=0A   </td>=0A   </tr>=0A    =0A   <tr>=0A   <td wi=
+dth=3D"5%">=0A   </td>=0A   <td width=3D"90%">=0A    <p style=3D"text-align=
+:center;color:rgb(255, 255, 255);line-height:14px;font-family:&quot;Google =
+Sans&quot;, Helvetica, Arial, sans-serif;font-size:10px;mso-padding-left-al=
+t:15px;mso-padding-right-alt:15px;"><!--[if gte mso 9]><span style=3D"font-=
+family: Arial, Helvetica, Verdana, Tahoma, sans-serif;color:#ffffff;"><![en=
+dif]-->=0A     <strong>Please do not reply to this email.</strong>=0A     <=
+br>=0A     =0A     <br>=0A     You are receiving this email because you are=
+ a Scene+ member and have opted-in to receiving email communications from C=
+ineplex Entertainment LP (=E2=80=9CCineplex=E2=80=9D). You may unsubscribe =
+from emails Cineplex sends to Scene+ members at any time by clicking on the=
+ unsubscribe link above or by changing your email preferences <a style=3D"c=
+olor:rgb(255, 255, 255);text-decoration:underline;" data-nl-type=3D"unsubsc=
+ription" href=3D"https://data.campaigns.cineplex.com/ee/v1/click=3Fparams=
+=3Dv1.WQp9qG0sJ1OgpnPeQ29LsLy83RZ_dJIJSIePZSGHeIO-NsMM55EBurqOP0-yiPSPafKMm=
+FU_GbqExGmOYVaQREtiBd18ZZGenKWzilDduhniOTmFmVkPwzn4tcaGOc-AFvL63tQsEEVUv2gi=
+PnDEW3tq1DipNksFo7lsFNPetfAMbPH_VX7HgkA6WjJ4S9NHDq_-RR0_EAPG5lVgKCJyxgUz50H=
+GvkwTN7XJ_BorLucTf5xuP0vuL73WYTHL5arMtJBlJhr4cJszGZ2_w7qyJcSWC0CnacSNjcQGbr=
+2isLHqMBQKaB3qTiz0dS4HXozmt-uzhT7h6KVYPXl0CGV0KXP-8QssLhaD4Wxz6THFQb2uU4zGY=
+jP0Rfq2XyG80bJXELEahIIgdq24q-uCZwvBXGx5zhG75GJgl8ZRSraG1hiIm0xJm0XfxELOCxOK=
+G3ZmXe5V_m2hHn1aGWh6ccfHIPhqdvhyYs9YEQQDzfSmi6SeBFbVGDUO4D1KLvorEgl103nsLZJ=
+0zBQL8bYV2-Z4jCYNWyl668_BRi1tViVrx00BBjiHVVVrZalzQsJ1yo-L0yUfbbuhlfALfolc0k=
+HARuR0I0tN4esyPDevtWntKyjBXV-z2YY7y6Q3GfiHtwfrx49Awbc0x1W4xKfcecQHUwtpVNbyq=
+6l6ncmncqcCkHkngX8sI0w&pid=3Dv1.n0H6a9HvQ08rmho55XsLeQ6iKhqcU0xxTeWA6ojKauZ=
+hvZ1Y9I5fs0o9PNBmmIwFgaw6_LmLHlb4di9dWGoYX7G7DUak8Wl5-SelUISlMtn9Ui0ivdZd0V=
+viF7kqwMv-ZqyhPm_u&tuid=3D691ca9d0228f5c32bf43ff62&configId=3De1f3099f-d292=
+-4909-bc6e-348abe6b1809">here</a>.<br>=0A     <br>=0A     Your Scene+ point=
+s balance may not be up to date at the time this email was sent. For the mo=
+st accurate Scene+ points balance, please <a style=3D"color:#ffffff;" href=
+=3D"https://data.campaigns.cineplex.com/ee/v1/click=3Fparams=3Dv1.A3qTOH7gd=
+_3bII_TQ9BeNXJJrAUIA77uILxMnbJYFHI7HTL46vYsbTIlorgLoeq7ZunOgkbum-lYeLlubd9V=
+RevQ1iTD6HxAMaNtMNJWlynhG1Zz25RrAriJq6XJAQSTbtw1guTyjG1k8eq5uX-piC2HS_3-FYK=
+1xja2BveIFJtuFj-bTYEKYcl1DVaMah-0BzygnkJ9LaPv5O2FAucw30OjFd05l5dkVqPOO7f3hy=
+ZRlbQIuoLNhBG_HSQyfW2ne8zWLwCUpplakVN9B0l1VNZ8n84Udb9jKwz5y9JkMsi03DG56CFX5=
+-6Egeox87G24Yoja7HGlNlnbAZidoGoAK13QPq12kbM8N2NDijn8pY-Zm0kfekHxop0dj33e6SU=
+MXD3QugZqOQaJkzJrzTrUhSPy9jQkZZVitC6I4S-Aq7l3ZVaPn4KFJDr1AmZYG0W4Y3a9M1u7qS=
+bo2q7ayCbzlLi3X1M&pid=3Dv1.s76Z_oqHPi6pvjc5FRn3paZ5Ml3yAHtkL5s1JsJBgExak79O=
+IcaFXUI7OO6DnbrRovIw6gvkB9RWXmp8&tuid=3D691ca9d0228f5c32bf43ff63&configId=
+=3De1f3099f-d292-4909-bc6e-348abe6b1809">log in</a> to your Scene+ account.=
+<br>=0A     <br>=0A     Cineplex<br>=0A     1303 Yonge Street, Toronto, ON =
+M4T 2Y9<br>=0A     <a class=3D"arc-link" data-nl-type=3D"externalLink" styl=
+e=3D"color:#ffffff;text-decoration:underline;" href=3D"https://data.campaig=
+ns.cineplex.com/ee/v1/click=3Fparams=3Dv1.A3qTOH7gd_3bII_TQ9BeNXJJrAUIA77uI=
+LxMnbJYFHI7HTL46vYsbTIlorgLoeq7ZunOgkbum-lYeLlubd9VRevQ1iTD6HxAMaNtMNJWlynh=
+G1Zz25RrAriJq6XJAQSTbtw1guTyjG1k8eq5uX-piC2HS_3-FYK1xja2BveIFJtuFj-bTYEKYcl=
+1DVaMah-0BzygnkJ9LaPv5O2FAucw30OjFd05l5dkVqPOO7f3hyZRlbQIuoLNhBG_HSQyfW2ne8=
+zWLwCUpplakVN9B0l1VNZ8n84Udb9jKwz5y9JkMsi03DG56CFX5-6Egeox87G24Yoja7HGlNlnb=
+AZidoGoAK13QPq12kbM8N2NDijn8pY-Zm0kfekHxop0dj33e6SUMXD3QugZqOQaJkzJrzTrUhSP=
+y9jQkZZVitC6I4S-Aq7l3ZVaPn4KFJDr1AmZYG0W4Y3a9M1u7qSbo2q7ayCbzlLi3X1M&pid=3D=
+v1.s76Z_oqHPi6pvjc5FRn3paZ5Ml3yAHtkL5s1JsJBgExak79OIcaFXUI7OO6DnbrRovIw6gvk=
+B9RWXmp8&tuid=3D691ca9d0228f5c32bf43ff5c&configId=3De1f3099f-d292-4909-bc6e=
+-348abe6b1809">Cineplex.com</a><br>=0A     <br>=0A     =C2=AE / =E2=84=A2 C=
+ineplex Entertainment LP or used under license. Scene+=E2=84=A2 trademark o=
+f Scene Plus IP Corporation.<br>=0A     =C2=A9 2026 Scene Plus IP Corporati=
+on. All rights reserved.<!--[if gte mso 9]></span><![endif]--></p></td>=0A =
+  <td width=3D"5%">=0A   </td> =0A   </tr></tbody></table></div></th> </tr>=
+ </tbody> </table>=0A</div><grammarly-desktop-integration data-grammarly-sh=
+adow-root=3D"true"></grammarly-desktop-integration>
+--_----L16cGxT5K8Sxk0z1XRistg===_EE/22-02676-4AE84B96
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!doctype html>=0A<html class style lang=3D"en"><head><meta charset=3D"utf-=
+8"><meta name=3D"content-version" content=3D"3.3.50"><meta class=3D"nl-dce-=
+fragment" data-nl-name=3D"EmailUrlBase"><meta name=3D"x-apple-disable-messa=
+ge-reformatting"><meta name=3D"viewport" content=3D"width=3Ddevice-width,in=
+itial-scale=3D1.0"><style data-name=3D"default" type=3D"text/css">body{font=
+-family:sans-serif;margin:0 !important;padding:0 !important;background:#FFF=
+FFF;min-width:750px;}td{padding:0;border-collapse:collapse;}th{font-weight:=
+normal;text-align:left;padding:0;}.acr-fragment,.acr-component{padding:0;}.=
+acr-fragment img,.acr-component img{vertical-align:middle;}.divider-contain=
+er{padding:5px 0;font-size:0px;}.text-container p{margin:0;}.image-containe=
+r{line-height:0;}.acr-tmp-component img,.image-container img{height:auto;}.=
+button-container a{text-decoration:none;color:inherit;}.acr-structure{backg=
+round-size:auto;background-repeat:no-repeat;}.structure__table{table-layout=
+:fixed;margin:0 auto;border-spacing:0;background-size:auto;background-repea=
+t:no-repeat;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important=
+;}.colspan1{width:100%;}.colspan2{width:50%;}.colspan3{width:75%;}.colspan4=
+{width:25%;}.colspan33{width:33%;}.colspan66{width:66%;}.component-social-c=
+ontainer{width:100%;text-align:center;}span.preheader{display:none !importa=
+nt;visibility:hidden;mso-hide:all;opacity:0;}.ExternalClass{width:100%;}.Ex=
+ternalClass,.ExternalClass p,.ExternalClass span,.ExternalClass font,.Exter=
+nalClass td,.ExternalClass div{line-height:100%;}h1,h2,h3,h4,h5{display:blo=
+ck;font-weight:bold;}h1{font-size:24px;margin:19px 0 19px 0;}h2{font-size:2=
+4px;margin:20px 0 20px 0;}h3{font-size:19px;margin:19px 0 19px 0;}h4{font-s=
+ize:16px;margin:21px 0 21px 0;}h5{font-size:13px;margin:22px 0 22px 0;}h6{f=
+ont-size:11px;margin:25px 0 25px 0;}.mso-is-desktop-hidden,.mso-is-desktop-=
+hidden table{mso-hide:all;}.colspan1,.colspan2,.colspan3,.colspan4,.colspan=
+33,.colspan66,.colspan-n{background-size:auto;background-repeat:no-repeat;b=
+ox-sizing:border-box;}.acr-grid-column{box-sizing:border-box;}@media screen=
+ and (min-width: 500px){th.is-desktop-visible{display:table-cell !important=
+;}.is-desktop-hidden{display:none !important;}.is-desktop-visible{display:b=
+lock !important;}.is-mobile-visible{display:none !important;}}.acr-dark-img=
+{display:none;}.text-container ul,.text-container ol{padding-left:40px;}</s=
+tyle><style data-name=3D"custom" type=3D"text/css">#acr-1257757783023830,bo=
+dy{background-color:rgba(0,0,0,1)!important;padding-bottom:0px!important;pa=
+dding-top:0px!important;}.structure__table{margin-right:auto!important;marg=
+in-left:auto!important;background-color:rgba(0,0,0,1)!important;}</style><s=
+tyle data-name=3D"grid" type=3D"text/css">=0A  .acr-grid-table {=0A    widt=
+h: 100%;=0A    table-layout: fixed;=0A    border-spacing: 0;=0A  }=0A=0A  .=
+acr-grid-column,=0A  .acr-repeat-grid-column {=0A    box-sizing: border-box=
+;=0A  }=0A=0A  @media screen and (max-width: 500px) {=0A    .acr-grid-table=
+ td {=0A      display: block;=0A      min-width: 100%;=0A    }=0A  }=0A</st=
+yle><style data-name=3D"media-default-max-width-500px" type=3D"text/css">@m=
+edia screen and (max-width: 500px){body{width:100% !important;min-width:0px=
+ !important;}.structure__table{width:100% !important;}.colspan1,.colspan2,.=
+colspan3,.colspan4,.colspan33,.colspan66,.colspan-n{display:block !importan=
+t;min-width:100%;}.container-small-size .colspan1,.container-small-size .co=
+lspan2,.container-small-size .colspan3,.container-small-size .colspan4,.con=
+tainer-small-size .colspan33,.container-small-size .colspan66,.container-sm=
+all-size .colspan-n{display:table-cell !important;width:100% !important;}.i=
+s-mobile-hidden{display:none !important;}.is-mobile-visible{display:block !=
+important;}.is-desktop-visible{display:none !important;}}</style><style dat=
+a-name=3D"media-custom-max-width-500px" type=3D"text/css">@media screen and=
+ (max-width: 500px){#acr-5980230{background-color:#ffffff!important;}#acr-3=
+7897085 th,#acr-2434822 th,#acr-56608358 th,#acr-62396264 th{display:table-=
+cell !important;}#acr-530966031522850{padding:0px 10px!important;}#acr-1257=
+757783023830{min-width:0px!important;}#acr-1192321428622068{height:auto!imp=
+ortant;max-width:none!important;width:100%!important;}}</style><title>=F0=
+=9F=92=96 Love, laughter, and a great Friday at the movies</title><style da=
+ta-name=3D"media-custom-prefers-color-scheme-dark" type=3D"text/css">@media=
+ (prefers-color-scheme: dark){.acr-dark-img{display:inline-block!important;=
+}.acr-light-img{display:none!important;}}</style><!--[if gte mso 9]><style =
+acrite-mso-css=3D"true">.image-container div {  display: block;}.structure_=
+_table td {  padding: 0;  border: none;}.button-container {  border: none !=
+important;  padding: 0 !important;  margin: 0 !important;  line-height: nor=
+mal !important;}.acr-structure {  margin: 0 !important;}.acr-component, .ac=
+r-tmp-component {  margin: 0 !important;  border: none !important;}.acr-fra=
+gment {  margin: 0 !important;  border: none !important;}.colspan1, .colspa=
+n2, .colspan3, .colspan4, .colspan33, .colspan66, .colspan-n {  box-sizing:=
+ border-box !important;}.acr-grid-column {  box-sizing: border-box !importa=
+nt;}.divider-mso-hidden {  border: none !important;}</style><![endif]--><st=
+yle type=3D"text/css" data-fragment-ref=3D"ajo:e7125795-a08b-4484-a8eb-b094=
+c31c6a6f">=0A@media only screen and (max-width: 500px) {=0A  h1 {=0A    fon=
+t-size: 28px !important;=0A    line-height: 30px;=0A  }=0A}=0A</style><styl=
+e data-name=3D"media-custom-prefers-color-scheme-dark" type=3D"text/css" da=
+ta-fragment-ref=3D"ajo:8cb6e7ee-c95d-4669-af64-1ed9c543b041">@media (prefer=
+s-color-scheme: dark){.acr-dark-img{display:block !important;}.acr-light-im=
+g{display:none !important;}}</style><style data-name=3D"media-custom-prefer=
+s-color-scheme-dark" type=3D"text/css" data-fragment-ref=3D"ajo:5a57fc9e-79=
+e8-4aaf-9c98-29d0e749670a">=0A@media (prefers-color-scheme: dark) {=0A  .ac=
+r-dark-img {=0A    display: block !important;=0A  }=0A  .acr-light-img {=0A=
+    display: none !important;=0A  }=0A}=0A</style><style data-name=3D"media=
+-custom-prefers-color-scheme-dark" type=3D"text/css" data-fragment-ref=3D"a=
+jo:55ef2c41-03a0-47dc-8283-32074bf3dfd3">=0A@media (prefers-color-scheme: d=
+ark) {=0A  .acr-dark-img {=0A    display: block !important;=0A  }=0A  .acr-=
+light-img {=0A    display: none !important;=0A  }=0A}=0A</style><style data=
+-name=3D"global-custom" type=3D"text/css"> @import url("https://mediafiles.=
+cineplex.com/assets/cplx/prod/30736/css/MarkOTFontStylesBundle.min.css");=
+=0A=0A  @font-face {=0A    font-family: 'MarkOTMedium';=0A    font-style: n=
+ormal;=0A    font-weight: 400;=0A    mso-font-alt: 'Arial';=0A    src: url(=
+https://mediafiles.cineplex.com/assets/cplx/prod/fonts/MarkOT-Medium.otf) f=
+ormat('opentype');=0A  }=0A=0A  @font-face {=0A    font-family: 'MarkOT-Ult=
+ra';=0A    font-style: normal;=0A    font-weight: 700;=0A    mso-font-alt: =
+'Arial Black';=0A    src: url(https://mediafiles.cineplex.com/assets/cplx/p=
+rod/fonts/MarkOT-Ultra.otf) format('opentype');=0A  }=0A=0A  @font-face {=
+=0A    font-family: 'MarkOTHeavy';=0A    font-style: normal;=0A    font-wei=
+ght: 700;=0A    mso-font-alt: 'Arial';=0A    src: url(https://mediafiles.ci=
+neplex.com/assets/cplx/prod/fonts/MarkOT-Heavy.otf) format('opentype');=0A =
+ }=0A=0A  body {=0A    margin: 0=0A  }=0A=0A  body,=0A  table,=0A  td,=0A  =
+p,=0A  a,=0A  li,=0A  blockquote {=0A    font-family: 'MarkOTMedium', Arial=
+, Helvetica, sans-serif !important;=0A    font-style: normal;=0A    font-we=
+ight: 400=0A  }=0A=0A  button {=0A    width: 90%;=0A    font-family: 'MarkO=
+TMedium', Arial, Helvetica, sans-serif !important=0A  }=0A=0A  h1 {=0A    f=
+ont-family: 'MarkOT-Ultra', Arial, Helvetica, sans-serif;=0Afont-size:35px;=
+=0A  }=0A=0A  h2 {=0A    font-family: 'MarkOTHeavy', Arial, Helvetica, sans=
+-serif;=0A    letter-spacing: .4px=0A  }=0A=0A  p,=0A  a {=0A    font-famil=
+y: 'MarkOTMedium', Arial, Helvetica, sans-serif !important=0A  }=0A   :root=
+ {=0A      color-scheme:light dark;=0A  supported-color-schemes:light dark;=
+=0A      }=0A=0A      @media(prefers-color-scheme:dark){=0A        body, ce=
+nter, table .darkmode-bg{=0A  background:#ffffff!important;=0A  color:#0000=
+00!important;=0A        }=0A=0A        .darkmode-transparent {=0A  backgrou=
+nd-color:transparent!important;=0A  }=0A        =0A        .buttonswhite {=
+=0A  color:#ffffff !important;=0A  }=0A  }=0A=0A      =0A       @media only=
+ screen and (max-device-width: 500px) and (max-device-height: 640px) {=0A  =
+ =0A         .mobile-hidden{display:none!important;}=0A=0A          /* MOBI=
+LE GLOBAL STYLES - DO NOT CHANGE */=0A          body {=0A            font-f=
+amily:'MarkOTMedium', Arial, Helvetica, sans-serif!important; padding: 0px =
+!important; font-size: 17px !important; line-height: 150% !important;}=0A  =
+        h1 {=0A            font-family: 'MarkOT-Ultra', Arial, Helvetica, s=
+ans-serif!important; font-size: 28px !important; line-height: normal !impor=
+tant;}=0A          h2 {font-family: 'MarkOTHeavy', Arial, Helvetica, sans-s=
+erif!important; font-size: 22px !important; line-height: normal !important;=
+}=0A          h3 { font-family: 'MarkOTHeavy', Arial, Helvetica, sans-serif=
+!important;font-size: 18px !important; line-height: normal !important;}=0A =
+         .buttonstyles {=0A            font-family:'MarkOTMedium', sans-ser=
+if!important;=0A            font-size: 17px !important;=0A            color=
+: #FFFFFF !important;=0A            padding: 10px !important;=0A          }=
+=0A          /* END OF MOBILE GLOBAL STYLES - DO NOT CHANGE */=0A        }=
+=0A=0A@media (prefers-color-scheme: dark) {=0A                    .rio-butt=
+on-secondary * {=0A                      color: #0F1111 !important;=0A     =
+                 background: #FEFEFE !important;=0A                      ba=
+ckground-color: linear-gradient(#FEFEFE, #FEFEFE) !important;=0A           =
+         }=0A                  }=0A=0A                  [data-ogsc] .rio-bu=
+tton-secondary * {=0A                    color: #0F1111 !important;=0A     =
+               background: #FEFEFE !important;=0A                    backgr=
+ound-color: linear-gradient(#FEFEFE, #FEFEFE) !important;=0A               =
+   }</style></head><body class=3D"acr-dc-highlight" data-new-gr-c-s-loaded=
+=3D"14.1277.0" id=3D"acr-1257757783023830" data-new-gr-c-s-check-loaded=3D"=
+14.1277.0" data-gr-ext-installed style=3D"isolation:isolate;">=0A<span styl=
+e=3D"display:none !important;visibility:hidden;mso-hide:all;opacity:0;" cla=
+ss=3D"acr-preheader">=F0=9F=8E=9F=EF=B8=8F Experience Reminders of Him and =
+Hoppers on the big screen</span><div class=3D"darkmode-transparent acr-cont=
+ainer" data-dashlane-rid=3D"a9d6240f1fa84f6c">         <div class=3D"acr-st=
+ructure" data-structure-id=3D"1-1-column" data-structure-name=3D"richtext.s=
+tructure_1_1_column" style=3D"background-color:rgb(0, 0, 0);" data-source-u=
+uid=3D"e2043569-f696-4e37-9194-37510788af95"><!--[if mso]><table cellpaddin=
+g=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"back=
+ground-color: rgb(0, 0, 0);" ><![endif]--> <table class=3D"structure__table=
+" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=
+=3D"600"> <tbody> <tr> <th class=3D"colspan1"><!--[if gte mso 9]><style acr=
+ite-mso-css=3D"true">.image-container div {  display: block;}.structure__ta=
+ble td {  padding: 0;  border: none;}.button-container {  border: none !imp=
+ortant;  padding: 0 !important;  margin: 0 !important;  line-height: normal=
+ !important;}.acr-structure {  margin: 0 !important;}.acr-component {  marg=
+in: 0 !important;}.acr-fragment {  margin: 0 !important;}.colspan1, .colspa=
+n2, .colspan3, .colspan4, .colspan33, .colspan66 {  box-sizing: border-box =
+!important;}</style><![endif]--><!--[if gte mso 9]><style acrite-mso-css=3D=
+"true">.image-container div {  display: block;}.structure__table td {  padd=
+ing: 0;  border: none;}.button-container {  border: none !important;  paddi=
+ng: 0 !important;  margin: 0 !important;  line-height: normal !important;}.=
+acr-structure {  margin: 0 !important;}.acr-component {  margin: 0 !importa=
+nt;}.acr-fragment {  margin: 0 !important;}.colspan1, .colspan2, .colspan3,=
+ .colspan4, .colspan33, .colspan66 {  box-sizing: border-box !important;}</=
+style><![endif]--><div class=3D"acr-fragment acr-component" data-component-=
+id=3D"html" data-source-uuid=3D"6dc9f885-5639-46eb-a52e-405b7d3098d4" data-=
+dashlane-rid=3D"96287accb7ec0ffb" data-dashlane-classification=3D"other" da=
+ta-contenteditable=3D"true"> <!--[if mso]>=0A      <style type=3D"text/css"=
+>=0A          /* Begin Outlook Font Fix */=0A              body, table, td,=
+ h1, h2, h3, a {=0A                 font-family : Arial, helvetica, sans-se=
+rif!important;=0A                 line-height : 100%;=0A              }=0A =
+         /* End Outlook Font Fix */=0A      </style>=0A    <![endif]-->=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A</div></th> </tr> </tbody> </table> <!--[i=
+f mso]></td></tr></table><![endif]--></div><div class=3D"acr-structure" dat=
+a-structure-id=3D"1-1-column" data-structure-name=3D"richtext.structure_1_1=
+_column" id=3D"acr-5980230" style=3D"background-color:rgb(0, 0, 0);" data-s=
+ource-uuid=3D"ec853bec-38ec-4639-a55f-b159acb5e898"><!--[if mso]><table cel=
+lpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=
+=3D"background-color: rgb(0, 0, 0);" ><![endif]--> <table class=3D"structur=
+e__table" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+ width=3D"600"> <tbody> <tr> <th class=3D"colspan1" style=3D"background-col=
+or:rgb(0, 0, 0);padding:0px 0px 20px;background-image:none;margin:auto;"><!=
+--[if gte mso 9]><style acrite-mso-css=3D"true">.image-container div {  dis=
+play: block;}.structure__table td {  padding: 0;  border: none;}.button-con=
+tainer {  border: none !important;  padding: 0 !important;  margin: 0 !impo=
+rtant;  line-height: normal !important;}.acr-structure {  margin: 0 !import=
+ant;}.acr-component {  margin: 0 !important;}.acr-fragment {  margin: 0 !im=
+portant;}.colspan1, .colspan2, .colspan3, .colspan4, .colspan33, .colspan66=
+ {  box-sizing: border-box !important;}</style><![endif]--><!--[if gte mso =
+9]><style acrite-mso-css=3D"true">.image-container div {  display: block;}.=
+structure__table td {  padding: 0;  border: none;}.button-container {  bord=
+er: none !important;  padding: 0 !important;  margin: 0 !important;  line-h=
+eight: normal !important;}.acr-structure {  margin: 0 !important;}.acr-comp=
+onent {  margin: 0 !important;}.acr-fragment {  margin: 0 !important;}.cols=
+pan1, .colspan2, .colspan3, .colspan4, .colspan33, .colspan66 {  box-sizing=
+: border-box !important;}</style><![endif]--><!--[if gte mso 9]><style acri=
+te-mso-css=3D"true">.image-container div {  display: block;}.structure__tab=
+le td {  padding: 0;  border: none;}.button-container {  border: none !impo=
+rtant;  padding: 0 !important;  margin: 0 !important;  line-height: normal =
+!important;}.acr-structure {  margin: 0 !important;}.acr-component {  margi=
+n: 0 !important;}.acr-fragment {  margin: 0 !important;}.colspan1, .colspan=
+2, .colspan3, .colspan4, .colspan33, .colspan66 {  box-sizing: border-box !=
+important;}</style><![endif]--><!--[if gte mso 9]><style acrite-mso-css=3D"=
+true">.image-container div {  display: block;}.structure__table td {  paddi=
+ng: 0;  border: none;}.button-container {  border: none !important;  paddin=
+g: 0 !important;  margin: 0 !important;  line-height: normal !important;}.a=
+cr-structure {  margin: 0 !important;}.acr-component {  margin: 0 !importan=
+t;}.acr-fragment {  margin: 0 !important;}.colspan1, .colspan2, .colspan3, =
+.colspan4, .colspan33, .colspan66 {  box-sizing: border-box !important;}</=
+style><![endif]--><!--[if gte mso 9]><style acrite-mso-css=3D"true">.image-=
+container div {  display: block;}.structure__table td {  padding: 0;  borde=
+r: none;}.button-container {  border: none !important;  padding: 0 !importa=
+nt;  margin: 0 !important;  line-height: normal !important;}.acr-structure =
+{  margin: 0 !important;}.acr-component {  margin: 0 !important;}.acr-fragm=
+ent {  margin: 0 !important;}.colspan1, .colspan2, .colspan3, .colspan4, .c=
+olspan33, .colspan66 {  box-sizing: border-box !important;}</style><![endif=
+]--><!--[if gte mso 9]><style acrite-mso-css=3D"true">.image-container div =
+{  display: block;}.structure__table td {  padding: 0;  border: none;}.butt=
+on-container {  border: none !important;  padding: 0 !important;  margin: 0=
+ !important;  line-height: normal !important;}.acr-structure {  margin: 0 !=
+important;}.acr-component {  margin: 0 !important;}.acr-fragment {  margin:=
+ 0 !important;}.colspan1, .colspan2, .colspan3, .colspan4, .colspan33, .col=
+span66 {  box-sizing: border-box !important;}</style><![endif]--><!--[if gt=
+e mso 9]><style acrite-mso-css=3D"true">.image-container div {  display: bl=
+ock;}.structure__table td {  padding: 0;  border: none;}.button-container {=
+  border: none !important;  padding: 0 !important;  margin: 0 !important;  =
+line-height: normal !important;}.acr-structure {  margin: 0 !important;}.ac=
+r-component {  margin: 0 !important;}.acr-fragment {  margin: 0 !important;=
+}.colspan1, .colspan2, .colspan3, .colspan4, .colspan33, .colspan66 {  box-=
+sizing: border-box !important;}</style><![endif]--><!--[if gte mso 9]><styl=
+e acrite-mso-css=3D"true">.image-container div {  display: block;}.structur=
+e__table td {  padding: 0;  border: none;}.button-container {  border: none=
+ !important;  padding: 0 !important;  margin: 0 !important;  line-height: n=
+ormal !important;}.acr-structure {  margin: 0 !important;}.acr-component { =
+ margin: 0 !important;}.acr-fragment {  margin: 0 !important;}.colspan1, .c=
+olspan2, .colspan3, .colspan4, .colspan33, .colspan66 {  box-sizing: border=
+-box !important;}</style><![endif]--><!--[if gte mso 9]><style acrite-mso-c=
+ss=3D"true">.image-container div {  display: block;}.structure__table td { =
+ padding: 0;  border: none;}.button-container {  border: none !important;  =
+padding: 0 !important;  margin: 0 !important;  line-height: normal !importa=
+nt;}.acr-structure {  margin: 0 !important;}.acr-component {  margin: 0 !im=
+portant;}.acr-fragment {  margin: 0 !important;}.colspan1, .colspan2, .cols=
+pan3, .colspan4, .colspan33, .colspan66 {  box-sizing: border-box !importan=
+t;}</style><![endif]--><!--[if gte mso 9]><style acrite-mso-css=3D"true">.i=
+mage-container div {  display: block;}.structure__table td {  padding: 0;  =
+border: none;}.button-container {  border: none !important;  padding: 0 !im=
+portant;  margin: 0 !important;  line-height: normal !important;}.acr-struc=
+ture {  margin: 0 !important;}.acr-component {  margin: 0 !important;}.acr-=
+fragment {  margin: 0 !important;}.colspan1, .colspan2, .colspan3, .colspan=
+4, .colspan33, .colspan66 {  box-sizing: border-box !important;}</style><![=
+endif]--><!--[if gte mso 9]><style acrite-mso-css=3D"true">.image-container=
+ div {  display: block;}.structure__table td {  padding: 0;  border: none;}=
+.button-container {  border: none !important;  padding: 0 !important;  mar=
+gin: 0 !important;  line-height: normal !important;}.acr-structure {  margi=
+n: 0 !important;}.acr-component {  margin: 0 !important;}.acr-fragment {  m=
+argin: 0 !important;}.colspan1, .colspan2, .colspan3, .colspan4, .colspan33=
+, .colspan66 {  box-sizing: border-box !important;}</style><![endif]--><!--=
+[if gte mso 9]><style acrite-mso-css=3D"true">.image-container div {  displ=
+ay: block;}.structure__table td {  padding: 0;  border: none;}.button-conta=
+iner {  border: none !important;  padding: 0 !important;  margin: 0 !import=
+ant;  line-height: normal !important;}.acr-structure {  margin: 0 !importan=
+t;}.acr-component {  margin: 0 !important;}.acr-fragment {  margin: 0 !impo=
+rtant;}.colspan1, .colspan2, .colspan3, .colspan4, .colspan33, .colspan66 {=
+  box-sizing: border-box !important;}</style><![endif]--><!--[if gte mso 9]=
+><style acrite-mso-css=3D"true">.image-container div {  display: block;}.st=
+ructure__table td {  padding: 0;  border: none;}.button-container {  border=
+: none !important;  padding: 0 !important;  margin: 0 !important;  line-hei=
+ght: normal !important;}.acr-structure {  margin: 0 !important;}.acr-compon=
+ent {  margin: 0 !important;}.acr-fragment {  margin: 0 !important;}.colspa=
+n1, .colspan2, .colspan3, .colspan4, .colspan33, .colspan66 {  box-sizing: =
+border-box !important;}</style><![endif]--><!--[if gte mso 9]><style acrite=
+-mso-css=3D"true">.image-container div {  display: block;}.structure__table=
+ td {  padding: 0;  border: none;}.button-container {  border: none !import=
+ant;  padding: 0 !important;  margin: 0 !important;  line-height: normal !i=
+mportant;}.acr-structure {  margin: 0 !important;}.acr-component {  margin:=
+ 0 !important;}.acr-fragment {  margin: 0 !important;}.colspan1, .colspan2,=
+ .colspan3, .colspan4, .colspan33, .colspan66 {  box-sizing: border-box !im=
+portant;}</style><![endif]--><!--[if gte mso 9]><style acrite-mso-css=3D"tr=
+ue">.image-container div {  display: block;}.structure__table td {  padding=
+: 0;  border: none;}.button-container {  border: none !important;  padding:=
+ 0 !important;  margin: 0 !important;  line-height: normal !important;}.acr=
+-structure {  margin: 0 !important;}.acr-component {  margin: 0 !important;=
+}.acr-fragment {  margin: 0 !important;}.colspan1, .colspan2, .colspan3, .c=
+olspan4, .colspan33, .colspan66 {  box-sizing: border-box !important;}</sty=
+le><![endif]--><!--[if gte mso 9]><style acrite-mso-css=3D"true">.image-con=
+tainer div {  display: block;}.structure__table td {  padding: 0;  border: =
+none;}.button-container {  border: none !important;  padding: 0 !important;=
+  margin: 0 !important;  line-height: normal !important;}.acr-structure {  =
+margin: 0 !important;}.acr-component {  margin: 0 !important;}.acr-fragment=
+ {  margin: 0 !important;}.colspan1, .colspan2, .colspan3, .colspan4, .cols=
+pan33, .colspan66 {  box-sizing: border-box !important;}</style><![endif]--=
+><!--[if gte mso 9]><style acrite-mso-css=3D"true">.image-container div {  =
+display: block;}.structure__table td {  padding: 0;  border: none;}.button-=
+container {  border: none !important;  padding: 0 !important;  margin: 0 !i=
+mportant;  line-height: normal !important;}.acr-structure {  margin: 0 !imp=
+ortant;}.acr-component {  margin: 0 !important;}.acr-fragment {  margin: 0 =
+!important;}.colspan1, .colspan2, .colspan3, .colspan4, .colspan33, .colspa=
+n66 {  box-sizing: border-box !important;}</style><![endif]--><!--[if gte m=
+so 9]><style acrite-mso-css=3D"true">.image-container div {  display: block=
+;}.structure__table td {  padding: 0;  border: none;}.button-container {  b=
+order: none !important;  padding: 0 !important;  margin: 0 !important;  lin=
+e-height: normal !important;}.acr-structure {  margin: 0 !important;}.acr-c=
+omponent {  margin: 0 !important;}.acr-fragment {  margin: 0 !important;}.c=
+olspan1, .colspan2, .colspan3, .colspan4, .colspan33, .colspan66 {  box-siz=
+ing: border-box !important;}</style><![endif]--><!--[if gte mso 9]><style a=
+crite-mso-css=3D"true">.image-container div {  display: block;}.structure__=
+table td {  padding: 0;  border: none;}.button-container {  border: none !i=
+mportant;  padding: 0 !important;  margin: 0 !important;  line-height: norm=
+al !important;}.acr-structure {  margin: 0 !important;}.acr-component {  ma=
+rgin: 0 !important;}.acr-fragment {  margin: 0 !important;}.colspan1, .cols=
+pan2, .colspan3, .colspan4, .colspan33, .colspan66 {  box-sizing: border-bo=
+x !important;}</style><![endif]--><!--[if gte mso 9]><style acrite-mso-css=
+=3D"true">.image-container div {  display: block;}.structure__table td {  p=
+adding: 0;  border: none;}.button-container {  border: none !important;  pa=
+dding: 0 !important;  margin: 0 !important;  line-height: normal !important=
+;}.acr-structure {  margin: 0 !important;}.acr-component {  margin: 0 !impo=
+rtant;}.acr-fragment {  margin: 0 !important;}.colspan1, .colspan2, .colspa=
+n3, .colspan4, .colspan33, .colspan66 {  box-sizing: border-box !important;=
+}</style><![endif]--><!--[if gte mso 9]><style acrite-mso-css=3D"true">.ima=
+ge-container div {  display: block;}.structure__table td {  padding: 0;  bo=
+rder: none;}.button-container {  border: none !important;  padding: 0 !impo=
+rtant;  margin: 0 !important;  line-height: normal !important;}.acr-structu=
+re {  margin: 0 !important;}.acr-component {  margin: 0 !important;}.acr-fr=
+agment {  margin: 0 !important;}.colspan1, .colspan2, .colspan3, .colspan4,=
+ .colspan33, .colspan66 {  box-sizing: border-box !important;}</style><![en=
+dif]--><!--[if gte mso 9]><style acrite-mso-css=3D"true">.image-container d=
+iv {  display: block;}.structure__table td {  padding: 0;  border: none;}.b=
+utton-container {  border: none !important;  padding: 0 !important;  margin=
+: 0 !important;  line-height: normal !important;}.acr-structure {  margin: =
+0 !important;}.acr-component {  margin: 0 !important;}.acr-fragment {  marg=
+in: 0 !important;}.colspan1, .colspan2, .colspan3, .colspan4, .colspan33, .=
+colspan66 {  box-sizing: border-box !important;}</style><![endif]--><!--[if=
+ gte mso 9]><style acrite-mso-css=3D"true">.image-container div {  display:=
+ block;}.structure__table td {  padding: 0;  border: none;}.button-containe=
+r {  border: none !important;  padding: 0 !important;  margin: 0 !important=
+;  line-height: normal !important;}.acr-structure {  margin: 0 !important;}=
+.acr-component {  margin: 0 !important;}.acr-fragment {  margin: 0 !import=
+ant;}.colspan1, .colspan2, .colspan3, .colspan4, .colspan33, .colspan66 {  =
+box-sizing: border-box !important;}</style><![endif]--><!--[if gte mso 9]><=
+style acrite-mso-css=3D"true">.image-container div {  display: block;}.stru=
+cture__table td {  padding: 0;  border: none;}.button-container {  border: =
+none !important;  padding: 0 !important;  margin: 0 !important;  line-heigh=
+t: normal !important;}.acr-structure {  margin: 0 !important;}.acr-componen=
+t {  margin: 0 !important;}.acr-fragment {  margin: 0 !important;}.colspan1=
+, .colspan2, .colspan3, .colspan4, .colspan33, .colspan66 {  box-sizing: bo=
+rder-box !important;}</style><![endif]--><!--[if gte mso 9]><style acrite-m=
+so-css=3D"true">.image-container div {  display: block;}.structure__table t=
+d {  padding: 0;  border: none;}.button-container {  border: none !importan=
+t;  padding: 0 !important;  margin: 0 !important;  line-height: normal !imp=
+ortant;}.acr-structure {  margin: 0 !important;}.acr-component {  margin: 0=
+ !important;}.acr-fragment {  margin: 0 !important;}.colspan1, .colspan2, .=
+colspan3, .colspan4, .colspan33, .colspan66 {  box-sizing: border-box !impo=
+rtant;}</style><![endif]--><!--[if gte mso 9]><style acrite-mso-css=3D"true=
+">.image-container div {  display: block;}.structure__table td {  padding: =
+0;  border: none;}.button-container {  border: none !important;  padding: 0=
+ !important;  margin: 0 !important;  line-height: normal !important;}.acr-s=
+tructure {  margin: 0 !important;}.acr-component {  margin: 0 !important;}.=
+acr-fragment {  margin: 0 !important;}.colspan1, .colspan2, .colspan3, .col=
+span4, .colspan33, .colspan66 {  box-sizing: border-box !important;}</style=
+><![endif]--><!--[if gte mso 9]><style acrite-mso-css=3D"true">.image-conta=
+iner div {  display: block;}.structure__table td {  padding: 0;  border: no=
+ne;}.button-container {  border: none !important;  padding: 0 !important;  =
+margin: 0 !important;  line-height: normal !important;}.acr-structure {  ma=
+rgin: 0 !important;}.acr-component {  margin: 0 !important;}.acr-fragment {=
+  margin: 0 !important;}.colspan1, .colspan2, .colspan3, .colspan4, .colspa=
+n33, .colspan66 {  box-sizing: border-box !important;}</style><![endif]--><=
+!--[if gte mso 9]><style acrite-mso-css=3D"true">.image-container div {  di=
+splay: block;}.structure__table td {  padding: 0;  border: none;}.button-co=
+ntainer {  border: none !important;  padding: 0 !important;  margin: 0 !imp=
+ortant;  line-height: normal !important;}.acr-structure {  margin: 0 !impor=
+tant;}.acr-component {  margin: 0 !important;}.acr-fragment {  margin: 0 !i=
+mportant;}.colspan1, .colspan2, .colspan3, .colspan4, .colspan33, .colspan6=
+6 {  box-sizing: border-box !important;}</style><![endif]--><!--[if gte mso=
+ 9]><style acrite-mso-css=3D"true">.image-container div {  display: block;}=
+.structure__table td {  padding: 0;  border: none;}.button-container {  bo=
+rder: none !important;  padding: 0 !important;  margin: 0 !important;  line=
+-height: normal !important;}.acr-structure {  margin: 0 !important;}.acr-co=
+mponent {  margin: 0 !important;}.acr-fragment {  margin: 0 !important;}.co=
+lspan1, .colspan2, .colspan3, .colspan4, .colspan33, .colspan66 {  box-sizi=
+ng: border-box !important;}</style><![endif]--><!--[if gte mso 9]><style ac=
+rite-mso-css=3D"true">.image-container div {  display: block;}.structure__t=
+able td {  padding: 0;  border: none;}.button-container {  border: none !im=
+portant;  padding: 0 !important;  margin: 0 !important;  line-height: norma=
+l !important;}.acr-structure {  margin: 0 !important;}.acr-component {  mar=
+gin: 0 !important;}.acr-fragment {  margin: 0 !important;}.colspan1, .colsp=
+an2, .colspan3, .colspan4, .colspan33, .colspan66 {  box-sizing: border-box=
+ !important;}</style><![endif]--><!--[if gte mso 9]><style acrite-mso-css=
+=3D"true">.image-container div {  display: block;}.structure__table td {  p=
+adding: 0;  border: none;}.button-container {  border: none !important;  pa=
+dding: 0 !important;  margin: 0 !important;  line-height: normal !important=
+;}.acr-structure {  margin: 0 !important;}.acr-component {  margin: 0 !impo=
+rtant;}.acr-fragment {  margin: 0 !important;}.colspan1, .colspan2, .colspa=
+n3, .colspan4, .colspan33, .colspan66 {  box-sizing: border-box !important;=
+}</style><![endif]--><!--[if gte mso 9]><style acrite-mso-css=3D"true">.ima=
+ge-container div {  display: block;}.structure__table td {  padding: 0;  bo=
+rder: none;}.button-container {  border: none !important;  padding: 0 !impo=
+rtant;  margin: 0 !important;  line-height: normal !important;}.acr-structu=
+re {  margin: 0 !important;}.acr-component {  margin: 0 !important;}.acr-fr=
+agment {  margin: 0 !important;}.colspan1, .colspan2, .colspan3, .colspan4,=
+ .colspan33, .colspan66 {  box-sizing: border-box !important;}</style><![en=
+dif]--><!--[if gte mso 9]><style acrite-mso-css=3D"true">.image-container d=
+iv {  display: block;}.structure__table td {  padding: 0;  border: none;}.b=
+utton-container {  border: none !important;  padding: 0 !important;  margin=
+: 0 !important;  line-height: normal !important;}.acr-structure {  margin: =
+0 !important;}.acr-component {  margin: 0 !important;}.acr-fragment {  marg=
+in: 0 !important;}.colspan1, .colspan2, .colspan3, .colspan4, .colspan33, .=
+colspan66 {  box-sizing: border-box !important;}</style><![endif]--><!--[if=
+ gte mso 9]><style acrite-mso-css=3D"true">.image-container div {  display:=
+ block;}.structure__table td {  padding: 0;  border: none;}.button-containe=
+r {  border: none !important;  padding: 0 !important;  margin: 0 !important=
+;  line-height: normal !important;}.acr-structure {  margin: 0 !important;}=
+.acr-component {  margin: 0 !important;}.acr-fragment {  margin: 0 !import=
+ant;}.colspan1, .colspan2, .colspan3, .colspan4, .colspan33, .colspan66 {  =
+box-sizing: border-box !important;}</style><![endif]--><!--[if gte mso 9]><=
+style acrite-mso-css=3D"true">.image-container div {  display: block;}.stru=
+cture__table td {  padding: 0;  border: none;}.button-container {  border: =
+none !important;  padding: 0 !important;  margin: 0 !important;  line-heigh=
+t: normal !important;}.acr-structure {  margin: 0 !important;}.acr-componen=
+t {  margin: 0 !important;}.acr-fragment {  margin: 0 !important;}.colspan1=
+, .colspan2, .colspan3, .colspan4, .colspan33, .colspan66 {  box-sizing: bo=
+rder-box !important;}</style><![endif]--><!--[if gte mso 9]><style acrite-m=
+so-css=3D"true">.image-container div {  display: block;}.structure__table t=
+d {  padding: 0;  border: none;}.button-container {  border: none !importan=
+t;  padding: 0 !important;  margin: 0 !important;  line-height: normal !imp=
+ortant;}.acr-structure {  margin: 0 !important;}.acr-component {  margin: 0=
+ !important;}.acr-fragment {  margin: 0 !important;}.colspan1, .colspan2, .=
+colspan3, .colspan4, .colspan33, .colspan66 {  box-sizing: border-box !impo=
+rtant;}</style><![endif]--><div class=3D"acr-fragment is-locked" data-fragm=
+ent-id=3D"ajo:e7125795-a08b-4484-a8eb-b094c31c6a6f"><table align=3D"center"=
+ cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"font-family: 'Ma=
+rkOTMedium', Arial, Helvetica, sans-serif !important; font-style: normal; f=
+ont-weight: 400; table-layout: fixed; width: 100%;"> <tbody> <tr> <th class=
+=3D"colspan1"><div class=3D"acr-tmp-component" style=3D"height:0px;width:au=
+to;" data-contenteditable=3D"true" data-tmp-component-id=3D"html"><style ty=
+pe=3D"text/css">=0A@media only screen and (max-width: 500px) {=0A  h1 {=0A =
+   font-size: 28px !important;=0A    line-height: 30px;=0A  }=0A}=0A</style=
+></div><div class=3D"acr-tmp-component" style=3D"background-color:rgb(0, 0,=
+ 0);" data-source-uuid=3D"a7a06770-5900-4c36-9199-1e68a8a039ff" data-conten=
+teditable=3D"true" data-tmp-component-id=3D"html"><table align=3D"center" b=
+gcolor=3D"#001636" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"color: #ffffff !important; font-family: 'MarkOTMedium', Arial, Helvetic=
+a, sans-serif !important; font-style: normal; font-weight: 400; padding: 15=
+px 0px; text-align: center;" width=3D"100%">=0A  <tbody>=0A    <tr style=3D=
+"background-color:#001636;border:0px;">=0A      <td width=3D"32%" style=3D"=
+font-family: 'MarkOTMedium', Arial, Helvetica, sans-serif !important; font-=
+style: normal; font-weight: 400;">=0A      </td>=0A      <td width=3D"36%" =
+valign=3D"middle" style=3D"font-family: 'MarkOTMedium', Arial, Helvetica, s=
+ans-serif !important; font-style: normal; font-weight: 400; mso-padding-alt=
+: 20px;">=0A        <a data-linkto=3D"https://" title data-nl-type=3D"exter=
+nalLink" style=3D"font-family: 'MarkOTMedium', Arial, Helvetica, sans-serif=
+ !important; font-style: normal; font-weight: 400; text-decoration: underli=
+ne;" href=3D"https://data.campaigns.cineplex.com/ee/v1/click=3Fparams=3Dv1.=
+hAig2nu078zY4exmzJsJb0FreNLlmTpSjMYL9ERieHrrVBseMJB8qkaaPhrGPNsQ5CAzN6AlgQQ=
+MIwxo9qg1qfoNjp1LhC_ToYgN25gJnbD5wI8LqAgat49mIx2JTRtCXVCUK7AIPGZUDqznhpx980=
+7pV2WDkIyjf3HRdfAKZ5-D_ZDryRjdWEjCZCeQZNfkFaLOJsVyOelsUMNyXVjM1xKsBYMk_8QWi=
+pqbQikWPOsNedLERmhW0tHl1Jv-87t5o0zbrs1mF9i1igpi7W4GWYYl1AD7SlCjSAY-PEP0Y1Na=
+YBqWjv5AwiLw0i80l7U1xhXM-8ReKfN1r3ZhdJVI-t-YwnMc64mMVrpFyXlmCY76Mk2Ja4AVuvI=
+vt1TE73D_UKkti22-mMsaEGyvnF88K5w6gORji5F1oEX33eatYmH1FNJaoG7OT9elMp9w78STfB=
+G5HdW0GEy4QeOLRksb6SBeeOJI&pid=3Dv1.AhBW4tA5HsGhSP1lTx-EIPsS03W4JiI1BbkSBqA=
+9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&tuid=3D6810d9c12f259d075e4a169c&c=
+onfigId=3De1f3099f-d292-4909-bc6e-348abe6b1809"><img alt=3D"Cineplex Logo" =
+style=3D"padding: 5px 0px; width: 180px; height: auto; text-align: center; =
+border: 0px;" width=3D"180" class height=3D"49" src=3D"https://cdn.campaign=
+s.cineplex.com/23dc5144-baef-40f8-9c51-44baefa0f836/urn:aaid:aem:5efa8f5f-c=
+75a-4f98-9238-d36e7e093f16/oak:1.1::ci:c2e257f0f4a7a199cc284637aef721fd/325=
+1cbde-99e3-3618-a184-69034dcff087"></a>=0A      </td>=0A      <td width=3D"=
+32%" style=3D"font-family: 'MarkOTMedium', Arial, Helvetica, sans-serif !im=
+portant; font-style: normal; font-weight: 400;">=0A      </td>=0A    </tr>=
+=0A  </tbody>=0A</table>=0A=0A<table style=3D"color: #ffffff !important; fo=
+nt-family: 'MarkOTMedium', Arial, Helvetica, sans-serif !important; font-st=
+yle: normal; font-weight: 400; padding: 20px 0px 15px 0px;">=0A  <tbody>=0A=
+    <tr style=3D"background-color:#000000;">=0A      <td width=3D"3%" style=
+=3D"font-family: 'MarkOTMedium', Arial, Helvetica, sans-serif !important; f=
+ont-style: normal; font-weight: 400;">=0A      </td>=0A      <td width=3D"5=
+8%" style=3D"color: #ffffff; font-family: 'MarkOTMedium', Arial, Helvetica,=
+ sans-serif !important; font-size: 15px !important; font-style: normal; fon=
+t-weight: normal; line-height: 110%; mso-ansi-font-size: 15px !important; m=
+so-font-alt: Arial, Helvetica, Verdana, Tahoma, sans-serif; mso-padding-lef=
+t-alt: 5px; mso-padding-top-alt: 20px; text-align: left;"><!--[if gte mso 9=
+]><span style=3D"font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif=
+;color:#ffffff; font-size:15px !important;"><![endif]-->=0A        =0A     =
+   =0A        Hey Talveer, you have <strong><span style=3D"color:#ffffff;fo=
+nt-family:'MarkOTMedium', Arial, Helvetica, sans-serif !important;font-styl=
+e:normal;font-weight:400;">0</span></strong> Scene+ Points<!--[if gte mso 9=
+]></span><![endif]--></td>=0A      <td width=3D"19%" style=3D"font-family: =
+'MarkOTMedium', Arial, Helvetica, sans-serif !important; font-style: normal=
+; font-weight: 400;">=0A      </td>=0A      <td width=3D"17%" style=3D"font=
+-family: 'MarkOTMedium', Arial, Helvetica, sans-serif !important; font-styl=
+e: normal; font-weight: 400; mso-padding-bottom-alt: 15px; mso-padding-left=
+-alt: 5px; mso-padding-top-alt: 20px;">=0A        <a data-linkto=3D"https:/=
+/" title data-nl-type=3D"externalLink" style=3D"font-family: 'MarkOTMedium'=
+, Arial, Helvetica, sans-serif !important; font-style: normal; font-weight:=
+ 400; text-decoration: underline;" href=3D"https://data.campaigns.cineplex.=
+com/ee/v1/click=3Fparams=3Dv1.hAig2nu078zY4exmzJsJb0FreNLlmTpSjMYL9ERieHrrV=
+BseMJB8qkaaPhrGPNsQ5CAzN6AlgQQMIwxo9qg1qfoNjp1LhC_ToYgN25gJnbD5wI8LqAgat49m=
+Ix2JTRtCXVCUK7AIPGZUDqznhpx9807pV2WDkIyjf3HRdfAKZ5-D_ZDryRjdWEjCZCeQZNfkFaL=
+OJsVyOelsUMNyXVjM1xKsBYMk_8QWipqbQikWPOsNedLERmhW0tHl1Jv-87t5o0zbrs1mF9i1ig=
+pi7W4GWYYl1AD7SlCjSAY-PEP0Y1NaYBqWjv5AwiLw0i80l7U1xhXM-8ReKfN1r3ZhdJVI-t-Yw=
+nMc64mMVrpFyXlmCY76Mk2Ja4AVuvIvt1TE73D_UKkti22-mMsaEGyvnF88K5w6gORji5F1oEX3=
+3eatYmH1FNJaoG7OT9elMp9w78STfBG5HdW0GEy4QeOLRksb6SBeeOJI&pid=3Dv1.AhBW4tA5H=
+sGhSP1lTx-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&tui=
+d=3D6810d9c12f259d075e4a169e&configId=3De1f3099f-d292-4909-bc6e-348abe6b180=
+9"><img alt=3D"Scene+ Logo" style=3D"padding: 0px; width: 100px; height: au=
+to; text-align: center; border: 0px;" width=3D"100" class height=3D"38" src=
+=3D"https://cdn.campaigns.cineplex.com/23dc5144-baef-40f8-9c51-44baefa0f836=
+/urn:aaid:aem:07e805b1-5f45-450f-95d1-2fcb19530f39/oak:1.0::ci:d7c76c62150a=
+a78046b49efc83dcf333/dd9205e4-4ea7-37dc-9186-0fe593890eaf"></a>=0A      </t=
+d>=0A      <td width=3D"3%" style=3D"font-family: 'MarkOTMedium', Arial, He=
+lvetica, sans-serif !important; font-style: normal; font-weight: 400;">=0A =
+     </td>=0A    </tr>=0A  </tbody>=0A</table></div>=0A</th> </tr> </tbody>=
+ </table></div></th> </tr> </tbody> </table> <!--[if mso]></td></tr></table=
+><![endif]--></div>      <div class=3D"acr-structure" data-structure-id=3D"=
+1-1-column" data-structure-name=3D"richtext.structure_1_1_column" data-lock=
+-type=3D"editable" data-source-uuid=3D"7a70e9bf-6250-44e8-924a-575e4b231b8a=
+" data-has-int-mso-hack=3D"true" style=3D"background-color:rgb(0, 0, 0);"><=
+!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=
+=3D"100%"><tr><td style=3D"background-color: rgb(0, 0, 0);" ><![endif]--> <=
+table class=3D"structure__table" align=3D"center" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0" width=3D"600"> <tbody> <tr role=3D"presentation"> <=
+th class=3D"colspan1"><div class=3D"acr-fragment acr-component" style=3D"pa=
+dding:0px;text-align:initial;" data-component-id=3D"html" data-source-uuid=
+=3D"3c9df587-1df0-449e-98b2-139a0f31b134" id=3D"acr-530966031522850" data-d=
+ashlane-rid=3D"4f78c8aba8909a99" data-dashlane-classification=3D"other" dat=
+a-contenteditable=3D"true"><!--[if mso]><table cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"padding: 0px; font-siz=
+e: 38px; font-family: Arial, Helvetica, sans-serif!important; color: rgb(0,=
+ 0, 0); text-align: center; background-color: #000000;" ><![endif]--><table=
+ align=3D"center" bgcolor=3D"#00000" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"text-align:center;margin-bottom:0px;border-collapse:col=
+lapse;" width=3D"100%"><tbody><tr><td style=3D"text-align:center;color:#fff=
+fff;mso-line-height-rule:exactly!important;line-height:38px!important;font-=
+family:'MarkOT-Ultra', Google Sans, Arial, Helvetica, sans-serif!important;=
+font-size:34px;letter-spacing:1px;padding-bottom:0px;text-transform:upperca=
+se;font-weight:bold;" width=3D"100%"><!--[if gte mso 9]><span style=3D"font=
+-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;font-weight:bold;"><=
+![endif]--><strong>PLAN YOUR WEEKEND ESCAPE</strong> <!--[if gte mso 9]></s=
+pan><![endif]--></td></tr><tr><td style=3D"text-align:center;color:#ffd500;=
+mso-line-height-rule:exactly!important;line-height:30px!important;font-fami=
+ly:'MarkOTHeavy', Google Sans, Arial, Helvetica, sans-serif!important;font-=
+size:26px;padding-bottom:0px;text-transform:uppercase;font-weight:bold;" wi=
+dth=3D"100%"><!--[if gte mso 9]><span style=3D"font-family: Arial, Helvetic=
+a, Verdana, Tahoma, sans-serif;"><![endif]--><strong></strong><!--[if gte m=
+so 9]></span><![endif]--></td></tr></tbody></table><!--[if mso]></td></tr><=
+/table><![endif]--></div><!--[if mso]><table cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"padding: 6px 0px 0px;" =
+><![endif]--><div class=3D"acr-fragment acr-component image-container" data=
+-component-id=3D"image" style=3D"width:100%;text-align:center;margin:6px 0p=
+x 0px;" data-lock-type=3D"editable" data-source-uuid=3D"9b475d99-c1bf-4289-=
+89c0-9366e5dca67d" data-has-ext-mso-hack=3D"true" data-has-int-mso-hack=3D"=
+true" data-contenteditable=3D"false"><!--[if mso]><table cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"text-align: =
+center;" ><![endif]--><img width=3D"600" style=3D"height:auto;width:100%;" =
+class data-medialibrary-source=3D"aem" height=3D"auto" src=3D"https://cdn.c=
+ampaigns.cineplex.com/23dc5144-baef-40f8-9c51-44baefa0f836/urn:aaid:aem:116=
+1e08e-3f73-48df-88bb-ef1b49c82004/oak:1.0::ci:2a86a05a16f3256fbaeb5eb3378a0=
+051/6a80f824-fc6f-39b5-99cb-39b1615f49fd"><!--[if mso]></td></tr></table><!=
+[endif]--></div><!--[if mso]></td></tr></table><![endif]--><div class=3D"ac=
+r-fragment acr-component image-container" style=3D"width:100%;text-align:ce=
+nter;" data-component-id=3D"image" data-source-uuid=3D"86a6dd1e-4fad-409c-9=
+804-70ac9d93971e" data-contenteditable=3D"false"><!--[if mso]><table cellpa=
+dding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"=
+text-align: center; border-color: transparent; border-width: 0px; border-st=
+yle: dashed; border-radius: 4px;" ><![endif]--><a class=3D"arc-link" data-n=
+l-type=3D"externalLink" id=3D"acr-link-67986432" style=3D"text-decoration:u=
+nderline;" href=3D"https://data.campaigns.cineplex.com/ee/v1/click=3Fparams=
+=3Dv1.uCs5cM01jvE-8_E-8HhnA-OwSbmgQWK29VT69Ka2t50nS7jn6Pq-F6cPHXP3PV9JPiRyf=
+MAtaStApviA1xMfREDgkqC5Z-cCFtAJAWIer0Aj81sKDXH0Fv0AXbGu_CzwTpYMv-BWgQE4jI2h=
+g-VsBK17LkihkWHMMqFKSKovnB0sbbhp8uzysslVMQuO2TWKrpsAGBIVzyPHoTokZAQ-99AtNxX=
+lGkPYKLJAmGeFN1OQbKgUvItzCsTJEGewM0VPie8e_1IWXZ9SVeGng8HawUzYY7mK0ZIqOAsa1p=
+v3ZhOJxXoMcwF4UJY324dzc3BKr3P5BJkFswip4ItQ5apfMSbfYciskl5iUp6DA_st4CL--rxyI=
+VF6A3M8Fm3uWtOvlcSZnD5CVzH_2Mpd_QPjt7DY80VA4k9cziMGvGGySI0HXpFp1cvCcWwwqZaW=
+j8gQ_N9kumg8HKofNP8g1Yo8q9jhH2WNZYs&pid=3Dv1.AhBW4tA5HsGhSP1lTx-EIPsS03W4Ji=
+I1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&tuid=3D69b471840da2ed55d=
+e51b64c&configId=3De1f3099f-d292-4909-bc6e-348abe6b1809"><img style=3D"heig=
+ht:auto;width:96%;max-width:96%;border:medium;border-radius:4px;" width=3D"=
+576" class data-medialibrary-source=3D"aem" alt=3D"Reminders of Him" id=3D"=
+acr-1192321428622068" height=3D"auto" src=3D"https://cdn.campaigns.cineplex=
+.com/23dc5144-baef-40f8-9c51-44baefa0f836/urn:aaid:aem:85b9a8b6-8271-454b-=
+8ece-3c943d11a4aa/oak:1.0::ci:8e39c217a013fe6c6cb673a4e83a49dc/cecb70f0-f6b=
+f-395c-8d75-1333ba9f2c78"></a><!--[if mso]></td></tr></table><![endif]--></=
+div><div class=3D"acr-fragment acr-component" data-source-uuid=3D"b02285bf-=
+be9e-4abf-b207-3dda5b930613" style=3D"background-color:rgb(0, 0, 0);" data-=
+component-id=3D"html" data-unlocked-styles data-dashlane-rid=3D"4dfaf9d1bb3=
+e8d85" data-dashlane-classification=3D"other" data-contenteditable=3D"true"=
+><table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" r=
+ole=3D"presentation"><tbody><tr><!--[if !mso]><!--><td style=3D"text-align:=
+center;width:270px;border-radius:50px;mso-padding-alt:15px 16px;mso-border-=
+alt:1px solid #005bf5;background:#005bf5;"><!--<![endif]--><!--[if mso]><td=
+><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:sche=
+mas-microsoft-com:office:word" style=3D"height:36pt; width:187.5pt; v-text-=
+anchor:middle;" arcsize=3D"104%" fillcolor=3D"#005bf5" strokeweight=3D"0" s=
+trokecolor=3D"#005bf5">=0A  <v:stroke opacity=3D"0" /><v:textbox inset=3D"0=
+,0,0,0"><center style=3D"color:#000000!important; font-family:sans-serif; f=
+ont-size:16px"><![endif]--><a target=3D"_blank" style=3D"width:270px;border=
+:1px solid #005bf5;background:#005bf5;mso-border-alt:none;color:#f1f1f1;tex=
+t-decoration:none;border-radius:50px;padding-top:15px;padding-bottom:15px;m=
+so-padding-alt:0;display:inline-block;font-size:16px;line-height:110%;white=
+-space:nowrap;" data-nl-type=3D"externalLink" class href=3D"https://data.ca=
+mpaigns.cineplex.com/ee/v1/click=3Fparams=3Dv1.uCs5cM01jvE-8_E-8HhnA-OwSbmg=
+QWK29VT69Ka2t50nS7jn6Pq-F6cPHXP3PV9JPiRyfMAtaStApviA1xMfREDgkqC5Z-cCFtAJAWI=
+er0Aj81sKDXH0Fv0AXbGu_CzwTpYMv-BWgQE4jI2hg-VsBK17LkihkWHMMqFKSKovnB0sbbhp8u=
+zysslVMQuO2TWKrpsAGBIVzyPHoTokZAQ-99AtNxXlGkPYKLJAmGeFN1OQbKgUvItzCsTJEGewM=
+0VPie8e_1IWXZ9SVeGng8HawUzYY7mK0ZIqOAsa1pv3ZhOJxXoMcwF4UJY324dzc3BKr3P5BJkF=
+swip4ItQ5apfMSbfYciskl5iUp6DA_st4CL--rxyIVF6A3M8Fm3uWtOvlcSZnD5CVzH_2Mpd_QP=
+jt7DY80VA4k9cziMGvGGySI0HXpFp1cvCcWwwqZaWj8gQ_N9kumg8HKofNP8g1Yo8q9jhH2WNZY=
+s&pid=3Dv1.AhBW4tA5HsGhSP1lTx-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5ea=
+UH-wpOEW8Tbm4pkQ&tuid=3D69b471840da2ed55de51b64d&configId=3De1f3099f-d292-4=
+909-bc6e-348abe6b1809"><span style=3D"text-decoration:none;"><!--[if gte ms=
+o 9]><span style=3D"font-family: Arial, Helvetica, Verdana, Tahoma, sans-se=
+rif;"><![endif]-->Get Tickets<!--[if gte mso 9]></span><![endif]--></span><=
+/a><!--[if mso]></center></v:textbox></v:stroke></v:roundrect></td><![endif=
+]--><!--[if !mso]><!--></td><!--<![endif]--></tr></tbody></table></div></th=
+> </tr> </tbody> </table> <!--[if mso]></td></tr></table><![endif]--></div>=
+        <div class=3D"acr-structure" data-structure-id=3D"1-1-column" data-=
+structure-name=3D"richtext.structure_1_1_column" data-lock-type=3D"editable=
+" data-has-int-mso-hack=3D"true" style=3D"background-color:rgb(0, 0, 0);"><=
+!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=
+=3D"100%"><tr><td style=3D"background-color: rgb(0, 0, 0);" ><![endif]--> <=
+table class=3D"structure__table" align=3D"center" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0" width=3D"600"> <tbody> <tr role=3D"presentation"> <=
+th class=3D"colspan1"><div class=3D"acr-fragment acr-component divider-cont=
+ainer" style=3D"text-align:center;background-color:rgb(0, 0, 0);padding:0px=
+;height:60px;width:auto;" data-component-id=3D"divider" data-source-uuid=3D=
+"d0ab0d55-8adf-4122-906e-94fc35e68e54" data-has-int-mso-hack=3D"true" data-=
+contenteditable=3D"false"><!--[if mso]><table cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"padding: 0px; text-alig=
+n: center; height: 60px; background-color: rgb(0, 0, 0);" valign=3D"top"><t=
+able cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><t=
+d style=3D"height: 60px; background-color: rgb(0, 0, 0);" ><![endif]--><div=
+ style=3D"border-top:60px solid rgb(0, 0, 0);border-right:none;border-botto=
+m:none;border-left:none;width:100%;display:inline-block;height:0px;line-hei=
+ght:0px;font-size:0px;border-radius:0px;border-image:initial;" class=3D"div=
+ider-mso-hidden">&nbsp;</div><!--[if mso]></td></tr></table></td></tr></tab=
+le><![endif]--></div><div class=3D"acr-fragment acr-component image-contain=
+er" style=3D"width:100%;text-align:center;background-color:rgb(0, 0, 0);" d=
+ata-component-id=3D"image" data-source-uuid=3D"554c7132-4829-4321-93b2-db06=
+c5702945" data-contenteditable=3D"false"><!--[if mso]><table cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"text-ali=
+gn: center; background-color: rgb(0, 0, 0); border-color: transparent; bord=
+er-width: 0px; border-style: dashed; border-radius: 0px;" ><![endif]--><img=
+ style=3D"height:auto;width:100%;max-width:100%;border-color:transparent;bo=
+rder-width:0px;border-style:dashed;border-radius:0px;" width=3D"600" class =
+alt=3D"A Must-See On The Big Screen" height=3D"auto" src=3D"https://cdn.cam=
+paigns.cineplex.com/23dc5144-baef-40f8-9c51-44baefa0f836/urn:aaid:aem:c90ab=
+ef8-4e4a-49e3-a701-fb9334c4d3b7/oak:1.0::ci:0d12a7f50371a414957c114b2f481c6=
+b/b5a56eed-91af-3e19-8954-4122e5281cc6"><!--[if mso]></td></tr></table><![e=
+ndif]--></div></th> </tr> </tbody> </table> <!--[if mso]></td></tr></table>=
+<![endif]--></div><div class=3D"acr-structure" data-structure-id=3D"1-1-col=
+umn" data-structure-name=3D"richtext.structure_1_1_column" data-lock-type=
+=3D"editable" data-has-int-mso-hack=3D"true" style=3D"background-color:rgb(=
+0, 0, 0);"><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" width=3D"100%"><tr><td style=3D"background-color: rgb(0, 0, 0);" ><!=
+[endif]--> <table class=3D"structure__table" align=3D"center" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" width=3D"600"> <tbody> <tr role=3D"pr=
+esentation"> <th class=3D"colspan1"><!--[if mso]><table cellpadding=3D"0" c=
+ellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"padding: 0px;=
+" ><![endif]--><div class=3D"acr-fragment acr-component image-container" da=
+ta-component-id=3D"image" data-source-uuid=3D"f0234a42-e9a2-4510-999b-65faa=
+3ad8d0e" style=3D"width:100%;text-align:center;background-color:rgb(0, 0, 0=
+);margin:0px;" data-has-ext-mso-hack=3D"true" data-has-int-mso-hack=3D"true=
+" data-contenteditable=3D"false"><!--[if mso]><table cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"text-align: cent=
+er; background-color: rgb(0, 0, 0); border: none; border-radius: 0px;" ><![=
+endif]--><a class=3D"arc-link" data-nl-type=3D"externalLink" id=3D"acr-link=
+-68485593" style=3D"text-decoration:underline;" href=3D"https://data.campai=
+gns.cineplex.com/ee/v1/click=3Fparams=3Dv1.uCs5cM01jvE-8_E-8HhnA-OwSbmgQWK2=
+9VT69Ka2t50nS7jn6Pq-F6cPHXP3PV9JPiRyfMAtaStApviA1xMfREDgkqC5Z-cCFtAJAWIer0A=
+j81sKDXH0Fv0AXbGu_CzwTpYMv-BWgQE4jI2hg-VsBK17LkihkWHMMqFKSKovnB0sbbhp8uzyss=
+lVMQuO2TWKrpsAGBIVzyPHoTokZAQ-99AtNxXlGkPYKLJAmGeFN1OQbKgUvItzCsTJEGewM0VPi=
+e8e_1IWXZ9SVeGng8HawUzYY7mK0ZIqOAsa1pv3ZhOJxXoMcwF4UJY324dzc3BKr3P5BJkFswip=
+4ItQ5apfMSbfYciskl5iUp6DA_st4CL--rxyIVF6A3M8Fm3uWtOvlcSZnD5CVzH_2Mpd_QPjt7D=
+Y80VA4k9cziMGvGGySI0HXpFp1cvCcWwwqZaWj8gQ_N9kumg8HKofNP8g1Yo8q9jhH2WNZYs&pi=
+d=3Dv1.AhBW4tA5HsGhSP1lTx-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-w=
+pOEW8Tbm4pkQ&tuid=3D69b471840da2ed55de51b64e&configId=3De1f3099f-d292-4909-=
+bc6e-348abe6b1809"><img style=3D"height:auto;width:100%;max-width:100%;bord=
+er:none;border-radius:0px;" width=3D"600" class alt=3D"Hoppers" data-medial=
+ibrary-source=3D"aem" height=3D"auto" src=3D"https://cdn.campaigns.cineplex=
+.com/23dc5144-baef-40f8-9c51-44baefa0f836/urn:aaid:aem:b1c0bf70-b862-4356-=
+80ff-16fb48493817/oak:1.0::ci:a537a75be256bb725cc8dfa7d28107f5/bdf77f77-262=
+3-3deb-92fb-f92a584c222a"></a><!--[if mso]></td></tr></table><![endif]--></=
+div><!--[if mso]></td></tr></table><![endif]--></th> </tr> </tbody> </table=
+> <!--[if mso]></td></tr></table><![endif]--></div><div class=3D"acr-struct=
+ure" data-structure-id=3D"1-1-column" data-structure-name=3D"richtext.struc=
+ture_1_1_column" style=3D"background-color:rgb(0, 0, 0);"><!--[if mso]><tab=
+le cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td =
+style=3D"background-color: rgb(0, 0, 0);" ><![endif]--> <table class=3D"str=
+ucture__table" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" width=3D"600"> <tbody> <tr> <th class=3D"colspan1"><div class=3D"acr=
+-fragment acr-component divider-container" style=3D"text-align:center;backg=
+round-color:rgb(0, 0, 0);padding:0px;height:60px;width:auto;" data-componen=
+t-id=3D"divider" data-source-uuid=3D"d0ab0d55-8adf-4122-906e-94fc35e68e54" =
+data-has-int-mso-hack=3D"true" data-contenteditable=3D"false"><!--[if mso]>=
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr>=
+<td style=3D"padding: 0px; text-align: center; height: 60px; background-col=
+or: rgb(0, 0, 0);" valign=3D"top"><table cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0" width=3D"100%"><tr><td style=3D"height: 60px; background-col=
+or: rgb(0, 0, 0);" ><![endif]--><div style=3D"border-top:60px solid rgb(0, =
+0, 0);border-right:none;border-bottom:none;border-left:none;width:100%;disp=
+lay:inline-block;height:0px;line-height:0px;font-size:0px;border-radius:0px=
+;border-image:initial;" class=3D"divider-mso-hidden">&nbsp;</div><!--[if ms=
+o]></td></tr></table></td></tr></table><![endif]--></div><div class=3D"acr-=
+fragment acr-component image-container" data-component-id=3D"image" style=
+=3D"width:100%;text-align:center;background-color:rgb(0, 0, 0);" data-has-i=
+nt-mso-hack=3D"true" data-source-uuid=3D"76ddbac7-fa7c-4575-9ac8-9717e1554d=
+0d" data-contenteditable=3D"false"><!--[if mso]><table cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"text-align: ce=
+nter; background-color: rgb(0, 0, 0);" ><![endif]--><a class=3D"arc-link" d=
+ata-nl-type=3D"externalLink" id=3D"acr-link-73745203" style=3D"text-decorat=
+ion:underline;" href=3D"https://data.campaigns.cineplex.com/ee/v1/click=3Fp=
+arams=3Dv1.uCs5cM01jvE-8_E-8HhnA-OwSbmgQWK29VT69Ka2t50nS7jn6Pq-F6cPHXP3PV9J=
+PiRyfMAtaStApviA1xMfREDgkqC5Z-cCFtAJAWIer0Aj81sKDXH0Fv0AXbGu_CzwTpYMv-BWgQE=
+4jI2hg-VsBK17LkihkWHMMqFKSKovnB0sbbhp8uzysslVMQuO2TWKrpsAGBIVzyPHoTokZAQ-99=
+AtNxXlGkPYKLJAmGeFN1OQbKgUvItzCsTJEGewM0VPie8e_1IWXZ9SVeGng8HawUzYY7mK0ZIqO=
+Asa1pv3ZhOJxXoMcwF4UJY324dzc3BKr3P5BJkFswip4ItQ5apfMSbfYciskl5iUp6DA_st4CL-=
+-rxyIVF6A3M8Fm3uWtOvlcSZnD5CVzH_2Mpd_QPjt7DY80VA4k9cziMGvGGySI0HXpFp1cvCcWw=
+wqZaWj8gQ_N9kumg8HKofNP8g1Yo8q9jhH2WNZYs&pid=3Dv1.AhBW4tA5HsGhSP1lTx-EIPsS0=
+3W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&tuid=3D69b471840da2=
+ed55de51b64f&configId=3De1f3099f-d292-4909-bc6e-348abe6b1809"><img width=3D=
+"600" style=3D"height:auto;width:100%;" class alt=3D"Now Playing" height=3D=
+"auto" src=3D"https://cdn.campaigns.cineplex.com/23dc5144-baef-40f8-9c51-44=
+baefa0f836/urn:aaid:aem:db334367-9a92-4252-b476-d287f095da31/oak:1.0::ci:56=
+14004a75b22b35d2ec2f4927193562/10798f73-488c-3eed-a08e-497cd4e82177"></a><!=
+--[if mso]></td></tr></table><![endif]--></div><div class=3D"acr-fragment a=
+cr-component divider-container" style=3D"text-align:center;background-color=
+:rgb(0, 0, 0);padding:0px;height:20px;width:auto;" data-component-id=3D"div=
+ider" data-has-int-mso-hack=3D"true" data-source-uuid=3D"0ea1f48c-93a1-40ea=
+-af5b-e1894ac34612" data-contenteditable=3D"false"><!--[if mso]><table cell=
+padding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=
+=3D"padding: 0px; text-align: center; height: 20px; background-color: rgb(0=
+, 0, 0);" valign=3D"top"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" width=3D"100%"><tr><td style=3D"height: 20px; background-color: rgb(=
+0, 0, 0);" ><![endif]--><div style=3D"border-top:20px solid rgb(0, 0, 0);bo=
+rder-right:none;border-bottom:none;border-left:none;width:100%;display:inli=
+ne-block;height:0px;line-height:0px;font-size:0px;border-radius:0px;" class=
+=3D"divider-mso-hidden">&nbsp;</div><!--[if mso]></td></tr></table></td></t=
+r></table><![endif]--></div></th> </tr> </tbody> </table> <!--[if mso]></td=
+></tr></table><![endif]--></div><div class=3D"acr-structure" data-structure=
+-id=3D"2-2-column" data-structure-name=3D"richtext.structure_2_2_column" st=
+yle=3D"background-color:rgb(0, 0, 0);" id=3D"acr-37897085"><!--[if mso]><ta=
+ble cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td=
+ style=3D"background-color: rgb(0, 0, 0);" ><![endif]--> <table class=3D"st=
+ructure__table" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" width=3D"600"> <tbody> <tr> <th class=3D"colspan2"><div class=3D"acr=
+-fragment acr-component image-container" style=3D"width:100%;text-align:cen=
+ter;" data-component-id=3D"image" data-source-uuid=3D"59c4333a-7265-42e5-b2=
+17-c0eda7d8fb0b" data-contenteditable=3D"false"><!--[if mso]><table cellpad=
+ding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"t=
+ext-align: center;" ><![endif]--><a class=3D"arc-link" data-nl-type=3D"exte=
+rnalLink" id=3D"acr-link-76580550" style=3D"text-decoration:underline;" hre=
+f=3D"https://data.campaigns.cineplex.com/ee/v1/click=3Fparams=3Dv1.Pqj_YGb1=
+9vyFW8d4cCM0N35Q-g_JpVpviiL5rO8yAnch0VZlvwb08oGUYAxRRPM5BZ7RJF6aus8wetLW78d=
+vxPK1bbttZY4iZNfpvwe1Zu5KoJt-PfDRrBAe65runU_1aywNJE1gK4plOTcIFZins_QscpHwha=
+0Ip6yAZR0Dct2yH1Dn6eOYTqZac7y7BD1yqGL5C2tUsJ57ERKdBCLBLZYgJe00VPA5hsRB3ev-g=
+ZjWsedit0pJkB4PU72eeW5ixfi4hsDj2pZSmp-FjuC_rlLNFEFrRm86ZcCp9EMh7C-hw8OqxmXx=
+Lb7JSckcjKAcjTqsDeG5RHSAcuCdAUpgpUYifXUZTYp6Or8z4QUzJYimIsLwUyIIHxWTGpOfrsJ=
+sWBhSTy9BFHn66LnHOnE2cz4IFkLI70t_CIuMZKiOmY5y8cjvrb4_SFxj9BTpw1EFQU1lVUJEtw=
+50dDC2X4toXkWE4msAMRJnHG5tkFy0iORZI6Dpva0pG5t0N0PEkrxYF5K-ITc9QmSK&pid=3Dv1=
+.AhBW4tA5HsGhSP1lTx-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8=
+Tbm4pkQ&tuid=3D69b471840da2ed55de51b650&configId=3De1f3099f-d292-4909-bc6e-=
+348abe6b1809"><img style=3D"height:auto;width:90%;max-width:90%;" width=3D"=
+270" alt=3D"undertone" id=3D"acr-84884548" class src=3D"https://mediafiles.=
+cineplex.com/Central/Film/Posters/60725_320_470.jpg" height=3D"auto"></a><!=
+--[if mso]></td></tr></table><![endif]--></div><div class=3D"acr-fragment a=
+cr-component divider-container" style=3D"text-align:center;background-color=
+:rgb(0, 0, 0);height:10px;width:auto;padding:0px;" data-component-id=3D"div=
+ider" data-has-int-mso-hack=3D"true" data-contenteditable=3D"false"><!--[if=
+ mso]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%=
+"><tr><td style=3D"padding: 0px; text-align: center; height: 10px; backgrou=
+nd-color: rgb(0, 0, 0);" valign=3D"top"><table cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"height: 10px; backgrou=
+nd-color: rgb(0, 0, 0);" ><![endif]--><div style=3D"border-top:10px solid r=
+gb(0, 0, 0);width:100%;display:inline-block;height:0px;line-height:0px;font=
+-size:0px;border-right:none;border-bottom:none;border-left:none;border-radi=
+us:0px;" class=3D"divider-mso-hidden">&nbsp;</div><!--[if mso]></td></tr></=
+table></td></tr></table><![endif]--></div></th> <th class=3D"colspan2"><div=
+ class=3D"acr-fragment acr-component image-container" style=3D"width:100%;t=
+ext-align:center;" id=3D"acr-19902922" data-component-id=3D"image" data-sou=
+rce-uuid=3D"5bdc9c02-a285-4de6-9ea3-f535fa6dadb2" data-contenteditable=3D"f=
+alse"><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+width=3D"100%"><tr><td style=3D"text-align: center;" ><![endif]--><a class=
+=3D"arc-link" data-nl-type=3D"externalLink" id=3D"acr-link-67745616" style=
+=3D"text-decoration:underline;" href=3D"https://data.campaigns.cineplex.com=
+/ee/v1/click=3Fparams=3Dv1.OOQj2nemz4Baq5cjmFjVTDpcHHno7iDGCHz-jkbQ7WPb1HKj=
+qqhn5MJfEGmkbPSg9uvubn0mvpenlN30qNsi4xJ-ZtQstJmyRK08j9Yk6ViWj9BfdWEpyuJaThh=
+NX_YQgDcKIyvOAvZ8eIN4cPlEzntnrehuz_rQCWUTqyv0zrPrQzWlIXaGBBptFfwizvuXNof3av=
+9xiXVirbPjbPDI7w4s4DKlB2W5_STWmrgC2G-UJn9oVppRNGCOOVyS7ZWMW-Ogjoo1sDxf1JubO=
+S_eDeqEkoHWBrzWpHMp7jhOmsA78qwiL_SDcAluc1qloy8ntDOnEOLVmlFAPVOcO0XaB3XdQQ7R=
+2IRx6AgO3o80S_HLDR_Q0DYs2K7qFVlqensiXzRb5Uxi7Z-NOmgCdAAO7I0Qy5ZhZXRIDV7lgPq=
+n4GTq04O99g3oIlHf68ndFHu19sBEFfiwpFy5YoOxukUta0JdxftPrkYMFl-giAAU3JwkhYs57u=
+hKuRQtcSlXZ6X94ahagGCfAoMi&pid=3Dv1.AhBW4tA5HsGhSP1lTx-EIPsS03W4JiI1BbkSBqA=
+9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&tuid=3D69b471840da2ed55de51b651&c=
+onfigId=3De1f3099f-d292-4909-bc6e-348abe6b1809"><img style=3D"height:auto;w=
+idth:90%;max-width:90%;" width=3D"270" id=3D"acr-96708537" alt=3D"The Bride=
+!" class src=3D"https://mediafiles.cineplex.com/Central/Film/Posters/36464_=
+320_470.jpg"></a><!--[if mso]></td></tr></table><![endif]--></div><div clas=
+s=3D"acr-fragment acr-component divider-container" style=3D"text-align:cent=
+er;background-color:rgb(0, 0, 0);height:10px;width:auto;padding:0px;" data-=
+component-id=3D"divider" data-has-int-mso-hack=3D"true" data-contenteditabl=
+e=3D"false"><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" width=3D"100%"><tr><td style=3D"padding: 0px; text-align: center; he=
+ight: 10px; background-color: rgb(0, 0, 0);" valign=3D"top"><table cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"he=
+ight: 10px; background-color: rgb(0, 0, 0);" ><![endif]--><div style=3D"bor=
+der-top:10px solid rgb(0, 0, 0);width:100%;display:inline-block;height:0px;=
+line-height:0px;font-size:0px;border-right:none;border-bottom:none;border-l=
+eft:none;border-radius:0px;" class=3D"divider-mso-hidden">&nbsp;</div><!--[=
+if mso]></td></tr></table></td></tr></table><![endif]--></div></th> </tr> <=
+/tbody> </table> <!--[if mso]></td></tr></table><![endif]--></div> <div cla=
+ss=3D"acr-structure" data-structure-id=3D"1-1-column" data-structure-name=
+=3D"richtext.structure_1_1_column" style=3D"background-color:rgb(0, 0, 0);"=
+><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=
+=3D"100%"><tr><td style=3D"background-color: rgb(0, 0, 0);" ><![endif]--> <=
+table class=3D"structure__table" align=3D"center" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0" width=3D"600"> <tbody> <tr> <th class=3D"colspan1">=
+<div class=3D"acr-fragment acr-component divider-container" data-component-=
+id=3D"divider" style=3D"text-align:center;background-color:rgb(0, 0, 0);pad=
+ding:0px;height:30px;width:auto;" data-has-int-mso-hack=3D"true" data-sourc=
+e-uuid=3D"ef606986-ce9d-463f-849b-a4c992ca6736" data-contenteditable=3D"fal=
+se"><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" wi=
+dth=3D"100%"><tr><td style=3D"padding: 0px; text-align: center; height: 30p=
+x; background-color: rgb(0, 0, 0);" valign=3D"top"><table cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"height: 30p=
+x; background-color: rgb(0, 0, 0);" ><![endif]--><div style=3D"border-width=
+:30px;border-style:solid none none;border-color:rgb(0, 0, 0);width:100%;dis=
+play:inline-block;height:0px;line-height:0px;font-size:0px;border-radius:0p=
+x;" class=3D"divider-mso-hidden">&nbsp;</div><!--[if mso]></td></tr></table=
+></td></tr></table><![endif]--></div></th> </tr> </tbody> </table> <!--[if =
+mso]></td></tr></table><![endif]--></div><div class=3D"acr-structure" data-=
+structure-id=3D"2-2-column" data-structure-name=3D"richtext.structure_2_2_c=
+olumn" style=3D"background-color:rgb(0, 0, 0);" id=3D"acr-56608358" data-so=
+urce-uuid=3D"45aa93a1-9464-4a06-b033-17a5867c99a9"><!--[if mso]><table cell=
+padding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=
+=3D"background-color: rgb(0, 0, 0);" ><![endif]--> <table class=3D"structur=
+e__table" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+ width=3D"600"> <tbody> <tr> <th class=3D"colspan2"><div class=3D"acr-fragm=
+ent acr-component image-container" style=3D"width:100%;text-align:center;" =
+data-component-id=3D"image" data-source-uuid=3D"c4bdaa9c-a0c7-4006-bb5e-82f=
+12ed12967" data-contenteditable=3D"false"><!--[if mso]><table cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"text-=
+align: center;" ><![endif]--><a class=3D"arc-link" data-nl-type=3D"external=
+Link" style=3D"text-decoration:underline;" href=3D"https://data.campaigns.c=
+ineplex.com/ee/v1/click=3Fparams=3Dv1.Ek-mRjSPX0cRGMXi6FATs5-wbHcRpw0B7C7W3=
+IJ7KM8Qu_rHkJsVzKIg3c8ZruXTrUYvjjVFKN3UfJ7bMN6yZB-gS3f1TqJy4OyE-nVJtEye3UQh=
+1gImGFruHVe1SKCFJQOa4tkfNAFkh92MedMPV09NE2TPBR6I0ljSuMSUkj44yETe59CqRNMJDgr=
+uGRr3PGnbH0LhzvYuroLis-fojJezndnFrRFVhXZHpUoTK2yZf04YZ-iSM0WjU8DW2kOIN7Phf-=
+IlkXnroMT_zvs-Ns_9uiuJhkTpRxZYoFMEMwQMF91AoBmZ8UGOdu93ONib2zoC0AhIbTqKJYZam=
+ZJSvnCu_m_ve4ej5Q6Ar-fZEIEHlpN9GHhmlppUj-Y6KnynBsle9VZ69XjyKc-X0vdblWyrD5dj=
+0Q8_8wRbAwcEeYiUW_e8gpM9TvH1abWJtAqMSPDOhDLiAxjVieTSGeb77ahL1-XCCZWzd5ZrfG6=
+NYqLQnMsbXKIyodhcWW08jr3czv2lGOLrAgI&pid=3Dv1.AhBW4tA5HsGhSP1lTx-EIPsS03W4J=
+iI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&tuid=3D69b471840da2ed55=
+de51b652&configId=3De1f3099f-d292-4909-bc6e-348abe6b1809"><img style=3D"hei=
+ght:auto;width:90%;max-width:90%;" width=3D"270" alt=3D"Scream 7" class src=
+=3D"https://mediafiles.cineplex.com/Central/Film/Posters/37326_320_470.jpg"=
+ height=3D"auto"></a><!--[if mso]></td></tr></table><![endif]--></div><div =
+class=3D"acr-fragment acr-component divider-container" style=3D"text-align:=
+center;background-color:rgb(0, 0, 0);height:10px;width:auto;padding:0px;" d=
+ata-component-id=3D"divider" data-has-int-mso-hack=3D"true" data-contentedi=
+table=3D"false"><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" width=3D"100%"><tr><td style=3D"padding: 0px; text-align: center;=
+ height: 10px; background-color: rgb(0, 0, 0);" valign=3D"top"><table cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D=
+"height: 10px; background-color: rgb(0, 0, 0);" ><![endif]--><div style=3D"=
+border-top:10px solid rgb(0, 0, 0);width:100%;display:inline-block;height:0=
+px;line-height:0px;font-size:0px;border-right:none;border-bottom:none;borde=
+r-left:none;border-radius:0px;" class=3D"divider-mso-hidden">&nbsp;</div><!=
+--[if mso]></td></tr></table></td></tr></table><![endif]--></div></th> <th =
+class=3D"colspan2"><div class=3D"acr-fragment acr-component image-container=
+" style=3D"width:100%;text-align:center;" data-component-id=3D"image" data-=
+source-uuid=3D"9e0e6ef7-9f39-4f51-84a5-61411426a25f" data-contenteditable=
+=3D"false"><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" width=3D"100%"><tr><td style=3D"text-align: center;" ><![endif]--><a=
+ class=3D"arc-link" data-nl-type=3D"externalLink" style=3D"text-decoration:=
+underline;" href=3D"https://data.campaigns.cineplex.com/ee/v1/click=3Fparam=
+s=3Dv1.7MX-gSw3skYd8IKJhHlyc7hE-qNvtHRC_96FKoTFTkUbXKTeWQVlxivsgFq-ymTm1yAF=
+YZG48TYqd7q9lVz3NkhRLciEx5clORHWWSI2M9taRQacnuzpRxH_JeUA0f7HYzOxCooYvpauI3f=
+cmcPp5guUUXKnGpeJdX71Yq4oXWnWpuZGrZfuUJEOm8o-r0WrdPtsC6k23ywIWhRhLsjRx7Qn1W=
+ThNdeq9fAwlm9A2Cm4UAGh2xRpug5UhKHqFiJ-5fbjeKaIW3y0Q1661dB-611NM-9rAeHVW-STP=
+ou0T7L7dviAgfvGRqM2o-EQTp-mJBgsT_bvxEzk8fwFQuPHSuwqp2MKHYCIOKzymcUV9OdvuWy8=
+Oufb7sbMEhQZlom1hvJfUW7jehFv-ZmRJ6ZKCBK6f87oKCs56ZtoO2dNh8mQKGQZsm25ReV9q5z=
+Nw4sBA58idkyoUlgVcG_xJsNUNatZfbgfkOLRaF1qVRaVjsvY54pwf-crZm2r0NI9ad26Rue-Zg=
+&pid=3Dv1.AhBW4tA5HsGhSP1lTx-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaU=
+H-wpOEW8Tbm4pkQ&tuid=3D69b471840da2ed55de51b653&configId=3De1f3099f-d292-49=
+09-bc6e-348abe6b1809"><img style=3D"height:auto;width:90%;max-width:90%;" w=
+idth=3D"270" alt=3D"Goat" class src=3D"https://mediafiles.cineplex.com/Cent=
+ral/Film/Posters/37912_320_470.jpg"></a><!--[if mso]></td></tr></table><![e=
+ndif]--></div><div class=3D"acr-fragment acr-component divider-container" s=
+tyle=3D"text-align:center;background-color:rgb(0, 0, 0);height:10px;width:a=
+uto;padding:0px;" data-component-id=3D"divider" data-has-int-mso-hack=3D"tr=
+ue" data-contenteditable=3D"false"><!--[if mso]><table cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"padding: 0px; =
+text-align: center; height: 10px; background-color: rgb(0, 0, 0);" valign=
+=3D"top"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"1=
+00%"><tr><td style=3D"height: 10px; background-color: rgb(0, 0, 0);" ><![en=
+dif]--><div style=3D"border-top:10px solid rgb(0, 0, 0);width:100%;display:=
+inline-block;height:0px;line-height:0px;font-size:0px;border-right:none;bor=
+der-bottom:none;border-left:none;border-radius:0px;" class=3D"divider-mso-h=
+idden">&nbsp;</div><!--[if mso]></td></tr></table></td></tr></table><![endi=
+f]--></div></th> </tr> </tbody> </table> <!--[if mso]></td></tr></table><![=
+endif]--></div> <div class=3D"acr-structure" data-structure-id=3D"1-1-colum=
+n" data-structure-name=3D"richtext.structure_1_1_column" style=3D"backgroun=
+d-color:rgb(0, 0, 0);"><!--[if mso]><table cellpadding=3D"0" cellspacing=3D=
+"0" border=3D"0" width=3D"100%"><tr><td style=3D"background-color: rgb(0, 0=
+, 0);" ><![endif]--> <table class=3D"structure__table" align=3D"center" cel=
+lpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"600"> <tbody> <tr> <=
+th class=3D"colspan1" data-has-int-mso-hack=3D"true"><div class=3D"acr-frag=
+ment acr-component divider-container" style=3D"text-align:center;background=
+-color:rgb(0, 0, 0);padding:0px;height:40px;width:auto;" data-component-id=
+=3D"divider" data-has-int-mso-hack=3D"true" data-contenteditable=3D"false">=
+<!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=
+=3D"100%"><tr><td style=3D"padding: 0px; text-align: center; height: 40px; =
+background-color: rgb(0, 0, 0);" valign=3D"top"><table cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"height: 20px; =
+background-color: rgb(0, 0, 0);" ><![endif]--><div style=3D"border-top:20px=
+ solid rgb(0, 0, 0);border-right:none;border-bottom:none;border-left:none;w=
+idth:100%;display:inline-block;height:0px;line-height:0px;font-size:0px;bor=
+der-radius:0px;" class=3D"divider-mso-hidden">&nbsp;</div><!--[if mso]></td=
+></tr></table></td></tr></table><![endif]--></div><!--[if mso]><table cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D=
+"padding: 0px;" ><![endif]--><div class=3D"acr-fragment acr-component" styl=
+e=3D"padding:0px;background-color:rgb(0, 0, 0);" data-component-id=3D"html"=
+ data-source-uuid=3D"02e8c065-1935-4a6c-ade7-adc9d446a938" data-dashlane-ri=
+d=3D"b3776b9ef3afdf2c" data-dashlane-classification=3D"other" data-contente=
+ditable=3D"true"><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" bo=
+rder=3D"0" width=3D"100%"><tr><td style=3D"padding-bottom:20px; font-size: =
+16px; color: #ffffff; text-align: center; background-color: #000000;" ><![e=
+ndif]--><div class=3D"text-container" data-contenteditable=3D"true"><p styl=
+e=3D"text-align:center;color:rgb(25, 133, 255);font-size:16px;line-height:2=
+2px;font-weight:700;font-family:'MarkOT', Arial, Helvetica, sans-serif!impo=
+rtant;">=0A    =0A  =0A<a style=3D"text-decoration:none;color:rgb(25, 133, =
+255);" data-nl-type=3D"externalLink" class href=3D"https://data.campaigns.c=
+ineplex.com/ee/v1/click=3Fparams=3Dv1.uCs5cM01jvE-8_E-8HhnA-OwSbmgQWK29VT69=
+Ka2t50nS7jn6Pq-F6cPHXP3PV9JPiRyfMAtaStApviA1xMfREDgkqC5Z-cCFtAJAWIer0Aj81sK=
+DXH0Fv0AXbGu_CzwTpYMv-BWgQE4jI2hg-VsBK17LkihkWHMMqFKSKovnB0sbbhp8uzysslVMQu=
+O2TWKrpsAGBIVzyPHoTokZAQ-99AtNxXlGkPYKLJAmGeFN1OQbKgUvItzCsTJEGewM0VPie8e_1=
+IWXZ9SVeGng8HawUzYY7mK0ZIqOAsa1pv3ZhOJxXoMcwF4UJY324dzc3BKr3P5BJkFswip4ItQ5=
+apfMSbfYciskl5iUp6DA_st4CL--rxyIVF6A3M8Fm3uWtOvlcSZnD5CVzH_2Mpd_QPjt7DY80VA=
+4k9cziMGvGGySI0HXpFp1cvCcWwwqZaWj8gQ_N9kumg8HKofNP8g1Yo8q9jhH2WNZYs&pid=3Dv=
+1.AhBW4tA5HsGhSP1lTx-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8=
+Tbm4pkQ&tuid=3D69b471850da2ed55de51b654&configId=3De1f3099f-d292-4909-bc6e-=
+348abe6b1809">=0A      See More Near Me=0A</a>=0A  =0A  </p><!--[if mso]></=
+td></tr></table><![endif]--></div></div><!--[if mso]></td></tr></table><![e=
+ndif]--><div class=3D"acr-fragment acr-component divider-container" style=
+=3D"text-align:center;background-color:rgb(0, 0, 0);padding:0px;height:60px=
+;width:auto;" data-component-id=3D"divider" data-has-int-mso-hack=3D"true" =
+data-source-uuid=3D"d0ab0d55-8adf-4122-906e-94fc35e68e54" data-contentedita=
+ble=3D"false"><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" borde=
+r=3D"0" width=3D"100%"><tr><td style=3D"padding: 0px; text-align: center; h=
+eight: 60px; background-color: rgb(0, 0, 0);" valign=3D"top"><table cellpad=
+ding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"h=
+eight: 30px; background-color: rgb(0, 0, 0);" ><![endif]--><div style=3D"bo=
+rder-width:30px;border-style:solid none none;border-color:rgb(0, 0, 0);widt=
+h:100%;display:inline-block;height:0px;line-height:0px;font-size:0px;border=
+-radius:0px;" class=3D"divider-mso-hidden">&nbsp;</div><!--[if mso]></td></=
+tr></table></td></tr></table><![endif]--></div></th> </tr> </tbody> </table=
+> <!--[if mso]></td></tr></table><![endif]--></div> <div class=3D"acr-struc=
+ture" data-structure-id=3D"1-1-column" data-structure-name=3D"richtext.stru=
+cture_1_1_column" style=3D"background-color:rgb(0, 0, 0);" data-source-uuid=
+=3D"e03f2c14-40ca-4d8c-9e0e-513da95000bf"><!--[if mso]><table cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"backg=
+round-color: rgb(0, 0, 0);" ><![endif]--> <table class=3D"structure__table"=
+ align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D=
+"600"> <tbody> <tr> <th class=3D"colspan1"><div class=3D"acr-fragment acr-c=
+omponent image-container" data-component-id=3D"image" style=3D"width:100%;t=
+ext-align:center;" data-has-int-mso-hack=3D"true" data-source-uuid=3D"34413=
+a02-f22b-4830-b6b9-0b04127e7472" data-contenteditable=3D"false"><!--[if mso=
+]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><t=
+r><td style=3D"text-align: center;" ><![endif]--><a class=3D"arc-link" data=
+-nl-type=3D"externalLink" id=3D"acr-link-99344236" style=3D"text-decoration=
+:underline;" href=3D"https://data.campaigns.cineplex.com/ee/v1/click=3Fpara=
+ms=3Dv1.uCs5cM01jvE-8_E-8HhnA-OwSbmgQWK29VT69Ka2t50nS7jn6Pq-F6cPHXP3PV9JPiR=
+yfMAtaStApviA1xMfREDgkqC5Z-cCFtAJAWIer0Aj81sKDXH0Fv0AXbGu_CzwTpYMv-BWgQE4jI=
+2hg-VsBK17LkihkWHMMqFKSKovnB0sbbhp8uzysslVMQuO2TWKrpsAGBIVzyPHoTokZAQ-99AtN=
+xXlGkPYKLJAmGeFN1OQbKgUvItzCsTJEGewM0VPie8e_1IWXZ9SVeGng8HawUzYY7mK0ZIqOAsa=
+1pv3ZhOJxXoMcwF4UJY324dzc3BKr3P5BJkFswip4ItQ5apfMSbfYciskl5iUp6DA_st4CL--rx=
+yIVF6A3M8Fm3uWtOvlcSZnD5CVzH_2Mpd_QPjt7DY80VA4k9cziMGvGGySI0HXpFp1cvCcWwwqZ=
+aWj8gQ_N9kumg8HKofNP8g1Yo8q9jhH2WNZYs&pid=3Dv1.AhBW4tA5HsGhSP1lTx-EIPsS03W4=
+JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&tuid=3D69b471840da2ed5=
+5de51b64f&configId=3De1f3099f-d292-4909-bc6e-348abe6b1809"><img width=3D"60=
+0" style=3D"height:auto;width:100%;" class alt=3D"Coming Soon" height=3D"au=
+to" src=3D"https://cdn.campaigns.cineplex.com/23dc5144-baef-40f8-9c51-44bae=
+fa0f836/urn:aaid:aem:6cf33474-339b-4d8c-a3d1-0aa8846d3ad4/oak:1.0::ci:e8384=
+9516878565fde8b9a12cd67c52f/4589b96f-8947-357d-a0a3-54a922ecc241"></a><!--[=
+if mso]></td></tr></table><![endif]--></div><div class=3D"acr-fragment acr-=
+component divider-container" style=3D"text-align:center;background-color:rg=
+b(0, 0, 0);padding:0px;height:20px;width:auto;" data-component-id=3D"divide=
+r" data-source-uuid=3D"87ff5752-6c66-4834-95b1-316d2df0f2da" data-has-int-m=
+so-hack=3D"true" data-contenteditable=3D"false"><!--[if mso]><table cellpad=
+ding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"p=
+adding: 0px; text-align: center; height: 20px; background-color: rgb(0, 0, =
+0);" valign=3D"top"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+ width=3D"100%"><tr><td style=3D"height: 20px; background-color: rgb(0, 0, =
+0);" ><![endif]--><div style=3D"border-top:20px solid rgb(0, 0, 0);border-r=
+ight:none;border-bottom:none;border-left:none;width:100%;display:inline-blo=
+ck;height:0px;line-height:0px;font-size:0px;border-radius:0px;" class=3D"di=
+vider-mso-hidden">&nbsp;</div><!--[if mso]></td></tr></table></td></tr></ta=
+ble><![endif]--></div></th> </tr> </tbody> </table> <!--[if mso]></td></tr>=
+</table><![endif]--></div> <div class=3D"acr-structure" data-structure-id=
+=3D"2-2-column" data-structure-name=3D"richtext.structure_2_2_column" style=
+=3D"background-color:rgb(0, 0, 0);" id=3D"acr-2434822" data-source-uuid=3D"=
+b353b5bf-a8ba-4250-aaf9-4db575da59db"><!--[if mso]><table cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"background-=
+color: rgb(0, 0, 0);" ><![endif]--> <table class=3D"structure__table" align=
+=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"600">=
+ <tbody> <tr> <th class=3D"colspan2"><div class=3D"acr-fragment acr-compone=
+nt image-container" style=3D"width:100%;text-align:center;" data-component-=
+id=3D"image" data-source-uuid=3D"a601d763-577a-4e4b-8efc-37510d9cf4ae" data=
+-contenteditable=3D"false"><!--[if mso]><table cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"text-align: center;" >=
+<![endif]--><a class=3D"arc-link" data-nl-type=3D"externalLink" id=3D"acr-l=
+ink-61412156" style=3D"text-decoration:underline;" href=3D"https://data.cam=
+paigns.cineplex.com/ee/v1/click=3Fparams=3Dv1.ajbYUW0EDVyp9ouihGz8b9LMtegoY=
+-go-I7Vh44jsFBfFw7qbKLJcg44VYg1vMu_wIo5y4FXTiBPlbVE0Xy4Xen4KoN8HI6bHNSdi62b=
+WnHasLTUpjy0b2eTl-T0dYt1-CBlC8fQIpTekn8ENocB944ZzyxtP6DvcG9F1dawUVGi3L3Oy0x=
+BgGixcCpXcV9D3IHrW8x4f_vfP9OQ5Y7bgxrEEewDRaypNXC5J5fxhOjoTtMZJ0HxN3JvLRD0vS=
+PoonfS0mtnk2UPB4asSVBOTUoIYoQuGbRxsLLgPiplanWUoiiJgS7KoYh8YdvcZw1Ik4_O_gafx=
+598vVgjvzbS7aFEV4SK9mg-B29wMlpmpCGPdgU9wlLWXitKOG9TkyFLsNQZAE3zCo8CIE3EMNFl=
+LevALlAtV5oB2zlb-DXaIRXwS9gxv9MAVbfw0cQlxcuu1TxwhKwDLFs6AT9agAjBrQaZxEWmvX3=
+q0-UvSaHlYH7pKlQP6ePQeqhy8SFaQIGEpk2bbItdnaKCSMWxUh_fGKUXWmA&pid=3Dv1.AhBW4=
+tA5HsGhSP1lTx-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ=
+&tuid=3D69b471850da2ed55de51b656&configId=3De1f3099f-d292-4909-bc6e-348abe6=
+b1809"><img style=3D"height:auto;width:90%;max-width:90%;" width=3D"270" id=
+=3D"acr-129953749195582" alt=3D"Project Hail Mary" data-params-id=3D"266536=
+59" class src=3D"https://mediafiles.cineplex.com/Central/Film/Posters/37916=
+_320_470.jpg"></a><!--[if mso]></td></tr></table><![endif]--></div><div cla=
+ss=3D"acr-fragment acr-component divider-container" style=3D"text-align:cen=
+ter;background-color:rgb(0, 0, 0);height:10px;width:auto;padding:0px;" data=
+-component-id=3D"divider" data-has-int-mso-hack=3D"true" data-source-uuid=
+=3D"107b7371-2719-44d5-9417-54e0814c0ee8" data-contenteditable=3D"false"><!=
+--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D=
+"100%"><tr><td style=3D"padding: 0px; text-align: center; height: 10px; bac=
+kground-color: rgb(0, 0, 0);" valign=3D"top"><table cellpadding=3D"0" cells=
+pacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"height: 10px; bac=
+kground-color: rgb(0, 0, 0);" ><![endif]--><div style=3D"border-top:10px so=
+lid rgb(0, 0, 0);width:100%;display:inline-block;height:0px;line-height:0px=
+;font-size:0px;border-right:none;border-bottom:none;border-left:none;border=
+-radius:0px;" class=3D"divider-mso-hidden">&nbsp;</div><!--[if mso]></td></=
+tr></table></td></tr></table><![endif]--></div><div class=3D"acr-fragment a=
+cr-component divider-container" style=3D"text-align:center;background-color=
+:rgb(0, 0, 0);height:10px;width:auto;padding:0px;" data-component-id=3D"div=
+ider" data-has-int-mso-hack=3D"true" data-source-uuid=3D"dcc7ed0a-3e29-4111=
+-a3b9-649dc772e2bb" data-contenteditable=3D"false"><!--[if mso]><table cell=
+padding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=
+=3D"padding: 0px; text-align: center; height: 10px; background-color: rgb(0=
+, 0, 0);" valign=3D"top"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" width=3D"100%"><tr><td style=3D"height: 10px; background-color: rgb(=
+0, 0, 0);" ><![endif]--><div style=3D"border-top:10px solid rgb(0, 0, 0);wi=
+dth:100%;display:inline-block;height:0px;line-height:0px;font-size:0px;bord=
+er-right:none;border-bottom:none;border-left:none;border-radius:0px;" class=
+=3D"divider-mso-hidden">&nbsp;</div><!--[if mso]></td></tr></table></td></t=
+r></table><![endif]--></div><div class=3D"acr-fragment acr-component" data-=
+component-id=3D"html" data-source-uuid=3D"c7928097-cf54-4a33-8f67-1a107e7e6=
+26b" data-dashlane-rid=3D"fcee5bda1ca0be61" data-dashlane-classification=3D=
+"other" data-contenteditable=3D"true"><table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" style=3D"border-collapse:collapse;" width=3D"100%" bgcol=
+or=3D"#000000"><tbody><tr><td align=3D"center" style=3D"text-align:center;"=
+> =0A  <!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+ width=3D"90%"><tr><td style=3D"text-align: center;" ><v:roundrect xmlns:v=
+=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:off=
+ice:word" style=3D"height:42px; v-text-anchor:middle;width:205.5pt;" arcsiz=
+e=3D"100%" strokecolor=3D"#ffffff" fillcolor=3D"#000000">=0A  <v:textbox in=
+set=3D"0,0,0,0"><center style=3D"color:#f1f1f1!important; font-family:sans-=
+serif; font-size:15px"><![endif]-->       =0A  <a class=3D"arc-link" style=
+=3D"text-decoration:none;color:#f1f1f1!important;" data-nl-type=3D"external=
+Link" href=3D"https://data.campaigns.cineplex.com/ee/v1/click=3Fparams=3Dv1=
+.ajbYUW0EDVyp9ouihGz8b9LMtegoY-go-I7Vh44jsFBfFw7qbKLJcg44VYg1vMu_wIo5y4FXT=
+iBPlbVE0Xy4Xen4KoN8HI6bHNSdi62bWnHasLTUpjy0b2eTl-T0dYt1-CBlC8fQIpTekn8ENocB=
+944ZzyxtP6DvcG9F1dawUVGi3L3Oy0xBgGixcCpXcV9D3IHrW8x4f_vfP9OQ5Y7bgxrEEewDRay=
+pNXC5J5fxhOjoTtMZJ0HxN3JvLRD0vSPoonfS0mtnk2UPB4asSVBOTUoIYoQuGbRxsLLgPiplan=
+WUoiiJgS7KoYh8YdvcZw1Ik4_O_gafx598vVgjvzbS7aFEV4SK9mg-B29wMlpmpCGPdgU9wlLWX=
+itKOG9TkyFLsNQZAE3zCo8CIE3EMNFlLevALlAtV5oB2zlb-DXaIRXwS9gxv9MAVbfw0cQlxcuu=
+1TxwhKwDLFs6AT9agAjBrQaZxEWmvX3q0-UvSaHlYH7pKlQP6ePQeqhy8SFaQIGEpk2bbItdnaK=
+CSMWxUh_fGKUXWmA&pid=3Dv1.AhBW4tA5HsGhSP1lTx-EIPsS03W4JiI1BbkSBqA9XSzQTom8C=
+VLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&tuid=3D69b471850da2ed55de51b657&configId=3D=
+e1f3099f-d292-4909-bc6e-348abe6b1809">=0A    <div class=3D"button-container=
+" style=3D"width:90%;text-align:center;margin:0px;max-width:100%;display:in=
+line-block;border:1px solid #ffffff;border-radius:34px;height:auto;line-hei=
+ght:110%;font-size:13px;background-color:#000000;padding-top:15px;padding-b=
+ottom:15px;">=0A      <span style=3D"background-color:#000000;color:#f1f1f1=
+;font-weight:normal;font-style:normal;text-decoration:none;" data-contented=
+itable=3D"true"><!--[if gte mso 9]><span style=3D"font-family: Arial, Helve=
+tica, Verdana, Tahoma, sans-serif;"><![endif]-->Get Advance Tickets<!--[if =
+gte mso 9]></span><![endif]--></span>=0A    </div>=0A  </a><!--[if mso]></c=
+enter></v:textbox></v:roundrect></td></tr></table><![endif]-->         =0A =
+        </td></tr></tbody></table></div></th> <th class=3D"colspan2"><div c=
+lass=3D"acr-fragment acr-component image-container" style=3D"width:100%;tex=
+t-align:center;" id=3D"acr-977716806561249" data-component-id=3D"image" dat=
+a-source-uuid=3D"73cecb97-e866-409a-b536-b96c8684c160" data-contenteditable=
+=3D"false"><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" width=3D"100%"><tr><td style=3D"text-align: center;" ><![endif]--><a=
+ class=3D"arc-link" data-nl-type=3D"externalLink" id=3D"acr-link-26271955" =
+style=3D"text-decoration:underline;" href=3D"https://data.campaigns.cineple=
+x.com/ee/v1/click=3Fparams=3Dv1.GNH3j2yDAjkM5f5ONGJYDKBUHalECGiEHuvJ40-RXwe=
+f9s-FbjoqRk20BmYpbEufevIl4wVoPOWnMiGdMMmLwLqPw0Sm9uWMT4n0YQKb-3EANlH-t_vxiF=
+Ry0RdhQZdWVshBlZZwLN2acishlwp47ncahp-r_L2-NGuOfPbWdR9suCX5ATBNbFErgnonANMPP=
+qBbwuHtvYM76bfVHwS5k6fRfPiahCGKxum6JR0sn2EfM0daW0o5_6fblPX-EAiOyyzIuCNKSbFs=
+vvV8bFaaeTCrlOATdnmJguexNxzmrg7-UmwAauQfS9vbl0B1OtkouVgnLgmxDgEEnlqp2VzeJoM=
+FRqJBjG_9LsYPWLPOdaX-c79JckwsR15StQpolSluigCjJEPWR2IzRXcMaSZwSCRjBBHlqjhooT=
+X1c9lDmtRs0-I54caNzxl50GIfMirszyw1HripMcxYap-rWOdJ-4nAvJrbE7wDMn2M-stxCZTa6=
+ZJK8SUVjMlNs7zXTlMay97wCYsKoozUwPjjbDmK1N744fjBebSRV504n4k&pid=3Dv1.AhBW4tA=
+5HsGhSP1lTx-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&t=
+uid=3D69b471850da2ed55de51b658&configId=3De1f3099f-d292-4909-bc6e-348abe6b1=
+809"><img style=3D"height:auto;width:90%;max-width:90%;" width=3D"270" id=
+=3D"acr-1241803915128544" alt=3D"Ready or Not 2: Here I Come" class src=3D"=
+https://mediafiles.cineplex.com/Central/Film/Posters/38303_320_470.jpg"></a=
+><!--[if mso]></td></tr></table><![endif]--></div><div class=3D"acr-fragmen=
+t acr-component divider-container" style=3D"text-align:center;background-co=
+lor:rgb(0, 0, 0);height:10px;width:auto;padding:0px;" data-component-id=3D"=
+divider" data-has-int-mso-hack=3D"true" data-contenteditable=3D"false"><!--=
+[if mso]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"1=
+00%"><tr><td style=3D"padding: 0px; text-align: center; height: 10px; backg=
+round-color: rgb(0, 0, 0);" valign=3D"top"><table cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"height: 10px; backg=
+round-color: rgb(0, 0, 0);" ><![endif]--><div style=3D"border-top:10px soli=
+d rgb(0, 0, 0);width:100%;display:inline-block;height:0px;line-height:0px;f=
+ont-size:0px;border-right:none;border-bottom:none;border-left:none;border-r=
+adius:0px;" class=3D"divider-mso-hidden">&nbsp;</div><!--[if mso]></td></tr=
+></table></td></tr></table><![endif]--></div><div class=3D"acr-fragment acr=
+-component divider-container" style=3D"text-align:center;background-color:r=
+gb(0, 0, 0);height:10px;width:auto;padding:0px;" data-component-id=3D"divid=
+er" data-has-int-mso-hack=3D"true" data-contenteditable=3D"false"><!--[if m=
+so]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">=
+<tr><td style=3D"padding: 0px; text-align: center; height: 10px; background=
+-color: rgb(0, 0, 0);" valign=3D"top"><table cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"height: 10px; backgroun=
+d-color: rgb(0, 0, 0);" ><![endif]--><div style=3D"border-top:10px solid rg=
+b(0, 0, 0);width:100%;display:inline-block;height:0px;line-height:0px;font-=
+size:0px;border-right:none;border-bottom:none;border-left:none;border-radiu=
+s:0px;" class=3D"divider-mso-hidden">&nbsp;</div><!--[if mso]></td></tr></t=
+able></td></tr></table><![endif]--></div><div class=3D"acr-fragment acr-com=
+ponent" data-component-id=3D"html" data-source-uuid=3D"9434fe9f-c25e-431f-a=
+de0-26ee6cdd3a71" data-dashlane-rid=3D"57a93ac94e06b967" data-dashlane-clas=
+sification=3D"other" data-contenteditable=3D"true"><table border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" style=3D"border-collapse:collapse;" width=
+=3D"100%" bgcolor=3D"#000000"><tbody><tr><td align=3D"center" style=3D"text=
+-align:center;"> =0A  <!--[if mso]><table cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" width=3D"90%"><tr><td style=3D"text-align: center;" ><v:rou=
+ndrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-mic=
+rosoft-com:office:word" style=3D"height:42px; v-text-anchor:middle;width:20=
+5.5pt;" arcsize=3D"100%" strokecolor=3D"#ffffff" fillcolor=3D"#000000">=0A =
+ <v:textbox inset=3D"0,0,0,0"><center style=3D"color:#f1f1f1!important; fon=
+t-family:sans-serif; font-size:15px"><![endif]-->       =0A  <a data-nl-typ=
+e=3D"externalLink" style=3D"text-decoration:underline;" href=3D"https://dat=
+a.campaigns.cineplex.com/ee/v1/click=3Fparams=3Dv1.GNH3j2yDAjkM5f5ONGJYDKBU=
+HalECGiEHuvJ40-RXwef9s-FbjoqRk20BmYpbEufevIl4wVoPOWnMiGdMMmLwLqPw0Sm9uWMT4n=
+0YQKb-3EANlH-t_vxiFRy0RdhQZdWVshBlZZwLN2acishlwp47ncahp-r_L2-NGuOfPbWdR9suC=
+X5ATBNbFErgnonANMPPqBbwuHtvYM76bfVHwS5k6fRfPiahCGKxum6JR0sn2EfM0daW0o5_6fbl=
+PX-EAiOyyzIuCNKSbFsvvV8bFaaeTCrlOATdnmJguexNxzmrg7-UmwAauQfS9vbl0B1OtkouVgn=
+LgmxDgEEnlqp2VzeJoMFRqJBjG_9LsYPWLPOdaX-c79JckwsR15StQpolSluigCjJEPWR2IzRXc=
+MaSZwSCRjBBHlqjhooTX1c9lDmtRs0-I54caNzxl50GIfMirszyw1HripMcxYap-rWOdJ-4nAvJ=
+rbE7wDMn2M-stxCZTa6ZJK8SUVjMlNs7zXTlMay97wCYsKoozUwPjjbDmK1N744fjBebSRV504n=
+4k&pid=3Dv1.AhBW4tA5HsGhSP1lTx-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5e=
+aUH-wpOEW8Tbm4pkQ&tuid=3D69b471850da2ed55de51b659&configId=3De1f3099f-d292-=
+4909-bc6e-348abe6b1809">=0A    <div class=3D"button-container" style=3D"wid=
+th:90%;text-align:center;margin:0px;max-width:100%;display:inline-block;bor=
+der:1px solid #ffffff;border-radius:34px;height:auto;line-height:110%;font-=
+size:13px;background-color:#000000;padding-top:15px;padding-bottom:15px;">=
+=0A      <span style=3D"background-color:#000000;color:#f1f1f1;font-weight:=
+normal;font-style:normal;text-decoration:none;" data-contenteditable=3D"tru=
+e"><!--[if gte mso 9]><span style=3D"font-family: Arial, Helvetica, Verdana=
+, Tahoma, sans-serif;"><![endif]-->Get Advance Tickets<!--[if gte mso 9]></=
+span><![endif]--></span>=0A    </div>=0A  </a><!--[if mso]></center></v:tex=
+tbox></v:roundrect></td></tr></table><![endif]-->          =0A         </td=
+></tr></tbody></table></div></th> </tr> </tbody> </table> <!--[if mso]></td=
+></tr></table><![endif]--></div><div class=3D"acr-structure" data-structure=
+-id=3D"1-1-column" data-structure-name=3D"richtext.structure_1_1_column" st=
+yle=3D"background-color:rgb(0, 0, 0);"><!--[if mso]><table cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"background=
+-color: rgb(0, 0, 0);" ><![endif]--> <table class=3D"structure__table" alig=
+n=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"600"=
+> <tbody> <tr> <th class=3D"colspan1"><div class=3D"acr-fragment acr-compon=
+ent divider-container" data-component-id=3D"divider" style=3D"text-align:ce=
+nter;background-color:rgb(0, 0, 0);padding:0px;height:30px;width:auto;" dat=
+a-has-int-mso-hack=3D"true" data-contenteditable=3D"false"><!--[if mso]><ta=
+ble cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td=
+ style=3D"padding: 0px; text-align: center; height: 30px; background-color:=
+ rgb(0, 0, 0);" valign=3D"top"><table cellpadding=3D"0" cellspacing=3D"0" b=
+order=3D"0" width=3D"100%"><tr><td style=3D"height: 30px; background-color:=
+ rgb(0, 0, 0);" ><![endif]--><div style=3D"border-width:30px;border-style:s=
+olid none none;border-color:rgb(0, 0, 0);width:100%;display:inline-block;he=
+ight:0px;line-height:0px;font-size:0px;border-radius:0px;" class=3D"divider=
+-mso-hidden">&nbsp;</div><!--[if mso]></td></tr></table></td></tr></table><=
+![endif]--></div></th> </tr> </tbody> </table> <!--[if mso]></td></tr></tab=
+le><![endif]--></div><div class=3D"acr-structure" data-structure-id=3D"2-2-=
+column" data-structure-name=3D"richtext.structure_2_2_column" style=3D"back=
+ground-color:rgb(0, 0, 0);" id=3D"acr-62396264"><!--[if mso]><table cellpad=
+ding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"b=
+ackground-color: rgb(0, 0, 0);" ><![endif]--> <table class=3D"structure__ta=
+ble" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" widt=
+h=3D"600"> <tbody> <tr> <th class=3D"colspan2"><div class=3D"acr-fragment a=
+cr-component image-container" style=3D"width:100%;text-align:center;" data-=
+component-id=3D"image" data-source-uuid=3D"a97e40ba-3ce7-43e7-a216-af0b9d1b=
+262b" data-contenteditable=3D"false"><!--[if mso]><table cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"text-align: =
+center;" ><![endif]--><a class=3D"arc-link" data-nl-type=3D"externalLink" s=
+tyle=3D"text-decoration:underline;" href=3D"https://data.campaigns.cineplex=
+.com/ee/v1/click=3Fparams=3Dv1.aGGwwl6xGmB4QcKfG4IJXyz3QIxVREUPF6tuqXx9hlk=
+jpXSc2VlNJLpSf_hqzqaRl1rsCmrmnORWuAGEh9594_nPHEO7AV1TFlPFWzjuoITIz2YF_4F89D=
+0AmICpA8SwnPdEyXWlzQXVMsrkgfT2lKx98xypX5u7EBxSX70tzz7gyCcrwzSwm6C4ErQeIOeLH=
+qU55g_iDq8il4RcCTCH9nEiQ6KPHqXeq2P6Po69aoLduV-GwEk5dqqk3z4TUvB4ICIWvqXe4Iwp=
+bUdBz0nPsx9GsGRIMa8VLMiPvZ5bQpZ0glPyexvNbNVNtnvD1MxeEtQBawRcPCAiUGw1r8u9ILe=
+AywVpL2vbsZcwNsAWVwhFr2ytJcq-oh1v_CZy7jouyXHfqjt14Deg1eU9piRfdhEfvrS5IpbAAC=
+mE4ZYEkfrh4UpAF2axfxjcMdjVHqjGK64JHXsJnYxSBUqVckgW4fd0MA2YWnuBXpgUzeridfHyH=
+NRdhU1_TRonhvWeePGUyGBF9-enoKkCxw2hQu5eQnsUzFE0&pid=3Dv1.AhBW4tA5HsGhSP1lTx=
+-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&tuid=3D69b47=
+1850da2ed55de51b65a&configId=3De1f3099f-d292-4909-bc6e-348abe6b1809"><img s=
+tyle=3D"height:auto;width:90%;max-width:90%;" width=3D"270" alt=3D"They Wil=
+l Kill You" class src=3D"https://mediafiles.cineplex.com/Central/Film/Poste=
+rs/60344_320_470.jpg" height=3D"auto"></a><!--[if mso]></td></tr></table><!=
+[endif]--></div><div class=3D"acr-fragment acr-component divider-container"=
+ style=3D"text-align:center;background-color:rgb(0, 0, 0);height:10px;width=
+:auto;padding:0px;" data-component-id=3D"divider" data-has-int-mso-hack=3D"=
+true" data-contenteditable=3D"false"><!--[if mso]><table cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"padding: 0px=
+; text-align: center; height: 10px; background-color: rgb(0, 0, 0);" valign=
+=3D"top"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"1=
+00%"><tr><td style=3D"height: 10px; background-color: rgb(0, 0, 0);" ><![en=
+dif]--><div style=3D"border-top:10px solid rgb(0, 0, 0);width:100%;display:=
+inline-block;height:0px;line-height:0px;font-size:0px;border-right:none;bor=
+der-bottom:none;border-left:none;border-radius:0px;" class=3D"divider-mso-h=
+idden">&nbsp;</div><!--[if mso]></td></tr></table></td></tr></table><![endi=
+f]--></div><div class=3D"acr-fragment acr-component divider-container" styl=
+e=3D"text-align:center;background-color:rgb(0, 0, 0);height:10px;width:auto=
+;padding:0px;" data-component-id=3D"divider" data-has-int-mso-hack=3D"true"=
+ data-contenteditable=3D"false"><!--[if mso]><table cellpadding=3D"0" cells=
+pacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"padding: 0px; tex=
+t-align: center; height: 10px; background-color: rgb(0, 0, 0);" valign=3D"t=
+op"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">=
+<tr><td style=3D"height: 10px; background-color: rgb(0, 0, 0);" ><![endif]-=
+-><div style=3D"border-top:10px solid rgb(0, 0, 0);width:100%;display:inlin=
+e-block;height:0px;line-height:0px;font-size:0px;border-right:none;border-b=
+ottom:none;border-left:none;border-radius:0px;" class=3D"divider-mso-hidden=
+">&nbsp;</div><!--[if mso]></td></tr></table></td></tr></table><![endif]-->=
+</div><div class=3D"acr-fragment acr-component" data-component-id=3D"html" =
+data-source-uuid=3D"9715bdfd-8979-4428-bf03-6606a6cfbd00" data-dashlane-rid=
+=3D"7836b8fbac0f4180" data-dashlane-classification=3D"other" data-contented=
+itable=3D"true"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" sty=
+le=3D"border-collapse:collapse;" width=3D"100%" bgcolor=3D"#000000"><tbody>=
+<tr><td align=3D"center" style=3D"text-align:center;"> =0A  <!--[if mso]><t=
+able cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%"><tr><td=
+ style=3D"text-align: center;" ><v:roundrect xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" style=3D"heig=
+ht:42px; v-text-anchor:middle;width:205.5pt;" arcsize=3D"100%" strokecolor=
+=3D"#ffffff" fillcolor=3D"#000000">=0A  <v:textbox inset=3D"0,0,0,0"><cente=
+r style=3D"color:#f1f1f1!important; font-family:sans-serif; font-size:15px"=
+><![endif]-->       =0A  <a class=3D"arc-link" style=3D"text-decoration:non=
+e;color:#f1f1f1!important;" data-nl-type=3D"externalLink" href=3D"https://d=
+ata.campaigns.cineplex.com/ee/v1/click=3Fparams=3Dv1.aGGwwl6xGmB4QcKfG4IJXy=
+z3QIxVREUPF6tuqXx9hlkjpXSc2VlNJLpSf_hqzqaRl1rsCmrmnORWuAGEh9594_nPHEO7AV1TF=
+lPFWzjuoITIz2YF_4F89D0AmICpA8SwnPdEyXWlzQXVMsrkgfT2lKx98xypX5u7EBxSX70tzz7g=
+yCcrwzSwm6C4ErQeIOeLHqU55g_iDq8il4RcCTCH9nEiQ6KPHqXeq2P6Po69aoLduV-GwEk5dqq=
+k3z4TUvB4ICIWvqXe4IwpbUdBz0nPsx9GsGRIMa8VLMiPvZ5bQpZ0glPyexvNbNVNtnvD1MxeEt=
+QBawRcPCAiUGw1r8u9ILeAywVpL2vbsZcwNsAWVwhFr2ytJcq-oh1v_CZy7jouyXHfqjt14Deg1=
+eU9piRfdhEfvrS5IpbAACmE4ZYEkfrh4UpAF2axfxjcMdjVHqjGK64JHXsJnYxSBUqVckgW4fd0=
+MA2YWnuBXpgUzeridfHyHNRdhU1_TRonhvWeePGUyGBF9-enoKkCxw2hQu5eQnsUzFE0&pid=3D=
+v1.AhBW4tA5HsGhSP1lTx-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW=
+8Tbm4pkQ&tuid=3D69b471850da2ed55de51b65b&configId=3De1f3099f-d292-4909-bc6e=
+-348abe6b1809">=0A    <div class=3D"button-container" style=3D"width:90%;te=
+xt-align:center;margin:0px;max-width:100%;display:inline-block;border:1px s=
+olid #ffffff;border-radius:34px;height:auto;line-height:110%;font-size:13px=
+;background-color:#000000;padding-top:15px;padding-bottom:15px;">=0A      <=
+span style=3D"background-color:#000000;color:#f1f1f1;font-weight:normal;fon=
+t-style:normal;text-decoration:none;" data-contenteditable=3D"true"><!--[if=
+ gte mso 9]><span style=3D"font-family: Arial, Helvetica, Verdana, Tahoma, =
+sans-serif;"><![endif]-->Learn More<!--[if gte mso 9]></span><![endif]--></=
+span>=0A    </div>=0A  </a><!--[if mso]></center></v:textbox></v:roundrect>=
+</td></tr></table><![endif]-->         =0A         </td></tr></tbody></tabl=
+e></div></th> <th class=3D"colspan2"><div class=3D"acr-fragment acr-compone=
+nt image-container" style=3D"width:100%;text-align:center;" data-component-=
+id=3D"image" data-source-uuid=3D"f8eae9b8-8360-47f2-bd61-60afd5ae0fb5" data=
+-contenteditable=3D"false"><!--[if mso]><table cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"text-align: center;" >=
+<![endif]--><a class=3D"arc-link" data-nl-type=3D"externalLink" style=3D"te=
+xt-decoration:underline;" href=3D"https://data.campaigns.cineplex.com/ee/v1=
+/click=3Fparams=3Dv1.u2trdKxz4jYyaoKp57j1vePHuuaSWTIVDjU2z-K4jCi3GagjmpA3oE=
+xuKVr94n9P_jVSy7QlNdZ_ev8-CpnRPJouta0EVSXzhB4hWpZBqB54S8lZTUCt2ne6hMmLmD-d5=
+ICWUYbqkhPaZLawNPNK7uCI3X4TGjOS3tcjx6w_IW3BkebeESubVgJplunpLBbFfyizQIsLo90P=
+DkPjrFiGtQOiAILfM9p35NSLJKq7pl_mq5RN_9RQtvmQU97hfMWeQhLPpT47ZAJeB-XRHRNnnYk=
+phN87DO3lJBf0XbtFQUL1jNk6pSY6hw1zItcQfvOmLTDIwVLjaDn9b8tonqbNqbytFOhLpxJDYE=
+4RD7d1sG0X0rH0hMVzznkXrJF1Q35Tvic3uCYTJ_6stKbsEFMEK4Swx_tGQ7Hksc7A-GD3JNLZk=
+r5hrDrWYjk44uTKkZ3InQxSsjOCkoJlogeVLKpHg4K9ccwS9Hsait1bTB_tCY2wuZeVHjf7JCsl=
+5YxSX7NpO_qDEyoRWS8u5VcyXc4ylDiS-fHOOkEFat0Jrsk9_A&pid=3Dv1.AhBW4tA5HsGhSP1=
+lTx-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&tuid=3D69=
+b471850da2ed55de51b65c&configId=3De1f3099f-d292-4909-bc6e-348abe6b1809"><im=
+g style=3D"height:auto;width:90%;max-width:90%;" width=3D"270" alt=3D"The S=
+uper Mario Galaxy Movie" data-params-id=3D"68839281" class data-medialibrar=
+y-source=3D"aem" height=3D"auto" src=3D"https://cdn.campaigns.cineplex.com/=
+23dc5144-baef-40f8-9c51-44baefa0f836/urn:aaid:aem:daad730b-886d-4892-9da4-f=
+44b0ece7ad1/oak:1.0::ci:89e467313c098747e1fb777cd4b1e8b6/db1bdf2c-66cc-3921=
+-9995-cfcf1376ab91"></a><!--[if mso]></td></tr></table><![endif]--></div><d=
+iv class=3D"acr-fragment acr-component divider-container" style=3D"text-ali=
+gn:center;background-color:rgb(0, 0, 0);height:10px;width:auto;padding:0px;=
+" data-component-id=3D"divider" data-has-int-mso-hack=3D"true" data-content=
+editable=3D"false"><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0" width=3D"100%"><tr><td style=3D"padding: 0px; text-align: cent=
+er; height: 10px; background-color: rgb(0, 0, 0);" valign=3D"top"><table ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=
+=3D"height: 10px; background-color: rgb(0, 0, 0);" ><![endif]--><div style=
+=3D"border-top:10px solid rgb(0, 0, 0);width:100%;display:inline-block;heig=
+ht:0px;line-height:0px;font-size:0px;border-right:none;border-bottom:none;b=
+order-left:none;border-radius:0px;" class=3D"divider-mso-hidden">&nbsp;</di=
+v><!--[if mso]></td></tr></table></td></tr></table><![endif]--></div><div c=
+lass=3D"acr-fragment acr-component divider-container" style=3D"text-align:c=
+enter;background-color:rgb(0, 0, 0);height:10px;width:auto;padding:0px;" da=
+ta-component-id=3D"divider" data-has-int-mso-hack=3D"true" data-contentedit=
+able=3D"false"><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" bord=
+er=3D"0" width=3D"100%"><tr><td style=3D"padding: 0px; text-align: center; =
+height: 10px; background-color: rgb(0, 0, 0);" valign=3D"top"><table cellpa=
+dding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"=
+height: 10px; background-color: rgb(0, 0, 0);" ><![endif]--><div style=3D"b=
+order-top:10px solid rgb(0, 0, 0);width:100%;display:inline-block;height:0p=
+x;line-height:0px;font-size:0px;border-right:none;border-bottom:none;border=
+-left:none;border-radius:0px;" class=3D"divider-mso-hidden">&nbsp;</div><!-=
+-[if mso]></td></tr></table></td></tr></table><![endif]--></div><div class=
+=3D"acr-fragment acr-component" data-component-id=3D"html" data-source-uuid=
+=3D"7fd3e789-a6c8-4c98-84a7-8f270fd11a9f" data-dashlane-rid=3D"b7aea18f3f80=
+303a" data-dashlane-classification=3D"other" data-contenteditable=3D"true">=
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;" width=3D"100%" bgcolor=3D"#000000"><tbody><tr><td align=3D=
+"center" style=3D"text-align:center;"> =0A  <!--[if mso]><table cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%"><tr><td style=3D"text-a=
+lign: center;" ><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmln=
+s:w=3D"urn:schemas-microsoft-com:office:word" style=3D"height:42px; v-text-=
+anchor:middle;width:205.5pt;" arcsize=3D"100%" strokecolor=3D"#ffffff" fill=
+color=3D"#000000">=0A  <v:textbox inset=3D"0,0,0,0"><center style=3D"color:=
+#f1f1f1!important; font-family:sans-serif; font-size:15px"><![endif]-->    =
+   =0A  <a class=3D"arc-link" style=3D"text-decoration:none;color:#f1f1f1!i=
+mportant;" data-nl-type=3D"externalLink" href=3D"https://data.campaigns.cin=
+eplex.com/ee/v1/click=3Fparams=3Dv1.u2trdKxz4jYyaoKp57j1vePHuuaSWTIVDjU2z-K=
+4jCi3GagjmpA3oExuKVr94n9P_jVSy7QlNdZ_ev8-CpnRPJouta0EVSXzhB4hWpZBqB54S8lZTU=
+Ct2ne6hMmLmD-d5ICWUYbqkhPaZLawNPNK7uCI3X4TGjOS3tcjx6w_IW3BkebeESubVgJplunpL=
+BbFfyizQIsLo90PDkPjrFiGtQOiAILfM9p35NSLJKq7pl_mq5RN_9RQtvmQU97hfMWeQhLPpT47=
+ZAJeB-XRHRNnnYkphN87DO3lJBf0XbtFQUL1jNk6pSY6hw1zItcQfvOmLTDIwVLjaDn9b8tonqb=
+NqbytFOhLpxJDYE4RD7d1sG0X0rH0hMVzznkXrJF1Q35Tvic3uCYTJ_6stKbsEFMEK4Swx_tGQ7=
+Hksc7A-GD3JNLZkr5hrDrWYjk44uTKkZ3InQxSsjOCkoJlogeVLKpHg4K9ccwS9Hsait1bTB_tC=
+Y2wuZeVHjf7JCsl5YxSX7NpO_qDEyoRWS8u5VcyXc4ylDiS-fHOOkEFat0Jrsk9_A&pid=3Dv1.=
+AhBW4tA5HsGhSP1lTx-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tb=
+m4pkQ&tuid=3D69b471850da2ed55de51b65d&configId=3De1f3099f-d292-4909-bc6e-34=
+8abe6b1809">=0A    <div class=3D"button-container" style=3D"width:90%;text-=
+align:center;margin:0px;max-width:100%;display:inline-block;border:1px soli=
+d #ffffff;border-radius:34px;height:auto;line-height:110%;font-size:13px;ba=
+ckground-color:#000000;padding-top:15px;padding-bottom:15px;">=0A      <spa=
+n style=3D"background-color:#000000;color:#f1f1f1;font-weight:normal;font-s=
+tyle:normal;text-decoration:none;" data-contenteditable=3D"true"><!--[if gt=
+e mso 9]><span style=3D"font-family: Arial, Helvetica, Verdana, Tahoma, san=
+s-serif;"><![endif]-->Get Advance Tickets<!--[if gte mso 9]></span><![endif=
+]--></span>=0A    </div>=0A  </a><!--[if mso]></center></v:textbox></v:roun=
+drect></td></tr></table><![endif]-->          =0A         </td></tr></tbody=
+></table></div></th> </tr> </tbody> </table> <!--[if mso]></td></tr></table=
+><![endif]--></div>    <div class=3D"acr-structure" data-structure-id=3D"1-=
+1-column" data-structure-name=3D"richtext.structure_1_1_column" style=3D"ba=
+ckground-color:rgb(0, 0, 0);"><!--[if mso]><table cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"background-color: r=
+gb(0, 0, 0);" ><![endif]--> <table class=3D"structure__table" align=3D"cent=
+er" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"600"> <tbody>=
+ <tr> <th class=3D"colspan1"><div class=3D"acr-fragment acr-component divid=
+er-container" style=3D"text-align:center;background-color:rgb(0, 0, 0);padd=
+ing:0px;height:30px;width:auto;" data-component-id=3D"divider" data-has-int=
+-mso-hack=3D"true" data-contenteditable=3D"false"><!--[if mso]><table cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D=
+"padding: 0px; text-align: center; height: 30px; background-color: rgb(0, 0=
+, 0);" valign=3D"top"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"100%"><tr><td style=3D"height: 30px; background-color: rgb(0, 0=
+, 0);" ><![endif]--><div style=3D"border-width:30px;border-style:solid none=
+ none;border-color:rgb(0, 0, 0);width:100%;display:inline-block;height:0px;=
+line-height:0px;font-size:0px;border-radius:0px;" class=3D"divider-mso-hidd=
+en">&nbsp;</div><!--[if mso]></td></tr></table></td></tr></table><![endif]-=
+-></div><div class=3D"acr-fragment acr-component" style=3D"padding:20px 40p=
+x;" data-component-id=3D"html" data-source-uuid=3D"f3a4961f-4ba5-44e0-869d-=
+30cfac04715d" data-dashlane-rid=3D"8075dd330443e19b" data-dashlane-classifi=
+cation=3D"other" data-contenteditable=3D"true"><!--[if mso]><table cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"pa=
+dding: 0px; font-size: 16px; font-family: Arial, Helvetica, sans-serif!impo=
+rtant; color: #ffffff; text-align: center; background-color: #000000;" ><![=
+endif]--><div class=3D"text-container" style=3D"padding-bottom:5px;" data-c=
+ontenteditable=3D"true"><p style=3D"text-align:center;color:rgb(255, 255, 2=
+55);font-size:17px;line-height:22px;font-family:'MarkOTMedium', Arial, Helv=
+etica, sans-serif!important;"><!--[if gte mso 9]><span style=3D"font-family=
+: Arial, Helvetica, Verdana, Tahoma, sans-serif;font0"><![endif]-->Looking =
+for ways to enhance your movie experience=3F Discover all that your local t=
+heatre has <span style=3D"white-space:nowrap;">to offer.</span>=0A =0A  </p=
+><!--[if mso]></td></tr></table><![endif]--></div></div><div class=3D"acr-f=
+ragment acr-component" data-component-id=3D"html" data-source-uuid=3D"2e98a=
+276-dfbb-40a0-8a05-01a6ccad7ab9" data-dashlane-rid=3D"44faffaa2ad06620" dat=
+a-dashlane-classification=3D"other" data-contenteditable=3D"true"><table al=
+ign=3D"center" bgcolor=3D"#000000" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" style=3D"border-collapse:collapse;text-align:center;background-col=
+or:#000000;" width=3D"100%"><tbody><tr><td width=3D"25%">=0A     </td><td s=
+tyle=3D"padding-top:10px;padding-bottom:30px;"><!--[if mso]><table cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" width=3D"270"><tr><td style=3D"tex=
+t-align: center;padding-top:10px;padding-bottom:10px;" ><v:roundrect xmlns:=
+v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:of=
+fice:word" style=3D"height:36pt; width:187.5pt; v-text-anchor:middle;" arcs=
+ize=3D"104%" fillcolor=3D"#005bf5" strokeweight=3D"0" strokecolor=3D"0">=0A=
+  <v:stroke opacity=3D"0" /><v:textbox inset=3D"0,0,0,0"><center style=3D"c=
+olor:#f1f1f1!important; font-family:sans-serif; font-size:15px"><![endif]--=
+><a class=3D"arc-link" style=3D"text-decoration:none;color:#f1f1f1!importan=
+t;" data-nl-type=3D"externalLink" href=3D"https://data.campaigns.cineplex.c=
+om/ee/v1/click=3Fparams=3Dv1.uCs5cM01jvE-8_E-8HhnA-OwSbmgQWK29VT69Ka2t50nS7=
+jn6Pq-F6cPHXP3PV9JPiRyfMAtaStApviA1xMfREDgkqC5Z-cCFtAJAWIer0Aj81sKDXH0Fv0AX=
+bGu_CzwTpYMv-BWgQE4jI2hg-VsBK17LkihkWHMMqFKSKovnB0sbbhp8uzysslVMQuO2TWKrpsA=
+GBIVzyPHoTokZAQ-99AtNxXlGkPYKLJAmGeFN1OQbKgUvItzCsTJEGewM0VPie8e_1IWXZ9SVeG=
+ng8HawUzYY7mK0ZIqOAsa1pv3ZhOJxXoMcwF4UJY324dzc3BKr3P5BJkFswip4ItQ5apfMSbfYc=
+iskl5iUp6DA_st4CL--rxyIVF6A3M8Fm3uWtOvlcSZnD5CVzH_2Mpd_QPjt7DY80VA4k9cziMGv=
+GGySI0HXpFp1cvCcWwwqZaWj8gQ_N9kumg8HKofNP8g1Yo8q9jhH2WNZYs&pid=3Dv1.AhBW4tA=
+5HsGhSP1lTx-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&t=
+uid=3D69b471850da2ed55de51b65e&configId=3De1f3099f-d292-4909-bc6e-348abe6b1=
+809">=0A    <div class=3D"button-container" style=3D"width:270px;text-align=
+:center;margin:0px;max-width:100%;display:inline-block;border:none;border-r=
+adius:50px;height:auto;line-height:110%;font-size:15px;background-color:#00=
+5bf5;padding-top:15px;padding-bottom:15px;">=0A      <span style=3D"backgro=
+und-color:#005bf5;color:#f1f1f1;font-weight:normal;font-style:normal;text-d=
+ecoration:none;" data-contenteditable=3D"true"><!--[if gte mso 9]><span sty=
+le=3D"font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;"><![endif=
+]-->Find My Theatre<!--[if gte mso 9]></span><![endif]--></span>=0A    </di=
+v>=0A  </a><!--[if mso]></center></v:textbox></v:stroke></v:roundrect></td>=
+</tr></table><![endif]--></td><td width=3D"25%">=0A     </td></tr></tbody><=
+/table></div><div class=3D"acr-fragment acr-component divider-container" st=
+yle=3D"text-align:center;background-color:rgb(0, 0, 0);padding:0px;height:2=
+0px;width:auto;" data-component-id=3D"divider" data-source-uuid=3D"87ff5752=
+-6c66-4834-95b1-316d2df0f2da" data-has-int-mso-hack=3D"true" data-contented=
+itable=3D"false"><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" bo=
+rder=3D"0" width=3D"100%"><tr><td style=3D"padding: 0px; text-align: center=
+; height: 20px; background-color: rgb(0, 0, 0);" valign=3D"top"><table cell=
+padding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=
+=3D"height: 20px; background-color: rgb(0, 0, 0);" ><![endif]--><div style=
+=3D"border-top:20px solid rgb(0, 0, 0);border-right:none;border-bottom:none=
+;border-left:none;width:100%;display:inline-block;height:0px;line-height:0p=
+x;font-size:0px;border-radius:0px;" class=3D"divider-mso-hidden">&nbsp;</di=
+v><!--[if mso]></td></tr></table></td></tr></table><![endif]--></div></th> =
+</tr> </tbody> </table> <!--[if mso]></td></tr></table><![endif]--></div>  =
+   <div data-structure-id=3D"1-1-column" class=3D"acr-structure" data-struc=
+ture-name=3D"richtext.structure_1_1_column" data-lock-type=3D"editable" dat=
+a-has-int-mso-hack=3D"true" style=3D"background-color:rgb(0, 0, 0);" data-s=
+ource-uuid=3D"9ba83a45-f5b0-4d06-9d75-b82d0eb7112c"><!--[if mso]><table cel=
+lpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=
+=3D"background-color: rgb(0, 0, 0);" ><![endif]--> <table class=3D"structur=
+e__table" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+ width=3D"600"> <tbody> <tr role=3D"presentation"> <th class=3D"colspan1"><=
+div data-component-id=3D"image" class=3D"acr-fragment acr-component image-c=
+ontainer" style=3D"width:100%;text-align:center;" data-lock-type=3D"editabl=
+e" data-source-uuid=3D"f09e2474-617f-47e1-82f1-a6616419d3fd" data-has-int-m=
+so-hack=3D"true" data-contenteditable=3D"false"><!--[if mso]><table cellpad=
+ding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"t=
+ext-align: center; border-radius: 0px; border-top: none; border-right: none=
+; border-bottom: 4px solid rgb(255, 213, 0); border-left: none; border-imag=
+e: initial;" ><![endif]--><!--[if mso]></td></tr></table><![endif]--><div c=
+lass=3D"component-image-container" data-name=3D"Add image"></div></div></th=
+> </tr> </tbody> </table> <!--[if mso]></td></tr></table><![endif]--></div>=
+<div data-structure-id=3D"1-1-column" class=3D"acr-structure" data-structur=
+e-name=3D"richtext.structure_1_1_column" data-lock-type=3D"editable" data-h=
+as-int-mso-hack=3D"true" style=3D"background-color:rgb(0, 0, 0);" data-sour=
+ce-uuid=3D"9ba83a45-f5b0-4d06-9d75-b82d0eb7112c"><!--[if mso]><table cellpa=
+dding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"=
+background-color: rgb(0, 0, 0);" ><![endif]--> <table class=3D"structure__t=
+able" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" wid=
+th=3D"600"> <tbody> <tr role=3D"presentation"> <th class=3D"colspan1"><div =
+class=3D"acr-fragment acr-component image-container" data-component-id=3D"i=
+mage" style=3D"width:100%;text-align:center;" data-lock-type=3D"editable" d=
+ata-source-uuid=3D"f09e2474-617f-47e1-82f1-a6616419d3fd" data-has-int-mso-h=
+ack=3D"true" data-contenteditable=3D"false"><!--[if mso]><table cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"text-=
+align: center; border-radius: 0px; border-top: none; border-right: none; bo=
+rder-bottom: 4px solid rgb(255, 213, 0); border-left: none; border-image: i=
+nitial;" ><![endif]--><a class=3D"arc-link" data-nl-type=3D"externalLink" s=
+tyle=3D"text-decoration:underline;" href=3D"https://data.campaigns.cineplex=
+.com/ee/v1/click=3Fparams=3Dv1.j4HVRT_gnyuJU7NIWrpeAA-7NtR5jao_4WD2yGbdSGi=
+ml8rHm6VUZB-9AGyY3H7s-AiZUINzskFQZmctCJ-GMWmscpGGNlXUSNCsRWneDNOKeF7rLFoVgv=
+PnGTnl5IU6oDBPx_46kNNIeRpo-qdh7CrbOx7dciGXkhcMSIzZXFYC53pD3spPf3151ANhp6X_U=
+4eJ60CHVeNUm5w6HMUk3_Kb8uLfSxPBQSmBufgoLA6RKK5IYZoxDeW87xZR1ssEoHWNiYO9RPVR=
+TOhaQzN82q-_1-gODa-ntmLs99CBbDErUaPdCxfmA8vZsP50&pid=3Dv1.s76Z_oqHPi6pvjc5F=
+Rn3paZ5Ml3yAHtkL5s1JsJBgExak79OIcaFXUI7OO6DnbrRovIw6gvkB9RWXmp8&tuid=3D69b4=
+71850da2ed55de51b660&configId=3De1f3099f-d292-4909-bc6e-348abe6b1809"><img =
+width=3D"600" style=3D"height:auto;width:100%;border-radius:0px;border-widt=
+h:medium medium 4px;border-style:none none solid;border-color:currentcolor =
+currentcolor rgb(255, 213, 0);border-image:initial;" class alt=3D"Crunchyro=
+ll" data-medialibrary-source=3D"aem" height=3D"auto" src=3D"https://cdn.cam=
+paigns.cineplex.com/23dc5144-baef-40f8-9c51-44baefa0f836/urn:aaid:aem:1de2c=
+6c8-f8a0-4d7c-9375-ecdcb3f78491/oak:1.0::ci:68dce5d55c3b831a2c7f692e3d72c8e=
+8/b0c02f0f-cefb-358d-aa10-348c43993b7c"></a><!--[if mso]></td></tr></table>=
+<![endif]--></div></th> </tr> </tbody> </table> <!--[if mso]></td></tr></ta=
+ble><![endif]--></div><div class=3D"acr-structure" data-structure-id=3D"1-1=
+-column" data-structure-name=3D"richtext.structure_1_1_column" data-has-int=
+-mso-hack=3D"true" style=3D"background-color:rgb(0, 0, 0);" data-source-uui=
+d=3D"a8a74073-27c6-4ddd-93cf-f3d8517ffa12"><!--[if mso]><table cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"backg=
+round-color: rgb(0, 0, 0);" ><![endif]--> <table class=3D"structure__table"=
+ align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D=
+"600"> <tbody> <tr> <th class=3D"colspan1">=0A<div class=3D"acr-fragment is=
+-locked" data-fragment-id=3D"ajo:8cb6e7ee-c95d-4669-af64-1ed9c543b041"><sty=
+le data-name=3D"media-custom-prefers-color-scheme-dark" type=3D"text/css">@=
+media (prefers-color-scheme: dark){.acr-dark-img{display:block !important;}=
+.acr-light-img{display:none !important;}}</style><table align=3D"center" c=
+ellpadding=3D"0" cellspacing=3D"0" border=3D"0" height=3D"auto" style=3D"he=
+ight: auto; width: 100%; table-layout: fixed;"> <tbody> <tr role=3D"present=
+ation"> <th class=3D"colspan1" data-source-uuid=3D"6907e5d7-8ca0-4fc8-9af5-=
+7f3abd9b312e"><div class=3D"acr-tmp-component image-container" data-has-int=
+-mso-hack=3D"true" data-source-uuid=3D"33b57d20-cb9e-4bae-8f38-50593a707111=
+" style=3D"width:100%;text-align:center;border-bottom:4px solid rgb(255, 21=
+3, 0);" data-params-id=3D"65217572" data-contenteditable=3D"false" data-tmp=
+-component-id=3D"image"><!--[if mso]><table cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"text-align: center;" ><=
+![endif]--><a class=3D"arc-link" data-nl-type=3D"externalLink" href=3D"http=
+s://data.campaigns.cineplex.com/ee/v1/click=3Fparams=3Dv1.TIchwdqBofQtu2ZIl=
+ZMeLYPjqqCMXLXFftFGa2jkRC2RzlOunKzNnvAB4DTs_Kqyoq5TPWehHL9YNBLnxNX-LwRYV4rR=
+7Oo_nI6zK04PaEJVqX3W1XImpUIkZ9_0TNQSkR3dX0G3rkEk30QDrwhcMQQC9QTq7tTAbpgtjWZ=
+y6Cdu0Bo_yfuvaSZ3H5ASnhQOrFMXsgMH1NO7FXBUMfcszh46AXyRGY0sCKxAH8uP9fFajd2f47=
+jAMdAHi8HGJlyqonvPgKJtAhz2rAgrWhQyeIc9ur3wwDw8fs3PLbSSgBIW5DZOpeGF__gufClg&=
+pid=3Dv1.AhBW4tA5HsGhSP1lTx-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH=
+-wpOEW8Tbm4pkQ&tuid=3D69b471830da2ed55de51b64a&configId=3De1f3099f-d292-490=
+9-bc6e-348abe6b1809" id=3D"acr-link-15533842" style=3D"text-decoration:unde=
+rline;"><img style=3D"height: auto; width: 100%; max-width: 100%;" width=3D=
+"600" class data-medialibrary-source=3D"aem" alt=3D"=0A  Family Favourites=
+=0A" height=3D"auto" src=3D"https://cdn.campaigns.cineplex.com/23dc5144-bae=
+f-40f8-9c51-44baefa0f836/urn:aaid:aem:362a9143-7a62-44e1-8c45-26398c2fba86/=
+oak:1.0::ci:e6a326e3012b6030142cc10d50b98396/3d9c45d7-c6ef-368c-8df0-b56d4f=
+26525a"></a><!--[if mso]></td></tr></table><![endif]--></div></th> </tr> </=
+tbody> </table> </div></th> </tr> </tbody> </table> <!--[if mso]></td></tr>=
+</table><![endif]--></div>    <div data-structure-id=3D"1-1-column" class=
+=3D"acr-structure" data-structure-name=3D"richtext.structure_1_1_column" da=
+ta-lock-type=3D"editable" data-has-int-mso-hack=3D"true" style=3D"backgroun=
+d-color:rgb(0, 0, 0);" data-source-uuid=3D"9ba83a45-f5b0-4d06-9d75-b82d0eb7=
+112c"><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+width=3D"100%"><tr><td style=3D"background-color: rgb(0, 0, 0);" ><![endif]=
+--> <table class=3D"structure__table" align=3D"center" cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0" width=3D"600"> <tbody> <tr role=3D"presentatio=
+n"> <th class=3D"colspan1"><div class=3D"acr-fragment acr-component image-c=
+ontainer" data-component-id=3D"image" style=3D"width:100%;text-align:center=
+;" data-lock-type=3D"editable" data-source-uuid=3D"f09e2474-617f-47e1-82f1-=
+a6616419d3fd" data-has-int-mso-hack=3D"true" data-contenteditable=3D"false"=
+><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=
+=3D"100%"><tr><td style=3D"text-align: center; border-radius: 0px; border-t=
+op: none; border-right: none; border-bottom: 4px solid rgb(255, 213, 0); bo=
+rder-left: none; border-image: initial;" ><![endif]--><a class=3D"arc-link"=
+ data-nl-type=3D"externalLink" style=3D"text-decoration:underline;" href=3D=
+"https://data.campaigns.cineplex.com/ee/v1/click=3Fparams=3Dv1.j4HVRT_gnyuJ=
+U7NIWrpeAA-7NtR5jao_4WD2yGbdSGiml8rHm6VUZB-9AGyY3H7s-AiZUINzskFQZmctCJ-GMWm=
+scpGGNlXUSNCsRWneDNOKeF7rLFoVgvPnGTnl5IU6oDBPx_46kNNIeRpo-qdh7CrbOx7dciGXkh=
+cMSIzZXFYC53pD3spPf3151ANhp6X_U4eJ60CHVeNUm5w6HMUk3_Kb8uLfSxPBQSmBufgoLA6RK=
+K5IYZoxDeW87xZR1ssEoHWNiYO9RPVRTOhaQzN82q-_1-gODa-ntmLs99CBbDErUaPdCxfmA8vZ=
+sP50&pid=3Dv1.s76Z_oqHPi6pvjc5FRn3paZ5Ml3yAHtkL5s1JsJBgExak79OIcaFXUI7OO6Dn=
+brRovIw6gvkB9RWXmp8&tuid=3D69b471850da2ed55de51b661&configId=3De1f3099f-d29=
+2-4909-bc6e-348abe6b1809"><img width=3D"600" style=3D"height:auto;width:100=
+%;border-radius:0px;border-width:medium medium 4px;border-style:none none s=
+olid;border-color:currentcolor currentcolor rgb(255, 213, 0);border-image:i=
+nitial;" class alt=3D"Holiday Gift Bundle  - Redeem Reminder" data-medialib=
+rary-source=3D"aem" height=3D"auto" src=3D"https://cdn.campaigns.cineplex.c=
+om/23dc5144-baef-40f8-9c51-44baefa0f836/urn:aaid:aem:2273d297-d75c-40d2-9fa=
+d-6c64da46387b/oak:1.0::ci:1e6eec09dc408c745c997f3319a47c1e/c30a8280-2c0e-3=
+583-9a48-978bc4158769"></a><!--[if mso]></td></tr></table><![endif]--></div=
+></th> </tr> </tbody> </table> <!--[if mso]></td></tr></table><![endif]--><=
+/div><div class=3D"acr-structure" data-structure-id=3D"1-1-column" data-str=
+ucture-name=3D"richtext.structure_1_1_column" data-lock-type=3D"editable" d=
+ata-source-uuid=3D"0771b087-b357-4be8-99b8-d2cec8a8a7a7" data-has-int-mso-h=
+ack=3D"true" style=3D"background-color:rgb(0, 0, 0);"><!--[if mso]><table c=
+ellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td styl=
+e=3D"background-color: rgb(0, 0, 0);" ><![endif]--> <table class=3D"structu=
+re__table" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0=
+" width=3D"600"> <tbody> <tr> <th class=3D"colspan1"><div class=3D"acr-frag=
+ment is-locked" data-fragment-id=3D"ajo:5a57fc9e-79e8-4aaf-9c98-29d0e749670=
+a"><style data-name=3D"media-custom-prefers-color-scheme-dark" type=3D"text=
+/css">=0A@media (prefers-color-scheme: dark) {=0A  .acr-dark-img {=0A    di=
+splay: block !important;=0A  }=0A  .acr-light-img {=0A    display: none !im=
+portant;=0A  }=0A}=0A</style> <div id=3D"acr-42268521" data-fragmentbuilder=
+-label=3D"Selected" data-source-uuid=3D"0c763e47-2d14-4eb2-aab2-68c994bf33d=
+c"> <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0=
+" style=3D"width: 100%; table-layout: fixed;"> <tbody> <tr> <th class=3D"co=
+lspan1 is-empty" style=3D"background-color:rgb(0, 0, 0);padding:0px;backgro=
+und-image:none;"></th> </tr> </tbody> </table> </div>=0A</div><grammarly-de=
+sktop-integration data-grammarly-shadow-root=3D"true"></grammarly-desktop-i=
+ntegration><div class=3D"acr-fragment acr-component divider-container" styl=
+e=3D"text-align:center;background-color:rgb(0, 0, 0);padding:0px;height:20p=
+x;width:auto;" data-component-id=3D"divider" data-source-uuid=3D"87ff5752-6=
+c66-4834-95b1-316d2df0f2da" data-has-int-mso-hack=3D"true" data-contentedit=
+able=3D"false"><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" bord=
+er=3D"0" width=3D"100%"><tr><td style=3D"padding: 0px; text-align: center; =
+height: 20px; background-color: rgb(0, 0, 0);" valign=3D"top"><table cellpa=
+dding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=3D"=
+height: 20px; background-color: rgb(0, 0, 0);" ><![endif]--><div style=3D"b=
+order-width:20px;border-style:solid none none;border-top-color:rgb(0, 0, 0)=
+;border-right-color:initial;border-bottom-color:initial;border-left-color:i=
+nitial;width:100%;display:inline-block;height:0px;line-height:0px;font-size=
+:0px;border-radius:0px;" class=3D"divider-mso-hidden">&nbsp;</div><!--[if m=
+so]></td></tr></table></td></tr></table><![endif]--></div></th> </tr> </tbo=
+dy> </table> <!--[if mso]></td></tr></table><![endif]--></div><div class=3D=
+"acr-structure" data-structure-id=3D"1-1-column" data-structure-name=3D"ric=
+htext.structure_1_1_column" style=3D"background-color:rgb(0, 0, 0);" data-s=
+ource-uuid=3D"cf66cd1b-4c61-4309-9dcb-68f2ecd58641"><!--[if mso]><table cel=
+lpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tr><td style=
+=3D"background-color: rgb(0, 0, 0);" ><![endif]--> <table class=3D"structur=
+e__table" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+ width=3D"600"> <tbody> <tr> <th class=3D"colspan1" data-source-uuid=3D"da0=
+f545c-6a76-4dec-8f3a-e9e0ccd5eb39"><div><table align=3D"center" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%;table-layout:fixe=
+d;"> <tbody> <tr> <th class=3D"colspan1"><div><table align=3D"center" cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%;table-layou=
+t:fixed;"> <tbody> <tr> <th class=3D"colspan1"><div class=3D"acr-fragment a=
+cr-component" style=3D"border-top:1px solid transparent;border-right:none;b=
+order-bottom:1px solid transparent;border-left:none;border-radius:0px;backg=
+round-color:rgb(0, 0, 0);" data-component-id=3D"html" data-source-uuid=3D"9=
+0b42ab3-8771-4a49-90fe-18d4a893dfb5" data-dashlane-rid=3D"86219b36b9a6c4c0"=
+ data-dashlane-classification=3D"other" data-contenteditable=3D"true"><!-- =
+APPS SECTION --><table align=3D"center" bgcolor=3D"#000000" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"margin-bottom:5px;border-collaps=
+e:collapse;" width=3D"100%"><tbody><tr><td style=3D"width:5%;">=0A   </td><=
+td align=3D"center" style=3D"width:90%;padding-top:40px;padding-bottom:30px=
+;"><table><tbody><tr><th class=3D"responsive-td" valign=3D"middle" width=3D=
+"30%"><table align=3D"center"><tbody><tr><td style=3D"text-align:center;col=
+or:#ffffff;letter-spacing:1px;font-family:Google Sans, Helvetica, Arial, sa=
+ns-serif;font-size:20px;" width=3D"*">=0A            <strong><!--[if gte ms=
+o 9]><span style=3D"font-family: Arial, Helvetica, Verdana, Tahoma, sans-se=
+rif;"><![endif]-->Get The App<!--[if gte mso 9]></span><![endif]--></strong=
+></td></tr></tbody></table></th><th align=3D"center" class=3D"responsive-td=
+" valign=3D"middle" width=3D"2%">=0A       </th><th align=3D"center" class=
+=3D"responsive-td" valign=3D"middle" width=3D"68%"><table><tbody><tr><td wi=
+dth=3D"48%">=0A            <a alias conversion=3D"false" data-linkto=3D"oth=
+er" target=3D"_blank" title class href=3D"https://data.campaigns.cineplex.c=
+om/ee/v1/click=3Fparams=3Dv1.j4HVRT_gnyuJU7NIWrpeAA-7NtR5jao_4WD2yGbdSGiml8=
+rHm6VUZB-9AGyY3H7s-AiZUINzskFQZmctCJ-GMWmscpGGNlXUSNCsRWneDNOKeF7rLFoVgvPnG=
+Tnl5IU6oDBPx_46kNNIeRpo-qdh7CrbOx7dciGXkhcMSIzZXFYC53pD3spPf3151ANhp6X_U4eJ=
+60CHVeNUm5w6HMUk3_Kb8uLfSxPBQSmBufgoLA6RKK5IYZoxDeW87xZR1ssEoHWNiYO9RPVRTOh=
+aQzN82q-_1-gODa-ntmLs99CBbDErUaPdCxfmA8vZsP50&pid=3Dv1.s76Z_oqHPi6pvjc5FRn3=
+paZ5Ml3yAHtkL5s1JsJBgExak79OIcaFXUI7OO6DnbrRovIw6gvkB9RWXmp8&tuid=3D69b4718=
+50da2ed55de51b662&configId=3De1f3099f-d292-4909-bc6e-348abe6b1809"><img sty=
+le=3D"padding:0px;border:0px;width:100%;height:auto;display:block;" width=
+=3D"164" class height=3D"auto" src=3D"https://cdn.campaigns.cineplex.com/23=
+dc5144-baef-40f8-9c51-44baefa0f836/urn:aaid:aem:579f7538-de79-4deb-a588-166=
+e5ece39cb/oak:1.0::ci:d6fd06896424e0ea5ac74ec04a2812a7/68e17b1b-8ba0-3c7d-8=
+d60-d3f37a89af6a"></a></td><td width=3D"3%">=0A           </td><td width=3D=
+"48%">=0A            <a alias conversion=3D"false" data-linkto=3D"other" ta=
+rget=3D"_blank" title class href=3D"https://data.campaigns.cineplex.com/ee/=
+v1/click=3Fparams=3Dv1.j4HVRT_gnyuJU7NIWrpeAA-7NtR5jao_4WD2yGbdSGiml8rHm6VU=
+ZB-9AGyY3H7s-AiZUINzskFQZmctCJ-GMWmscpGGNlXUSNCsRWneDNOKeF7rLFoVgvPnGTnl5IU=
+6oDBPx_46kNNIeRpo-qdh7CrbOx7dciGXkhcMSIzZXFYC53pD3spPf3151ANhp6X_U4eJ60CHVe=
+NUm5w6HMUk3_Kb8uLfSxPBQSmBufgoLA6RKK5IYZoxDeW87xZR1ssEoHWNiYO9RPVRTOhaQzN82=
+q-_1-gODa-ntmLs99CBbDErUaPdCxfmA8vZsP50&pid=3Dv1.s76Z_oqHPi6pvjc5FRn3paZ5Ml=
+3yAHtkL5s1JsJBgExak79OIcaFXUI7OO6DnbrRovIw6gvkB9RWXmp8&tuid=3D69b471850da2e=
+d55de51b663&configId=3De1f3099f-d292-4909-bc6e-348abe6b1809"><img style=3D"=
+padding:0px;border:0px;width:100%;height:auto;text-align:center;display:blo=
+ck;" width=3D"164" class height=3D"auto" src=3D"https://cdn.campaigns.cinep=
+lex.com/23dc5144-baef-40f8-9c51-44baefa0f836/urn:aaid:aem:69f6380e-1205-433=
+7-90a1-abf315ad1107/oak:1.0::ci:d4ff666e3de38f09206ae94048186bb6/ad9e1f4b-5=
+79e-333e-90ed-020b6bcae5d7"></a></td></tr></tbody></table></th></tr></tbody=
+></table></td><td style=3D"width:5%;">=0A   </td></tr></tbody></table></div=
+></th> </tr> </tbody> </table> </div></th> </tr> </tbody> </table></div></t=
+h> </tr> </tbody> </table> <!--[if mso]></td></tr></table><![endif]--></div=
+>    <div class=3D"acr-structure is-footer" data-structure-id=3D"1-1-column=
+" data-structure-name=3D"richtext.structure_1_1_column" style=3D"background=
+-color:rgb(0, 0, 0);" data-source-uuid=3D"bdf61671-e85d-4ad2-b096-a0282e67f=
+874"><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" w=
+idth=3D"100%"><tr><td style=3D"background-color: rgb(0, 0, 0);" ><![endif]-=
+-> <table class=3D"structure__table" align=3D"center" cellpadding=3D"0" cel=
+lspacing=3D"0" border=3D"0" width=3D"600"> <tbody> <tr> <th class=3D"colspa=
+n1"><!--[if gte mso 9]><style acrite-mso-css=3D"true">.image-container div =
+{  display: block;}.structure__table td {  padding: 0;  border: none;}.butt=
+on-container {  border: none !important;  padding: 0 !important;  margin: 0=
+ !important;  line-height: normal !important;}.acr-structure {  margin: 0 !=
+important;}.acr-component {  margin: 0 !important;}.acr-fragment {  margin:=
+ 0 !important;}.colspan1, .colspan2, .colspan3, .colspan4, .colspan33, .col=
+span66 {  box-sizing: border-box !important;}</style><![endif]--><!--[if gt=
+e mso 9]><style acrite-mso-css=3D"true">.image-container div {  display: bl=
+ock;}.structure__table td {  padding: 0;  border: none;}.button-container {=
+  border: none !important;  padding: 0 !important;  margin: 0 !important;  =
+line-height: normal !important;}.acr-structure {  margin: 0 !important;}.ac=
+r-component {  margin: 0 !important;}.acr-fragment {  margin: 0 !important;=
+}.colspan1, .colspan2, .colspan3, .colspan4, .colspan33, .colspan66 {  box-=
+sizing: border-box !important;}</style><![endif]--><!--[if gte mso 9]><styl=
+e acrite-mso-css=3D"true">.image-container div {  display: block;}.structur=
+e__table td {  padding: 0;  border: none;}.button-container {  border: none=
+ !important;  padding: 0 !important;  margin: 0 !important;  line-height: n=
+ormal !important;}.acr-structure {  margin: 0 !important;}.acr-component { =
+ margin: 0 !important;}.acr-fragment {  margin: 0 !important;}.colspan1, .c=
+olspan2, .colspan3, .colspan4, .colspan33, .colspan66 {  box-sizing: border=
+-box !important;}</style><![endif]--><!--[if gte mso 9]><style acrite-mso-c=
+ss=3D"true">.image-container div {  display: block;}.structure__table td { =
+ padding: 0;  border: none;}.button-container {  border: none !important;  =
+padding: 0 !important;  margin: 0 !important;  line-height: normal !importa=
+nt;}.acr-structure {  margin: 0 !important;}.acr-component {  margin: 0 !im=
+portant;}.acr-fragment {  margin: 0 !important;}.colspan1, .colspan2, .cols=
+pan3, .colspan4, .colspan33, .colspan66 {  box-sizing: border-box !importan=
+t;}</style><![endif]--><!--[if gte mso 9]><style acrite-mso-css=3D"true">.i=
+mage-container div {  display: block;}.structure__table td {  padding: 0;  =
+border: none;}.button-container {  border: none !important;  padding: 0 !im=
+portant;  margin: 0 !important;  line-height: normal !important;}.acr-struc=
+ture {  margin: 0 !important;}.acr-component {  margin: 0 !important;}.acr-=
+fragment {  margin: 0 !important;}.colspan1, .colspan2, .colspan3, .colspan=
+4, .colspan33, .colspan66 {  box-sizing: border-box !important;}</style><![=
+endif]--><!--[if gte mso 9]><style acrite-mso-css=3D"true">.image-container=
+ div {  display: block;}.structure__table td {  padding: 0;  border: none;}=
+.button-container {  border: none !important;  padding: 0 !important;  mar=
+gin: 0 !important;  line-height: normal !important;}.acr-structure {  margi=
+n: 0 !important;}.acr-component {  margin: 0 !important;}.acr-fragment {  m=
+argin: 0 !important;}.colspan1, .colspan2, .colspan3, .colspan4, .colspan33=
+, .colspan66 {  box-sizing: border-box !important;}</style><![endif]--><!--=
+[if gte mso 9]><style acrite-mso-css=3D"true">.image-container div {  displ=
+ay: block;}.structure__table td {  padding: 0;  border: none;}.button-conta=
+iner {  border: none !important;  padding: 0 !important;  margin: 0 !import=
+ant;  line-height: normal !important;}.acr-structure {  margin: 0 !importan=
+t;}.acr-component {  margin: 0 !important;}.acr-fragment {  margin: 0 !impo=
+rtant;}.colspan1, .colspan2, .colspan3, .colspan4, .colspan33, .colspan66 {=
+  box-sizing: border-box !important;}</style><![endif]--><!--[if gte mso 9]=
+><style acrite-mso-css=3D"true">.image-container div {  display: block;}.st=
+ructure__table td {  padding: 0;  border: none;}.button-container {  border=
+: none !important;  padding: 0 !important;  margin: 0 !important;  line-hei=
+ght: normal !important;}.acr-structure {  margin: 0 !important;}.acr-compon=
+ent {  margin: 0 !important;}.acr-fragment {  margin: 0 !important;}.colspa=
+n1, .colspan2, .colspan3, .colspan4, .colspan33, .colspan66 {  box-sizing: =
+border-box !important;}</style><![endif]--><!--[if gte mso 9]><style acrite=
+-mso-css=3D"true">.image-container div {  display: block;}.structure__table=
+ td {  padding: 0;  border: none;}.button-container {  border: none !import=
+ant;  padding: 0 !important;  margin: 0 !important;  line-height: normal !i=
+mportant;}.acr-structure {  margin: 0 !important;}.acr-component {  margin:=
+ 0 !important;}.acr-fragment {  margin: 0 !important;}.colspan1, .colspan2,=
+ .colspan3, .colspan4, .colspan33, .colspan66 {  box-sizing: border-box !im=
+portant;}</style><![endif]--><!--[if gte mso 9]><style acrite-mso-css=3D"tr=
+ue">.image-container div {  display: block;}.structure__table td {  padding=
+: 0;  border: none;}.button-container {  border: none !important;  padding:=
+ 0 !important;  margin: 0 !important;  line-height: normal !important;}.acr=
+-structure {  margin: 0 !important;}.acr-component {  margin: 0 !important;=
+}.acr-fragment {  margin: 0 !important;}.colspan1, .colspan2, .colspan3, .c=
+olspan4, .colspan33, .colspan66 {  box-sizing: border-box !important;}</sty=
+le><![endif]--><!--[if gte mso 9]><style acrite-mso-css=3D"true">.image-con=
+tainer div {  display: block;}.structure__table td {  padding: 0;  border: =
+none;}.button-container {  border: none !important;  padding: 0 !important;=
+  margin: 0 !important;  line-height: normal !important;}.acr-structure {  =
+margin: 0 !important;}.acr-component {  margin: 0 !important;}.acr-fragment=
+ {  margin: 0 !important;}.colspan1, .colspan2, .colspan3, .colspan4, .cols=
+pan33, .colspan66 {  box-sizing: border-box !important;}</style><![endif]--=
+><!--[if gte mso 9]><style acrite-mso-css=3D"true">.image-container div {  =
+display: block;}.structure__table td {  padding: 0;  border: none;}.button-=
+container {  border: none !important;  padding: 0 !important;  margin: 0 !i=
+mportant;  line-height: normal !important;}.acr-structure {  margin: 0 !imp=
+ortant;}.acr-component {  margin: 0 !important;}.acr-fragment {  margin: 0 =
+!important;}.colspan1, .colspan2, .colspan3, .colspan4, .colspan33, .colspa=
+n66 {  box-sizing: border-box !important;}</style><![endif]--><!--[if gte m=
+so 9]><style acrite-mso-css=3D"true">.image-container div {  display: block=
+;}.structure__table td {  padding: 0;  border: none;}.button-container {  b=
+order: none !important;  padding: 0 !important;  margin: 0 !important;  lin=
+e-height: normal !important;}.acr-structure {  margin: 0 !important;}.acr-c=
+omponent {  margin: 0 !important;}.acr-fragment {  margin: 0 !important;}.c=
+olspan1, .colspan2, .colspan3, .colspan4, .colspan33, .colspan66 {  box-siz=
+ing: border-box !important;}</style><![endif]--><!--[if gte mso 9]><style a=
+crite-mso-css=3D"true">.image-container div {  display: block;}.structure__=
+table td {  padding: 0;  border: none;}.button-container {  border: none !i=
+mportant;  padding: 0 !important;  margin: 0 !important;  line-height: norm=
+al !important;}.acr-structure {  margin: 0 !important;}.acr-component {  ma=
+rgin: 0 !important;}.acr-fragment {  margin: 0 !important;}.colspan1, .cols=
+pan2, .colspan3, .colspan4, .colspan33, .colspan66 {  box-sizing: border-bo=
+x !important;}</style><![endif]--><!--[if gte mso 9]><style acrite-mso-css=
+=3D"true">.image-container div {  display: block;}.structure__table td {  p=
+adding: 0;  border: none;}.button-container {  border: none !important;  pa=
+dding: 0 !important;  margin: 0 !important;  line-height: normal !important=
+;}.acr-structure {  margin: 0 !important;}.acr-component {  margin: 0 !impo=
+rtant;}.acr-fragment {  margin: 0 !important;}.colspan1, .colspan2, .colspa=
+n3, .colspan4, .colspan33, .colspan66 {  box-sizing: border-box !important;=
+}</style><![endif]--><!--[if gte mso 9]><style acrite-mso-css=3D"true">.ima=
+ge-container div {  display: block;}.structure__table td {  padding: 0;  bo=
+rder: none;}.button-container {  border: none !important;  padding: 0 !impo=
+rtant;  margin: 0 !important;  line-height: normal !important;}.acr-structu=
+re {  margin: 0 !important;}.acr-component {  margin: 0 !important;}.acr-fr=
+agment {  margin: 0 !important;}.colspan1, .colspan2, .colspan3, .colspan4,=
+ .colspan33, .colspan66 {  box-sizing: border-box !important;}</style><![en=
+dif]--><!--[if gte mso 9]><style acrite-mso-css=3D"true">.image-container d=
+iv {  display: block;}.structure__table td {  padding: 0;  border: none;}.b=
+utton-container {  border: none !important;  padding: 0 !important;  margin=
+: 0 !important;  line-height: normal !important;}.acr-structure {  margin: =
+0 !important;}.acr-component {  margin: 0 !important;}.acr-fragment {  marg=
+in: 0 !important;}.colspan1, .colspan2, .colspan3, .colspan4, .colspan33, .=
+colspan66 {  box-sizing: border-box !important;}</style><![endif]--><div cl=
+ass=3D"acr-fragment acr-component" data-component-id=3D"html" data-source-u=
+uid=3D"b9625795-5201-4592-ab39-1ec02ef118d4" data-dashlane-rid=3D"8b8322217=
+1a58198" data-dashlane-classification=3D"other" data-contenteditable=3D"tru=
+e"></div><div class=3D"acr-fragment is-locked" data-fragment-id=3D"ajo:55ef=
+2c41-03a0-47dc-8283-32074bf3dfd3"><style data-name=3D"media-custom-prefers-=
+color-scheme-dark" type=3D"text/css">=0A@media (prefers-color-scheme: dark)=
+ {=0A  .acr-dark-img {=0A    display: block !important;=0A  }=0A  .acr-ligh=
+t-img {=0A    display: none !important;=0A  }=0A}=0A</style> <table align=
+=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width=
+: 100%; table-layout: fixed;"> <tbody> <tr> <th class=3D"colspan1" style=3D=
+"background-color:rgb(0, 0, 0);border-top:1px solid rgb(69, 69, 69);border-=
+right:none;border-bottom:none;border-left:none;border-radius:0px;padding:20=
+px 0px;"><div class=3D"acr-tmp-component" style=3D"vertical-align:baseline;=
+text-align:center;" data-source-uuid=3D"8c1b6e7d-ce36-4906-811a-f61a22a937c=
+e" data-contenteditable=3D"true" data-tmp-component-id=3D"html"><!-- LEGAL =
+--><table align=3D"center" border=3D"0" cellpadding=3D"10" cellspacing=3D"0=
+" style=3D"margin-top:20px;margin-bottom:5px;border-collapse:collapse;" wid=
+th=3D"100%">=0A =0A  <tbody style=3D"color:#ffffff;text-align:center;">=0A =
+  <tr>=0A   <td width=3D"5%">=0A   </td>=0A   <td width=3D"90%">=0A    <a s=
+tyle=3D"text-align:center;color:#ffffff;letter-spacing:1px;font-family:Goog=
+le Sans, Helvetica, Arial, sans-serif;font-size:18px;text-decoration:underl=
+ine;" target=3D"_blank" data-nl-type=3D"mirrorPage" href=3D"https://data.ca=
+mpaigns.cineplex.com/ee/v1/webview=3Fparams=3Dv1.WjTWvqMKrPTuh54ufMDpugCBUB=
+uRhAVZmMhEBGNbEBtr30xtRsJcc42PSegctJUPg31K07rGT1WKrPUoZaOr1ZcFkicdjhcCjdkBe=
+unLW9AHJovj1zfG-T6Oooe48e2SZDoozkECHLnt-D3plrWU5KF91Y-wBSOj4jk5HW5cY7hsO3N9=
+EUOoxbXEJvwcsWFSjXC85lUzvlDvThGdevT-CM5U7H5Tzj7muKzgBXMcVsdPLNyqtFBSxPco0_U=
+T-N8CVgY9ZgTlnnkpm71XsPuzCcmZOzTJPjEx-EvTm242Rf5qXdFuQr5xRXZXmZowuITPiIe8OD=
+OBAj1wwoiBF3f6OzPNr6NvlNdJCwYI1VGxa5YwaC5JB7yuPkFykD54UgPJ5XKllF6o9XkY5CyFP=
+MBQNZdB9bVF0JJX5s2lkr5rVt3RkRFaL1YPZVZE2OpmBrNUI-4Mqmtf3Ce41z9PZ-nCIqDGEm4O=
+&configId=3De1f3099f-d292-4909-bc6e-348abe6b1809&pid=3Dv1.lWqD5OB7FqnDU8KIR=
+TTwEVhOhXpJeyhKdd-mDCK8Vdsst9iNplNB0ICsvdiuMyS0yoQrgkoUvmoWrDd3d9SP0aSKEMIK=
+F4bFwXhtojYi_-pHa3R_-Gtp73x_Y0cGwwZSZQqCJgMS&p=3Dv1.VKuQAiPbXdO4gys6W2Ao1hA=
+MnV4U1xszbiO6pys1ssB08_PVEcGUwHquA2fx9APZXjX9sLHrzveO666K5zIzNgXsESVkrveStM=
+3mZbLZogFUUydk0E91W91dWcbeNshYfQpqDS11mN8GZqOWtjwFuhlKHfScFQ5h75rAuqQrbNKdu=
+WCOAt1vnq2PuIReOu7pMXaBQ9i5DaW8pT3sPWTimIalAjNH_3bYepM1k90JjoQ5hGSTFeZj9ZAx=
+zkzEocq4lhkl3x1qJrrh--0bFXWskaeln6OJWOCxvs292xtcz2WxgqgslEdpezePhydGT7LID4q=
+HkYhL-4nY1kH1WZd8kAXqc8W7XEmPoaT7q3jI2SBfIv2Z3O9wXJsJ4Onr91xG22rtjH5wQIvgjY=
+pehiJTV6e9p6NUv8eCC-gcYVZLaOSLShOl7eTGeNMNTon_0aeyLQGugN2O4W_FPcr8fwcqof3U3=
+E7oTDvF5MAWT0WGOHq_Eu4YjcT5EijLwor88zlSJq29Bv30iLjc1Y86PiTZtGQGtirlnggnIIno=
+DfzbASNrPLJ7p78BoX5cf3JXaKZRnZe50zBrmUFvQobDXA_VDj5bRbjUePpddMNo1lntlxwbQvo=
+XjGdMTCdljNgcBxb4JVmOpFPUUOQLU-dBTrNE3jgSeqeHcREeRlyMYdJcHIKo7MGjV2ZX4rReeQ=
+29pl58DqmoqS_iYg11RtIjVWU3EbVmvyY02F-wE521RGP60len3kPuuMGgezGvHzLMZTlIaNJ5u=
+OK7tQrcresgiqYxV69KktM4Eb2eMvoMWufsHIAI0NhJqQ1lQpeBdtbhXTsSQHfGwLpTeM9e22sg=
+9oOnwMBdCR1Hl-9EFRXmivpV4EcYNJ_mw4vW3yyC8k1ES6mnFKvYrs6L6y9d2obrTTJj8HFTfSu=
+4tVFuvGdc2S1TRrELBHCXIQL8dF6horu00X2qoTVgY2Hn&t=3D1773440676538"><!--[if gt=
+e mso 9]><span style=3D"font-family: Arial, Helvetica, Verdana, Tahoma, san=
+s-serif;color:#ffffff;"><![endif]-->View this email online<!--[if gte mso 9=
+]></span><![endif]--><br><br></a></td>=0A   <td width=3D"5%">=0A   </td> =
+=0A   </tr>=0A    =0A   <tr>=0A   <td width=3D"5%">=0A   </td>=0A   <td wid=
+th=3D"90%">=0A    <a style=3D"text-align:centert;color:#ffffff;font-family:=
+Google Sans, Helvetica, Arial, sans-serif;font-size:14px;text-decoration:no=
+ne;" target=3D"_blank" href=3D"https://data.campaigns.cineplex.com/ee/v1/cl=
+ick=3Fparams=3Dv1.hAig2nu078zY4exmzJsJb0FreNLlmTpSjMYL9ERieHrrVBseMJB8qkaaP=
+hrGPNsQ5CAzN6AlgQQMIwxo9qg1qfoNjp1LhC_ToYgN25gJnbD5wI8LqAgat49mIx2JTRtCXVCU=
+K7AIPGZUDqznhpx9807pV2WDkIyjf3HRdfAKZ5-D_ZDryRjdWEjCZCeQZNfkFaLOJsVyOelsUMN=
+yXVjM1xKsBYMk_8QWipqbQikWPOsNedLERmhW0tHl1Jv-87t5o0zbrs1mF9i1igpi7W4GWYYl1A=
+D7SlCjSAY-PEP0Y1NaYBqWjv5AwiLw0i80l7U1xhXM-8ReKfN1r3ZhdJVI-t-YwnMc64mMVrpFy=
+XlmCY76Mk2Ja4AVuvIvt1TE73D_UKkti22-mMsaEGyvnF88K5w6gORji5F1oEX33eatYmH1FNJa=
+oG7OT9elMp9w78STfBG5HdW0GEy4QeOLRksb6SBeeOJI&pid=3Dv1.AhBW4tA5HsGhSP1lTx-EI=
+PsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&tuid=3D691ca9d0=
+228f5c32bf43ff58&configId=3De1f3099f-d292-4909-bc6e-348abe6b1809"><!--[if g=
+te mso 9]><span style=3D"font-family: Arial, Helvetica, Verdana, Tahoma, sa=
+ns-serif;color:#ffffff;"><![endif]-->Privacy<!--[if gte mso 9]></span><![en=
+dif]--> </a> &nbsp;|&nbsp; <a alias conversion=3D"false" data-linkto=3D"htt=
+ps://" style=3D"text-align:center;color:#ffffff;font-family:Google Sans, He=
+lvetica, Arial, sans-serif;font-size:14px;text-decoration:none;" target=3D"=
+_blank" title data-nl-type=3D"unsubscription" href=3D"https://data.campaign=
+s.cineplex.com/ee/v1/click=3Fparams=3Dv1.ru9sFaL1eKHvTpCYukEWxqe15FdO96Lt9U=
+nyb4tau2E8BwjrMsv8UQ_loyJMoGJyaOLloIk-Cf1uJ9hil3dQ5TQ1m4_qXqBJiDAOJ-16FvmPU=
+SfqGrfiCpdMMxs9MOwFH_PybJ7M4RJ3efIKqiQiIpjiDrPmVredgeGOjt4hPUMpBP8YK9Ijr0Ht=
+UosPv1JPsmTcB1FEdc7bkdcpJDdhVv4drlduQ2nTTUAvshsR7d6tFDerjd0oAtTrlkBXhLWGQuY=
+4_LAuteU9gQdItfVj_Qz1rhKDAbPRoWOSatSzxMhOvgRltgqM7UJ-LM56bHdwQH1bEYBga8VF5E=
+AymBiU33wp1qJ4301C6kHIAGA1th0UW72WbhW-m-_Ka4JAXFpIrBXYE_0X3snzYSceg_0C28c0d=
+7iVbyjCv6OZsVAyHZy7hfD9gY2BMrNhgVfOLnnzsDvrQg0Zh_maqDJqDuHfbq7yXBjYFyF6ku0k=
+AHByCJr8H91xCU7AhXoZwQrYJnVzYc9vpbOo_HaxJ8Xjkk8nLu8KK1uoyeayKbYEYvgqSYmcDpE=
+MmIFsCRcjZqPlj_dO7rEZL52goEeUetJAP4DbWi9YAugTd81brzpJh0qyiNlhG_gRuLxgUja0Kh=
+eWKcfq_oLBapSte729hSh5oFeZrY6m0g5Ya5eSJxpz6o0vVSAwTtbu7oU&pid=3Dv1.lWqD5OB7=
+FqnDU8KIRTTwEVhOhXpJeyhKdd-mDCK8Vdsst9iNplNB0ICsvdiuMyS0yoQrgkoUvmoWrDd3d9S=
+P0aSKEMIKF4bFwXhtojYi_-pHa3R_-Gtp73x_Y0cGwwZSZQqCJgMS&tuid=3D691ca9d0228f5c=
+32bf43ff59&configId=3De1f3099f-d292-4909-bc6e-348abe6b1809">Unsubscribe </a=
+> &nbsp;|&nbsp; <a style=3D"text-align:center;color:#ffffff;font-family:Goo=
+gle Sans, Helvetica, Arial, sans-serif;font-size:14px;text-decoration:none;=
+" target=3D"_blank" href=3D"https://data.campaigns.cineplex.com/ee/v1/click=
+=3Fparams=3Dv1.hAig2nu078zY4exmzJsJb0FreNLlmTpSjMYL9ERieHrrVBseMJB8qkaaPhrG=
+PNsQ5CAzN6AlgQQMIwxo9qg1qfoNjp1LhC_ToYgN25gJnbD5wI8LqAgat49mIx2JTRtCXVCUK7A=
+IPGZUDqznhpx9807pV2WDkIyjf3HRdfAKZ5-D_ZDryRjdWEjCZCeQZNfkFaLOJsVyOelsUMNyXV=
+jM1xKsBYMk_8QWipqbQikWPOsNedLERmhW0tHl1Jv-87t5o0zbrs1mF9i1igpi7W4GWYYl1AD7S=
+lCjSAY-PEP0Y1NaYBqWjv5AwiLw0i80l7U1xhXM-8ReKfN1r3ZhdJVI-t-YwnMc64mMVrpFyXlm=
+CY76Mk2Ja4AVuvIvt1TE73D_UKkti22-mMsaEGyvnF88K5w6gORji5F1oEX33eatYmH1FNJaoG7=
+OT9elMp9w78STfBG5HdW0GEy4QeOLRksb6SBeeOJI&pid=3Dv1.AhBW4tA5HsGhSP1lTx-EIPsS=
+03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&tuid=3D691ca9d0228=
+f5c32bf43ff5a&configId=3De1f3099f-d292-4909-bc6e-348abe6b1809"> <!--[if gte=
+ mso 9]><span style=3D"font-family: Arial, Helvetica, Verdana, Tahoma, sans=
+-serif;color:#ffffff;"><![endif]-->Contact Us <!--[if gte mso 9]></span><![=
+endif]--></a> &nbsp;|&nbsp; <a style=3D"text-align:center;color:#ffffff;fon=
+t-family:Google Sans, Helvetica, Arial, sans-serif;font-size:14px;text-deco=
+ration:none;" target=3D"_blank" href=3D"https://data.campaigns.cineplex.com=
+/ee/v1/click=3Fparams=3Dv1.hAig2nu078zY4exmzJsJb0FreNLlmTpSjMYL9ERieHrrVBse=
+MJB8qkaaPhrGPNsQ5CAzN6AlgQQMIwxo9qg1qfoNjp1LhC_ToYgN25gJnbD5wI8LqAgat49mIx2=
+JTRtCXVCUK7AIPGZUDqznhpx9807pV2WDkIyjf3HRdfAKZ5-D_ZDryRjdWEjCZCeQZNfkFaLOJs=
+VyOelsUMNyXVjM1xKsBYMk_8QWipqbQikWPOsNedLERmhW0tHl1Jv-87t5o0zbrs1mF9i1igpi7=
+W4GWYYl1AD7SlCjSAY-PEP0Y1NaYBqWjv5AwiLw0i80l7U1xhXM-8ReKfN1r3ZhdJVI-t-YwnMc=
+64mMVrpFyXlmCY76Mk2Ja4AVuvIvt1TE73D_UKkti22-mMsaEGyvnF88K5w6gORji5F1oEX33ea=
+tYmH1FNJaoG7OT9elMp9w78STfBG5HdW0GEy4QeOLRksb6SBeeOJI&pid=3Dv1.AhBW4tA5HsGh=
+SP1lTx-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&tuid=
+=3D691ca9d0228f5c32bf43ff61&configId=3De1f3099f-d292-4909-bc6e-348abe6b1809=
+"> <!--[if gte mso 9]><span style=3D"font-family: Arial, Helvetica, Verdana=
+, Tahoma, sans-serif;color:#ffffff;"><![endif]-->Sceneplus.ca<!--[if gte ms=
+o 9]></span><![endif]--> </a></td>=0A   <td width=3D"5%">=0A   </td>=0A   <=
+/tr>=0A    =0A   <tr>=0A   <td width=3D"5%">=0A   </td>=0A   <td width=3D"9=
+0%">=0A    <p style=3D"text-align:center;color:rgb(255, 255, 255);line-heig=
+ht:14px;font-family:&quot;Google Sans&quot;, Helvetica, Arial, sans-serif;f=
+ont-size:10px;mso-padding-left-alt:15px;mso-padding-right-alt:15px;"><!--[i=
+f gte mso 9]><span style=3D"font-family: Arial, Helvetica, Verdana, Tahoma,=
+ sans-serif;color:#ffffff;"><![endif]-->=0A     <strong>Please do not reply=
+ to this email.</strong>=0A     <br>=0A     =0A     <br>=0A     You are rec=
+eiving this email because you are a Scene+ member and have opted-in to rece=
+iving email communications from Cineplex Entertainment LP (=E2=80=9CCineple=
+x=E2=80=9D). You may unsubscribe from emails Cineplex sends to Scene+ membe=
+rs at any time by clicking on the unsubscribe link above or by changing you=
+r email preferences <a style=3D"color:rgb(255, 255, 255);text-decoration:un=
+derline;" data-nl-type=3D"unsubscription" href=3D"https://data.campaigns.ci=
+neplex.com/ee/v1/click=3Fparams=3Dv1.ru9sFaL1eKHvTpCYukEWxqe15FdO96Lt9Unyb4=
+tau2E8BwjrMsv8UQ_loyJMoGJyaOLloIk-Cf1uJ9hil3dQ5TQ1m4_qXqBJiDAOJ-16FvmPUSfqG=
+rfiCpdMMxs9MOwFH_PybJ7M4RJ3efIKqiQiIpjiDrPmVredgeGOjt4hPUMpBP8YK9Ijr0HtUosP=
+v1JPsmTcB1FEdc7bkdcpJDdhVv4drlduQ2nTTUAvshsR7d6tFDerjd0oAtTrlkBXhLWGQuY4_LA=
+uteU9gQdItfVj_Qz1rhKDAbPRoWOSatSzxMhOvgRltgqM7UJ-LM56bHdwQH1bEYBga8VF5EAymB=
+iU33wp1qJ4301C6kHIAGA1th0UW72WbhW-m-_Ka4JAXFpIrBXYE_0X3snzYSceg_0C28c0d7iVb=
+yjCv6OZsVAyHZy7hfD9gY2BMrNhgVfOLnnzsDvrQg0Zh_maqDJqDuHfbq7yXBjYFyF6ku0kAHBy=
+CJr8H91xCU7AhXoZwQrYJnVzYc9vpbOo_HaxJ8Xjkk8nLu8KK1uoyeayKbYEYvgqSYmcDpEMmIF=
+sCRcjZqPlj_dO7rEZL52goEeUetJAP4DbWi9YAugTd81brzpJh0qyiNlhG_gRuLxgUja0KheWKc=
+fq_oLBapSte729hSh5oFeZrY6m0g5Ya5eSJxpz6o0vVSAwTtbu7oU&pid=3Dv1.lWqD5OB7FqnD=
+U8KIRTTwEVhOhXpJeyhKdd-mDCK8Vdsst9iNplNB0ICsvdiuMyS0yoQrgkoUvmoWrDd3d9SP0aS=
+KEMIKF4bFwXhtojYi_-pHa3R_-Gtp73x_Y0cGwwZSZQqCJgMS&tuid=3D691ca9d0228f5c32bf=
+43ff62&configId=3De1f3099f-d292-4909-bc6e-348abe6b1809">here</a>.<br>=0A   =
+  <br>=0A     Your Scene+ points balance may not be up to date at the time =
+this email was sent. For the most accurate Scene+ points balance, please <a=
+ style=3D"color:#ffffff;" href=3D"https://data.campaigns.cineplex.com/ee/v1=
+/click=3Fparams=3Dv1.hAig2nu078zY4exmzJsJb0FreNLlmTpSjMYL9ERieHrrVBseMJB8qk=
+aaPhrGPNsQ5CAzN6AlgQQMIwxo9qg1qfoNjp1LhC_ToYgN25gJnbD5wI8LqAgat49mIx2JTRtCX=
+VCUK7AIPGZUDqznhpx9807pV2WDkIyjf3HRdfAKZ5-D_ZDryRjdWEjCZCeQZNfkFaLOJsVyOels=
+UMNyXVjM1xKsBYMk_8QWipqbQikWPOsNedLERmhW0tHl1Jv-87t5o0zbrs1mF9i1igpi7W4GWYY=
+l1AD7SlCjSAY-PEP0Y1NaYBqWjv5AwiLw0i80l7U1xhXM-8ReKfN1r3ZhdJVI-t-YwnMc64mMVr=
+pFyXlmCY76Mk2Ja4AVuvIvt1TE73D_UKkti22-mMsaEGyvnF88K5w6gORji5F1oEX33eatYmH1F=
+NJaoG7OT9elMp9w78STfBG5HdW0GEy4QeOLRksb6SBeeOJI&pid=3Dv1.AhBW4tA5HsGhSP1lTx=
+-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&tuid=3D691ca=
+9d0228f5c32bf43ff63&configId=3De1f3099f-d292-4909-bc6e-348abe6b1809">log in=
+</a> to your Scene+ account.<br>=0A     <br>=0A     Cineplex<br>=0A     130=
+3 Yonge Street, Toronto, ON M4T 2Y9<br>=0A     <a class=3D"arc-link" data-n=
+l-type=3D"externalLink" style=3D"color:#ffffff;text-decoration:underline;" =
+href=3D"https://data.campaigns.cineplex.com/ee/v1/click=3Fparams=3Dv1.hAig2=
+nu078zY4exmzJsJb0FreNLlmTpSjMYL9ERieHrrVBseMJB8qkaaPhrGPNsQ5CAzN6AlgQQMIwxo=
+9qg1qfoNjp1LhC_ToYgN25gJnbD5wI8LqAgat49mIx2JTRtCXVCUK7AIPGZUDqznhpx9807pV2W=
+DkIyjf3HRdfAKZ5-D_ZDryRjdWEjCZCeQZNfkFaLOJsVyOelsUMNyXVjM1xKsBYMk_8QWipqbQi=
+kWPOsNedLERmhW0tHl1Jv-87t5o0zbrs1mF9i1igpi7W4GWYYl1AD7SlCjSAY-PEP0Y1NaYBqWj=
+v5AwiLw0i80l7U1xhXM-8ReKfN1r3ZhdJVI-t-YwnMc64mMVrpFyXlmCY76Mk2Ja4AVuvIvt1TE=
+73D_UKkti22-mMsaEGyvnF88K5w6gORji5F1oEX33eatYmH1FNJaoG7OT9elMp9w78STfBG5HdW=
+0GEy4QeOLRksb6SBeeOJI&pid=3Dv1.AhBW4tA5HsGhSP1lTx-EIPsS03W4JiI1BbkSBqA9XSzQ=
+Tom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&tuid=3D691ca9d0228f5c32bf43ff5c&config=
+Id=3De1f3099f-d292-4909-bc6e-348abe6b1809">Cineplex.com</a><br>=0A     <br>=
+=0A     =C2=AE / =E2=84=A2 Cineplex Entertainment LP or used under license.=
+ Scene+=E2=84=A2 trademark of Scene Plus IP Corporation.<br>=0A     =C2=A9 =
+2026 Scene Plus IP Corporation. All rights reserved.<!--[if gte mso 9]></sp=
+an><![endif]--></p></td>=0A   <td width=3D"5%">=0A   </td> =0A   </tr></tbo=
+dy></table></div></th> </tr> </tbody> </table>=0A</div><grammarly-desktop-i=
+ntegration data-grammarly-shadow-root=3D"true"></grammarly-desktop-integrat=
+ion></th> </tr> </tbody> </table> <!--[if mso]></td></tr></table><![endif]-=
+-></div></div><grammarly-desktop-integration data-grammarly-shadow-root=3D"=
+true"></grammarly-desktop-integration><img src=3D"https://data.campaigns.ci=
+neplex.com/ee/v1/open=3Fparams=3Dv1.TIchwdqBofQtu2ZIlZMeLYPjqqCMXLXFftFGa2j=
+kRC2RzlOunKzNnvAB4DTs_Kqyoq5TPWehHL9YNBLnxNX-LwRYV4rR7Oo_nI6zK04PaEJVqX3W1X=
+ImpUIkZ9_0TNQSkR3dX0G3rkEk30QDrwhcMQQC9QTq7tTAbpgtjWZy6Cdu0Bo_yfuvaSZ3H5ASn=
+hQOrFMXsgMH1NO7FXBUMfcszh46AXyRGY0sCKxAH8uP9fFajd2f47jAMdAHi8HGJlyqonvPgKJt=
+Ahz2rAgrWhQyeIc9ur3wwDw8fs3PLbSSgBIW5DZOpeGF__gufClg&pid=3Dv1.AhBW4tA5HsGhS=
+P1lTx-EIPsS03W4JiI1BbkSBqA9XSzQTom8CVLtbwIqC1VvM5eaUH-wpOEW8Tbm4pkQ&tuid=3D=
+69b471850da2ed55de51b664&configId=3De1f3099f-d292-4909-bc6e-348abe6b1809" w=
+idth=3D"1" height=3D"1"></body></html>
+--_----L16cGxT5K8Sxk0z1XRistg===_EE/22-02676-4AE84B96--
+

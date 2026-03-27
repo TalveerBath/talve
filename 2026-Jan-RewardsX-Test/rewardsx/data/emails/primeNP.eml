@@ -1,0 +1,1345 @@
+Delivered-To: talveerbath@gmail.com
+Received: by 2002:a05:7110:b507:b0:2fe:1825:8528 with SMTP id hp7csp253190geb;
+        Fri, 13 Mar 2026 14:07:42 -0700 (PDT)
+X-Received: by 2002:ac8:5f84:0:b0:4f0:131f:66fe with SMTP id d75a77b69052e-50957e70a64mr66115141cf.59.1773436062274;
+        Fri, 13 Mar 2026 14:07:42 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1773436062; cv=none;
+        d=google.com; s=arc-20240605;
+        b=d7O8LdE+MZY0Uhup//Z6hs6SvqB4YGkTrPXc/smEwntEsa6Mwepe3sri8WswfwTT2p
+         KHBp3no2oSx47Q8PXU7fsnnyPrH9QnoSY37X9s1VLSeCYE6KRlKPad1aOUtx84uKFCnT
+         xGMVhGtBEOacrkSQ5RSia2gxD9WL+fs1cC1cp9J00RjkpUEa+gxY5CneRvp4ew+9sele
+         vll1S81P5qBS4eM40sGNGw/5SpU0ttU7bE7lIUT35zkIbs6pBN2oxxGc5KEIVtjW2TIK
+         JjvTf63kneOiJYHuFDiB6ARK9tEIL8DIp5K4hI9EnP359iJSTSlx4NKG+R0Rd/ckmEy5
+         t8ug==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:list-unsubscribe:list-unsubscribe-post:bounces-to
+         :mime-version:subject:message-id:to:from:date:dkim-signature
+         :dkim-signature;
+        bh=usVrMqIqNUYthyHosecLJuiQmFiwhQEGwf6vVft/u4g=;
+        fh=OYuaZ8rPTC9pUigfh3yoTx6H7O1WyMO4Twlu5+H+CBU=;
+        b=ZLjJhw9sF6lAUHH8q7jF+fKpY3CrZuhnhPcBvFL51EZHgjWrEgKHvISLD5hoACzJzj
+         /Un6MJ+e7wgfi5kqy42qeEuYTHSIX/hC5AVQKTsDpxoQ7Axj3RwzAjUDgrWx3gDwrJMm
+         Id8tKTgBYEukoo86CXV5lSUiDMA9+AGDsnhhW9AJ3LhOp1czuj0v7PCcmrJArj4V79r0
+         hU8hrQ3dH3TivtYM13tWC7YAwiVbJ1kBC0QP0vdoa8iYt39PcPqjYwX+GZGhLxJt5Jpt
+         o8I63wfUTRIxlbdwAzNA+LRhN5TP3/Tnb0dK7iU8ny6viw05ciIZlvCGx3eiFZnvEiTe
+         rh3g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@amazonmusic.com header.s=gyqc2gsgykcrmko5acyd2mbjomjmg2sc header.b="v/ox0/0b";
+       dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono header.b=uhhcvR3E;
+       spf=pass (google.com: domain of 20260313210741ae71234ed1d6408189c55bfa94f0p0na-cip4wj86btscn@bounces.amazonmusic.com designates 23.251.252.23 as permitted sender) smtp.mailfrom=20260313210741ae71234ed1d6408189c55bfa94f0p0na-CIP4WJ86BTSCN@bounces.amazonmusic.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=amazonmusic.com
+Return-Path: <20260313210741ae71234ed1d6408189c55bfa94f0p0na-CIP4WJ86BTSCN@bounces.amazonmusic.com>
+Received: from e252-23.smtp-out.amazonses.com (e252-23.smtp-out.amazonses.com. [23.251.252.23])
+        by mx.google.com with ESMTPS id d75a77b69052e-5093a1ce630si118264821cf.260.2026.03.13.14.07.42
+        for <talveerbath@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 13 Mar 2026 14:07:42 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 20260313210741ae71234ed1d6408189c55bfa94f0p0na-cip4wj86btscn@bounces.amazonmusic.com designates 23.251.252.23 as permitted sender) client-ip=23.251.252.23;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@amazonmusic.com header.s=gyqc2gsgykcrmko5acyd2mbjomjmg2sc header.b="v/ox0/0b";
+       dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono header.b=uhhcvR3E;
+       spf=pass (google.com: domain of 20260313210741ae71234ed1d6408189c55bfa94f0p0na-cip4wj86btscn@bounces.amazonmusic.com designates 23.251.252.23 as permitted sender) smtp.mailfrom=20260313210741ae71234ed1d6408189c55bfa94f0p0na-CIP4WJ86BTSCN@bounces.amazonmusic.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=amazonmusic.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=gyqc2gsgykcrmko5acyd2mbjomjmg2sc; d=amazonmusic.com;
+	t=1773436062;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type:List-Unsubscribe-Post:List-Unsubscribe;
+	bh=FJN69mcJSLnyJ0vEVkhMnc/RsjgaXXL/7/OXaL24LLQ=;
+	b=v/ox0/0bhK1OpJ0nGM91Z7Rdm/kLtIe/t11K/tf7H2J4tGIfTQpygkaiZzWYZh64
+	9J5nKi74IjwxXB485AuXeUZBVCbVFCPkazUBSFlN+FjXvchX7O8jHtMYFZLjYT7i5DJ
+	JSm7b378X4bkutzjHENc6eKS3lGWxCXktKUnHPeRCZpLh5qS7iT/pTPl1r8P9GLU8zJ
+	WF5AozAk/zf8L6je0BmPIdnmevcq/tHE1Pnat8XYgB52Mipgg7YQC4YI9WTz/pa7VlF
+	2XAZ6YfYQ3erLAQK3YBdJ56eFQJao7zbdrMwIFrySF+k7ywbkbrTrNKk+V9rCNJ1Pji
+	ZvknLw+kgg==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1773436062;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type:List-Unsubscribe-Post:List-Unsubscribe:Feedback-ID;
+	bh=FJN69mcJSLnyJ0vEVkhMnc/RsjgaXXL/7/OXaL24LLQ=;
+	b=uhhcvR3EcuMg9RM4zq/THRbQu425PV+/KQd7zTCzbxGsQphrgm/WuWeUwakJkW/r
+	l3HLZunY1rmonnbXKcyTKyAP1GIkHqkkZlREkD9ElrcWxmeqMU19CtRcwT/UNBZOG20
+	rwpGggCbNt3+RpkNtGmEWgSurbIF/BgRZJ1ibhrc=
+Date: Fri, 13 Mar 2026 21:07:41 +0000
+From: Amazon Music <no-reply@amazonmusic.com>
+To: talveerbath@gmail.com
+Message-ID: <0100019ce906c90e-cdc504dc-9f26-49ae-b2ac-5f0e8c0ca799-000000@email.amazonses.com>
+Subject: Reminder: podcasts are included with your Prime membership.
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2160778_1876688195.1773436061956"
+X-AMAZON-MAIL-RELAY-TYPE: notification
+Bounces-to: 20260313210741ae71234ed1d6408189c55bfa94f0p0na-CIP4WJ86BTSCN@bounces.amazonmusic.com
+X-AMAZON-METADATA: CA=CIP4WJ86BTSCN-CU=A1AGM2TPS1H9TK
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <https://www.amazon.ca/gp/f.html?C=Q0KVPQMQZQ3R&K=3K4TZU1SBI482&M=urn:rtn:msg:20260313210741ae71234ed1d6408189c55bfa94f0p0na&R=EXQ9NNI8Z602&T=X&U=https%3A%2F%2Famazonmusic.com%2Femail-opt-out%3FoptOutToken%3D%2Fgp%2Fgss%2Fo%2F170nKCvhE-fn6UD1l0BtK-6sQjL1ma56S2PqUdmjWKsqDBm1d-zC-f3LndoK7VFCQ%26marketplaceId%3DA2EUQ1WTGCTBG2&H=H6PKWIPVCQ3C3YY96KPHOE0UD9KA>
+X-Original-MessageID: <urn.rtn.msg.20260313210741ae71234ed1d6408189c55bfa94f0p0na@1773436061958.>
+Feedback-ID: 1363392570::1.us-east-1.+gzE1S+MWTFXXYmwxo7wkk651GMxMPAUFYiyN/09X40=:AmazonSES
+X-SES-Outgoing: 2026.03.13-23.251.252.23
+
+------=_Part_2160778_1876688195.1773436061956
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Amazon Music
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+
+
+
+DearTalveer
+
+</b><br>We noticed that you aren't taking full advantage of your Prime memb=
+ership.<br><br><strong>As a Prime member, you have access to top podcasts a=
+d-free from Amazon Music, at no additional cost.</strong><br><br>Discover n=
+ew podcasts and music based on your likes and preferences.<br><br>
+
+
+
+
+Listen now
+https://music.amazon.ca/podcasts/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Add no-reply@amazonmusic.com, our new sender e-mail address, to your Safe S=
+enders list to ensure receipt of messages from Amazon Music.
+
+Amazon Music provides weekly and occasional e-mail updates about new music,=
+ podcasts and other music-related content. It is our intention to be helpfu=
+l and informative. We're also sensitive to your time and remain committed t=
+o limiting our email to important updates as well critical information abou=
+t your account. If you'd rather not receive any e-mail information from Ama=
+zon Music, please modify your Amazon Music preferences here "https://amazon=
+music.com/email-opt-out?optOutToken=3D/gp/gss/o/170nKCvhE-fn6UD1l0BtK-6sQjL=
+1ma56S2PqUdmjWKsqDBm1d-zC-f3LndoK7VFCQ&marketplaceId=3DA2EUQ1WTGCTBG2"
+                             =20
+=C2=A9 2026 Amazon.com, Inc. or its affiliates. All rights reserved. Amazon=
+, Amazon Echo, Amazon Music, Prime, and all related logos are trademarks of=
+ Amazon.com, Inc. or its affiliates.Amazon.com, 410 Terry Avenue N., Seattl=
+e, WA 98109-5210.
+
+Please note that this message was sent to the following e-mail address: tal=
+veerbath@gmail.com
+
+Reference: 1363392570
+                             =20
+
+
+
+
+
+
+
+
+
+------=_Part_2160778_1876688195.1773436061956
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml"
+xmlns:v=3D"urn:schemas-microsoft-com:vml"
+xmlns:o=3D"urn:schemas-microsoft-com:office:office"
+>
+=09<head>
+=09=09<!--[if gte mso 9]><xml>
+=09=09=09<o:OfficeDocumentSettings>
+=09=09=09<o:AllowPNG/>
+=09=09=09<o:PixelsPerInch>96</o:PixelsPerInch>
+=09=09=09</o:OfficeDocumentSettings>
+=09=09=09</xml>
+=09=09<![endif]-->
+
+=09=09<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF=
+-8" />
+=09=09<meta name=3D"HandheldFriendly" content=3D"true"/>
+=09=09<meta name=3D"MobileOptimized" content=3D"320"/>
+=09=09<meta name=3D"viewport" content=3D"width=3Ddevice-width" />
+
+=09=09=09=09=09=09=09
+=09=09        <title></title>
+       =20
+=09=09
+=09=09<!--[if !mso]><!-->
+        <link href=3D"https://fonts.googleapis.com/css2?family=3DRoboto:ita=
+l,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&amp;display=3Dswap" =
+rel=3D"stylesheet" type=3D"text/css"/>
+        <!--<![endif]-->
+<style type=3D"text/css">
+   =20
+    span, td, table, div {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .st-email-body{
+        width:100% !important;
+        -webkit-text-size-adjust: 100%;
+        margin: 0 auto!important;
+        padding: 0px;
+        background-color: #ffffff;
+    }
+
+    span.st-preheader{
+        display: none!important;
+    }
+
+   =20
+    td img + div {
+        display: none;
+    }
+
+   =20
+    a[href^=3D"tel"],
+    a[href^=3D"sms"]{text-decoration: none; color: inherit !important; poin=
+ter-events: none; cursor: default;}
+    u + .st-email-body a {color: inherit; text-decoration: none; font-size:=
+ inherit; font-family: inherit; font-weight: inherit; line-height: inherit;=
+}
+   =20
+    *[x-apple-data-detectors] {color: inherit !important; text-decoration: =
+none !important; font-size: inherit !important; font-family: inherit !impor=
+tant; font-weight: inherit !important; line-height: inherit !important;}
+
+    a,a:hover,a:link,a:visited {
+        outline: none;
+        color: #00A1B3 !important;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+   =20
+    .st-hide-desktop {
+        display:none;
+        font-size:0;
+        height:0;
+        min-height:0;
+        max-height:0;
+        line-height:0;
+        mso-hide:all;
+    }
+
+    .st-gmail-fix { display: none !important; }
+
+    </style>
+<style>
+
+@media screen and (max-width: 480px) {
+           =20
+                            .st-col,.st-mobile-full-width,.st-module-wrappe=
+r-table,.st-wrapper,.st-wrapper-table{width:100%!important}.st-col{padding:=
+0!important}.st-resize{width:100%!important}.st-mobile-width-constraint,.st=
+-resize{display:block!important;height:auto!important}.st-mobile-width-cons=
+traint{max-width:100%!important}.st-equal-height,.st-height-auto{height:aut=
+o!important}.st-hide-desktop{display:table-row!important}.st-hide-mobile{di=
+splay:none!important}.st-mobile-inline{display:inline!important}.show-img-m=
+obile{display:table-row!important;width:100%!important;float:none;overflow:=
+visible!important;height:auto!important}
+                .st-dynamic-1282-4 { background-image:none!important; }
+.st-dynamic-1381-61 { padding-right:0px!important;padding-left:0px!importan=
+t; }
+.st-dynamic-1398-69 { padding-left:0px!important;padding-right:0px!importan=
+t; }
+.st-dynamic-1393-70 { padding-right:5px!important;padding-left:0px!importan=
+t; }
+.st-dynamic-1381-72 { padding-left:0px!important; }
+.st-dynamic-1405-80 { padding-left:undefinedpx!important; }
+.st-dynamic-1400-81 { padding-right:0px!important;padding-left:5px!importan=
+t; }
+.st-dynamic-1578-234 { padding-right:20px!important;padding-left:20px!impor=
+tant; }
+.st-dynamic-1574-236 { padding-top:32px!important;padding-bottom:32px!impor=
+tant; }
+.st-dynamic-1591-239 { padding-right:80px!important; }               =20
+                .st-wrapper-table{
+                    width: 100%!important;
+                    max-width: 480px!important;
+                    margin: 0 auto;
+                }
+                    }
+                    #MessageViewBody .st-module-wrapper-table  {margin-top:=
+-1px}
+            @media (max-width:599px) and (min-width:481px) {.st-module-wrap=
+per-table {margin-top:-1px !important;}}
+            div > u + .body .st-module-wrapper-table {margin-top:0px !impor=
+tant}
+            </style>
+<!--[if !mso]><!-->
+    <style>
+    ul, ol {margin-left:15px; padding-left:0px}
+    </style>
+<!--<![endif]-->
+<!--[if mso]>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+
+                span.MsoHyperlink {
+            mso-style-priority:99;
+            color:inherit;
+        }
+        span.MsoHyperlinkFollowed {
+            mso-style-priority:99;
+            color:inherit;
+        }
+        ol li, ul li {margin-top:0px !important;margin-bottom:0px !importan=
+t;}
+    </style>
+<![endif]-->
+
+<!--[if gte mso 9]>
+    <style>
+        .st-mso-full-width{
+            width: 100%;
+        }
+            </style>
+<![endif]-->
+
+
+<!--[if IEMobile]>
+    <style type=3D"text/css">
+        .st-mso-full-width{
+            width: 100%;
+        }
+    </style>
+<![endif]-->
+
+
+    <style>
+.aligned-bullets ul{list-style-position: outside!important;}
+.aligned-bullets ol{list-style-position: outside!important;} =20
+
+@media screen and (max-width: 480px) {
+.mob-pb-20{padding-bottom:20px!important;}
+.mob-ps-0{padding-right:0px!important;padding-left:0px!important;}
+ =20
+.minw-34 img{min-width:34px!important;}=20
+
+.center-element td{margin: 0 auto!important; text-align:center!important;}
+.center-element {text-align:center!important;}=20
+.center-element=C2=A0table{margin: 0 auto!important;}=20
+
+.center-element p{text-align:center!important;}=20
+.center-element span{text-align:center!important;}
+
+.center-element img{ margin: 0 auto!important;}
+
+.cta-full-width table{width:100%!important;}=20
+.cta-full-width a{width: 390px!important;}
+ =20
+.border-radius-20{border-radius: 20px;}
+ =20
+}
+
+:root {color-scheme: light dark;supported-color-schemes:light dark;}
+
+ @media (prefers-color-scheme: dark) {
+   .light-img {display:none!important;}
+   .dark-img { display:block!important; }
+  .bg-darkmode {background-color:#000000!important;}
+   .bg-darkmode td p span{color:#ffffff!important;}
+ }
+ @media (prefers-color-scheme: light) {
+   .light-img {display:block!important;}
+   .dark-img { display:none!important;}
+
+ }
+[data-ogsc] .dark-img {display:block!important;}
+[data-ogsb] .dark-img {display:block!important;}
+[data-ogsc] .light-img {display:none!important;}
+[data-ogsb] .light-img {display:none!important;}
+[class^=3D"apple-mail"] .dark-img {display:block!important;}
+[class^=3D"apple-mail"] .light-img {display:none!important;}
+</style>
+
+<style type=3D"text/css">.__scope__v7s0o .minh-20 {min-height: 20px !import=
+ant;}
+.__scope__eoqp9 .minh-20 {min-height: 20px !important;}
+.__scope__pp9nf .minh-20 {min-height: 20px !important;}
+.__scope__cm06 .minh-20 {min-height: 20px !important;}
+.__scope__5757 .minh-20 {min-height: 20px !important;}
+.__scope__u41g0 .minh-20 {min-height: 20px !important;}
+.__scope__lvah8 .minh-20 {min-height: 20px !important;}
+.__scope__hdvn .minh-20 {min-height: 20px !important;}
+.__scope__ejbk4 .minh-20 {min-height: 20px !important;}
+.__scope__ear65 .minh-20 {min-height: 20px !important;}
+.__scope__5irt1 .minh-20 {min-height: 20px !important;}
+.__scope__ljv8 .minh-20 {min-height: 20px !important;}
+.__scope__cfhu .minh-20 {min-height: 20px !important;}
+.__scope__ul79v .minh-20 {min-height: 20px !important;}
+.__scope__snllf .minh-20 {min-height: 20px !important;}
+.__scope__n2c8n .minh-20 {min-height: 20px !important;}
+.__scope__u4tf .minh-20 {min-height: 20px !important;}
+.__scope__qsgiu .minh-20 {min-height: 20px !important;}
+.__scope__far3v .minh-20 {min-height: 20px !important;}
+.__scope__oi1l3 .minh-20 {min-height: 20px !important;}
+.__scope__lk7ql .minh-20 {min-height: 20px !important;}
+.__scope__1phma .minh-20 {min-height: 20px !important;}
+.__scope__lgikm .minh-20 {min-height: 20px !important;}</style>
+
+=09</head>
+=09<body class=3D"st-email-body st-center-gmail"><img width=3D"1" height=3D=
+"1" src=3D"https://www.amazon.ca/gp/r.html?C=3DQ0KVPQMQZQ3R&K=3D3K4TZU1SBI4=
+82&M=3Durn:rtn:msg:20260313210741ae71234ed1d6408189c55bfa94f0p0na&R=3D1OK47=
+01KHCKSY&T=3DO&U=3Dhttps%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2=
+FG%2F01%2Fnav%2Ftransp.gif&H=3D5OQDAA9UV7KAMAJ3WHSGMDCH8A8A&ref_=3Dpe_13891=
+3550_1363392570_opens" alt=3D"" />
+=09=09
+=09=09=09=09=09<table width=3D"640" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0" style=3D"margin:0 auto;" align=3D"center">
+        <tr style=3D"display: none;">
+          <td display=3D"none" align=3D"left" style=3D"font-family: Helveti=
+ca, Arial, sans-serif; font-size:12px; color:rgba(0, 0, 0, 0); color: trans=
+parent; display: none;">Listen now
+          </td>
+        </tr>
+      </table>=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09<div style=3D"font-size:0px; display:none; visibility:hid=
+den; opacity:0; color:transparent; max-height:0px; height:0; width:0; mso-h=
+ide:all;">
+=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09&#8199;&#847; &#8199;&#847;=
+ &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#81=
+99;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#=
+847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; =
+&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#819=
+9;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#8=
+47; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &=
+#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199=
+;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#84=
+7; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#=
+8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;=
+&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847=
+; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8=
+199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&=
+#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;=
+ &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#81=
+99;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#=
+847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; =
+&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#819=
+9;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#8=
+47; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &=
+#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199=
+;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#84=
+7; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#=
+8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;=
+&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847=
+; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8=
+199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&=
+#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;=
+ &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#81=
+99;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#=
+847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; =
+&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#819=
+9;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#8=
+47; &#8199;&#847; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &sh=
+y; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; =
+&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &sh=
+y; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; =
+&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &sh=
+y; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; =
+&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &sh=
+y; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; =
+&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &sh=
+y; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; =
+&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &sh=
+y; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; =
+&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &sh=
+y; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; =
+&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &sh=
+y; &nbsp;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09<table role=3D"presentation" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" bgcolor=3D"#FFFFFF" class=3D"st-wrapp=
+er-table" style=3D"width: 100%;">
+=09=09=09=09=09=09
+  <!---HEADER AMU---->
+ =20
+ =20
+  <!---HEADER AMP---->
+ =20
+ =20
+  <!---HEADER AMF---->
+ =20
+ =20
+  <!---HEADER ---->
+ =20
+  <tr>
+    <td width=3D"100%" valign=3D"top" bgcolor=3D"#E0E0E0" align=3D"center" =
+class=3D"st-dynamic-1282-4"> <!-----Header----->
+
+     =20
+        <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" align=3D"center" width=3D"600" class=3D"st-wrapper st-wrapper-ba=
+ckground st-module-wrapper-table" style=3D"width: 600px;">
+          <tr>
+            <td width=3D"100%" bgcolor=3D"#FFFFFF" valign=3D"top" class=3D"=
+bg-darkmode" style=3D"width: 100%; padding-top: 28px; padding-bottom: 28px;=
+">
+              <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D=
+"0" border=3D"0" width=3D"600" class=3D"st-mso-full-width st-mobile-full-wi=
+dth" style=3D"width: 600px;">
+                <tr>
+                  <td align=3D"center" valign=3D"top" width=3D"600">
+                    <table width=3D"100%" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" role=3D"presentation">
+                      <tr>
+                        <td width=3D"100%" align=3D"center" valign=3D"top" =
+class=3D"__scope__mapn" style=3D"width: 100%;">
+                          <table width=3D"100%" class=3D"ce-dark-mode" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                            <tr>
+                              <td align=3D"center" cellpadding=3D"0" cellsp=
+acing=3D"0" border=3D"0" style=3D"text-align: center; font-size: 0px; line-=
+height: 0px; margin:0px; padding:0px; border-collapse: collapse;">
+                                <div class=3D"light-img">
+                                  <a href=3D"https://music.amazon.ca/gp/r.h=
+tml?C=3DQ0KVPQMQZQ3R&K=3D3K4TZU1SBI482&M=3Durn:rtn:msg:20260313210741ae7123=
+4ed1d6408189c55bfa94f0p0na&R=3DBYSFU9O56CPB&T=3DC&U=3Dhttps%3A%2F%2Fmusic.a=
+mazon.ca%2Fpodcasts%2F%3Fref_%3Dpe_138913550_1363392570&H=3DLLGQ4FWDKQXNNHA=
+AG1AWWEHX4B4A&ref_=3Dpe_138913550_1363392570" title=3D"Amazon Music" target=
+=3D"_new">
+                                    <img src=3D"https://www.emailimagecdnlu=
+t9.com/e6jhl3v5kb/en_us/images/6402638361797-1677878147.3993.png" width=3D"=
+240" alt=3D"Amazon Music" style=3D"width: 240px !important;">
+                                  </a>
+                                </div>
+                                <div class=3D"dark-img">
+                                  <!--[if !mso]><!-->
+                                  <div class=3D"dark-img" style=3D"display:=
+none;">
+                                    <a href=3D"https://music.amazon.ca/gp/r=
+.html?C=3DQ0KVPQMQZQ3R&K=3D3K4TZU1SBI482&M=3Durn:rtn:msg:20260313210741ae71=
+234ed1d6408189c55bfa94f0p0na&R=3DGQEC8LPMTSB0&T=3DC&U=3Dhttps%3A%2F%2Fmusic=
+.amazon.ca%2Fpodcasts%2F%3Fref_%3Dpe_138913550_1363392570&H=3DC1S4YK324HG7G=
+ASUS4YYQCYGVVYA&ref_=3Dpe_138913550_1363392570" title=3D"Amazon Music" targ=
+et=3D"_new">
+                                      <img src=3D"https://www.emailimagecdn=
+lut9.com/e6jhl3v5kb/en_us/images/640263967d97d-1677878166.5144.png" width=
+=3D"240" alt=3D"Amazon Music" style=3D"width: 240px !important;">
+                                    </a>
+                                  </div>
+                                  <!--<![endif]-->
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table> <!----END-Header----->
+
+     =20
+    </td>
+  </tr>
+ =20
+ =20
+
+  <!---HERO ECG---->
+ =20
+ =20
+  <!---COPYBLOCK---->
+ =20
+  <tr>
+    <td width=3D"100%" valign=3D"top" bgcolor=3D"#E0E0E0" align=3D"center" =
+class=3D"st-dynamic-1282-4">=20
+        <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" align=3D"center" width=3D"600" class=3D"st-wrapper st-wrapper-ba=
+ckground st-module-wrapper-table" style=3D"width: 600px;">
+          <tr>
+            <td width=3D"100%" bgcolor=3D"#FFFFFF" valign=3D"top" class=3D"=
+bg-darkmode" style=3D"width: 100%; padding-right: 20px; padding-left: 20px;=
+">
+              <table role=3D"presentation" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" align=3D"center" width=3D"100%" style=3D"width: 100%;">
+                <tr>
+                  <td width=3D"100%" valign=3D"top" align=3D"left">
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0" width=3D"560" class=3D"st-mso-full-width st-mobile-f=
+ull-width" style=3D"width: 560px;">
+                      <tr>
+                        <td align=3D"center" valign=3D"top" width=3D"560">
+                          <table width=3D"100%" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" role=3D"presentation">
+                          =20
+                           =20
+                           =20
+                           =20
+                            <tr>
+                              <td width=3D"100%" valign=3D"top" align=3D"le=
+ft" style=3D"text-align: left; font-family: Arial, Helvetica, sans-serif; c=
+olor: #14191a; font-size: 20px; font-weight: 400; letter-spacing: normal; l=
+ine-height: 30px; padding-top: 12px; width: 100%;">
+                                <p style=3D"margin: 0px; text-align: left;"=
+><span style=3D"font-size: 20px; line-height: 30px;">Dear Talveer,</span></=
+p>
+                              </td>
+                            </tr>
+                           =20
+                           =20
+                            <tr>
+                              <td width=3D"100%" valign=3D"top" align=3D"le=
+ft" style=3D"text-align: left; font-family: Arial, Helvetica, sans-serif; c=
+olor: #14191a; font-size: 20px; font-weight: 400; letter-spacing: normal; l=
+ine-height: 30px; padding-top: 12px; width: 100%;">
+                             =20
+                            <p style=3D"text-align: center; margin: 0px;"><=
+span style=3D"font-size: 20px; line-height: 30px;"></b><br>We noticed that =
+you aren't taking full advantage of your Prime membership.<br><br><strong>A=
+s a Prime member, you have access to top podcasts ad-free from Amazon Music=
+, at no additional cost.</strong><br><br>Discover new podcasts and music ba=
+sed on your likes and preferences.<br><br></span></p>
+                             =20
+                              </td>
+                            </tr>
+                           =20
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td width=3D"100%" valign=3D"top" align=3D"left">
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0" width=3D"560" class=3D"st-mso-full-width st-mobile-f=
+ull-width" style=3D"width: 560px;">
+                      <tr>
+                        <td align=3D"center" valign=3D"top" width=3D"560">
+                          <table width=3D"100%" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" role=3D"presentation">       =20
+                            <tr>
+                              <td width=3D"100%" valign=3D"top" align=3D"ce=
+nter" style=3D"width: 100%;">
+                                <p height=3D"10" width=3D"100%" style=3D"ms=
+o-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; tex=
+t-size-adjust:100%; width: 100%; height: 10px; max-height: 10px; margin: 0p=
+x; font-size: 10px; line-height: 10px">
+                                  &nbsp;
+                                </p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width=3D"100%" valign=3D"top" align=3D"le=
+ft" style=3D"width: 100%;"><strong style=3D"font-size: 14px; font-family:Ar=
+ial, sans-serif; text-align:left;">
+                                  <ul style=3D"list-style: none;">
+                                 =20
+                                   =20
+                                   =20
+                                   =20
+                                  </ul>
+                                </strong></td>
+                            </tr>
+                           =20
+                           =20
+                           =20
+                           =20
+                            <tr>
+                              <td width=3D"100%" valign=3D"top" align=3D"ce=
+nter" style=3D"width: 100%;">
+                              </td>
+                            </tr>
+   =20
+                           =20
+                            <tr>
+                                  <td width=3D"100%" valign=3D"top" align=
+=3D"center" class=3D"miw-200" style=3D"padding-top: 30px;padding-bottom: 20=
+px; width: 100%;">
+                                      <table role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse: initial;=
+">
+                                      <tr>
+                                    <td width=3D"100%" bgcolor=3D"#25D1DA" =
+align=3D"center" height=3D"5" valign=3D"middle" style=3D"mso-padding-alt:16=
+px 40px 16px 40px; border-radius:99px; height: 5px; width: 100%; text-align=
+: center; background-color: #25d1da; vertical-align: middle">
+                                                                 =20
+                                                                 =20
+                                <a href=3D"https://music.amazon.ca/gp/r.htm=
+l?C=3DQ0KVPQMQZQ3R&K=3D3K4TZU1SBI482&M=3Durn:rtn:msg:20260313210741ae71234e=
+d1d6408189c55bfa94f0p0na&R=3DD3SM2XE4P6SV&T=3DC&U=3Dhttps%3A%2F%2Fmusic.ama=
+zon.ca%2Fpodcasts%2F%3Fref_%3Dpe_138913550_1363392570&H=3DVRGJFLELE0VSGONAR=
+3M7BYJRP34A&ref_=3Dpe_138913550_1363392570" target=3D"_blank" title=3D"" bg=
+color=3D"#25D1DA" valign=3D"middle" style=3D"color: #000000 !important; mso=
+-line-height-rule:exactly; text-align:center; font-family: Arial, Helvetica=
+, sans-serif; color: #14191a; font-size: 20px; font-weight: normal; letter-=
+spacing: normal; line-height: 22px; padding: 16px 40px; text-decoration: no=
+ne; display: table-cell; height: 5px; border-radius: 99px; vertical-align: =
+middle; box-sizing: content-box"><strong style=3D"color: #000000 !important=
+;">Listen now</strong></a>
+                               =20
+                                </td>
+                                </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                           =20
+                         =20
+                           =20
+                           =20
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+       </td>
+  </tr>
+ =20
+   <tr>
+    <td width=3D"100%" valign=3D"top" bgcolor=3D"#E0E0E0" align=3D"center" =
+class=3D"st-dynamic-1282-4">
+      <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" align=3D"center" width=3D"600" class=3D"st-wrapper st-wrapper-back=
+ground st-module-wrapper-table" style=3D"width: 600px;">
+        <tr>
+          <td width=3D"100%" bgcolor=3D"#FFFFFF" valign=3D"top" class=3D"bg=
+-darkmode" style=3D"width: 100%;">
+            <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0" width=3D"600" class=3D"st-mso-full-width st-mobile-full-widt=
+h" style=3D"width: 600px;">
+              <tr>
+                <td align=3D"center" valign=3D"top" width=3D"600">
+                  <table width=3D"100%" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation">
+                    <tr>
+                      <td width=3D"100%" valign=3D"top" align=3D"center" st=
+yle=3D"padding: 0px; width: 100%;">
+                        <p height=3D"40" width=3D"100%" style=3D"mso-line-h=
+eight-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-a=
+djust:100%; width: 100%; height: 40px; max-height: 40px; margin: 0px; font-=
+size: 40px; line-height: 40px">
+                          &nbsp;
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+   <!---COPYBLOCK2---->
+ =20
+ <!---Widget---->
+=20
+   <!---Widget---->
+ =20
+<!---COPYBLOCK3---->
+ =20
+  <tr>
+    <td width=3D"100%" valign=3D"top" bgcolor=3D"#E0E0E0" align=3D"center" =
+class=3D"st-dynamic-1282-4">
+      <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" align=3D"center" width=3D"600" class=3D"st-wrapper st-wrapper-back=
+ground st-module-wrapper-table" style=3D"width: 600px;">
+        <tr>
+          <td width=3D"100%" bgcolor=3D"#FFFFFF" valign=3D"top" class=3D"bg=
+-darkmode" style=3D"width: 100%;">
+            <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0" width=3D"600" class=3D"st-mso-full-width st-mobile-full-widt=
+h" style=3D"width: 600px;">
+              <tr>
+                <td align=3D"center" valign=3D"top" width=3D"600">
+                  <table width=3D"100%" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation">
+                    <tr>
+                      <td width=3D"100%" valign=3D"top" align=3D"center" st=
+yle=3D"padding: 0px; width: 100%;">
+                        <p height=3D"40" width=3D"100%" style=3D"mso-line-h=
+eight-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-a=
+djust:100%; width: 100%; height: 40px; max-height: 40px; margin: 0px; font-=
+size: 40px; line-height: 40px">
+                          &nbsp;
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!---COPYBLOCK4---->
+ =20
+   <tr>
+    <td width=3D"100%" valign=3D"top" bgcolor=3D"#E0E0E0" align=3D"center" =
+class=3D"st-dynamic-1282-4">
+      <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" align=3D"center" width=3D"600" class=3D"st-wrapper st-wrapper-back=
+ground st-module-wrapper-table" style=3D"width: 600px;">
+        <tr>
+          <td width=3D"100%" bgcolor=3D"#FFFFFF" valign=3D"top" class=3D"bg=
+-darkmode" style=3D"width: 100%;">
+            <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0" width=3D"600" class=3D"st-mso-full-width st-mobile-full-widt=
+h" style=3D"width: 600px;">
+              <tr>
+                <td align=3D"center" valign=3D"top" width=3D"600">
+                  <table width=3D"100%" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation">
+                    <tr>
+                      <td width=3D"100%" valign=3D"top" align=3D"center" st=
+yle=3D"padding: 0px; width: 100%;">
+                        <p height=3D"40" width=3D"100%" style=3D"mso-line-h=
+eight-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-a=
+djust:100%; width: 100%; height: 40px; max-height: 40px; margin: 0px; font-=
+size: 40px; line-height: 40px">
+                          &nbsp;
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+   =20
+ =20
+ =20
+ =20
+  <!-----Manual Widget---->
+<tr>
+    <td width=3D"100%" valign=3D"top" bgcolor=3D"#E0E0E0" align=3D"center" =
+class=3D"st-dynamic-2139-4">
+       =20
+    </td>
+</tr>
+<!-------END-manual-widget------>
+ =20
+ =20
+  <!---WIDGET 1---->
+ =20
+ =20
+ =20
+  <!---WIDGET 2---->
+ =20
+ =20
+  <!---WIDGET 3---->
+ =20
+  <tr>
+    <td width=3D"100%" valign=3D"top" bgcolor=3D"#E0E0E0" align=3D"center" =
+class=3D"st-dynamic-1904-4">  </td>
+  </tr>
+ =20
+  <!---METRONOME---->
+ =20
+ =20
+  <!---FOOTER---->
+  <tr>
+    <td width=3D"100%" valign=3D"top" bgcolor=3D"#E0E0E0" align=3D"center" =
+class=3D"st-dynamic-1282-4">
+      <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" align=3D"center" width=3D"600" class=3D"st-wrapper st-wrapper-back=
+ground st-module-wrapper-table" style=3D"width: 600px;">
+        <tr>
+          <td width=3D"100%" bgcolor=3D"#FFFFFF" valign=3D"top" class=3D"bg=
+-darkmode" style=3D"width: 100%; padding-top: 52px;">
+            <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" align=3D"center" width=3D"100%" style=3D"width: 100%;">
+              <tr>
+                <td width=3D"100%" valign=3D"top" align=3D"left" class=3D"s=
+t-dynamic-1578-234" style=3D"padding-right: 30px; padding-left: 30px;">
+                  <table role=3D"presentation" cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0" align=3D"left" width=3D"100%" style=3D"width: 100%;">
+                    <tr>
+                      <td width=3D"270" valign=3D"middle" style=3D"padding-=
+top: 10px; padding-bottom: 10px; width: 270px;">
+                        <table role=3D"presentation" width=3D"100%" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0">
+                          <tr>
+                            <td width=3D"100%" valign=3D"top" align=3D"left=
+" style=3D"text-align: left; font-family: Helvetica, Arial, sans-serif; col=
+or: #000000; font-size: 19px; font-weight: normal; letter-spacing: normal; =
+line-height: 23px; width: 100%;">
+                              <p style=3D"text-align: center; margin: 0px;"=
+><strong><span style=3D"font-size: 19px; line-height: 23px;"><a href=3D"htt=
+ps://www.amazon.ca/gp/f.html?C=3DQ0KVPQMQZQ3R&K=3D3K4TZU1SBI482&M=3Durn:rtn=
+:msg:20260313210741ae71234ed1d6408189c55bfa94f0p0na&R=3DUZEOSDYEYP6N&T=3DC&=
+U=3Dhttps%3A%2F%2Fmusicapp.amazon.com%2F%3Fref_%3Dpe_138913550_1363392570&H=
+=3DFL2GJEB26SF4ZDJPRMOFNOJRZQAA&ref_=3Dpe_138913550_1363392570" style=3D"co=
+lor: #000000; text-decoration: none !important;"><span style=3D"color: #000=
+000;">iOS APP</span></a></span></strong></p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td width=3D"269" valign=3D"middle" style=3D"border-l=
+eft: 1px solid #b9baba; padding-top: 10px; padding-bottom: 10px; width: 269=
+px;">
+                        <table role=3D"presentation" width=3D"100%" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0">
+                          <tr>
+                            <td width=3D"100%" valign=3D"top" align=3D"left=
+" style=3D"text-align: left; font-family: Helvetica, Arial, sans-serif; col=
+or: #000000; font-size: 20px; font-weight: normal; letter-spacing: normal; =
+line-height: 24px; width: 100%;">
+                              <p style=3D"text-align: center; margin: 0px;"=
+><strong><span style=3D"font-size: 20px; line-height: 24px;"><a href=3D"htt=
+ps://www.amazon.ca/gp/f.html?C=3DQ0KVPQMQZQ3R&K=3D3K4TZU1SBI482&M=3Durn:rtn=
+:msg:20260313210741ae71234ed1d6408189c55bfa94f0p0na&R=3D2CR5IY4ZJZ0LX&T=3DC=
+&U=3Dhttps%3A%2F%2Fmusicapp.amazon.com%2F%3Fref_%3Dpe_138913550_1363392570&=
+H=3DELPAIT6L8JUZQYFVGAT6JVE59K8A&ref_=3Dpe_138913550_1363392570" style=3D"c=
+olor: #000000; text-decoration: none !important;"><span style=3D"color: #00=
+0000;">ANDROID APP</span></a></span></strong></p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td width=3D"100%" valign=3D"top" align=3D"left">
+                  <table role=3D"presentation" cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0" width=3D"600" class=3D"st-mso-full-width st-mobile-ful=
+l-width" style=3D"width: 600px;">
+                    <tr>
+                      <td align=3D"center" valign=3D"top" width=3D"600">
+                        <table width=3D"100%" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" role=3D"presentation">
+                          <tr>
+                            <td width=3D"100%" valign=3D"top" align=3D"cent=
+er" class=3D"st-dynamic-1574-236" style=3D"padding: 52px 20px; width: 100%;=
+">
+                              <p height=3D"1" width=3D"100%" style=3D"mso-l=
+ine-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-s=
+ize-adjust:100%; width: 100%; height: 1px; max-height: 1px; background-colo=
+r: #b9baba; margin: 0px; font-size: 1px; line-height: 1px">
+                                &nbsp;
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+             =20
+             =20
+             =20
+              <tr>
+                <td width=3D"100%" valign=3D"top" align=3D"left" style=3D"p=
+adding-top: 21px; padding-right: 30px; padding-left: 30px;">
+                  <table role=3D"presentation" cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0" align=3D"left" width=3D"100%" style=3D"width: 100%;">
+                    <tr>
+                      <td width=3D"336" valign=3D"top" class=3D"st-dynamic-=
+1591-239" style=3D"padding-right: 5px; padding-left: 5px; width: 336px;">
+                        <table role=3D"presentation" width=3D"100%" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0">
+                          <tr>
+                            <td width=3D"100%" align=3D"center" valign=3D"t=
+op" class=3D"__scope__kidhq" style=3D"width: 100%;">
+                              <table width=3D"100%" class=3D"ce-dark-mode" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                <tr>
+                                  <td align=3D"left" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"text-align: left; font-size: 0px; line-=
+height: 0px; margin:0px; padding:0px; border-collapse: collapse;">
+                                    <div class=3D"light-img">
+                                      <a href=3D"https://music.amazon.ca/gp=
+/r.html?C=3DQ0KVPQMQZQ3R&K=3D3K4TZU1SBI482&M=3Durn:rtn:msg:20260313210741ae=
+71234ed1d6408189c55bfa94f0p0na&R=3DZNAH009TY3U8&T=3DC&U=3Dhttps%3A%2F%2Fmus=
+ic.amazon.ca%2Fpodcasts%2F%3Fref_%3Dpe_138913550_1363392570&H=3DKE38HQ5WPFH=
+QA9DKHGLJH18Z5BUA&ref_=3Dpe_138913550_1363392570" title=3D"Amazon Music" ta=
+rget=3D"_new">
+                                        <img src=3D"https://www.emailimagec=
+dnlut9.com/e6jhl3v5kb/en_us/images/645a756645b41-1683649894.2855.png" width=
+=3D"166" alt=3D"Amazon Music" style=3D"width: 166px !important;">
+                                      </a>
+                                    </div>
+                                    <div class=3D"dark-img">
+                                      <!--[if !mso]><!-->
+                                      <div class=3D"dark-img" style=3D"disp=
+lay:none;">
+                                        <a href=3D"https://music.amazon.ca/=
+gp/r.html?C=3DQ0KVPQMQZQ3R&K=3D3K4TZU1SBI482&M=3Durn:rtn:msg:20260313210741=
+ae71234ed1d6408189c55bfa94f0p0na&R=3D9ON5V963L3CB&T=3DC&U=3Dhttps%3A%2F%2Fm=
+usic.amazon.ca%2Fpodcasts%2F%3Fref_%3Dpe_138913550_1363392570&H=3DRGUBYG0PY=
+M68C2AM3UYXZMEBXC4A&ref_=3Dpe_138913550_1363392570" title=3D"Amazon Music" =
+target=3D"_new">
+                                          <img src=3D"https://www.emailimag=
+ecdnlut9.com/e6jhl3v5kb/en_us/images/645a7554631ce-1683649876.406.png" widt=
+h=3D"166" alt=3D"Amazon Music" style=3D"width: 166px !important;">
+                                        </a>
+                                      </div>
+                                      <!--<![endif]-->
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td width=3D"55" valign=3D"top" style=3D"padding-righ=
+t: 5px; padding-left: 5px; width: 55px;">
+                        <table role=3D"presentation" width=3D"100%" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0">
+                          <tr>
+                            <td width=3D"100%" align=3D"center" valign=3D"t=
+op" class=3D"__scope__gvre4" style=3D"width: 100%;">
+                              <table width=3D"100%" class=3D"ce-dark-mode" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                <tr>
+                                  <td align=3D"center" cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0" style=3D"text-align: center; font-size: 0px; l=
+ine-height: 0px; margin:0px; padding:0px; border-collapse: collapse;">
+                                    <div class=3D"light-img">
+                                      <a href=3D"https://www.amazon.ca/gp/f=
+.html?C=3DQ0KVPQMQZQ3R&K=3D3K4TZU1SBI482&M=3Durn:rtn:msg:20260313210741ae71=
+234ed1d6408189c55bfa94f0p0na&R=3D11X5NJLDOH7JU&T=3DC&U=3Dhttps%3A%2F%2Fwww.=
+instagram.com%2Famazonmusic&H=3DBFXUJKUXCTBN15WEFVLTLPLBTT8A" title=3D"Amaz=
+on Music" target=3D"_new">
+                                        <img src=3D"https://m.media-amazon.=
+com/images/G/01/AmazonMusic/2024/Marketing/OutboundAcqTemplateExperiments/I=
+nstagram_alpha_1.png" width=3D"45" alt=3D"Amazon Music" style=3D"width: 45p=
+x !important;">
+                                      </a>
+                                    </div>
+                                    <div class=3D"dark-img">
+                                      <!--[if !mso]><!-->
+                                      <div class=3D"dark-img" style=3D"disp=
+lay:none;">
+                                        <a href=3D"https://www.amazon.ca/gp=
+/f.html?C=3DQ0KVPQMQZQ3R&K=3D3K4TZU1SBI482&M=3Durn:rtn:msg:20260313210741ae=
+71234ed1d6408189c55bfa94f0p0na&R=3D2KWKT03TIX199&T=3DC&U=3Dhttps%3A%2F%2Fww=
+w.instagram.com%2Famazonmusic&H=3DKBDWXBX3OI8J0YNJLGBBP6CIKAQA" title=3D"Am=
+azon Music" target=3D"_new">
+                                        <img src=3D"https://m.media-amazon.=
+com/images/G/01/AmazonMusic/2024/Marketing/OutboundAcqTemplateExperiments/I=
+nstagram_alpha.png" width=3D"45" alt=3D"Amazon Music" style=3D"width: 45px =
+!important;">
+                                        </a>
+                                      </div>
+                                      <!--<![endif]-->
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td width=3D"55" valign=3D"top" style=3D"padding-righ=
+t: 5px; padding-left: 5px; width: 55px;">
+                        <table role=3D"presentation" width=3D"100%" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0">
+                          <tr>
+                            <td width=3D"100%" align=3D"center" valign=3D"t=
+op" class=3D"__scope__0b20r" style=3D"width: 100%;">
+                              <table width=3D"100%" class=3D"ce-dark-mode" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                <tr>
+                                  <td align=3D"center" cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0" style=3D"text-align: center; font-size: 0px; l=
+ine-height: 0px; margin:0px; padding:0px; border-collapse: collapse;">
+                                    <div class=3D"light-img">
+                                      <a href=3D"https://www.amazon.ca/gp/f=
+.html?C=3DQ0KVPQMQZQ3R&K=3D3K4TZU1SBI482&M=3Durn:rtn:msg:20260313210741ae71=
+234ed1d6408189c55bfa94f0p0na&R=3D2EXFTF24MUXSC&T=3DC&U=3Dhttps%3A%2F%2Ftwit=
+ter.com%2Famazonmusic&H=3DKMAGHWFNQQ2LOBFLNRX7BKGACYMA" title=3D"Amazon Mus=
+ic" target=3D"_new">
+                                        <img src=3D"https://m.media-amazon.=
+com/images/G/01/AmazonMusic/2024/Marketing/OutboundAcqTemplateExperiments/T=
+witter_alpha_1.png" width=3D"45" alt=3D"Amazon Music" style=3D"width: 45px =
+!important;">
+                                      </a>
+                                    </div>
+                                    <div class=3D"dark-img">
+                                      <!--[if !mso]><!-->
+                                      <div class=3D"dark-img" style=3D"disp=
+lay:none;">
+                                        <a href=3D"https://www.amazon.ca/gp=
+/f.html?C=3DQ0KVPQMQZQ3R&K=3D3K4TZU1SBI482&M=3Durn:rtn:msg:20260313210741ae=
+71234ed1d6408189c55bfa94f0p0na&R=3DZN1S9IMSGW1V&T=3DC&U=3Dhttps%3A%2F%2Ftwi=
+tter.com%2Famazonmusic&H=3DVQQSSLMO3MTG6TEJ3CYNFJPGOQOA" title=3D"Amazon Mu=
+sic" target=3D"_new">
+                                        <img src=3D"https://m.media-amazon.=
+com/images/G/01/AmazonMusic/2024/Marketing/OutboundAcqTemplateExperiments/T=
+witter_alpha.png" width=3D"45" alt=3D"Amazon Music" style=3D"width: 45px !i=
+mportant;">
+                                        </a>
+                                      </div>
+                                      <!--<![endif]-->
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td width=3D"54" valign=3D"top" style=3D"padding-righ=
+t: 5px; padding-left: 5px; width: 54px;">
+                        <table role=3D"presentation" width=3D"100%" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0">
+                          <tr>
+                            <td width=3D"100%" align=3D"center" valign=3D"t=
+op" class=3D"__scope__jna3r" style=3D"width: 100%;">
+                              <table width=3D"100%" class=3D"ce-dark-mode" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                <tr>
+                                  <td align=3D"center" cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0" style=3D"text-align: center; font-size: 0px; l=
+ine-height: 0px; margin:0px; padding:0px; border-collapse: collapse;">
+                                    <div class=3D"light-img">
+                                      <a href=3D"https://www.amazon.ca/gp/f=
+.html?C=3DQ0KVPQMQZQ3R&K=3D3K4TZU1SBI482&M=3Durn:rtn:msg:20260313210741ae71=
+234ed1d6408189c55bfa94f0p0na&R=3DXWQQD4P03LMN&T=3DC&U=3Dhttps%3A%2F%2Fwww.f=
+acebook.com%2FAmazonMusic&H=3DYILOPVYL4M3QA5RHBZARJLTK9BWA" title=3D"Amazon=
+ Music" target=3D"_new">
+                                        <img src=3D"https://m.media-amazon.=
+com/images/G/01/AmazonMusic/2024/Marketing/OutboundAcqTemplateExperiments/F=
+acebook_alpha_1.png" width=3D"45" alt=3D"Amazon Music" style=3D"width: 45px=
+ !important;">
+                                      </a>
+                                    </div>
+                                    <div class=3D"dark-img">
+                                      <!--[if !mso]><!-->
+                                      <div class=3D"dark-img" style=3D"disp=
+lay:none;">
+                                        <a href=3D"https://www.amazon.ca/gp=
+/f.html?C=3DQ0KVPQMQZQ3R&K=3D3K4TZU1SBI482&M=3Durn:rtn:msg:20260313210741ae=
+71234ed1d6408189c55bfa94f0p0na&R=3D1DI5ZJDGMKX3Q&T=3DC&U=3Dhttps%3A%2F%2Fww=
+w.facebook.com%2FAmazonMusic&H=3DGFQYYON0QRB8LKAZFKREAKCMFOWA" title=3D"Ama=
+zon Music" target=3D"_new">
+                                        <img src=3D"https://m.media-amazon.=
+com/images/G/01/AmazonMusic/2024/Marketing/OutboundAcqTemplateExperiments/F=
+acebook_alpha.png" width=3D"45" alt=3D"Amazon Music" style=3D"width: 45px !=
+important;">
+                                        </a>
+                                      </div>
+                                      <!--<![endif]-->
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td width=3D"100%" valign=3D"top" align=3D"left">
+                  <table role=3D"presentation" cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0" width=3D"600" class=3D"st-mso-full-width st-mobile-ful=
+l-width" style=3D"width: 600px;">
+                    <tr>
+                      <td align=3D"center" valign=3D"top" width=3D"600">
+                        <table width=3D"100%" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" role=3D"presentation">
+                          <tr>
+                         =20
+
+
+
+
+
+
+
+
+<td width=3D"100%" valign=3D"top" align=3D"left" style=3D"text-align: left;=
+ font-family: Arial, Helvetica, sans-serif; color: #727576; font-size: 14px=
+; font-weight: normal; letter-spacing: normal; line-height: 17px; padding-t=
+op: 20px; padding-right: 20px; padding-left: 20px; width: 100%;">
+                           =20
+                              <p style=3D"margin: 0px;"><span style=3D"font=
+-size: 14px; line-height: 17px;">Add no-reply@amazonmusic.com, our new send=
+er e-mail address, to your Safe Senders list to ensure receipt of messages =
+from Amazon Music.</span></p>
+                             =20
+ <p style=3D"margin: 0px;"><span style=3D"font-size: 14px; line-height: 17p=
+x;">&nbsp;</span></p>
+ <p style=3D"margin: 0px;"><span style=3D"font-size: 14px; line-height: 17p=
+x;"></span></p>
+                             =20
+                              <p style=3D"margin: 0px;"><span style=3D"font=
+-size: 14px; line-height: 17px;">Amazon Music provides weekly and occasiona=
+l e-mail updates about new music, podcasts and other music-related content.=
+ It is our intention to be helpful and informative. We're also sensitive to=
+ your time and remain committed to limiting our email to important updates =
+as well critical information about your account. If you'd rather not receiv=
+e any e-mail information from Amazon Music, please modify your Amazon Music=
+ preferences <span style=3D"text-decoration: underline;"><span style=3D"col=
+or: #28d4dc; text-decoration: underline;"><a style=3D"color: #28d4dc; text-=
+decoration: underline;" href=3D"https://www.amazon.ca/gp/f.html?C=3DQ0KVPQM=
+QZQ3R&K=3D3K4TZU1SBI482&M=3Durn:rtn:msg:20260313210741ae71234ed1d6408189c55=
+bfa94f0p0na&R=3DEXQ9NNI8Z602&T=3DX&U=3Dhttps%3A%2F%2Famazonmusic.com%2Femai=
+l-opt-out%3FoptOutToken%3D%2Fgp%2Fgss%2Fo%2F170nKCvhE-fn6UD1l0BtK-6sQjL1ma5=
+6S2PqUdmjWKsqDBm1d-zC-f3LndoK7VFCQ%26marketplaceId%3DA2EUQ1WTGCTBG2&H=3DH6P=
+KWIPVCQ3C3YY96KPHOE0UD9KA">here</a></span></span>.</span></p>
+                             =20
+                                <p style=3D"margin: 0px;"><span style=3D"fo=
+nt-size: 14px; line-height: 17px;">&nbsp;</span></p>
+                             =20
+<p style=3D"margin: 0px;"><span style=3D"font-size: 14px; line-height: 17px=
+;">&copy; 2026 Amazon.com, Inc. or its affiliates. All rights reserved. Ama=
+zon, Amazon Echo, Amazon Music, Prime, and all related logos are trademarks=
+ of Amazon.com, Inc. or its affiliates.Amazon.com, 410 Terry Avenue N., Sea=
+ttle, WA 98109-5210.</span></p>
+
+                              <p style=3D"margin: 0px;"><span style=3D"font=
+-size: 14px; line-height: 17px;">&nbsp;</span></p>
+                              <p style=3D"margin: 0px;"><span style=3D"font=
+-size: 14px; line-height: 17px;">Please note that this message was sent to =
+the following e-mail address: talveerbath@gmail.com</span></p>
+ <p style=3D"margin: 0px;"><span style=3D"font-size: 14px; line-height: 17p=
+x;">&nbsp;</span></p>
+<p style=3D"margin: 0px;"><span style=3D"font-size: 14px; line-height: 17px=
+;">Reference: 1363392570</span></p>
+                             =20
+
+
+
+
+
+
+
+
+
+
+    =20
+
+=20
+
+
+=20
+
+
+=20
+=20
+                             =20
+                             =20
+                             =20
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width=3D"100%" valign=3D"top" align=3D"cent=
+er" style=3D"padding: 0px; width: 100%;">
+                              <p height=3D"52" width=3D"100%" style=3D"mso-=
+line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-=
+size-adjust:100%; width: 100%; height: 52px; max-height: 52px; margin: 0px;=
+ font-size: 52px; line-height: 52px">
+                                &nbsp;
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr><!--[if false]><!-->
+  <!---FOOTER---->
+ =20
+  <tr>
+    <td class=3D"st-gmail-fix" style=3D"background-color: #FFFFFF;font-size=
+:0; line-height: 0; height: 0; min-width: 600px;">
+      &nbsp;
+    </td>
+  </tr><!--<![endif]-->
+</table>=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img width=3D"1"=
+ height=3D"1" src=3D"https://www.amazon.ca/gp/r.html?C=3DQ0KVPQMQZQ3R&K=3D3=
+K4TZU1SBI482&M=3Durn:rtn:msg:20260313210741ae71234ed1d6408189c55bfa94f0p0na=
+&R=3D22IOJAJOSA6M2&T=3DE&U=3Dhttps%3A%2F%2Fimages-na.ssl-images-amazon.com%=
+2Fimages%2FG%2F01%2Fnav%2Ftransp.gif&H=3DEG5GPVQRBYPHCKFXQCPLLELWBKMA&ref_=
+=3Dpe_138913550_1363392570_open" alt=3D"" /></body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------=_Part_2160778_1876688195.1773436061956--

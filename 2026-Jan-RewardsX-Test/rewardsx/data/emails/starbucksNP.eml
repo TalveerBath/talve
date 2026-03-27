@@ -1,0 +1,818 @@
+Delivered-To: talveerbath@gmail.com
+Received: by 2002:a05:7108:16d0:b0:29e:688f:e18f with SMTP id s16csp1402741gdo;
+        Wed, 28 Dec 2022 10:14:48 -0800 (PST)
+X-Google-Smtp-Source: AMrXdXs8tgo+uvwMAjJ+5KgNkS/RWhk6horWYEOC3unxpv4XcSHEEp7A4J7CmnDov4IZ+xOrVvL9
+X-Received: by 2002:a17:907:d410:b0:7c1:fbea:c5ce with SMTP id vi16-20020a170907d41000b007c1fbeac5cemr21332956ejc.7.1672251288325;
+        Wed, 28 Dec 2022 10:14:48 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1672251288; cv=none;
+        d=google.com; s=arc-20160816;
+        b=RJd8K9EHfu5xwrhYQcF6qCG5N/jW6309cK+KFoSJAkYbuh9nB1QEcQLzrQEggkjLoT
+         jVupkFQtxqwtIud0YiJiwsU4eH4kZcjiuHvGR+uZPtMeAMXmyg3wJtuIfm4I1z+SThiA
+         dts/Wzt9zvio84VMlkirkZbGftkykKYp4e/9vO6txJtbJPJe0AmYF9vdzLDILdzVnXxY
+         PQSQYHouH4WwaiRqg+bXps4T6nE1fc9xIk5ZMEjHP3wkoVNC3AJnFqkhU9jalNu+HFvy
+         0GCp4SlZw52jn/hz0kepzwJM6k0QxuVoxIiU/dAFdfxhBxrPnU52E+eRZFhhk7/OT0SD
+         7Xog==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:date:to:from:mime-version:list-unsubscribe:message-id
+         :errors-to:dkim-signature;
+        bh=KC5haVokFN/ahweW3uyYH0jUYW9jA6bnr8w8sh/wSJs=;
+        b=o3Nn94QdC+KzSS2KHAr9OANV8jrZbXM3AXwqH7KgZ/gUjOaBa8UmSytoDzlZDv5gQP
+         KIczKGftjYkL7b6QMnaiEXYBGUxq87HB1A391b9H53k17LlkFpeJGXiNGLZaesvqouk/
+         werajKhisbPgnY+1wm9+/F5DlEg8yu7scp5meVSJR9usCLT5H8kh2RKSFHguUrjX+lR4
+         BKpT4TNURq+Dy8eNnG7HNUiRKysFZXIoSg9WOQViXgCzAyYIgryr2i2BtOTgqd3Zcp8P
+         XGt7mQP2Ck2K+zLsSdgS3XX/qugFZDu95sPa5l0TtzWs44E7jldwAwHy1tJXMND/RZHh
+         L6xA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@e.starbucks.com header.s=0 header.b=dQAnbs8p;
+       spf=pass (google.com: domain of starbucks@e.starbucks.com designates 173.213.5.44 as permitted sender) smtp.mailfrom=Starbucks@e.starbucks.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=e.starbucks.com
+Return-Path: <Starbucks@e.starbucks.com>
+Received: from p1-005044.e.starbucks.com (p1-005044.e.starbucks.com. [173.213.5.44])
+        by mx.google.com with ESMTPS id nc7-20020a1709071c0700b00835203f1170si15411124ejc.575.2022.12.28.10.14.47
+        for <talveerbath@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 28 Dec 2022 10:14:48 -0800 (PST)
+Received-SPF: pass (google.com: domain of starbucks@e.starbucks.com designates 173.213.5.44 as permitted sender) client-ip=173.213.5.44;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@e.starbucks.com header.s=0 header.b=dQAnbs8p;
+       spf=pass (google.com: domain of starbucks@e.starbucks.com designates 173.213.5.44 as permitted sender) smtp.mailfrom=Starbucks@e.starbucks.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=e.starbucks.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=0; d=e.starbucks.com;
+ h=Message-ID:List-Unsubscribe:MIME-Version:From:To:Date:Subject:Content-Type;
+ i=Starbucks@e.starbucks.com;
+ bh=KC5haVokFN/ahweW3uyYH0jUYW9jA6bnr8w8sh/wSJs=;
+ b=dQAnbs8p9dY+2fZ9gjzRUiJV4wP0nbvdadywXMO7XfeUL9OUNj0Xtuy2Nn76RdxxpaV6fh0lYOkf
+   7pkyjHaBfyN17VkPSjVjIUfS54zLpFUNLpYIP9BJouWQOop6KbDV5CSC312adoV73Cxz3IPYiTlJ
+   XGKTc2PA55I2uINtgYg=
+Received: from NY5PMER011 (10.24.72.58) by p1-005044.e.starbucks.com id hli3pe2o8isu for <talveerbath@gmail.com>; Wed, 28 Dec 2022 13:04:31 -0500 (envelope-from <Starbucks@e.starbucks.com>)
+Errors-to: Starbucks@e.starbucks.com
+Return-Path: Starbucks@e.starbucks.com<rp-fe8861ee812de2c29a549b2a43c48466ea2ffecabc61511668834deef90cc1d9@e.starbucks.com>
+Message-ID: <1161.4993073443.202212281804315891523.0056374024@e.starbucks.com>
+List-Unsubscribe: <mailto:unsubscribe-fe8861ee812de2c29a549b2a43c48466ea2ffecabc61511668834deef90cc1d9@e.starbucks.com?subject=Unsubscribe>
+X-Mailer: XyzMailer
+X-Xyz-cr: 1161
+X-Xyz-cn: 24075
+X-Xyz-bcn: 23950
+X-Xyz-md: 100
+X-Xyz-mg: 4993073443
+X-Xyz-et: 117
+X-Xyz-pk: 403129992
+X-Xyz-ct: 124160
+X-Xyz-bct: 123328
+X-Xyz-Rcpt-Hash: c41626be3c69442e9dded3e3ee121e71a1ecfb35e799eb43d9825c97be0c4f84@gmail.com
+X-PVIQ: 000273-000603-001161-024075-000000
+X-CM-MessageId: 1161-24075
+MIME-Version: 1.0
+From: "Starbucks Rewards" <Starbucks@e.starbucks.com>
+To: "talveerbath@gmail.com" <talveerbath@gmail.com>
+Date: 28 Dec 2022 18:04:31 +0000
+Subject: =?utf-8?B?T3VyIFRlcm1zIG9mIFVzZSBhcmUgY2hhbmdpbmfigIsgfCBOb3VzIG1vZGlmaW9ucyBub3MgbW9kYWxpdMOpcw==?= 
+Content-Type: multipart/alternative;
+ boundary=--boundary_56373696_edc02bab-b289-4f36-83a6-04ee20fe3c49
+
+
+----boundary_56373696_edc02bab-b289-4f36-83a6-04ee20fe3c49
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Updates coming to Starbucks=C2=AE Rewards | Mises =C3=A0 jour de =
+R=C3=A9compenses Starbucks=C2=AE =C3=A0 venir=0A=0AView this emai=
+l online.=0Ahttps://x.e.starbucks.com/ats/msg.aspx?sg1=3Dfe8861ee=
+812de2c29a549b2a43c48466ea2ffecabc61511668834deef90cc1d9=0A=0AQue=
+stions? Contact us here, or call us toll free at (800) 235-2883. =
+You=0Acan mail comments to P.O. Box 20430, Augusta, GA 30916, USA=
+.  You can =0Aalso visit our website at www.starbucks.ca.=0Ahttp:=
+//l.e.starbucks.com/rts/go2.aspx?t=3D376056&tp=3Di-1NHD-Ij-6GJ-5R=
+uQUd-1t-RHUWe-1c-WIb-5Rq6KB-l8PBMx9s27-LorJc=0Ahttp://l.e.starbuc=
+ks.com/rts/go2.aspx?t=3D376051&tp=3Di-1NHD-Ij-6GJ-5RuQUd-1t-RHUWe=
+-1c-WIb-5Rq6KB-l8PBMx9s27-LorJc=0A=0AIf you would like to stop re=
+ceiving emails, you can unsubscribe.=0Ahttp://l.e.starbucks.com/r=
+ts/go2.aspx?t=3D376052&tp=3Di-1NHD-Ij-6GJ-5RuQUd-1t-RHUWe-1c-WIb-=
+5Rq6KB-l8PBMx9s27-LorJc&x=3Dtalveerbath@gmail.com%7c22.12.28%7c23=
+-13-ANO-1-0-1-EM-SR-NA-CA=0A=0A=C2=A9 2022 Starbucks Corporation.=
+=0A=0AStarbucks Card Terms Of Use =0Ahttp://l.e.starbucks.com/rts=
+/go2.aspx?t=3D376053&tp=3Di-1NHD-Ij-6GJ-5RuQUd-1t-RHUWe-1c-WIb-5R=
+q6KB-l8PBMx9s27-LorJc=0A=0AStarbucks=C2=AE Rewards Terms of Use=0A=
+http://l.e.starbucks.com/rts/go2.aspx?t=3D376054&tp=3Di-1NHD-Ij-6=
+GJ-5RuQUd-1t-RHUWe-1c-WIb-5Rq6KB-l8PBMx9s27-LorJc=0A=0APrivacy St=
+atement=0Ahttp://l.e.starbucks.com/rts/go2.aspx?t=3D376055&tp=3Di=
+-1NHD-Ij-6GJ-5RuQUd-1t-RHUWe-1c-WIb-5Rq6KB-l8PBMx9s27-LorJc=0A=0A=
+=0AVoir en ligne=0Ahttps://x.e.starbucks.com/ats/msg.aspx?sg1=3Df=
+e8861ee812de2c29a549b2a43c48466ea2ffecabc61511668834deef90cc1d9=0A=
+=0ADes questions? Communiquez avec nous ici ou appelez-nous sans =
+frais au =0A1 800 235-2883.  Vous pouvez nous faire parvenir vos =
+commentaires par la =0Aposte en =C3=A9crivant =C3=A0 l=E2=80=99ad=
+resse suivante : Box 20430, Augusta, GA 30916, =0A=C3=89tats-Unis=
+.  Vous pouvez aussi consulter notre site web =C3=A0 =0Afr.starbu=
+cks.ca. =0Ahttp://l.e.starbucks.com/rts/go2.aspx?t=3D376063&tp=3D=
+i-1NHD-Ij-6GJ-5RuQUd-1t-RHUWe-1c-WIc-5Rq6KB-l8PBMx9s27-YHYZm=0Aht=
+tp://l.e.starbucks.com/rts/go2.aspx?t=3D376064&tp=3Di-1NHD-Ij-6GJ=
+-5RuQUd-1t-RHUWe-1c-WIc-5Rq6KB-l8PBMx9s27-YHYZm=0A=0ASi vous ne s=
+ouhaitez plus recevoir ces courriels, il suffit de vous =0Ad=C3=A9=
+sabonner.=0Ahttp://l.e.starbucks.com/rts/go2.aspx?t=3D376065&tp=3D=
+i-1NHD-Ij-6GJ-5RuQUd-1t-RHUWe-1c-WIc-5Rq6KB-l8PBMx9s27-YHYZm&x=3D=
+talveerbath@gmail.com%7c22.12.28%7c23-13-ANO-1-0-1-EM-SR-NA-CA=0A=
+=0A=C2=A9 Starbucks Corporation, 2022.=0A=0AModalit=C3=A9s d=E2=80=
+=99utilisation de la carte Starbucks=0Ahttp://l.e.starbucks.com/r=
+ts/go2.aspx?t=3D376066&tp=3Di-1NHD-Ij-6GJ-5RuQUd-1t-RHUWe-1c-WIc-=
+5Rq6KB-l8PBMx9s27-YHYZm=0A=0AModalit=C3=A9s d=E2=80=99utilisation=
+ R=C3=A9compenses Starbucks=C2=AE=0Ahttp://l.e.starbucks.com/rts/=
+go2.aspx?t=3D376067&tp=3Di-1NHD-Ij-6GJ-5RuQUd-1t-RHUWe-1c-WIc-5Rq=
+6KB-l8PBMx9s27-YHYZm=0A=0A=C3=89nonc=C3=A9 de confidentialit=C3=A9=
+=0Ahttp://l.e.starbucks.com/rts/go2.aspx?t=3D376068&tp=3Di-1NHD-I=
+j-6GJ-5RuQUd-1t-RHUWe-1c-WIc-5Rq6KB-l8PBMx9s27-YHYZm=0A=0A=0A
+----boundary_56373696_edc02bab-b289-4f36-83a6-04ee20fe3c49
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html=0A    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional /=
+/EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">=0A=
+<html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D=
+"urn:schemas-microsoft-com:vml"=0A    xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office">=0A=0A<head>=0A    <meta http-equiv=3D"C=
+ontent-Type" content=3D"text/html; charset=3DUTF-8" />=0A    <met=
+a charset=3D"utf-8" />=0A    <!--VIEWPORT FOR RESPONSIVE EMAILS--=
+>=0A    <meta name=3D"viewport" content=3D"width=3Ddevice-width, =
+initial-scale=3D1.0, maximum-scale=3D1.0," />=0A=0A    <!--WINDOW=
+S PHONE - allow media queries to work -->=0A    <meta http-equiv=3D=
+"X-UA-Compatible" content=3D"IE=3Dedge" />=0A    <title>Starbucks=
+</title>=0A    <style>=0A        /* Force hotmail/outlook.com to =
+display at full width (outer div) */=0A        .ReadMsgBody {=0A =
+           width: 100%;=0A        }=0A=0A        /* Force hotmail=
+/outlook.com to display at full width (inner div) */=0A        .E=
+xternalClass {=0A            width: 100%;=0A        }=0A=0A      =
+  /* Stop Wekbit and Windows Phone changing the font size */=0A  =
+      body {=0A            width: 100% !important;=0A            =
+-webkit-text-size-adjust: 100%;=0A            -ms-text-size-adjus=
+t: 100%;=0A            margin: 0;=0A            padding: 0;=0A   =
+     }=0A=0A        table {=0A            border-collapse: collap=
+se;=0A            mso-table-lspace: 0pt;=0A            mso-table-=
+rspace: 0pt;=0A            padding: 0;=0A        }=0A=0A        t=
+able td {=0A            border-collapse: collapse;=0A            =
+mso-line-height-rule: exactly;=0A        }=0A=0A        /* Outloo=
+k Background Image Fix */=0A        v:* {=0A            behavior:=
+ url(#default#VML);=0A            display: block;=0A        }=0A=0A=
+        /* iOS Links - Prevent color of certain content being cha=
+nged (ie: dates/times) */=0A        a[x-apple-data-detectors] {=0A=
+            color: inherit !important;=0A            text-decorat=
+ion: none !important;=0A            font-size: inherit !important=
+;=0A            font-family: inherit !important;=0A            fo=
+nt-weight: inherit !important;=0A            line-height: inherit=
+ !important;=0A        }=0A=0A        /*outlook links - prevent c=
+olor of certain content being changed (ie: dates/times/locations/=
+email addresses) */=0A        .blueLinks a {=0A            color:=
+ inherit !important;=0A            text-decoration: none !importa=
+nt;=0A            font-family: 'SoDo Sans', 'Avenir', 'Roboto', H=
+elvetica, Arial, sans-serif !important;=0A        }=0A=0A        =
+.gmailfix {=0A            display: none;=0A            display: n=
+one !important;=0A        }=0A=0A        /* ------=0ASoDo Sans=0A=
+------ */=0A        @font-face {=0A            font-family: 'SoDo=
+ Sans';=0A            src: url('https://globalassets.starbucks.co=
+m/assets/F68E80399F234AB59C207A924D44AE90.woff2') format('woff2')=
+, url('https://globalassets.starbucks.com/assets/56B8CB81F870423B=
+85E3C7A3F99D9AF8.woff') format('woff');=0A            font-weight=
+: normal;=0A            font-style: normal;=0A        }=0A=0A    =
+    @font-face {=0A            font-family: 'SoDo Sans';=0A      =
+      src: url('https://globalassets.starbucks.com/assets/58577DE=
+6D88649078FA18D9C489F394B.woff2') format('woff2'), url('https://g=
+lobalassets.starbucks.com/assets/C67E1F2B51734BA68BA8AEEB75A98FC5=
+.woff') format('woff');=0A            font-weight: 100;=0A       =
+     font-style: normal;=0A        }=0A=0A        @font-face {=0A=
+            font-family: 'SoDo Sans';=0A            src: url('htt=
+ps://globalassets.starbucks.com/assets/6262F18D228B454EB0E6A23066=
+BE6A9D.woff2') format('woff2'), url('https://globalassets.starbuc=
+ks.com/assets/530B935AB42343E2BAF4FCB2BC6986F9.woff') format('wof=
+f');=0A            font-weight: 300;=0A            font-style: no=
+rmal;=0A        }=0A=0A        @font-face {=0A            font-fa=
+mily: 'SoDo Sans';=0A            src: url('https://globalassets.s=
+tarbucks.com/assets/C8C4DB3721C24594A8E6AA367A203F77.woff2') form=
+at('woff2'), url('https://globalassets.starbucks.com/assets/72EA7=
+FE9643343E7B3EB3B6AED8F2474.woff') format('woff');=0A            =
+font-weight: 600;=0A            font-style: normal;=0A        }=0A=
+=0A        @font-face {=0A            font-family: 'SoDo Sans';=0A=
+            src: url('https://globalassets.starbucks.com/assets/B=
+21783F82F77480089D77D7AFC0BC5D0.woff2') format('woff2'), url('htt=
+ps://globalassets.starbucks.com/assets/128646D8AC4B45E5B7ADB5491A=
+DDEAB8.woff') format('woff');=0A            font-weight: bold;=0A=
+            font-style: normal;=0A        }=0A=0A        @font-fa=
+ce {=0A            font-family: 'SoDo Sans';=0A            src: u=
+rl('https://globalassets.starbucks.com/assets/30A169E5ACAD4ACFBDF=
+1A58A44566525.woff2') format('woff2'), url('https://globalassets.=
+starbucks.com/assets/F40EE31222CE43A5B03D67FD782B15A3.woff') form=
+at('woff');=0A            font-weight: 900;=0A            font-st=
+yle: normal;=0A        }=0A=0A        @font-face {=0A            =
+font-family: 'SoDo Sans';=0A            src: url('https://globala=
+ssets.starbucks.com/assets/C2F5BB5C506546EBB1745B77B25D8939.woff2=
+') format('woff2'), url('https://globalassets.starbucks.com/asset=
+s/D44D406E752844E78B65E5935CA8DC00.woff') format('woff');=0A     =
+       font-weight: normal;=0A            font-style: italic;=0A =
+       }=0A=0A        @font-face {=0A            font-family: 'So=
+Do Sans';=0A            src: url('https://globalassets.starbucks.=
+com/assets/D107AF7E9747480CAFF3778ECDC58A2C.woff2') format('woff2=
+'), url('https://globalassets.starbucks.com/assets/DD2F8974ED7A49=
+688E4683749D641DE4.woff') format('woff');=0A            font-weig=
+ht: 100;=0A            font-style: italic;=0A        }=0A=0A     =
+   @font-face {=0A            font-family: 'SoDo Sans';=0A       =
+     src: url('https://globalassets.starbucks.com/assets/9C99F790=
+5C534D65B3798FF8563A3F84.woff2') format('woff2'), url('https://gl=
+obalassets.starbucks.com/assets/9E16ABBE95D1482FB142A49A4AD70C19.=
+woff') format('woff');=0A            font-weight: 300;=0A        =
+    font-style: italic;=0A        }=0A=0A        @font-face {=0A =
+           font-family: 'SoDo Sans';=0A            src: url('http=
+s://globalassets.starbucks.com/assets/205FCF235D0E4C149114B9813C6=
+5967F.woff2') format('woff2'), url('https://globalassets.starbuck=
+s.com/assets/44B9549E147C49D9A452FAEAA120E81D.woff') format('woff=
+');=0A            font-weight: 600;=0A            font-style: ita=
+lic;=0A        }=0A=0A        @font-face {=0A            font-fam=
+ily: 'SoDo Sans';=0A            src: url('https://globalassets.st=
+arbucks.com/assets/128646D8AC4B45E5B7ADB5491ADDEAB8.woff') format=
+('woff2'), url('https://globalassets.starbucks.com/assets/E0D0A43=
+56E18400B8CB98B1741A54BD2.woff') format('woff');=0A            fo=
+nt-weight: bold;=0A            font-style: italic;=0A        }=0A=
+=0A        @font-face {=0A            font-family: 'SoDo Sans';=0A=
+            src: url('https://globalassets.starbucks.com/assets/D=
+9667A55A5DB4F5099A9BA876F647C38.woff2') format('woff2'), url('htt=
+ps://globalassets.starbucks.com/assets/03FFFD505E8E4960AEB54A1355=
+3A6F39.woff') format('woff');=0A            font-weight: 900;=0A =
+           font-style: italic;=0A        }=0A=0A        /* ------=
+---=0ALander Short=0A--------- */=0A        @font-face {=0A      =
+      font-family: 'Lander Short';=0A            src: url('https:=
+//globalassets.starbucks.com/assets/2B43DAB063784EE1817E9602C0BD8=
+AAD.woff2') format('woff2'), url('https://globalassets.starbucks.=
+com/assets/91DD611B5E074EAE9EF8D3C87F47817B.woff') format('woff')=
+;=0A            font-weight: normal;=0A            font-style: no=
+rmal;=0A        }=0A=0A        @font-face {=0A            font-fa=
+mily: 'Lander Short';=0A            src: url('https://globalasset=
+s.starbucks.com/assets/D161956E55C34ECD9E4468116F3CC09F.woff2') f=
+ormat('woff2'), url('https://globalassets.starbucks.com/assets/B0=
+35B40402EB46D49D40ECE63DBD5BDD.woff') format('woff');=0A         =
+   font-weight: 300;=0A            font-style: normal;=0A        =
+}=0A=0A        @font-face {=0A            font-family: 'Lander Sh=
+ort';=0A            src: url('https://globalassets.starbucks.com/=
+assets/0A58D8B3A03B4836AD09B2946D5FE39A.woff2') format('woff2'), =
+url('https://globalassets.starbucks.com/assets/F6112820A4E444049E=
+59A541A0582731.woff') format('woff');=0A            font-weight: =
+600;=0A            font-style: normal;=0A        }=0A=0A        @=
+font-face {=0A            font-family: 'Lander Short';=0A        =
+    src: url('https://globalassets.starbucks.com/assets/32DE307D9=
+C154FB0A8B89A14803E9225.woff2') format('woff2'), url('https://glo=
+balassets.starbucks.com/assets/C46571D9B26145F5BB1E790231B0F424.w=
+off') format('woff');=0A            font-weight: bold;=0A        =
+    font-style: normal;=0A        }=0A=0A        @font-face {=0A =
+           font-family: 'Lander Short';=0A            src: url('h=
+ttps://globalassets.starbucks.com/assets/17B1859C21B24042BF036507=
+231FFE46.woff2') format('woff2'), url('https://globalassets.starb=
+ucks.com/assets/6CE39C95D6904A53811C70CBA42A3C7D.woff') format('w=
+off');=0A            font-weight: normal;=0A            font-styl=
+e: italic;=0A        }=0A=0A        @font-face {=0A            fo=
+nt-family: 'Lander Short';=0A            src: url('https://global=
+assets.starbucks.com/assets/C265C0FD4F6D45BFA72F1CD8042E9A42.woff=
+2') format('woff2'), url('https://globalassets.starbucks.com/asse=
+ts/B84E81FA6F5E4B3AA0B9F81EBAD66F0C.woff') format('woff');=0A    =
+        font-weight: 300;=0A            font-style: italic;=0A   =
+     }=0A=0A        @font-face {=0A            font-family: 'Land=
+er Short';=0A            src: url('https://globalassets.starbucks=
+.com/assets/8741E699D2E14BB4BC0F5B3E83ADE4C2.woff2') format('woff=
+2'), url('https://globalassets.starbucks.com/assets/2B270DF4C0624=
+2DCB2929B3F96AC9D25.woff') format('woff');=0A            font-wei=
+ght: 600;=0A            font-style: italic;=0A        }=0A=0A    =
+    @font-face {=0A            font-family: 'Lander Short';=0A   =
+         src: url('https://globalassets.starbucks.com/assets/103D=
+08173A564199A9EDFDC9C7157F17.woff2') format('woff2'), url('https:=
+//globalassets.starbucks.com/assets/F52553C98DA940BE81FA5690742AD=
+32C.woff') format('woff');=0A            font-weight: bold;=0A   =
+         font-style: italic;=0A        }=0A=0A        @media only=
+ screen and (max-device-width:568px) and (-webkit-min-device-pixe=
+l-ratio:2) {=0A            [class].fixed {=0A                disp=
+lay: block !important;=0A            }=0A        }=0A=0A        @=
+media only screen and (max-width: 414px) {=0A            .iphone =
+{=0A                outline: 1px solid #d4e9e2;=0A            }=0A=
+        }=0A    </style>=0A    <!--[if gte mso 9]>=0A<style type=3D=
+"text/css">=0Abody, table, td {font-family: 'SoDo Sans', Arial, H=
+elvetica, sans-serif !important;}=0Asup { font-size: 100% !import=
+ant; }=0A.lhfix{ mso-line-height-rule: exactly;}=0A.supFix{ mso-t=
+ext-raise: 60%;}=0Asup { font-size: 100% !important; }=0Adiv, spa=
+n{font-family: 'SoDo Sans', Arial, Helvetica, sans-serif !importa=
+nt;}=0A.fallback-text { font-family: Arial, Helvetica, sans-serif=
+ !important;}=0A.fallback-stext { font-family: Cambria, 'Hoefler =
+Text', 'Liberation Serif', Times, 'Times New Roman', 'serif' !imp=
+ortant;}=0A.msoserif {font-family: Georgia, serif !important;}=0A=
+</style>=0A<xml>=0A<o:OfficeDocumentSettings>=0A<o:AllowPNG/>=0A<=
+o:PixelsPerInch>96</o:PixelsPerInch>=0A</o:OfficeDocumentSettings=
+>=0A</xml>=0A<![endif]-->=0A=0A</head>=0A=0A=0A<body>=0A    <!--P=
+REHEADER-->=0A    <div style=3D"display: none; max-height: 0px; o=
+verflow: hidden;">Updates coming to Starbucks=C2=AE Rewards | Mis=
+es =C3=A0 jour de R=C3=A9compenses Starbucks=C2=AE =C3=A0 venir</=
+div>=0A    <div style=3D"display: none; max-height: 0px; overflow=
+: hidden;">=0A        &#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&=
+zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;=
+&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj=
+;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#84=
+7;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nb=
+sp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&z=
+wnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&=
+#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;=
+&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847=
+;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbs=
+p;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zw=
+nj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#=
+847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&=
+nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;=
+&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp=
+;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwn=
+j;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#8=
+47;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&n=
+bsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&=
+zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;=
+&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj=
+;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#84=
+7;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nb=
+sp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&z=
+wnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&=
+#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;=
+&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847=
+;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbs=
+p;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zw=
+nj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#=
+847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&=
+nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;=
+&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp=
+;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwn=
+j;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#8=
+47;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&n=
+bsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&=
+zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;=
+&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj=
+;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#84=
+7;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nb=
+sp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&z=
+wnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&=
+#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;=
+&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847=
+;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbs=
+p;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zw=
+nj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#=
+847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&=
+nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;=
+&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp=
+;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwn=
+j;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#8=
+47;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&n=
+bsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&=
+zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;=
+&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj=
+;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#84=
+7;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nb=
+sp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&z=
+wnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&=
+#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;=
+&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847=
+;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbs=
+p;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zw=
+nj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#=
+847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&=
+nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;=
+&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp=
+;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwn=
+j;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#8=
+47;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&n=
+bsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&=
+zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;=
+&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj=
+;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#84=
+7;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nb=
+sp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&z=
+wnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&=
+#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;=
+&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847=
+;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbs=
+p;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zw=
+nj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#=
+847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&=
+nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;=
+&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp=
+;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwn=
+j;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#8=
+47;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&n=
+bsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&=
+zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;=
+&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj=
+;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#84=
+7;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nb=
+sp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&z=
+wnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&=
+#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;=
+&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847=
+;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbs=
+p;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zw=
+nj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#=
+847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&=
+nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;=
+&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp=
+;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwn=
+j;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;=0A    </div>=0A    <=
+!--/PREHEADER-->=0A    <!--Starts NEW Gmail App fix -->=0A    <di=
+v style=3D"display:none; white-space:nowrap; font:15px courier; l=
+ine-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=0A        &nbs=
+p; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=0A        &nbsp; &nbsp; &nb=
+sp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=0A   =
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs=
+p; &nbsp; &nbsp;=0A        &nbsp; &nbsp;</div>=0A    <!--Ends NEW=
+ Gmail App fix -->=0A=0A    <table role=3D"presentation" width=3D=
+"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=0A      =
+  <tr>=0A            <td align=3D"center" valign=3D"top" class=3D=
+"fixed">=0A                <!--CONTAINER-->=0A                <ta=
+ble width=3D"640" align=3D"center" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"presentation"=0A                    st=
+yle=3D"max-width:640px;">=0A                    <tr>=0A          =
+              <td align=3D"right" valign=3D"middle"=0A           =
+                 style=3D"-webkit-font-smoothing: antialiased; fo=
+nt-family:'SoDo Sans', Avenir, 'Roboto', Helvetica, Arial, sans-s=
+erif; font-size:16px; text-align:right; color:#5d5d5d; mso-line-h=
+eight-rule:exactly; padding:10px 12px 5px;"=0A                   =
+         class=3D"fallback-text">=0A                            <=
+a href=3D"#francais"=0A                                style=3D"t=
+ext-decoration: none; color:#5d5d5d; font-weight:normal; font-fam=
+ily:'SoDo Sans', Avenir, 'Roboto', Helvetica, Arial, sans-serif;"=
+>Fran=C3=A7ais</a>&nbsp;&nbsp;&nbsp;=0A                        </=
+td>=0A                    </tr>=0A                    <!--MASTHEA=
+D & BODY-->=0A                    <tr>=0A                        =
+<td>=0A                            <table width=3D"640" align=3D"=
+center" role=3D"presentation" border=3D"0" cellspacing=3D"0"=0A  =
+                              cellpadding=3D"0" style=3D"max-widt=
+h:640px;" bgcolor=3D"#f2f0eb">=0A                                =
+<!--MASTHEAD -->=0A                                <tr>=0A       =
+                             <td>=0A                             =
+           <table cellpadding=3D"0" cellspacing=3D"0" width=3D"64=
+0" align=3D"center"=0A                                           =
+ style=3D"max-width:640px;" role=3D"presentation">=0A            =
+                                <tr>=0A                          =
+                      <td align=3D"center" valign=3D"middle" bgco=
+lor=3D"#f2f0eb"=0A                                               =
+     style=3D"font-size:22px; mso-line-height-rule:exactly;">=0A =
+                                                   <a href=3D"htt=
+p://l.e.starbucks.com/rts/go2.aspx?h=3D376075&tp=3Di-1NGB-Ij-6GJ-=
+5RuQUd-1t-RHUWe-1c-5Rq6KB-l8PBMx9s27-21Iz1H"=0A                  =
+                                      style=3D"text-decoration:no=
+ne;"=0A                                                        da=
+ta-link-name=3D"23-13-ANO-1-0-1-EM-SR-NA-CA_starbucksLogo">=0A   =
+                                                     <img src=3D"=
+https://i.a.starbucks.com/wpm/1161/ContentUploads/Teleion/Masthea=
+ds/EN/Starbucks_rewards_f2f0eb_t1e3932.png"=0A                   =
+                                         width=3D"640"=0A        =
+                                                    style=3D"disp=
+lay:block; border:0; font-family:'SoDo Sans', Avenir, 'Roboto', H=
+elvetica, Arial, sans-serif; color:#1e3932; text-align:center; te=
+xt-transform:uppercase; letter-spacing: 1px; font-weight: bold; f=
+ont-size: 22px;"=0A                                              =
+              alt=3D"STARBUCKS&reg; REWARDS"=0A                  =
+                                          title=3D"STARBUCKS&reg;=
+ REWARDS" /></a>=0A                                              =
+  </td>=0A                                            </tr>=0A   =
+                                     </table>=0A                 =
+                   </td>=0A                                </tr>=0A=
+                                <!--MASTHEAD END AND BODY START--=
+>=0A                                <tr>=0A                      =
+              <td align=3D"center" valign=3D"middle" bgcolor=3D"#=
+f2f0eb"=0A                                        style=3D"-webki=
+t-font-smoothing: antialiased; font-family:'SoDo Sans', Avenir, '=
+Roboto', Helvetica, Arial, sans-serif; font-size:38px; line-heigh=
+t:46px; text-align:center; color:#1e3932; mso-line-height-rule:ex=
+actly; font-weight:bold; letter-spacing: 0.120em; padding: 30px 2=
+4px 8px 24px;"=0A                                        class=3D=
+"fallback-text">=0A                                        WE=E2=80=
+=99RE&nbsp;UPDATING<br>=0A                                       =
+ OUR TERMS OF&nbsp;USE=0A                                    </td=
+>=0A                                </tr>=0A                     =
+           <tr>=0A                                    <td align=3D=
+"center" bgcolor=3D"#f2f0eb" valign=3D"middle"=0A                =
+                        style=3D"-webkit-font-smoothing: antialia=
+sed; font-family:'SoDo Sans', Avenir, 'Roboto', Helvetica, Arial,=
+ sans-serif; font-size:22px; line-height:30px; text-align:center;=
+ color:#1e3932; mso-line-height-rule:exactly; padding:20px 60px 5=
+6px 60px;"=0A                                        class=3D"fal=
+lback-text">=0A                                        Starbucks =
+Rewards is updating the Terms of Use for Reward redemption starti=
+ng in&nbsp;February.=0A                                        <b=
+r><br>=0A                                        You can read the=
+ updated Terms of Use in the link&nbsp;below.=0A                 =
+                   </td>=0A                                </tr>=0A=
+=0A                                <tr>=0A                       =
+             <td width=3D"640" align=3D"center" bgcolor=3D"#f2f0e=
+b" valign=3D"middle"=0A                                        st=
+yle=3D"color:#1e3932; mso-line-height-rule:exactly; padding:0px 0=
+ 38px 0px;">=0A                                        <a href=3D=
+"http://l.e.starbucks.com/rts/go2.aspx?h=3D376076&tp=3Di-1NGB-Ij-=
+6GJ-5RuQUd-1t-RHUWe-1c-5Rq6KB-l8PBMx9s27-21Iz1H"=0A              =
+                              style=3D"text-decoration:none;" tar=
+get=3D"_blank"=0A                                            data=
+-link-name=3D"23-13-ANO-1-0-1-EM-SR-NA-CA_CTA"><img alt=3D"New Te=
+rms of Use"=0A                                                sty=
+le=3D"border:0; display:block; font-family:'SoDo Sans', Avenir, '=
+Roboto', Helvetica, Arial, sans-serif; font-size:18px; line-heigh=
+t: 30px; mso-line-height-rule:exactly; text-align:center; color:#=
+1e3932;"=0A                                                bgcolo=
+r=3D"#f2f0eb" width=3D"640" border=3D"0"=0A                      =
+                          src=3D"https://i.a.starbucks.com/wpm/11=
+61/ContentUploads/Teleion/CTAs/NewTermsofUse_1e3932_Tfff_bf2f0eb.=
+png"></a>=0A                                    </td>=0A         =
+                       </tr>=0A                            </tabl=
+e>=0A                        </td>=0A                    </tr>=0A=
+                    <!--/BODY-->=0A                   =0A        =
+        </table>=0A                <!--FOOTER-->=0A              =
+  <table width=3D"640" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center" role=3D"presentation"=0A                 =
+   bgcolor=3D"#ffffff">=0A                  =0A                  =
+  <tr>=0A                        <td align=3D"center" valign=3D"t=
+op" class=3D"fallback-text"=0A                            style=3D=
+"font-family:'SoDo Sans', Avenir, 'Roboto', Helvetica, Arial, san=
+s-serif; font-size:14px; line-height:16px; text-align:center; col=
+or:#707070; font-weight: normal; padding-top:40px;">=0A          =
+                  <!--SBX_SR_OptIn_CA-EN-->=0A<table cellpadding=3D=
+"0" cellspacing=3D"0" width=3D"640" align=3D"center" bgcolor=3D"#=
+ffffff" style=3D"width:640px;" role=3D"presentation" class=3D"dar=
+kModeFooter">=0A    <tr>=0A        <td bgcolor=3D"#ffffff" class=3D=
+"darkModeFooter" align=3D"center">=0A            <table cellpaddi=
+ng=3D"0" cellspacing=3D"0" width=3D"480" align=3D"center" bgcolor=
+=3D"#ffffff" style=3D"width:480px;" role=3D"presentation" class=3D=
+"darkModeFooter">=0A                <tr>=0A                    <t=
+d align=3D"center" valign=3D"top" style=3D"font-family:'SoDo Sans=
+', Avenir, 'Roboto', Helvetica, Arial, sans-serif; font-size:14px=
+; line-height:20px; color:#707070; mso-line-height-rule:exactly;"=
+ class=3D"fallback-text darkModeFooter">=0A                      =
+  Ref: 23-13-ANO-1-0-1-EM-SR-NA-CA=0A                        <br =
+/><br />=0A                        Questions? <a href=3D"http://l=
+.e.starbucks.com/rts/go2.aspx?h=3D376050&tp=3Di-1NHD-Ij-6GJ-5RuQU=
+d-1t-RHUWe-1c-WIb-5Rq6KB-l8PBMx9s27-LorJc" style=3D"line-height:2=
+0px; color:#707070; text-decoration:underline;" data-link-name=3D=
+"contact-us" class=3D"darkModeFooter">Contact=0A                 =
+           us&nbsp;here</a>, or call us toll free at <a href=3D""=
+ style=3D"color:#707070; text-decoration:none; cursor:text;" clas=
+s=3D"bluelinks darkModeFooter">(800) 235-2883</a>. You can=0A    =
+                    mail comments to <a href=3D"" style=3D"color:=
+#707070; text-decoration:none; cursor:text;" class=3D"bluelinks d=
+arkModeFooter">P.O. Box 20430, Augusta, GA=0A                    =
+        30916, USA</a>. You can also visit our website at&nbsp;<a=
+ href=3D"http://l.e.starbucks.com/rts/go2.aspx?h=3D376050&tp=3Di-=
+1NHD-Ij-6GJ-5RuQUd-1t-RHUWe-1c-WIb-5Rq6KB-l8PBMx9s27-LorJc" style=
+=3D"line-height:20px; color:#707070; text-decoration:underline;" =
+data-link-name=3D"contact-us" class=3D"darkModeFooter">www.starbu=
+cks.ca</a>.=0A                        <br /><br />=0A            =
+            If you would like to stop receiving emails, you can <=
+a href=3D"http://l.e.starbucks.com/rts/go2.aspx?h=3D376052&tp=3Di=
+-1NHD-Ij-6GJ-5RuQUd-1t-RHUWe-1c-WIb-5Rq6KB-l8PBMx9s27-LorJc&x=3Dt=
+alveerbath@gmail.com%7c22.12.28%7c23-13-ANO-1-0-1-EM-SR-NA-CA" st=
+yle=3D"line-height:20px; color:#707070; text-decoration:underline=
+;" data-link-name=3D"unsubscribe" class=3D"darkModeFooter">unsubs=
+cribe</a>. You will continue to receive transactional messages an=
+d other messages that do not require consent under applicable law=
+.=0A                        <br /><br>=0A                        =
+&copy;&nbsp;2022 Starbucks&nbsp;Corporation.=0A                  =
+      <br /><br />=0A                        <a href=3D"http://l.=
+e.starbucks.com/rts/go2.aspx?h=3D376058&tp=3Di-1NHD-Ij-6GJ-5RuQUd=
+-1t-RHUWe-1c-WIb-5Rq6KB-l8PBMx9s27-LorJc" style=3D"color:#707070;=
+ text-decoration:underline;" data-link-name=3D"terms-of-use" clas=
+s=3D"darkModeFooter">=0A                            Starbucks Car=
+d Terms of&nbsp;Use=0A                        </a>=0A            =
+            <br><br>=0A                        <a href=3D"http://=
+l.e.starbucks.com/rts/go2.aspx?h=3D376059&tp=3Di-1NHD-Ij-6GJ-5RuQ=
+Ud-1t-RHUWe-1c-WIb-5Rq6KB-l8PBMx9s27-LorJc" style=3D"color:#70707=
+0; text-decoration:underline;" class=3D"darkModeFooter" data-link=
+-name=3D"reward-terms">=0A                            Starbucks</=
+a><sup style=3D"line-height:11px; text-decoration:none !important=
+;">&reg;</sup>&nbsp;<a href=3D"http://l.e.starbucks.com/rts/go2.a=
+spx?h=3D376060&tp=3Di-1NHD-Ij-6GJ-5RuQUd-1t-RHUWe-1c-WIb-5Rq6KB-l=
+8PBMx9s27-LorJc" style=3D"color:#707070; text-decoration:underlin=
+e;" class=3D"darkModeFooter" data-link-name=3D"reward-terms-2">Re=
+wards=0A                            Terms of&nbsp;Use</a>=0A     =
+                   <br><br>=0A                        <a href=3D"=
+http://l.e.starbucks.com/rts/go2.aspx?h=3D376061&tp=3Di-1NHD-Ij-6=
+GJ-5RuQUd-1t-RHUWe-1c-WIb-5Rq6KB-l8PBMx9s27-LorJc" style=3D"color=
+:#707070; text-decoration:underline;" class=3D"darkModeFooter" da=
+ta-link-name=3D"privacy">=0A                            Privacy&n=
+bsp;Statement=0A                        </a>=0A                  =
+  </td>=0A                </tr>=0A            </table>=0A        =
+</td>=0A    </tr>=0A    <tr>=0A        <td bgcolor=3D"#ffffff" cl=
+ass=3D"darkModeFooter">=0A            <table cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"640" align=3D"center" bgcolor=3D"#ffffff=
+" style=3D"max-width:640px;" role=3D"presentation" class=3D"darkM=
+odeFooter">=0A                <tr>=0A                    <td alig=
+n=3D"center" valign=3D"middle" style=3D"font-size:22px; mso-line-=
+height-rule:exactly; text-align:center; padding-top:30px;">=0A   =
+                     <a href=3D"http://l.e.starbucks.com/rts/go2.=
+aspx?h=3D376062&tp=3Di-1NHD-Ij-6GJ-5RuQUd-1t-RHUWe-1c-WIb-5Rq6KB-=
+l8PBMx9s27-LorJc" style=3D"text-decoration:none;" class=3D"darkMo=
+deFooter" data-link-name=3D"rewards-logo-footer">=0A             =
+               <img src=3D"https://i.a.starbucks.com/wpm/1161/Con=
+tentUploads/UploadedContent_38013/images/FY22SG_Launch_FW01_10-8_=
+EN_SR_03.png" width=3D"640" style=3D"display:block; border:0; fon=
+t-family:'SoDo Sans', Avenir, 'Roboto', Helvetica, Arial, sans-se=
+rif; color:#707070; text-align:center; text-transform:uppercase; =
+letter-spacing: 1px; font-weight: bold; font-size: 22px;" alt=3D"=
+STARBUCKS&reg; REWARDS" title=3D"STARBUCKS&reg; REWARDS" /></a>=0A=
+                    </td>=0A                </tr>=0A            <=
+/table>=0A        </td>=0A    </tr>=0A</table>=0A<!--SBX_SR_OptIn=
+_CA-EN-->=0A                        </td>=0A                    <=
+/tr>=0A                </table>=0A                <!--FOOTER-->=0A=
+            </td>=0A        </tr>=0A    </table>=0A    <table rol=
+e=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0">=0A        <tr>=0A            <td align=3D"cent=
+er" valign=3D"top" class=3D"fixed">=0A                <!--CONTAIN=
+ER-->=0A                <table id=3D"francais" width=3D"640" alig=
+n=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=0A =
+                   role=3D"presentation" style=3D"max-width:640px=
+;">=0A                    <!--MASTHEAD & BODY-->=0A              =
+      <tr>=0A                        <td>=0A                     =
+       <table width=3D"640" align=3D"center" role=3D"presentation=
+" border=3D"0" cellspacing=3D"0"=0A                              =
+  cellpadding=3D"0" style=3D"max-width:640px;" bgcolor=3D"#f2f0eb=
+">=0A                               =0A                          =
+      <!--MASTHEAD -->=0A                                <tr>=0A =
+                                   <td>=0A                       =
+                 <table cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"640" align=3D"center"=0A                                     =
+       style=3D"max-width:640px;" role=3D"presentation">=0A      =
+                                      <tr>=0A                    =
+                            <td align=3D"center" valign=3D"middle=
+" bgcolor=3D"#f2f0eb"=0A                                         =
+           style=3D"font-size:22px; mso-line-height-rule:exactly;=
+">=0A                                                    <a href=3D=
+"http://l.e.starbucks.com/rts/go2.aspx?h=3D376077&tp=3Di-1NGB-Ij-=
+6GJ-5RuQUd-1t-RHUWe-1c-5Rq6KB-l8PBMx9s27-21Iz1H"=0A              =
+                                          style=3D"text-decoratio=
+n:none;"=0A                                                      =
+  data-link-name=3D"23-13-ANO-1-0-1-EM-SR-NA-CA-FR_starbucksLogo"=
+>=0A                                                        <img =
+src=3D"https://i.a.starbucks.com/wpm/1161/ContentUploads/Teleion/=
+Mastheads/FR/StarbucksRecompenses_f2f0eb_t1e3932.png"=0A         =
+                                                   width=3D"640"=0A=
+                                                            style=
+=3D"display:block; border:0; font-family:'SoDo Sans', Avenir, 'Ro=
+boto', Helvetica, Arial, sans-serif; color:#1e3932; text-align:ce=
+nter; text-transform:uppercase; letter-spacing: 1px; font-weight:=
+ bold; font-size: 22px;"=0A                                      =
+                      alt=3D"R=C3=89COMPENSES STARBUCKS&reg;"=0A =
+                                                           title=3D=
+"R=C3=89COMPENSES STARBUCKS&reg;" /></a>=0A                      =
+                          </td>=0A                               =
+             </tr>=0A                                        </ta=
+ble>=0A                                    </td>=0A              =
+                  </tr>=0A                                <!--MAS=
+THEAD END AND BODY START-->=0A                                <tr=
+>=0A                                    <td align=3D"center" vali=
+gn=3D"middle" bgcolor=3D"#f2f0eb"=0A                             =
+           style=3D"-webkit-font-smoothing: antialiased; font-fam=
+ily:'SoDo Sans', Avenir, 'Roboto', Helvetica, Arial, sans-serif; =
+font-size:32px; line-height:42px; text-align:center; color:#1e393=
+2; mso-line-height-rule:exactly; font-weight:bold; letter-spacing=
+: 0.120em; padding: 32px 24px 16px 24px;"=0A                     =
+                   class=3D"fallback-text">=0A                   =
+                     NOUS METTONS =C3=80 JOUR&nbsp;NOS=0A        =
+                                <br>MODALIT=C3=89S&nbsp;D=E2=80=99=
+UTILISATION=0A                                    </td>=0A       =
+                         </tr>=0A                                =
+<tr>=0A                                    <td align=3D"center" b=
+gcolor=3D"#f2f0eb" valign=3D"middle"=0A                          =
+              style=3D"-webkit-font-smoothing: antialiased; font-=
+family:'SoDo Sans', Avenir, 'Roboto', Helvetica, Arial, sans-seri=
+f; font-size:22px; line-height:30px; text-align:center; color:#1e=
+3932; mso-line-height-rule:exactly; padding: 20px 40px 50px 40px;=
+"=0A                                        class=3D"fallback-tex=
+t">=0A                                        En f=C3=A9vrier, no=
+us modifions les modalit=C3=A9s d=E2=80=99utilisation li=C3=A9es =
+=C3=A0 l=E2=80=99=C3=A9change de r=C3=A9compenses dans le cadre d=
+u programme R=C3=A9compenses&nbsp;Starbucks.=0A                  =
+                      <br><br>=0A                                =
+        Pour en savoir plus sur les modalit=C3=A9s d=E2=80=99util=
+isation mises =C3=A0 jour, consultez le lien&nbsp;ci-dessous.=0A =
+                                   </td>=0A                      =
+          </tr>=0A=0A                                <tr>=0A     =
+                               <td width=3D"640" align=3D"center"=
+ bgcolor=3D"#f2f0eb" valign=3D"middle"=0A                        =
+                style=3D"color:#1e3932; mso-line-height-rule:exac=
+tly; padding:0px 0 38px 0px;">=0A                                =
+        <a href=3D"http://l.e.starbucks.com/rts/go2.aspx?h=3D3760=
+78&tp=3Di-1NGB-Ij-6GJ-5RuQUd-1t-RHUWe-1c-5Rq6KB-l8PBMx9s27-21Iz1H=
+"=0A                                            style=3D"text-dec=
+oration:none;" target=3D"_blank"=0A                              =
+              data-link-name=3D"23-13-ANO-1-0-1-EM-SR-NA-CA-FR_CT=
+A"><img=0A                                                alt=3D"=
+Nouvelles modalit=C3=A9s"=0A                                     =
+           style=3D"border:0; display:block; font-family:'SoDo Sa=
+ns', Avenir, 'Roboto', Helvetica, Arial, sans-serif; font-size:18=
+px; line-height: 30px; mso-line-height-rule:exactly; text-align:c=
+enter; color:#1e3932;"=0A                                        =
+        bgcolor=3D"#f2f0eb" width=3D"640" border=3D"0"=0A        =
+                                        src=3D"https://i.a.starbu=
+cks.com/wpm/1161/ContentUploads/Teleion/CTAs/Nouvellesmodalites_1=
+e3932_Tfff_bf2f0eb.png"></a>=0A                                  =
+  </td>=0A                                </tr>=0A               =
+             </table>=0A                        </td>=0A         =
+           </tr>=0A                    <!--/BODY-->=0A           =
+   =0A                </table>=0A                <!--FOOTER-->=0A=
+                <table width=3D"640" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" align=3D"center" role=3D"presentation"=0A   =
+                 bgcolor=3D"#ffffff">=0A                  =0A    =
+         =0A                    <tr>=0A                        <t=
+d align=3D"center" valign=3D"top" class=3D"fallback-text"=0A     =
+                       style=3D"font-family:'SoDo Sans', Avenir, =
+'Roboto', Helvetica, Arial, sans-serif; font-size:14px; line-heig=
+ht:16px; text-align:center; color:#707070; font-weight: normal; p=
+adding-top:40px;">=0A                            <!--SBX_SR_OptIn=
+_CA-FR-->=0A<table cellpadding=3D"0" cellspacing=3D"0" width=3D"6=
+40" align=3D"center" bgcolor=3D"#ffffff" style=3D"width:640px;" r=
+ole=3D"presentation" class=3D"darkModeFooter">=0A    <tr>=0A     =
+   <td bgcolor=3D"#ffffff" class=3D"darkModeFooter" align=3D"cent=
+er">=0A            <table cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"480" align=3D"center" bgcolor=3D"#ffffff" style=3D"width:48=
+0px;" role=3D"presentation" class=3D"darkModeFooter">=0A         =
+       <tr>=0A                    <td align=3D"center" valign=3D"=
+top" style=3D"font-family:'SoDo Sans', Avenir, 'Roboto', Helvetic=
+a, Arial, sans-serif; font-size:14px; line-height:20px; color:#70=
+7070; mso-line-height-rule:exactly;" class=3D"fallback-text darkM=
+odeFooter">=0A                        Ref: 23-13-ANO-1-0-1-EM-SR-=
+NA-CA=0A                        <br /><br />=0A                  =
+      Des questions? <a href=3D"http://l.e.starbucks.com/rts/go2.=
+aspx?h=3D376069&tp=3Di-1NHD-Ij-6GJ-5RuQUd-1t-RHUWe-1c-WIc-5Rq6KB-=
+l8PBMx9s27-YHYZm" style=3D"line-height:20px; color:#707070; text-=
+decoration:underline;" data-link-name=3D"fr-contact-us" class=3D"=
+darkModeFooter">Communiquez avec nous ici</a> ou=0A              =
+          appelez-nous sans frais au <a href=3D"" style=3D"color:=
+#707070; text-decoration:none; cursor:text;" class=3D"bluelinks d=
+arkModeFooter">1 800 235-2883</a>. Vous pouvez=0A                =
+        nous faire parvenir vos commentaires par la poste en =C3=A9=
+crivant =C3=A0=0A                        l=E2=80=99adresse suivan=
+te : <a href=3D"" style=3D"color:#707070; text-decoration:none; c=
+ursor:text;" class=3D"bluelinks darkModeFooter">Box 20430, August=
+a, GA 30916,=0A                            =C3=89tats-Unis</a>. V=
+ous pouvez aussi consulter notre site web=0A                     =
+   =C3=A0&nbsp;<a href=3D"http://l.e.starbucks.com/rts/go2.aspx?h=
+=3D376070&tp=3Di-1NHD-Ij-6GJ-5RuQUd-1t-RHUWe-1c-WIc-5Rq6KB-l8PBMx=
+9s27-YHYZm" style=3D"line-height:20px; color:#707070; text-decora=
+tion:underline;" data-link-name=3D"starbucks.ca-fr" class=3D"dark=
+ModeFooter">fr.starbucks.ca</a>.=0A                        <br><b=
+r>=0A                        Si vous ne souhaitez plus recevoir c=
+es courriels, il suffit de <a href=3D"http://l.e.starbucks.com/rt=
+s/go2.aspx?h=3D376071&tp=3Di-1NHD-Ij-6GJ-5RuQUd-1t-RHUWe-1c-WIc-5=
+Rq6KB-l8PBMx9s27-YHYZm" style=3D"line-height:20px; color:#707070;=
+ text-decoration:underline;" data-link-name=3D"unsubscribe-fr" cl=
+ass=3D"darkModeFooter">vous=0A                            d=C3=A9=
+sabonner</a>. Vous continuerez de recevoir des messages=0A       =
+                 transactionnels ainsi que d'autres messages qui =
+ne n=C3=A9cessitent pas=0A                        de consentement=
+ en vertu de la l=C3=A9gislation&nbsp;applicable.=0A             =
+           <br><br>=0A                        &copy;&nbsp;Starbuc=
+ks=0A                        Corporation,&nbsp;2022.=0A          =
+              <br><br>=0A                        <a href=3D"http:=
+//l.e.starbucks.com/rts/go2.aspx?h=3D376072&tp=3Di-1NHD-Ij-6GJ-5R=
+uQUd-1t-RHUWe-1c-WIc-5Rq6KB-l8PBMx9s27-YHYZm" style=3D"line-heigh=
+t:20px; color:#707070; text-decoration:underline;" data-link-name=
+=3D"terms-of-use-fr" class=3D"darkModeFooter">Modalit=C3=A9s d=E2=
+=80=99utilisation de la=0A                            carte&nbsp;=
+Starbucks</a>=0A                        <br><br>=0A              =
+          <a href=3D"http://l.e.starbucks.com/rts/go2.aspx?h=3D37=
+6067&tp=3Di-1NHD-Ij-6GJ-5RuQUd-1t-RHUWe-1c-WIc-5Rq6KB-l8PBMx9s27-=
+YHYZm" style=3D"line-height:20px; color:#707070; text-decoration:=
+underline;" data-link-name=3D"reward-terms-fr" class=3D"darkModeF=
+ooter">Modalit=C3=A9s d=E2=80=99utilisation=0A                   =
+         R=C3=A9compenses&nbsp;Starbucks=C2=AE</a>=0A            =
+            <br><br>=0A                        <a href=3D"http://=
+l.e.starbucks.com/rts/go2.aspx?h=3D376073&tp=3Di-1NHD-Ij-6GJ-5RuQ=
+Ud-1t-RHUWe-1c-WIc-5Rq6KB-l8PBMx9s27-YHYZm" style=3D"line-height:=
+20px; color:#707070; text-decoration:underline;" data-link-name=3D=
+"fr-privacy" class=3D"darkModeFooter">=C3=89nonc=C3=A9=0A        =
+                    de&nbsp;confidentialit=C3=A9</a>=0A          =
+          </td>=0A                </tr>=0A            </table>=0A=
+        </td>=0A    </tr>=0A    <tr>=0A        <td bgcolor=3D"#ff=
+ffff" class=3D"darkModeFooter">=0A            <table cellpadding=3D=
+"0" cellspacing=3D"0" width=3D"640" align=3D"center" bgcolor=3D"#=
+ffffff" style=3D"max-width:640px;" role=3D"presentation" class=3D=
+"darkModeFooter">=0A                <tr>=0A                    <t=
+d align=3D"center" valign=3D"middle" style=3D"font-size:22px; mso=
+-line-height-rule:exactly; text-align:center; padding-top:30px;">=
+=0A                        <a href=3D"http://l.e.starbucks.com/rt=
+s/go2.aspx?h=3D376074&tp=3Di-1NHD-Ij-6GJ-5RuQUd-1t-RHUWe-1c-WIc-5=
+Rq6KB-l8PBMx9s27-YHYZm" style=3D"text-decoration:none;" class=3D"=
+darkModeFooter" data-link-name=3D"rewards-logo-footer">=0A       =
+                     <img src=3D"https://i.a.starbucks.com/wpm/11=
+61/ContentUploads/Teleion/Images/SR_Holiday_DSD_Email_FR_03.png" =
+width=3D"640" height=3D"183" style=3D"display:block; border:0; fo=
+nt-family:'SoDo Sans', Avenir, 'Roboto', Helvetica, Arial, sans-s=
+erif; color:#707070; text-align:center; text-transform:uppercase;=
+ letter-spacing: 1px; font-weight: bold; font-size: 22px;" alt=3D=
+"R=C3=89COMPENSES STARBUCKS&reg;" title=3D"R=C3=89COMPENSES STARB=
+UCKS&reg;" /></a>=0A                    </td>=0A                <=
+/tr>=0A            </table>=0A        </td>=0A    </tr>=0A</table=
+>=0A<!--SBX_SR_OptIn_CA-FR-->=0A                        </td>=0A =
+                   </tr>=0A                </table>=0A           =
+     <!--FOOTER-->=0A            </td>=0A        </tr>=0A    </ta=
+ble>=0A    <!--Starts Gmail App fix 2 -->=0A    <div style=3D"dis=
+play:none; white-space:nowrap; font:15px courier; color:#ffffff;"=
+> - - - - - - - - - - -=0A        - - - - - -=0A        - - - - -=
+ - - - - - - - - - - - </div>=0A    <!--Ends Gmail App fix 2 -->=0A=
+</body>=0A=0A<img src=3D"http://l.e.starbucks.com/rts/open.aspx?t=
+p=3Di-1NGB-Ij-6GJ-5RuQUd-1t-RHUWe-1c-5Rq6KB-l8PBMx9s27-21Iz1H" he=
+ight=3D"1" width=3D"1" style=3D"display:none">=0A</html>
+----boundary_56373696_edc02bab-b289-4f36-83a6-04ee20fe3c49--
+
+

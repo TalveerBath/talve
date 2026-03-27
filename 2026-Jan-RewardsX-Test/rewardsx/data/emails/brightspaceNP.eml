@@ -1,0 +1,210 @@
+Delivered-To: talveerbath@gmail.com
+Received: by 2002:a05:7110:4815:b0:2fc:5780:b0eb with SMTP id b21csp21254gel;
+        Thu, 12 Mar 2026 09:42:07 -0700 (PDT)
+X-Forwarded-Encrypted: i=3; AJvYcCWqBS4Pfa+YYKc0DUihQ8Y2Ukb85IaK8qMPhgH59PrW7z3rNYnGhjzWrEMWNja3vRhZwULy8C+mGANsfw==@gmail.com
+X-Received: by 2002:a05:6214:d01:b0:89a:a0a:c101 with SMTP id 6a1803df08f44-89a81ff7935mr4735776d6.67.1773333727340;
+        Thu, 12 Mar 2026 09:42:07 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1773333727; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=NsccgE3cyjXTzY5Do+h57xhjjtz8c5tjghRZMmWZ88vDe3JpqLntzvFtJySVwF1lVk
+         Xd0jawtaz2bjcRkrapQtPcBtzysuJ47a3sDtj4uASigAKqojESXKAbP/+s4cocqDDeTj
+         lpyGPNh0It82bJOB4KgRorO9EdOBaTB1cAbRgOeffL9rhQtDJgwn8SvrM3WjvzH9GF9W
+         k22VUcypkgNi48lYtOjdJQwqVZ4uaM3aWEhzzTVd5bfkmBWw+vLVzAvle3rcVTtKU+Mx
+         cFL6Gz4RoDoUSxqKez6oeugfmkUkn7Zxh7OOc/gSeBmS4N759npcmlBk9Pvm7rsg2rs4
+         Fi2w==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-id:mime-version:to:message-id:subject:date:from
+         :dkim-signature:dkim-signature;
+        bh=iFvEhQ9b0jEU9x/yrNgShsInkIw81quuXuqU07IR+5s=;
+        fh=kn6UfqgauBxQ1ccTxfyOOKl0+mSfc6YIRk7bcLGfT4A=;
+        b=iNNhc6wIj4dfSjr5Abz7BrcZHkoCW3cKX6UxfGFwY1XKR5iZ0FsjAJhv0kPkQMa5W7
+         O1fozFykaEfJnPC2f1lLI1W4j4A98iG1bNpEgiViBPfzLOw1QHHvYKGWtbqUUB208cH0
+         pA9lRHSt/EAXdLoPAto2GHeIMFmU54QwJyWI85YrLJN62gOAI8UXJMPVHLjJkfJGfn9Y
+         c91nCT9Jx1nk+gR5Lup+qxyWtfeVad/Pi4H7Oyat6NcvRadB1fmAbxnAz/BVHnVg08bR
+         mYH5RiHMgm/XQbpnoDH6WvqTqt1SZOmph+GGcm7M/Gs6pdCXsdI712kMkIZilH+TKD07
+         MoXw==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@naitca.onmicrosoft.com header.s=selector2-naitca-onmicrosoft-com header.b=K7ectaG2;
+       dkim=pass header.i=@brightspace.com header.s=d2lmail1 header.b=DoD6yEzK;
+       arc=pass (i=1 spf=pass spfdomain=nait.brightspace.com dkim=pass dkdomain=brightspace.com dmarc=pass fromdomain=nait.brightspace.com);
+       spf=none (google.com: tbath2+srs=ytbvx=bm=nait.brightspace.com=notifications-noreply@studentmail.nait.ca does not designate permitted sender hosts) smtp.mailfrom="tbath2+SRS=yTbvx=BM=nait.brightspace.com=notifications-noreply@studentmail.nait.ca";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=brightspace.com
+Return-Path: <tbath2+SRS=yTbvx=BM=nait.brightspace.com=notifications-noreply@studentmail.nait.ca>
+Received: from SN4PR2101CU001.outbound.protection.outlook.com (mail-southcentralusazlp170120001.outbound.protection.outlook.com. [2a01:111:f403:c10d::1])
+        by mx.google.com with ESMTPS id 6a1803df08f44-89a65bc7f76si64840356d6.97.2026.03.12.09.42.07
+        for <talveerbath@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Thu, 12 Mar 2026 09:42:07 -0700 (PDT)
+Received-SPF: none (google.com: tbath2+srs=ytbvx=bm=nait.brightspace.com=notifications-noreply@studentmail.nait.ca does not designate permitted sender hosts) client-ip=2a01:111:f403:c10d::1;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@naitca.onmicrosoft.com header.s=selector2-naitca-onmicrosoft-com header.b=K7ectaG2;
+       dkim=pass header.i=@brightspace.com header.s=d2lmail1 header.b=DoD6yEzK;
+       arc=pass (i=1 spf=pass spfdomain=nait.brightspace.com dkim=pass dkdomain=brightspace.com dmarc=pass fromdomain=nait.brightspace.com);
+       spf=none (google.com: tbath2+srs=ytbvx=bm=nait.brightspace.com=notifications-noreply@studentmail.nait.ca does not designate permitted sender hosts) smtp.mailfrom="tbath2+SRS=yTbvx=BM=nait.brightspace.com=notifications-noreply@studentmail.nait.ca";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=brightspace.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=Ge56czGVtJxCWMR9NfLYB94m0w1lcQGkbuGHl1UkFYofzVvtwRYepRFOIf0H16pHCwaM2oPEULsZMztIdiIpa9g5vq9RNsksS2QBIK1IIS5pI/ZiaTYT88zFeOhpVMaUtDMstCmjAx8+luvtocPTFhj2YKHTcUrFlNSbC/tb3Hmd1JJQKcODgNh4aEQdyi+L580DlMdCPClEaI2rkPQj5mGf86LTaxbWwuq59e8LYZBO5GZYCgLYshIrHvlr7HjGnsgAYqDFkXr+n9D4pghxJyQ/VShwf104SZAJdkaXfOv8EGsLijFVqi7ymjsNClRb+BM2L50XnFYfLSNLlarVSA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=iFvEhQ9b0jEU9x/yrNgShsInkIw81quuXuqU07IR+5s=;
+ b=Cuau6wKlEs/A1Y0+SFa/D/B9DWLfMphIKOtH/OLdgzob5ppeRMndxIVh/GAVFa9BvdxQFVufVlV0owhGviVRe7Cnx5hVCIwlOTqtIjZQJuul4JxOMEnvDwA8oVuLdctiYL1jWMuJArMAOA4zoATyvQD4EK0YdR603JGp7F1Ig4yOB4nQPf/hnGI4ySb/WwNNj3n1Has67OIUYumNTB7kE3aM5z7BQV+/IVh3xcP/9iBxEtRph7o8VxZZgfq+kHkizFa9Xv395GgjywXq5JUAjOmenm/AXklS2jEJUL6FvvOQ6oYbWzHKHe43iN0WRL+Me7Nzet7zj5V+yHRoCih2VQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass (sender ip is
+ 35.182.71.56) smtp.rcpttodomain=studentmail.nait.ca
+ smtp.mailfrom=nait.brightspace.com; dmarc=pass (p=reject sp=reject pct=100)
+ action=none header.from=nait.brightspace.com; dkim=pass (signature was
+ verified) header.d=brightspace.com; arc=none (0)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=naitca.onmicrosoft.com; s=selector2-naitca-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=iFvEhQ9b0jEU9x/yrNgShsInkIw81quuXuqU07IR+5s=;
+ b=K7ectaG20FGsqR3gSJu99YZDc40X+wzK7MtQ5uP3Fq8XaFYI2O1cvMUHy1KpmTwGio+AZN/8P4iaQn2zaX69Oy5wTnoJ3qSlYeyurWUkuCvu4Ujr6F6QFptXkR7V5ibh3Q9qIqhmekxAGSF3yUePNF1u4CF/Ai6tLko1QmY39Qo=
+Received: from YT4PR01CA0318.CANPRD01.PROD.OUTLOOK.COM (2603:10b6:b01:10a::9)
+ by SA2PR02MB7820.namprd02.prod.outlook.com (2603:10b6:806:14e::24) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9700.15; Thu, 12 Mar
+ 2026 16:42:03 +0000
+Received: from YT2PEPF000001CA.CANPRD01.PROD.OUTLOOK.COM
+ (2603:10b6:b01:10a:cafe::f6) by YT4PR01CA0318.outlook.office365.com
+ (2603:10b6:b01:10a::9) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9678.28 via Frontend Transport; Thu,
+ 12 Mar 2026 16:42:04 +0000
+Authentication-Results: spf=pass (sender IP is 35.182.71.56)
+ smtp.mailfrom=nait.brightspace.com; dkim=pass (signature was verified)
+ header.d=brightspace.com;dmarc=pass action=none
+ header.from=nait.brightspace.com;
+Received-SPF: Pass (protection.outlook.com: domain of nait.brightspace.com
+ designates 35.182.71.56 as permitted sender) receiver=protection.outlook.com;
+ client-ip=35.182.71.56; helo=ca05psmtp.brightspace.com; pr=C
+Received: from ca05psmtp.brightspace.com (35.182.71.56) by
+ YT2PEPF000001CA.mail.protection.outlook.com (10.167.241.22) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.9678.18
+ via Frontend Transport; Thu, 12 Mar 2026 16:42:02 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/relaxed; d=brightspace.com;
+	s=d2lmail1; t=1773333722;
+	bh=iFvEhQ9b0jEU9x/yrNgShsInkIw81quuXuqU07IR+5s=;
+	h=From:Date:Subject:To:From;
+	b=DoD6yEzKiipXIS+xJgY/gTa8N72zbKURkPyH7doXk5LZ4JqC6YoPHyX/2xLo3Hfzu
+	 bkNU5FvAQ0DJ0WIwB+Va3CasYAIGKRQCbaI2R3nEYsQylvG5pXbHrmTrjxAe+BBAWK
+	 9QS0PWuqom2iYCN3C0HyZ/T3glWRtMjeZAxFx46ujaQHoJQbaYDa+pLbw7yvs5As1W
+	 Zw3CTwUx4S5qiNu5sGM6yaDaMjHI8WqmGZFVrucQzxr5Ee4Yo0yJXRq/ByuOjjfyZ3
+	 7B8szuUE6JRXWF4FuhdLg4OZAPB6hkIBV2VX7tUk4nj/oAKEaGaQFgin7HoGANrYtz
+	 SP+2NmhYo6bGw==
+Received: from [172.26.11.169] (unknown [172.26.38.204])
+	by ca05psmtpout003b.acc1.int.d2l (Postfix) with ESMTP id B85F3803F0
+	for <tbath2@studentmail.nait.ca>; Thu, 12 Mar 2026 16:42:02 +0000 (UTC)
+From: "notifications-noreply@nait.brightspace.com"
+	<notifications-noreply@nait.brightspace.com>
+Date: Thu, 12 Mar 2026 16:42:02 +0000
+Subject: DMIT2504 - Mobile Application Development (A03.1252) - Feedback: Your
+ feedback for "Assignment 03 - Basic input & navigation" has been released
+Message-Id: <3F15RP19QSU4.BAZ1CCHDOQ2F3@IP-AC1A0BA9>
+To: "tbath2@studentmail.nait.ca" <tbath2@studentmail.nait.ca>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Id: <3F15RP19QSU4.5BKPMA572O2Q2@IP-AC1A0BA9>
+Return-Path: notifications-noreply@nait.brightspace.com
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 5c98fb47-d3b9-4649-9d94-f88cbdd9729c:0
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: YT2PEPF000001CA:EE_|SA2PR02MB7820:EE_
+X-MS-Office365-Filtering-Correlation-Id: 3263ce28-1d3f-415c-3278-08de80564a07
+X-LD-Processed: 5c98fb47-d3b9-4649-9d94-f88cbdd9729c,ExtAddr
+X-MS-Exchange-AtpMessageProperties: SA
+X-MS-Exchange-SenderADCheck: 0
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam:
+	BCL:0;ARA:13230040|61400799027|376014|786006|48200799018|9140799003|55112099003|13003099007|8096899003|16102099003|56012099003|19002099003;
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?NHVLYS9keFpTeU5DaGNaeTNXRXY5TDFkTU5LbTZKVG5SNDJ1YStORmJiU3pM?=
+ =?utf-8?B?Zk1TM3QycGxESmp2SG5Rb0N2WWpROXZkM3ppVzNJSnBoUUpYaC84dGFmS1J5?=
+ =?utf-8?B?dng1dnVJZGJlcXhnUWJMZFlYeTRKM0xzRG5jRlBPeEQwOWYrQW5RSnF4b2Rw?=
+ =?utf-8?B?WE95TVVyN3hPWUFBTlg5Q3FDNVB1ZnA0UkVKbXkxSThqa21jYmw5aENhWWhy?=
+ =?utf-8?B?ZkxaZVgrSnh3OW5aWjZaM1pNUmNyK3VPd0lqYzllRVNIK0t4SERTRHJWUmZr?=
+ =?utf-8?B?dzVnT0JLcFpqVk9zcVcrN0VEQ3c4ZzVqQUFEVGszR3NDWWdpUTM2WEZtY21s?=
+ =?utf-8?B?VXdkaWNFMnRxZzdqYVF2QzNHV0hTRUQ0S0U3UzZmYnEreEoxTWh6bkw3QVZZ?=
+ =?utf-8?B?NUczMmNWT2NzSTlKb2tNSHlacFZzR3NIUC9WbUFkSC9OblBmZzFuVzlPRmwr?=
+ =?utf-8?B?N04wMENjNHY3b2ltS2FxSGtIOXZNMlQvaXZHUnV5YXZ0bW5CRDd6WG5xYStR?=
+ =?utf-8?B?dDZqS0RkVStxRHBvbWoyT3YzYlpMR0dRVGhxNzVXbnFUTHZ5cmhFY2ZEem9x?=
+ =?utf-8?B?OFhXc05nSU9LNmswY0VpM3prU0p3ZW93N0NsdnN6Q0RTSnRWdWZJWTZHNXpp?=
+ =?utf-8?B?Y0pTbEJmd0JCcklQVUM4cjlmOEUyR0gyZjFTMUhOaEpUa21oWVc0aFllZGtp?=
+ =?utf-8?B?a1dveUU0aFRjQWQ2eS9qSG5pcTBaRmJSYUc2aEVUdTNGVVJtWDZESTZuSkJV?=
+ =?utf-8?B?RE4vUWdwQnMzVzN6aEkwMG1lSklDOWJhUGczUGE1TGF5WUNQSENaUnM4Mit0?=
+ =?utf-8?B?Q0Z5aURZTjVybURjZGJrTTFKRzAzTnNqRUYzTnU3Sk1uUTBvOEVoU2hDeWNu?=
+ =?utf-8?B?ZS9kODE3SzZYbDlCaWhwUENBR2JGL2JWcXhuMCs5ZVlReHBQeHF4TktVeXJj?=
+ =?utf-8?B?clQrYlpxazVMbHd2TlczS1dkaUxwb0ErSHYveTk1U252SWh5Z2Y1M2UxVmVZ?=
+ =?utf-8?B?YmtWUEVQNGp1cmNKWlM2aDRkWW9QRWwwOXNhWGhnNHQzNG0wNmlDNHRMY2NJ?=
+ =?utf-8?B?MUVkY0J4THVMQmVvYnlXbHNUL25qZmtHN0xzMDgyd3lDdXJNaTkwNHY1WFlj?=
+ =?utf-8?B?K1NVSTAzbkcyWjNCUEExWmE0cDlhRmEzV24yNXE4czIzOEV2b25QTjdOaWdS?=
+ =?utf-8?B?c0c4WnlOenREamFicDlyTndZdUl3TW9kSkJaQklBNFBteHB3Ymo2WDBRRnZ1?=
+ =?utf-8?B?SkZJbGJjNkN0dU9uLzZ6VTA0TGNZQjhDU1dhSEVYRy91cWxxWlE2UVorOTdr?=
+ =?utf-8?B?b2hUVFhhTlMxMUR5eFZIYVROOEtZSmc4WXgrY1k2ZHd5QmF4RGE0OUJSaEU0?=
+ =?utf-8?B?dmZpcFh0cEMydHN3RGJ2TjhzNUhkWVpkREc1NWw1c043MXFTdzZGNksxM2ph?=
+ =?utf-8?B?S0xsZ2ZaaERlRWIyU3RVWU5GR2JOMnhIdzhvUElVR0dtdlVLaTNkQ0xYd3d2?=
+ =?utf-8?B?cjhFYXVIcmZmWlhablNhNzE3Zm90cUVieE44M0QvWThnYjJhVzZReFFrcy92?=
+ =?utf-8?B?bmM0UGhnQUhHbnY5ZkdCSDNLekpReTBhVlY0dE9DOUhKNUZ5b1pWNk5LZlZr?=
+ =?utf-8?B?L21FbXRuTGNWTkZCY2VOT1Vld01XSkU1N0hCSUpwVDZVS0dxRmFBNEhoU2E0?=
+ =?utf-8?B?OXVud2h5MnI4QjV4blV3bGlsL1ZXZHJSdUNIVS9LZlByQVNDaFp2dW9LQ1RW?=
+ =?utf-8?B?dzRieGprVnUvdStIVUE5ZFo0c1R2dEpnTWFzZWhoYS8xTjdpTVdhemlzamM1?=
+ =?utf-8?Q?g+J12cZJrfjRKftrJP0d+lkUIlqf0aQt0vjy8=3D?=
+X-Forefront-Antispam-Report:
+	CIP:35.182.71.56;CTRY:CA;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:ca05psmtp.brightspace.com;PTR:ca05psmtpout.brightspace.com;CAT:NONE;SFS:(13230040)(61400799027)(376014)(786006)(48200799018)(9140799003)(55112099003)(13003099007)(8096899003)(16102099003)(56012099003)(19002099003);DIR:OUT;SFP:1102;
+X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-0:
+	OeAP3CCH7EOTcCu6Ocj//zoMFV+1j7E+X/ZvYeIhSEHoV/FCqGQxX9EdT+iOyuTV477Y+cf2rD+nyUhy2UouUGYHgz4N10gb9qyo6MXAZnfW/hhAmleomuJkHbonMWT7owIuMBlK3X1FksWI/lfoKZUOLr88zG08mDhPbwEygMIK+aLyYfCPzb6xVVIPaSeqr9p6AzCvAkMDs620pX6lldSEXnjCKyW++bZsQ7xTR71taJSBmrya2KvtmYNEOOpsKQJzAw1WHt61MhY1f5dryg2CApAN0WbRzCqcRr5D1iu7BF91vUqY9UNzWX/WoYdfA5o6buGyeCEg4yVBfMMyPh3rcj3JK5XO2Zz9Vg8J/vyQBxeVomMSUeZyKEqPHbCTPin2DJ1rBUf6cxIlW34WIszAWpIl5sT8/VfIxO3obmfO7+dkrLeIVNOsTsr1lAjL
+X-ExternalRecipientOutboundConnectors: 5c98fb47-d3b9-4649-9d94-f88cbdd9729c
+X-OriginatorOrg: naitca.onmicrosoft.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 12 Mar 2026 16:42:02.9878
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 3263ce28-1d3f-415c-3278-08de80564a07
+X-MS-Exchange-CrossTenant-Id: 5c98fb47-d3b9-4649-9d94-f88cbdd9729c
+X-MS-Exchange-CrossTenant-AuthSource:
+	YT2PEPF000001CA.CANPRD01.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA2PR02MB7820
+
+<!doctype html>
+<html>
+	<head>
+		<title>DMIT2504 - Mobile Application Development (A03.1252) - Feedback: Your feedback for &quot;Assignment 03 - Basic input &amp; navigation&quot; has been released</title>
+	</head>
+	<body style="font-family:&#39;Lato&#39;, sans-serif; font-size:20px;">
+		<div style="width:100%;font-family:&#39;Lato&#39;, sans-serif; font-size:20px;">
+			<div style="border-bottom:1px dotted #000000;margin-bottom:15px;padding-bottom:5px;">
+			<h1 style="margin:0px;padding:0px;color:#000000;font-size:0.95rem;font-weight:bold;">DMIT2504 - Mobile Application Development (A03.1252) - Feedback: Your feedback for &quot;Assignment 03 - Basic input &amp; navigation&quot; has been released<br /><span style="color:#666666;font-size:0.8rem;font-weight:normal;">Sent Thursday, March 12, 2026 10:42 AM MDT</span></h1>
+		</div>
+		<div style="padding:0px;margin:0px;">
+			<div><div style="padding:0px;margin:0px;">
+	<div style="margin:0px;padding:0px;margin:0px 0px 10px 0px;color:#000000;">Feedback for &quot;Assignment 03 - Basic input &amp; navigation&quot; has been released</div>
+	<a rel="noopener" style="color:#00617f;" href="https://lms.nait.ca/d2l/lms/dropbox/user/folder_user_view_feedback.d2l?ou=95810&amp;db=201531&amp;grpid=0">Access &quot;Assignment 03 - Basic input &amp; navigation&quot;</a>
+</div>
+</div>
+			<div style="padding:0px;margin:0px;margin-top:15px;">
+				<div style="padding:0px;margin:0px;border-top:1px dotted #666666;margin-top:15px;padding-top:5px;">
+					<table style="width:100%;border-collapse:collapse;border-spacing:0px;padding:0px;margin:0px;font-family:&#39;Lato&#39;, sans-serif; font-size:20px;" cellspacing="0" cellpadding="0">
+						<tbody>
+							<tr>
+								<td style="width:100%;margin:0px;padding:0px;white-space:nowrap !important;vertical-align:top;text-align:left;" nowrap="nowrap">
+									<a style="color:#00617f;" href="https://lms.nait.ca/d2l/p/home/95810">DMIT2504 - Mobile Application Development (A03.1252)</a>
+								</td>
+								<td style="width:100%;margin:0px;padding:0px;white-space:nowrap !important;vertical-align:top;text-align:right;" nowrap="nowrap">
+									<a style="color:#00617f;" href="https://lms.nait.ca/d2l/lms/dropbox/user/folder_user_view_feedback.d2l?ou=95810&amp;db=201531&amp;grpid=0">Go to Assignment &gt;&gt;</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div style="padding:0px;margin:0px;margin-top:15px;">
+				<div style="padding:0px;margin:0px;text-align:center;">
+					<span style="margin:0px;padding:0px;color:#666666;font-size:0.8rem;">You are receiving this message because you subscribed to receive instant notifications via email.</span>
+					<a style="color:#00617f;font-size:0.8rem;" href="https://lms.nait.ca/d2l/Notifications/Settings?ou=6606">Change Notification Settings</a>
+					<br /><span style="margin:0px;padding:0px;color:#666666;font-size:0.8rem;"></span>
+				</div>
+			</div>
+		</div>
+</div>
+	</body>
+</html>
