@@ -82,3 +82,29 @@ def parse_eml(path: str) -> dict:
         "sender": sender.strip(),
         "body": cleaned_body
     }
+
+#mailgun 
+def parse_mime_string(mime_str: str) -> dict:
+    """Parse a MIME string from Mailgun into a structured dict."""
+    if not mime_str:
+        return {"subject": "", "sender": "", "body": ""}
+
+    # Convert MIME string → email.message.Message
+    msg = BytesParser(policy=policy.default).parsebytes(
+        mime_str.encode("utf-8", errors="ignore")
+    )
+
+    raw_subject = msg.get("subject", "")
+    raw_from = msg.get("from", "")
+    raw_reply_to = msg.get("reply-to", "")
+
+    sender = extract_email(raw_from) or extract_email(raw_reply_to)
+
+    raw_body = extract_body_from_mime(msg)
+    cleaned_body = clean_html(raw_body)
+
+    return {
+        "subject": raw_subject.strip(),
+        "sender": sender.strip(),
+        "body": cleaned_body
+    }

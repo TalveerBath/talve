@@ -53,7 +53,7 @@ Body: {email_data.get('body')}
                 "stream": False,
                 "temperature": 0
             },
-            timeout=60
+            timeout=160
         )
 
         data = response.json()
